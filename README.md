@@ -1,5 +1,1 @@
-SSIJ
-MI
-BALLLLLLLLLLLLLLLLLLLSSSSSSSSSSSSSSSSSSS
-(2)
-toniedominikjakbyco
+Nie zmieniajcie mi tu nic bo mi sie psuje plyz
