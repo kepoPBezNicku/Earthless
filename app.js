@@ -69,20 +69,21 @@ class MyLine {
 }
 
 function doTheEvent(ob) {
-	console.log(typeof ob.line);
 	middlediv.textContent = "";
 
+	let newBigPhoto = document.createElement("img");
+	newBigPhoto.setAttribute("src", ob.photoPath);
+	middlediv.insertAdjacentElement('beforeend', newBigPhoto);
+	newBigPhoto.classList.add("bigPhoto");
+	
 	ob.line.forEach((element) => {
 		let newPhoto = document.createElement("img");
-
 		newPhoto.setAttribute("src", element.photoPath);
-		newPhoto.setAttribute("height", "350px");
 		middlediv.insertAdjacentElement("beforeend", newPhoto);
 		newPhoto.classList.add("linePhoto");
 
 		let newSpanNode = document.createTextNode(element.who);
 		let newSpan = document.createElement("span");
-
 		newSpan.appendChild(newSpanNode);
 		newSpan.style.color = element.color;
 		middlediv.insertAdjacentElement("beforeend", newSpan);
@@ -90,7 +91,6 @@ function doTheEvent(ob) {
 
 		let newTextNode = document.createTextNode(element.text);
 		let newText = document.createElement("span");
-
 		newText.appendChild(newTextNode);
 		middlediv.insertAdjacentElement("beforeend", newText);
 		newText.classList.add("lineText");
@@ -116,39 +116,84 @@ function doTheEvent(ob) {
 //wstawić jakiś sen (insp. Adamem Mickiewiczem XDDDD)
 
 let c1u1e1 = new MyEvent(
-	"bogosBinted/rysunek.svg",
+	"bogosBinted/rysunek.svg",	
 	[
 		new MyLine(
-			"bogosBinted/rysunek.svg",
-			"Jakub",
-			"#a3be8c",
-			"Ooh, co to... co ty było? Nieważne, muszę się przygotować - od tego co dziś powiem zależą losy mojego państwa, a nawet całego świata!"
+			"bogosBinted/rysunek.svg", "Jakub", "green",
+			"Ooh, co to... co ty było? Co to niby miało... JUŻ 8, ZASPAŁEM! Ale ten sen..."
 		),
 	],
-	"Pomyśl o znaczeniu tego snu",
-	"Zaraz się spóźnię!", // :OOOOOO NOWAY
+	"O co chodziło z tym snem?",
+	"Zaraz się spóźnię!",
 	function () {
 		doTheEvent(c1u1e2v1);
-		console.log("leftoption");
 	},
 	function () {
-		console.log("rightoption");
+		doTheEvent(c1u1e2v2)
 	}
 );
-doTheEvent(c1u1e1);
 
-let c1u1e2v1 = new MyEvent(
+	let c1u1e2v1 = new MyEvent(
+		"bogosBinted/rysunek.svg",
+		[
+			new MyLine("bogosBinted/rysunek.svg", "Jakub", "green",
+			"Nigga"),
+			new MyLine("bogosBinted/rysunek.svg", "bukaJ", "red",
+			"Nigga2"),
+		],
+		"Zaraz się spóźnię!",
+		"Nie mam czasu, muszę się zbierać",
+		function () {
+			console.log("leftoption");
+		},
+		function () {
+			console.log("rightoption");
+		}
+	);
+
+	let c1u1e2v2 = new MyEvent(
+		"bogosBinted/rysunek.svg",
+		[new MyLine(
+			"bogosBinted/rysunek.svg", "Jakub", "green",
+			"Na dzisiejszym wywiadzie muszę się dobrze prezentować! Ale nie mogę nie zdążyć ze wszystkim."
+		)],
+		"Wypij kawę", 
+		"Wymyj zęby",
+		function (){
+			data.isCoffeDrunk = true;
+	
+			//nextOptionToRun
+		},
+		function (){
+			data.areTeethBrushed = true;
+	
+			//nextOptionToRun
+		}
+	)
+
+doTheEvent(c1u1e1);
+/*
+let cxuxexvx = new MyEvent(
 	"bogosBinted/rysunek.svg",
-	[
-		new MyLine("BogosBinted/rysunek.svg", "Jakub", "green", "Nigga"),
-		new MyLine("BogosBinted/rysunek.svg", "Jakub", "green", "Nigga2"),
-	],
-	"Zaraz się spóźnię!",
-	"Nie mam czasu, muszę się zbierać",
-	function () {
-		console.log("leftoption");
+	[MyLine(
+		"bogosBinted/rysunek.svg", "Jakub", "red",
+		"testline"
+	)],
+	"LewaOpcja",
+	"PrawaOpcja",
+	function (){
+		//stats
+
+		//nextOptionToRun
+
+		console.log("OpcjaL")
 	},
-	function () {
-		console.log("rightoption");
+	function (){
+		//stats
+
+		//nextOptionToRun
+
+		console.log("OpcjaP")
 	}
-);
+)
+*/
