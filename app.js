@@ -116,10 +116,10 @@ function doTheEvent(ob) {
 //wstawić jakiś sen (insp. Adamem Mickiewiczem XDDDD)
 
 let c1u1e1 = new MyEvent(
-	"assets/rysunek.svg",
+	"bogosBinted/rysunek.svg",
 	[
 		new MyLine(
-			"assets/rysunek.svg",
+			"bogosBinted/rysunek.svg",
 			"Jakub",
 			"#a3be8c",
 			"Ooh, co to... co ty było? Nieważne, muszę się przygotować - od tego co dziś powiem zależą losy mojego państwa, a nawet całego świata!"
@@ -138,10 +138,10 @@ let c1u1e1 = new MyEvent(
 doTheEvent(c1u1e1);
 
 let c1u1e2v1 = new MyEvent(
-	"assets/rysunek.svg",
+	"bogosBinted/rysunek.svg",
 	[
-		new MyLine("assets/rysunek.svg", "Jakub", "green", "Nigga"),
-		new MyLine("assets/rysunek.svg", "Jakub", "green", "Nigga2"),
+		new MyLine("BogosBinted/rysunek.svg", "Jakub", "green", "Nigga"),
+		new MyLine("BogosBinted/rysunek.svg", "Jakub", "green", "Nigga2"),
 	],
 	"Zaraz się spóźnię!",
 	"Nie mam czasu, muszę się zbierać",
