@@ -46,6 +46,9 @@ let data = {
 			AgreSuS: 50,
 		},
 	},
+	areTeethBrushed : false,
+	isCoffeDrunk : false,
+	isBreakfastEaten : false
 };
 
 class MyEvent {
@@ -116,7 +119,7 @@ function doTheEvent(ob) {
 //wstawić jakiś sen (insp. Adamem Mickiewiczem XDDDD)
 
 let c1u1e1 = new MyEvent(
-	"bogosBinted/rysunek.svg",	
+	"bogosBinted/rysunek.svg",	//budzik.svg
 	[
 		new MyLine(
 			"bogosBinted/rysunek.svg", "Jakub", "green",
@@ -134,7 +137,7 @@ let c1u1e1 = new MyEvent(
 );
 
 	let c1u1e2v1 = new MyEvent(
-		"bogosBinted/rysunek.svg",
+		"bogosBinted/rysunek.svg", //chmurka.svg
 		[
 			new MyLine("bogosBinted/rysunek.svg", "Jakub", "green",
 			"Nigga"),
@@ -155,7 +158,7 @@ let c1u1e1 = new MyEvent(
 		"bogosBinted/rysunek.svg",
 		[new MyLine(
 			"bogosBinted/rysunek.svg", "Jakub", "green",
-			"Na dzisiejszym wywiadzie muszę się dobrze prezentować! Ale nie mogę nie zdążyć ze wszystkim."
+			"Na dzisiejszym wywiadzie muszę się dobrze prezentować! Ale mogę nie zdążyć ze wszystkim."
 		)],
 		"Wypij kawę", 
 		"Wymyj zęby",
@@ -168,6 +171,30 @@ let c1u1e1 = new MyEvent(
 			data.areTeethBrushed = true;
 	
 			//nextOptionToRun
+		}
+	)
+
+	let c1u1e3v1 = new MyEvent(
+		"bogosBinted/rysunek.svg",
+		[MyLine(
+			"bogosBinted/rysunek.svg", "Jakub", "red",
+			"testline"
+		)],
+		"LewaOpcja",
+		"PrawaOpcja",
+		function (){
+			//stats
+	
+			//nextOptionToRun
+	
+			console.log("OpcjaL")
+		},
+		function (){
+			//stats
+	
+			//nextOptionToRun
+	
+			console.log("OpcjaP")
 		}
 	)
 
