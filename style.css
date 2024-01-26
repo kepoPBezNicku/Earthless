@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+:root {
+    --background-color: #2e3440;
+    --header-color: #3b4252;
+    --chapter-background-color: #434c5e;
+    --main-containers-color: #4c566a;
+    --font-family: "Outfit", Segoe UI, sans-serif;
+    --left-button: #bf616a;
+    --right-button: #a3be8c;
+}
+
+html {
+    font-size: 17px;
+    color: white;
+}
+
+body {
+    background-color: var(--background-color);
+    position: relative;
+}
+
+/* ---------------------------------------------------- */
+/* ---------------------- HEADER ---------------------- */
+/* ---------------------------------------------------- */
+
+header {
+    background-color: var(--header-color);
+    margin-bottom: 20px;
+    font-family: var(--font-family);
+    position: sticky;
+    top: 0;
+}
+
+#header-section {
+    max-width: 1300px;
+    margin: 0px auto;
+}
+
+
+#header-section nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#header-section #chapter-burger #chapter {
+    background-color: var(--chapter-background-color);
+    font-size: 1.7rem;
+    position: relative;
+    top: 20px;
+    border-radius: 10px;
+    padding: 10px 20px 12px;
+    text-align: center;
+}
+
+#header-section nav h1 {
+    margin: 0px;
+    white-space: nowrap;
+}
+
+#header-section #resources {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: fit-content;
+    gap: 30px;
+}
+
+#header-section nav #resources ul {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+}
+
+#header-section nav #resources ul li {
+    list-style-type: none;
+    font-size: 2rem;
+    margin: 0px 10px;
+    text-align: center;
+}
+
+
+#burger {
+    display: none;
+}
+
+@media only screen and (max-width: 920px) {
+    header {
+        display: flex;
+        position: fixed;
+        top: 0;
+        width: fit-content;
+        margin: 0px 0px 0px auto;
+        border-bottom-left-radius: 25px;
+        background-color: rgba(0, 0, 0, 0);
+        /* transform: translateX(120px); */
+        transition: 0.2s ease transform;
+        right: 0;
+    }
+    #header-section #chapter-burger {
+        display: flex;
+        flex-direction: row;
+    }
+    #header-section #chapter-burger #chapter {
+        margin: 0px;
+        padding: 15px;
+        position: static;
+        align-self: flex-start;
+        border-radius: 0px;
+        font-size: 1.5rem;
+        border-bottom-left-radius: 25px;
+    }
+    #header-section nav {
+        align-items: flex-end;
+        flex-direction: column;
+    }
+    #header-section nav #resources {
+        padding: 10px;
+        gap: 0px;
+        font-size: 2rem;
+        background-color: var(--chapter-background-color);
+        border-bottom-left-radius: 25px;
+        transform: translateX(160px);
+        transition: 0.3s ease transform;
+        flex-direction: column;
+    }
+    #header-section nav #resources.open {
+        transform: translateX(0px);
+        
+    }
+    #header-section nav #resources ul {
+        flex-direction: column;
+        width: fit-content;
+        gap: 20px;
+        margin: 0px;
+    }
+    #header-section nav #resources #right-header-container {
+        margin-top: 15px;
+    }
+    #burger {
+        display: block;
+        font-size: 2.5rem;
+        margin: 10px 10px;
+        cursor: pointer;
+    }
+
+}
+
+
+/* ---------------------------------------------------- */
+/* ----------------------- MAIN ----------------------- */
+/* ---------------------------------------------------- */
+
+#main-section {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: var(--font-family);
+    width:  700px;
+    margin: 0px auto;
+}
+
+#main-section a {
+    text-decoration: none;
+    color: white;
+    width: 50%;
+    max-width: 430px;
+    min-width: 200px;
+}
+
+#main-section a #start {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: var(--main-containers-color);
+    box-shadow: 0px 0px 2px 5px var(--main-containers-color);
+    height: 200px;
+    font-size: 25px;
+}
+
+#main-section .choice {
+    display: flex;
+    flex-direction: column;
+}
+
+#main-section .choice #middlediv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+#main-section .choice #middlediv .linePhoto {
+    order: 1;
+    margin: 15px 0px;
+}
+
+#main-section .choice #middlediv .lineWho {
+    width: fit-content;
+    margin: 0px auto;
+    order: 0;
+    font-size: 2rem;
+}
+
+#main-section .choice #middlediv .lineText {
+    order: 2;
+}
+
+#main-section .choice #decision-button {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#main-section .choice #decision-button input {
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+    width: 45%;
+}
+
+#left {
+    background-color: var(--left-button);
+    border: 4px solid #d08770;
+}
+
+#right {
+    background-color: var(--right-button);
+    border: 4px solid #88c0d0;
+
+}
+
+@media only screen and (max-width: 1000px) {
+    #main-section {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+    }
+}
+
+@media only screen and (max-width: 920px) {
+    main {
+        margin-top: 70px;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    #main-section {
+        flex-direction: column;
+        margin: 10px auto;
+        width: fit-content;
+        gap: 60px
+    }
+    #main-section div {
+        width: 100%;
+    }
+    #main-section .choice #middlediv .lineText {
+        width: 70%;
+        margin: 0px auto;
+    }
+    #main-section .choice #decision-button {
+        flex-direction: column-reverse;
+    }
+    #main-section .choice #decision-button input {
+        margin: 10px auto;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    main {
+        margin-top: 100px
+    }
+}
+
+/* ---------------------------------------------------- */
+/* ---------------------- FOOTER ---------------------- */
+/* ---------------------------------------------------- */
+
+
+
+/* ------------------------------------ */
+
