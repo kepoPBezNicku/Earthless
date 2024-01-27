@@ -227,7 +227,7 @@ header {
     font-size: 1rem;
     color: white;
     font-weight: bold;
-    width: 45%;
+    width: fit-content;
 }
 
 #left {
