@@ -28,9 +28,9 @@ let data = {
 	chapter: 1,
 	underchapter: 1,
 	stats: {
-		publicOpinion: 50,
-		currency: 0, //(!)
-		fuel: 0,
+		publicOpinion: 50, //%
+		currency: 100, //(n)
+		fuel: 0, //n
 		relations: {
 			//%
 			chemist: 50,
@@ -114,8 +114,6 @@ function doTheEvent(ob) {
 
 	buttonLeft.addEventListener("click", ob.fL);
 	buttonRight.addEventListener("click", ob.fP);
-
-	console.log(ob);
 }
 
 //====================CHAPTER 1====================
@@ -141,97 +139,173 @@ let c1u1e1 = new MyEvent(
 	}
 );
 
-	let c1u1e2v1 = new MyEvent(
-		"bogosBinted/rysunek.svg", //chmurka.svg
-		[
-			new MyLine("bogosBinted/rysunek.svg", "Jakub", "green",
-			"Nigga"),
-			new MyLine("bogosBinted/rysunek.svg", "bukaJ", "red",
-			"Nigga2"),
-		],
-		"Zaraz się spóźnię!",
-		"Nie mam czasu, muszę się zbierać",
-		function () {
-			notimeleft = true;
+let c1u1e2v1 = new MyEvent(
+	"bogosBinted/rysunek.svg", //chmurka.svg
+	[
+		new MyLine("bogosBinted/rysunek.svg", "Jakub", "green",
+		"Nigga"),
+		new MyLine("bogosBinted/rysunek.svg", "bukaJ", "red",
+		"Nigga2"),
+	],
+	"Zaraz się spóźnię!",
+	"Nie mam czasu, muszę się zbierać",
+	function () {
+		data.notimeleft = true;
 
-			doTheEvent(c1u1e3v1);
-		},
-		function () {
-			notimeleft = true;
+		doTheEvent(c1u1e3v1);
+	},
+	function () {
+		data.notimeleft = true;
 
-			doTheEvent(c1u1e3v1);
-		}
-	);
+		doTheEvent(c1u1e3v1);
+	}
+);
 
-	let c1u1e2v2 = new MyEvent(
-		"bogosBinted/rysunek.svg", //budzik.svg
-		[new MyLine(
-			"bogosBinted/rysunek.svg", "Jakub", "green",
-			"Na dzisiejszym wywiadzie muszę się dobrze prezentować! Ale mogę nie zdążyć ze wszystkim."
-		)],
-		"Wypij kawę", 
-		"Wymyj zęby",
-		function (){
-			data.isCoffeDrunk = true;
-	
-			if(notimeleft==true) {}
-			else doTheEvent(c1u1e3v1)
-		},
-		function (){
-			data.areTeethBrushed = true;
-	
-			if(notimeleft=true) {}
-			else doTheEvent(c1u1e3v2)
-		}
-	)
+let c1u1e2v2 = new MyEvent(
+	"bogosBinted/rysunek.svg", //budzik.svg
+	[new MyLine(
+		"bogosBinted/rysunek.svg", "Jakub", "green",
+		"Na dzisiejszym wywiadzie muszę się dobrze prezentować! Ale mogę nie zdążyć ze wszystkim."
+	)],
+	"Wypij kawę", 
+	"Wymyj zęby",
+	function (){
+		data.isCoffeDrunk = true;
 
-	let c1u1e3v1 = new MyEvent(
-		"bogosBinted/rysunek.svg", //kawa.svg
-		[new MyLine(
-			"bogosBinted/rysunek.svg", "Jakub", "green",
-			"Dzień bez kawy to dzień stracony! Dobra, na szczęscie zostało mi trochę czasu na..."
-		)],
-		"Wymycie zębów",
-		"Szbykie śniadanie",
-		function (){
-			data.areTeethBrushed = true;
-	
-			//nextOptionToRun
-	
-			console.log("OpcjaL")
-		},
-		function (){
-			data.isBreakfastEaten = true;
-	
-			//nextOptionToRun
-	
-			console.log("OpcjaP")
-		}
-	)
+		if(data.notimeleft==true) doTheEvent(c1u1e3v3)
+		else doTheEvent(c1u1e3v1)
+	},
+	function (){
+		data.areTeethBrushed = true;
 
-	let c1u1e3v2 = new MyEvent(
-		"bogosBinted/rysunek.svg", //zeby.svg
-		[new MyLine(
-			"bogosBinted/rysunek.svg", "Jakub", "green",
-			"No, i takie ząbki ma człowiek sukcesu :DD teraz zostało mi jeszcze trochę czasu żeby .."
-		)],
-		"Zjeść śniadanie",
-		"Wypić kawę",
-		function (){
-			data.isBreakfastEaten = true
-	
-			//nextOptionToRun
-	
-			console.log("OpcjaL")
-		},
-		function (){
-			data.isCoffeDrunk = true
-	
-			//nextOptionToRun
-	
-			console.log("OpcjaP")
-		}
-	)
+		if(data.notimeleft=true) doTheEvent(c1u1e3v4)
+		else doTheEvent(c1u1e3v2)
+	}
+)
+
+let c1u1e3v1 = new MyEvent(
+	"bogosBinted/rysunek.svg", //kawa.svg
+	[new MyLine(
+		"bogosBinted/rysunek.svg", "Jakub", "green",
+		"Dzień bez kawy to dzień stracony! Dobra, na szczęscie zostało mi trochę czasu na..."
+	)],
+	"Wymycie zębów",
+	"Szbykie śniadanie",
+	function (){
+		data.areTeethBrushed = true;
+
+		doTheEvent(c1u1e3v4)
+	},
+	function (){
+		data.isBreakfastEaten = true;
+
+		doTheEvent(c1u1e4v1)
+	}
+)
+
+let c1u1e3v2 = new MyEvent(
+	"bogosBinted/rysunek.svg", //zeby.svg
+	[new MyLine(
+		"bogosBinted/rysunek.svg", "Jakub", "green",
+		"No, i takie ząbki ma człowiek sukcesu :DD teraz zostało mi jeszcze trochę czasu żeby .."
+	)],
+	"Zjeść śniadanie",
+	"Wypić kawę",
+	function (){
+		data.isBreakfastEaten = true
+
+		doTheEvent(c1u1e4v1)
+	},
+	function (){
+		data.isCoffeDrunk = true
+
+		doTheEvent(c1u1e3v3)
+	}
+)
+
+let c1u1e3v3 = new MyEvent(
+	"bogosBinted/rysunek.svg", //kawa.svg
+	[new MyLine(
+		"bogosBinted/rysunek.svg", "Jakub", "green",
+		"Dzień bez kawy to dzień stracony! No ale już nic innego nie zdążę zrobić, pójdę złapać taxi."
+	)],
+	"Wezmę zwykłą taxówkę, każdy grosz się liczy.",
+	"Zamówię sobie taxi premium, niech wiedzą, że mnie stać",
+	function (){
+		data.stats.currency-=15
+
+		doTheEvent(c1u1e5v1)
+	},
+	function (){
+		data.stats.currency-=30
+
+		doTheEvent(c1u1e5v1)
+	}
+)
+
+let c1u1e3v4 = new MyEvent(
+	"bogosBinted/rysunek.svg", //zeby,svg
+	[new MyLine(
+		"bogosBinted/rysunek.svg", "Jakub", "green",
+		"No, i takie ząbki ma człowiek sukcesu :DD Dobra, dość tego gapienia się w lustro, lepiej zamówię taxi."
+	)],
+	"Wezmę zwykłą taxówkę, każdy grosz się liczy.",
+	"Zamówię sobie taxi premium, niech wiedzą, że mnie stać",
+	function (){
+		data.stats.currency-=15
+
+		doTheEvent(c1u1e5v1)
+	},
+	function (){
+		data.stats.currency-=30
+
+		doTheEvent(c1u1e5v1)
+	}
+)
+
+let c1u1e4v1 = new MyEvent(
+	"bogosBinted/rysunek.svg", //jedzenie.svg
+	[new MyLine(
+		"bogosBinted/rysunek.svg", "Jakub", "green",
+		"Dobra, najadłem się, teraz lece zamówić taxi. "
+	)],
+	"Wezmę zwykłą taxówkę, każdy grosz się liczy.",
+	"Zamówię sobie taxi premium, niech wiedzą, że mnie stać",
+	function (){
+		data.stats.currency-=15
+
+		doTheEvent(c1u1e5v1)
+	},
+	function (){
+		data.stats.currency-=30
+
+		doTheEvent(c1u1e5v1)
+	}
+)
+
+let c1u1e5v1 = new MyEvent(
+	"bogosBinted/rysunek.svg",
+	[new MyLine(
+		"bogosBinted/rysunek.svg", "Jakub", "red",
+		"testline"
+	)],
+	"LewaOpcja",
+	"PrawaOpcja",
+	function (){
+		//stats
+
+		//nextOptionToRun
+
+		console.log("OpcjaL")
+	},
+	function (){
+		//stats
+
+		//nextOptionToRun
+
+		console.log("OpcjaP")
+	}
+)
 
 doTheEvent(c1u1e1);
 /*
