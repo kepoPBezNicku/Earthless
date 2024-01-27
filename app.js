@@ -176,7 +176,7 @@ let c1u1e1 = new MyEvent(
 
 	let c1u1e3v1 = new MyEvent(
 		"bogosBinted/rysunek.svg",
-		[MyLine(
+		[new MyLine(
 			"bogosBinted/rysunek.svg", "Jakub", "red",
 			"testline"
 		)],
