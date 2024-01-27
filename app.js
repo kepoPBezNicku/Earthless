@@ -79,12 +79,12 @@ function doTheEvent(ob) {
 	newBigPhoto.setAttribute("src", ob.photoPath);
 	middlediv.insertAdjacentElement('beforeend', newBigPhoto);
 	newBigPhoto.classList.add("bigPhoto");
-
-	let whoinfo = document.createElement("div")
-	whoinfo.classList.add("whoInfo");
-	newBigPhoto.insertAdjacentElement('afterend', whoinfo)
 	
 	ob.line.forEach((element) => {
+		let whoinfo = document.createElement("div")
+		whoinfo.classList.add("whoInfo");
+		newBigPhoto.insertAdjacentElement('afterend', whoinfo)
+
 		let newPhoto = document.createElement("img");
 		newPhoto.setAttribute("src", element.photoPath);
 		whoinfo.insertAdjacentElement("beforeend", newPhoto);
