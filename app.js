@@ -152,12 +152,12 @@ let c1u1e2v1 = new MyEvent(
 	function () {
 		data.notimeleft = true;
 
-		doTheEvent(c1u1e3v1);
+		doTheEvent(c1u1e2v1);
 	},
 	function () {
 		data.notimeleft = true;
 
-		doTheEvent(c1u1e3v1);
+		doTheEvent(c1u1e2v1);
 	}
 );
 
@@ -178,7 +178,7 @@ let c1u1e2v2 = new MyEvent(
 	function (){
 		data.areTeethBrushed = true;
 
-		if(data.notimeleft=true) doTheEvent(c1u1e3v4)
+		if(data.notimeleft==true) doTheEvent(c1u1e3v4)
 		else doTheEvent(c1u1e3v2)
 	}
 )
@@ -286,8 +286,32 @@ let c1u1e4v1 = new MyEvent(
 let c1u1e5v1 = new MyEvent(
 	"bogosBinted/rysunek.svg",
 	[new MyLine(
-		"bogosBinted/rysunek.svg", "Jakub", "red",
-		"testline"
+		"bogosBinted/rysunek.svg", "Jakub", "green",
+		"Zaraz powinna być, w tym czasie może..."
+	)],
+	"Zobaczę co się dzieje na Y",
+	"Po prostu poczekam w samotności, lepiej odpocznę przed wywiadem",
+	function (){
+		//stats
+
+		doTheEvent(c1u1e6v1)
+	},
+	function (){
+		//stats
+
+		doTheEvent(c1u1e6v2)
+	}
+)
+
+let cxuxexvx = new MyEvent(
+	"bogosBinted/rysunek.svg",
+	[new MyLine(
+		"bogosBinted/rysunek.svg", "NICK", "red",
+		"Halo?? Dziś jest prima aprilis czy ja o czymś nie wiem???"
+	),
+	new MyLine(
+		"bogosBinted/rysunek.svg", "NICK", "red", 
+		"Myślicie że ten wyciek był prawdziwy? Przecież by nam"
 	)],
 	"LewaOpcja",
 	"PrawaOpcja",
