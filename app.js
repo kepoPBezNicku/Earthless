@@ -6,7 +6,18 @@ let newDiv = document.querySelector('.respNav');
 let resources = document.getElementById('resources')
 let burger = document.getElementById('burger');
 
-// Otwieranie repsonsywnego menu przyciskiem
+// ====================== LEAVING SITE ALERT ======================
+window.addEventListener('beforeunload', function (e) {
+	var confirmationMessage = 'Czy na pewno chcesz opuścić stronę?';
+	e.returnValue = confirmationMessage;
+	return confirmationMessage;
+});
+
+window.addEventListener('unload', function () {
+	console.log('Strona jest odświeżana lub opuszczana.');
+});
+
+// ==== Otwieranie repsonsywnego menu przyciskiem ====
 
 burger.addEventListener('click', function() {
     if (resources.className == "") {
@@ -17,6 +28,19 @@ burger.addEventListener('click', function() {
         burger.className = "fa-solid fa-chart-simple";
     }
 })
+
+// ============ LOADING SCREEN ============
+
+function loadingScreen() {
+	setTimeout(
+		function() {
+			let loadingScreen = document.querySelector("#loading-screen");
+			loadingScreen.style.setProperty("display", "none");
+			loadingScreen.style.setProperty("opacity", 0);
+		}, 3190)
+}
+
+loadingScreen();
 
 // =========================================================
 
@@ -116,6 +140,10 @@ function doTheEvent(ob) {
 	buttonRight.addEventListener("click", ob.fP);
 }
 
+// =================== MOUSEOUVER ===================
+
+
+
 //====================CHAPTER 1====================
 //=====Underchapter 1=====
 
@@ -133,6 +161,9 @@ let c1u1e1 = new MyEvent(
 	"Zaraz się spóźnię!",
 	function () {
 		doTheEvent(c1u1e2v1);
+		buttonLeft.addEventListener("mouseover", function() {
+			
+		})
 	},
 	function () {
 		doTheEvent(c1u1e2v2)
@@ -333,16 +364,7 @@ let cxuxexvx = new MyEvent(
 
 doTheEvent(c1u1e1);
 
-function loadingScreen() {
-	setTimeout(
-		function() {
-			let loadingScreen = document.querySelector("#loading-screen");
-			loadingScreen.style.setProperty("display", "none");
-			loadingScreen.style.setProperty("opacity", 0);
-		}, 3190)
-}
 
-loadingScreen();
 /*
 let cxuxexvx = new MyEvent(
 	"bogosBinted/rysunek.svg",
@@ -370,13 +392,3 @@ let cxuxexvx = new MyEvent(
 */
 
 
-// ====================== LEAVING SITE ALERT ======================
-window.addEventListener('beforeunload', function (e) {
-	var confirmationMessage = 'Czy na pewno chcesz opuścić stronę?';
-	e.returnValue = confirmationMessage;
-	return confirmationMessage;
-});
-
-window.addEventListener('unload', function () {
-	console.log('Strona jest odświeżana lub opuszczana.');
-});

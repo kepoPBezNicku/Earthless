@@ -127,15 +127,17 @@ header {
 #header-section nav #resources ul {
     display: flex;
     justify-content: center;
+    /* align-items: center; */
     padding: 0px;
 }
 
 #header-section nav #resources ul li {
     list-style-type: none;
     font-size: 2rem;
-    margin: 0px 10px;
+    margin: 0px 20px;
     text-align: center;
 }
+
 
 
 #burger {
