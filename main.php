@@ -9,6 +9,17 @@
     <?php include 'zm.php' ?>
 </head>
 <body>
+    <ul id="loading-screen">
+        <li>E</li>
+        <li>A</li>
+        <li>R</li>
+        <li>T</li>
+        <li>H</li>
+        <li>L</li>
+        <li>E</li>
+        <li>S</li>
+        <li>S</li>
+    </ul>
     <header>
         <section id="header-section">
             <nav id="headerNav">
@@ -40,8 +51,10 @@
             <div class="choice">
                 <div id="middlediv">Default</div>
                 <div id="decision-button">
-                    <input type="button" value="Left" id="left" />
-                    <input type="button" value="Right" id="right" />
+                    <!-- <input type="button" value="Left" id="left" /> -->
+                    <button id="left"></button>
+                    <!-- <input type="button" value="Right" id="right" /> -->
+                    <button id="right"></button>
                 </div>
             </div>
         </section>

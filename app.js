@@ -21,8 +21,8 @@ burger.addEventListener('click', function() {
 // =========================================================
 
 let middlediv = document.querySelector("div#middlediv");
-let buttonLeft = document.querySelector("input#left");
-let buttonRight = document.querySelector("input#right");
+let buttonLeft = document.querySelector("button#left");
+let buttonRight = document.querySelector("button#right");
 
 let data = {
 	chapter: 1,
@@ -109,8 +109,8 @@ function doTheEvent(ob) {
 		);
 	});
 
-	buttonLeft.value = ob.opL;
-	buttonRight.value = ob.opP;
+	buttonLeft.textContent = ob.opL;
+	buttonRight.textContent = ob.opP;
 
 	buttonLeft.addEventListener("click", ob.fL);
 	buttonRight.addEventListener("click", ob.fP);
@@ -332,6 +332,17 @@ let cxuxexvx = new MyEvent(
 )
 
 doTheEvent(c1u1e1);
+
+function loadingScreen() {
+	setTimeout(
+		function() {
+			let loadingScreen = document.querySelector("#loading-screen");
+			loadingScreen.style.setProperty("opacity", 0);
+			loadingScreen.style.setProperty("display", "none");
+		}, 3200)
+}
+
+loadingScreen();
 /*
 let cxuxexvx = new MyEvent(
 	"bogosBinted/rysunek.svg",

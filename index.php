@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="style.css">
     <?php include 'zm.php' ?>
 </head>
-
 <body>
     <header id="head-ind">
         <section id="header-section">

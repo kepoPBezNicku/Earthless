@@ -29,13 +29,67 @@ body {
     position: relative;
 }
 
+#loading-screen {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #0b0c0f;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0px;
+    z-index: 10;
+    opacity: 1;
+    animation-duration: 0.3s;
+    animation-timing-function: ease;
+    animation-name: loadingScreenOp;
+    animation-delay: 3s;
+}
+
+@keyframes loadingScreenOp {
+    0% {opacity: 1}
+    100% {opacity: 0}
+}
+
+#loading-screen li {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0px;
+    font-family: Outfit;
+    animation-name: loadingScreen;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    margin-right: 0px;
+    font-size: 40px;
+    margin: 0px 10px;
+    text-align: center;
+    user-select: none;
+    color: white;
+}
+
+/* #loading-screen h1::after {
+    display: block;
+    border: 1px solid white;
+    background-color: white;
+    content: "";
+    transform-origin: 0%;
+} */
+
+@keyframes loadingScreen {
+    0% {font-size: 80px; margin: 0px 100px; color: var(--chapter-background-color)}
+    70% {font-size: 40px; margin: 0px 10px; color: var(--chapter-background-color)}
+    100% {color: white}
+}
+
 /* ---------------------------------------------------- */
 /* ---------------------- HEADER ---------------------- */
 /* ---------------------------------------------------- */
 
 header {
     background-color: var(--header-color);
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     font-family: var(--font-family);
     position: sticky;
     top: 0;
@@ -166,7 +220,7 @@ header {
     justify-content: space-evenly;
     font-family: var(--font-family);
     width:  700px;
-    margin: 0px auto;
+    margin: 0px auto 40px;
 }
 
 #main-section a {
@@ -196,32 +250,55 @@ header {
 #main-section .choice #middlediv {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     margin-bottom: 15px;
 }
 
+#main-section .choice #middlediv .whoInfo {
+    /* display: grid; */
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 0px;
+    margin: 10px 0px 0px 0px;
+    /* grid-template-columns: 1fr 1fr 4fr; */
+    /* grid-template:  */
+        /* "photo name text"; */
+        /* "text text"; */
+}
+
+#main-section .choice #middlediv .bigPhoto {
+    width: 400px;
+    margin: 0px auto;
+    border-radius: 20px;
+}
+
 #main-section .choice #middlediv .linePhoto {
-    order: 1;
-    margin: 15px 0px;
+    width: 50px;
+    /* grid-area: photo; */
+    /* margin: 0px 10px 0px auto; */
+    border-radius: 10px;
 }
 
 #main-section .choice #middlediv .lineWho {
     width: fit-content;
-    margin: 0px auto;
-    order: 0;
     font-size: 2rem;
+    /* grid-area: name; */
+    margin: 0px 0px 0px 10px;
 }
 
 #main-section .choice #middlediv .lineText {
-    order: 2;
+    width: 100%;
+    /* grid-area: text; */
+    margin: 10px;
 }
 
 #main-section .choice #decision-button {
     display: flex;
     justify-content: space-evenly;
+    gap: 20px;
 }
 
-#main-section .choice #decision-button input {
+#main-section .choice #decision-button button {
     border-radius: 5px;
     padding: 10px 25px;
     font-size: 1rem;
@@ -254,22 +331,26 @@ header {
     main {
         margin-top: 70px;
     }
+    #main-section .choice #decision-button {
+        align-items: center;
+    }
 }
 
 @media only screen and (max-width: 750px) {
     #main-section {
         flex-direction: column;
         margin: 10px auto;
+        padding: 0px 15px;
         width: fit-content;
         gap: 60px
     }
     #main-section div {
         width: 100%;
     }
-    #main-section .choice #middlediv .lineText {
+    /* #main-section .choice #middlediv .lineText {
         width: 70%;
         margin: 0px auto;
-    }
+    } */
     #main-section .choice #decision-button {
         flex-direction: column-reverse;
     }
