@@ -35,17 +35,20 @@ body {
     top: 0;
     background-color: #0b0c0f;
     width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0px;
+    padding: 0px;
     z-index: 10;
     opacity: 1;
     animation-duration: 0.3s;
     animation-timing-function: ease;
     animation-name: loadingScreenOp;
     animation-delay: 3s;
+    overflow: hidden;
 }
 
 @keyframes loadingScreenOp {
@@ -69,14 +72,6 @@ body {
     color: white;
 }
 
-/* #loading-screen h1::after {
-    display: block;
-    border: 1px solid white;
-    background-color: white;
-    content: "";
-    transform-origin: 0%;
-} */
-
 @keyframes loadingScreen {
     0% {font-size: 80px; margin: 0px 100px; color: var(--chapter-background-color)}
     70% {font-size: 40px; margin: 0px 10px; color: var(--chapter-background-color)}
@@ -89,7 +84,6 @@ body {
 
 header {
     background-color: var(--header-color);
-    margin-bottom: 40px;
     font-family: var(--font-family);
     position: sticky;
     top: 0;
@@ -221,6 +215,7 @@ header {
     font-family: var(--font-family);
     width:  700px;
     margin: 0px auto 40px;
+    padding-top: 80px;
 }
 
 #main-section a {
@@ -329,7 +324,8 @@ header {
 
 @media only screen and (max-width: 920px) {
     main {
-        margin-top: 70px;
+        /* margin-top: 70px; */
+        padding-top: 120px;
     }
     #main-section .choice #decision-button {
         align-items: center;
@@ -361,7 +357,7 @@ header {
 
 @media only screen and (max-width: 650px) {
     main {
-        margin-top: 100px
+        padding-top: 130px
     }
 }
 

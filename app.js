@@ -337,9 +337,9 @@ function loadingScreen() {
 	setTimeout(
 		function() {
 			let loadingScreen = document.querySelector("#loading-screen");
-			loadingScreen.style.setProperty("opacity", 0);
 			loadingScreen.style.setProperty("display", "none");
-		}, 3200)
+			loadingScreen.style.setProperty("opacity", 0);
+		}, 3190)
 }
 
 loadingScreen();
@@ -368,3 +368,15 @@ let cxuxexvx = new MyEvent(
 	}
 )
 */
+
+
+// ====================== LEAVING SITE ALERT ======================
+window.addEventListener('beforeunload', function (e) {
+	var confirmationMessage = 'Czy na pewno chcesz opuścić stronę?';
+	e.returnValue = confirmationMessage;
+	return confirmationMessage;
+});
+
+window.addEventListener('unload', function () {
+	console.log('Strona jest odświeżana lub opuszczana.');
+});
