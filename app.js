@@ -92,7 +92,7 @@ fuel.style.setProperty("--transform", "scaleY("+data.stats.fuel+')');
 
 class MyEvent {
 	constructor(photoPath, line, opL, opP, fL, fP) {
-		this.photoPath = photoPath; //ex rysunek.svg
+		this.photoPath = photoPath; //ex rysunek.png
 		this.line = line; //list of obiects (path,who, color, line)
 		this.opL = opL; //string
 		this.opP = opP; //string
@@ -150,56 +150,65 @@ function doTheEvent(ob) {
 	buttonLeft.textContent = ob.opL;
 	buttonRight.textContent = ob.opP;
 
+	buttonLeft.removeEventListener('click', ob.fL),
+	buttonRight.removeEventListener('click', ob.fP),
+
 	buttonLeft.addEventListener("click", ob.fL);
 	buttonRight.addEventListener("click", ob.fP);
 }
 
 // =================== MOUSEOUVER ===================
 
-
+function statsChanger(object,cos,cos,cos,pOp,mon,fue) {
+	// object.removeEventListener('click'),
+	publicOpinion.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')')
+	object.addEventListener("mouseover", function() {
+		publicOpinion.style.setProperty("--transform", "scaleY("+pOp+')')
+		// console.log("GUWNWANOWNOONWOWOWO")
+	})
+	object.addEventListener("mouseout", function() {
+		publicOpinion.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')')
+	})
+	object.addEventListener("click", function() {
+		publicOpinion.style.setProperty("--transform", "scaleY("+pOp+')')
+		data.stats.publicOpinion = pOp;
+	})
+}
 
 //====================CHAPTER 1====================
 //=====Underchapter 1=====
 
 //wstawić jakiś sen (insp. Adamem Mickiewiczem XDDDD)
-
 let c1u1e1 = new MyEvent(
-	"bogosBinted/rysunek.svg",	//budzik.svg
+	"bogosBinted/rysunek.png",	//budzik.png
 	[
 		new MyLine(
-			"bogosBinted/rysunek.svg", "Jakub", "green",
+			"bogosBinted/rysunek.png", "Jakub", "green",
 			"Ooh, co to... co ty było? Co to niby miało... JUŻ 8, ZASPAŁEM! Ale ten sen..."
 		),
 	],
 	"O co chodziło z tym snem?",
 	"Zaraz się spóźnię!",
-	// TA FUNKCJA JEST WZOREM DO RESZTY OBIEKTOW
+	
 	function () {
-		publicOpinion.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')')
-		buttonRight.addEventListener("mouseover", function() {
-			publicOpinion.style.setProperty("--transform", "scaleY(0.9)")
-		})
-		buttonRight.addEventListener("mouseout", function() {
-			publicOpinion.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')')
-		})
 		doTheEvent(c1u1e2v1);
-		buttonRight.addEventListener("click", function() {
-			publicOpinion.style.setProperty("--transform", "scaleY(0.9)")
-			data.stats.publicOpinion = 0.9;
-			// DO ZMIANY (TEST)
-		})
+		
 	},
+	
 	function () {
 		doTheEvent(c1u1e2v2)
+		
 	},
+	statsChanger(buttonLeft,null,null,null,0.3),
+	statsChanger(buttonRight,null,null,null,0.9)
 );
 
 let c1u1e2v1 = new MyEvent(
-	"bogosBinted/rysunek.svg", //chmurka.svg
+	"bogosBinted/rysunek.png", //chmurka.png
 	[
-		new MyLine("bogosBinted/rysunek.svg", "Jakub", "green",
+		new MyLine("bogosBinted/rysunek.png", "Jakub", "green",
 		"Nigga"),
-		new MyLine("bogosBinted/rysunek.svg", "bukaJ", "red",
+		new MyLine("bogosBinted/rysunek.png", "bukaJ", "red",
 		"Nigga2"),
 	],
 	"Zaraz się spóźnię!",
@@ -207,20 +216,20 @@ let c1u1e2v1 = new MyEvent(
 	function () {
 		// people.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')')
 		data.notimeleft = true;
-
-		doTheEvent(c1u1e2v1);
+		
 	},
 	function () {
 		data.notimeleft = true;
-
-		doTheEvent(c1u1e2v1);
-	}
+		
+	},
+	// statsChanger(buttonLeft,null,null,null,1.2,null,null),
+	// statsChanger(buttonRight,null,null,null,-1,null,null)
 );
 
 let c1u1e2v2 = new MyEvent(
-	"bogosBinted/rysunek.svg", //budzik.svg
+	"bogosBinted/rysunek.png", //budzik.png
 	[new MyLine(
-		"bogosBinted/rysunek.svg", "Jakub", "green",
+		"bogosBinted/rysunek.png", "Jakub", "green",
 		"Na dzisiejszym wywiadzie muszę się dobrze prezentować! Ale mogę nie zdążyć ze wszystkim."
 	)],
 	"Wypij kawę", 
@@ -240,9 +249,9 @@ let c1u1e2v2 = new MyEvent(
 )
 
 let c1u1e3v1 = new MyEvent(
-	"bogosBinted/rysunek.svg", //kawa.svg
+	"bogosBinted/rysunek.png", //kawa.png
 	[new MyLine(
-		"bogosBinted/rysunek.svg", "Jakub", "green",
+		"bogosBinted/rysunek.png", "Jakub", "green",
 		"Dzień bez kawy to dzień stracony! Dobra, na szczęscie zostało mi trochę czasu na..."
 	)],
 	"Wymycie zębów",
@@ -260,9 +269,9 @@ let c1u1e3v1 = new MyEvent(
 )
 
 let c1u1e3v2 = new MyEvent(
-	"bogosBinted/rysunek.svg", //zeby.svg
+	"bogosBinted/rysunek.png", //zeby.png
 	[new MyLine(
-		"bogosBinted/rysunek.svg", "Jakub", "green",
+		"bogosBinted/rysunek.png", "Jakub", "green",
 		"No, i takie ząbki ma człowiek sukcesu :DD teraz zostało mi jeszcze trochę czasu żeby .."
 	)],
 	"Zjeść śniadanie",
@@ -280,9 +289,9 @@ let c1u1e3v2 = new MyEvent(
 )
 
 let c1u1e3v3 = new MyEvent(
-	"bogosBinted/rysunek.svg", //kawa.svg
+	"bogosBinted/rysunek.png", //kawa.png
 	[new MyLine(
-		"bogosBinted/rysunek.svg", "Jakub", "green",
+		"bogosBinted/rysunek.png", "Jakub", "green",
 		"Dzień bez kawy to dzień stracony! No ale już nic innego nie zdążę zrobić, pójdę złapać taxi."
 	)],
 	"Wezmę zwykłą taxówkę, każdy grosz się liczy.",
@@ -300,9 +309,9 @@ let c1u1e3v3 = new MyEvent(
 )
 
 let c1u1e3v4 = new MyEvent(
-	"bogosBinted/rysunek.svg", //zeby,svg
+	"bogosBinted/rysunek.png", //zeby,png
 	[new MyLine(
-		"bogosBinted/rysunek.svg", "Jakub", "green",
+		"bogosBinted/rysunek.png", "Jakub", "green",
 		"No, i takie ząbki ma człowiek sukcesu :DD Dobra, dość tego gapienia się w lustro, lepiej zamówię taxi."
 	)],
 	"Wezmę zwykłą taxówkę, każdy grosz się liczy.",
@@ -320,9 +329,9 @@ let c1u1e3v4 = new MyEvent(
 )
 
 let c1u1e4v1 = new MyEvent(
-	"bogosBinted/rysunek.svg", //jedzenie.svg
+	"bogosBinted/rysunek.png", //jedzenie.png
 	[new MyLine(
-		"bogosBinted/rysunek.svg", "Jakub", "green",
+		"bogosBinted/rysunek.png", "Jakub", "green",
 		"Dobra, najadłem się, teraz lece zamówić taxi. "
 	)],
 	"Wezmę zwykłą taxówkę, każdy grosz się liczy.",
@@ -340,9 +349,9 @@ let c1u1e4v1 = new MyEvent(
 )
 
 let c1u1e5v1 = new MyEvent(
-	"bogosBinted/rysunek.svg",
+	"bogosBinted/rysunek.png",
 	[new MyLine(
-		"bogosBinted/rysunek.svg", "Jakub", "green",
+		"bogosBinted/rysunek.png", "Jakub", "green",
 		"Zaraz powinna być, w tym czasie może..."
 	)],
 	"Zobaczę co się dzieje na Y",
@@ -360,17 +369,17 @@ let c1u1e5v1 = new MyEvent(
 )
 
 let c1u1e6v1 = new MyEvent(
-	"bogosBinted/rysunek.svg",
+	"bogosBinted/rysunek.png",
 	[new MyLine(
-		"bogosBinted/rysunek.svg", "SkididiEdge2k13", "white",
+		"bogosBinted/rysunek.png", "SkididiEdge2k13", "white",
 		"Halo?? Dziś jest prima aprilis czy ja o czymś nie wiem???"
 	),
 	new MyLine(
-		"bogosBinted/rysunek.svg", "ArchUserUWU", "white", 
+		"bogosBinted/rysunek.png", "ArchUserUWU", "white", 
 		"Myślicie że ten wyciek był prawdziwy? Przecież by nam powiedzieli o czymś takim..."
 	),
 	new MyLine(
-		"bogosBinted/rysunek.svg", "NwordEnjoyer", "white",
+		"bogosBinted/rysunek.png", "NwordEnjoyer", "white",
 		"No to zaczynamy szturm foliarzy XDDD nie ma szans że to prawda, pewnie jakieś AI"
 	)],
 	"Przewiń dalej",
@@ -396,9 +405,9 @@ doTheEvent(c1u1e1);
 
 /*
 let cuev = new MyEvent(
-	"bogosBinted/rysunek.svg",
+	"bogosBinted/rysunek.png",
 	[new MyLine(
-		"bogosBinted/rysunek.svg", "Jakub", "red",
+		"bogosBinted/rysunek.png", "Jakub", "red",
 		"testline"
 	)],
 	"LewaOpcja",
