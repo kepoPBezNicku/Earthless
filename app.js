@@ -61,22 +61,21 @@ let data = {
 	chapter: 1,
 	underchapter: 1,
 	stats: {
-		publicOpinion: 0.5, //%
-		currency: 0.5, //(n)
-		fuel: 0.5, //n
+		publicOpinion: 0.5, 
+		currency: 0.5,
+		fuel: 0.5,
 		relations: {
-			//%
-			chemist: 50,
-			biologist: 50,
-			physicist: 50,
-			farmer: 50,
-			handler: 50,
-			translator: 50,
+			chemist: 0.5,
+			biologist: 0.5,
+			physicist: 0.5,
+			farmer: 0.5,
+			handler: 0.5,
+			translator: 0.5,
 		},
 		alienRelations: {
-			Nerds: 50,
-			Magicals: 50,
-			AgreSuS: 50,
+			Nerds: 0.5,
+			Magicals: 0.5,
+			AgreSuS: 0.5,
 		},
 	},
 	notimeleft: false,
@@ -85,19 +84,16 @@ let data = {
 	isBreakfastEaten : false
 };
 
-
-publicOpinion.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')');
-money.style.setProperty("--transform", "scaleY("+data.stats.currency+')');
-fuel.style.setProperty("--transform", "scaleY("+data.stats.fuel+')');
-
 class MyEvent {
-	constructor(photoPath, line, opL, opP, fL, fP) {
+	constructor(photoPath, line, opL, opP, fL, fP, sL, sP) {
 		this.photoPath = photoPath; //ex rysunek.svg
 		this.line = line; //list of obiects (path,who, color, line)
 		this.opL = opL; //string
 		this.opP = opP; //string
 		this.fL = fL; //function
 		this.fP = fP; //function
+		this.sL = sL; //2-dimension list
+		this.sP = sP; //2-dimension list
 	}
 }
 
@@ -152,11 +148,9 @@ function doTheEvent(ob) {
 
 	buttonLeft.addEventListener("click", ob.fL);
 	buttonRight.addEventListener("click", ob.fP);
+
+	//tutaj dodamy mouseover
 }
-
-// =================== MOUSEOUVER ===================
-
-
 
 //====================CHAPTER 1====================
 //=====Underchapter 1=====
@@ -173,21 +167,8 @@ let c1u1e1 = new MyEvent(
 	],
 	"O co chodziło z tym snem?",
 	"Zaraz się spóźnię!",
-	// TA FUNKCJA JEST WZOREM DO RESZTY OBIEKTOW
 	function () {
-		publicOpinion.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')')
-		buttonRight.addEventListener("mouseover", function() {
-			publicOpinion.style.setProperty("--transform", "scaleY(0.9)")
-		})
-		buttonRight.addEventListener("mouseout", function() {
-			publicOpinion.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')')
-		})
 		doTheEvent(c1u1e2v1);
-		buttonRight.addEventListener("click", function() {
-			publicOpinion.style.setProperty("--transform", "scaleY(0.9)")
-			data.stats.publicOpinion = 0.9;
-			// DO ZMIANY (TEST)
-		})
 	},
 	function () {
 		doTheEvent(c1u1e2v2)
@@ -205,15 +186,14 @@ let c1u1e2v1 = new MyEvent(
 	"Zaraz się spóźnię!",
 	"Nie mam czasu, muszę się zbierać",
 	function () {
-		// people.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')')
 		data.notimeleft = true;
 
-		doTheEvent(c1u1e2v1);
+		doTheEvent(c1u1e2v2);
 	},
 	function () {
 		data.notimeleft = true;
 
-		doTheEvent(c1u1e2v1);
+		doTheEvent(c1u1e2v2);
 	}
 );
 
@@ -470,7 +450,9 @@ let cuev = new MyEvent(
 		//nextOptionToRun
 
 		console.log("OpcjaP")
-	}
+	},
+	[["",0.1]["",0.2]],
+	[["",0.1]["",0.2]]
 )
 */
 
