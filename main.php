@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Projekt GEEK</title>
     <link rel="stylesheet" href="style.css">
-    <?php include 'zm.php' ?>
 </head>
 <body>
     <ul id="loading-screen">
@@ -51,9 +50,7 @@
             <div class="choice">
                 <div id="middlediv">Default</div>
                 <div id="decision-button">
-                    <!-- <input type="button" value="Left" id="left" /> -->
                     <button id="left"></button>
-                    <!-- <input type="button" value="Right" id="right" /> -->
                     <button id="right"></button>
                 </div>
             </div>
