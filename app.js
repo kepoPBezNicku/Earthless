@@ -353,27 +353,57 @@ let c1u1e6 = new MyEvent(
 	function (){
 		//stats
 
-		//nextOptionToRun
-
-		console.log("OpcjaL")
+		doTheEvent(c1u1e7);
 	},
 	function (){
 		//stats
 
-		//nextOptionToRun
-
-		console.log("OpcjaP")
+		doTheEvent(c1u1e7);
 	}
 )
 
 let c1u1e7 = new MyEvent(
 	"bogosBinted/rysunek.svg",
 	[new MyLine(
-		"bogosBinted/rysunek.svg", "PanMirek", "yellow",
+		"bogosBinted/rysunek.svg", "Pan Mirek", "yellow",
 		"Długo będzie jeszcze tam pan stał? Ja mam inne kursy!"
 	)],
 	"O, to już? Szybki pan jest!",
 	"Ale spokojnie, gdzie się panu tak śpieszy?",
+	function (){
+		//stats
+
+		doTheEvent(c1u1e8)
+	},
+	function (){
+		//stats
+
+		doTheEvent(c1u1e8)
+
+		console.log("OpcjaP")
+	}
+)
+
+let c1u1e8 = new MyEvent(
+	"bogosBinted/rysunek.svg",
+	[new MyLine(
+		"bogosBinted/rysunek.svg", "Pan Mirek", "yellow",
+		"Puścić panu coś?"
+	),
+	new MyLine(
+		"bogosBinted/rysunek.svg", "Jakub", "green",
+		"Czemu nie? To pan puści radio gulasz może"
+	),
+	new MyLine(
+		"bogosBinted/rysunek.svg", "*kobiecy głos z radia*", "red",
+		"Przerywamy porgram by wydać nowy komunikat rzecznika sekretarza ONZ: Tak, to prawda. W związku z obecnymi zagrożeniami naturalnymi jesteśmy zmuszeni jako ludzkość ewakuwać się na inną planetę. Apeluję o zachowanie spokoju, zdrowego rozsądku i wiarę, że wyjdziemy z tego problemu cało."
+	),
+	new MyLine(
+		"bogosBinted/rysunek.svg", "Jakub", "green",
+		"Czyli zaczyna się..."
+	)],
+	"LewaOpcja",
+	"PrawaOpcja",
 	function (){
 		//stats
 
