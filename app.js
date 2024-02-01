@@ -325,16 +325,16 @@ let c1u1e5v1 = new MyEvent(
 	function (){
 		//stats
 
-		doTheEvent(c1u1e6v1)
+		doTheEvent(c1u1e6)
 	},
 	function (){
 		//stats
 
-		// doTheEvent(c1u1e6v2)
+		doTheEvent(c1u1e7)
 	}
 )
 
-let c1u1e6v1 = new MyEvent(
+let c1u1e6 = new MyEvent(
 	"bogosBinted/rysunek.svg",
 	[new MyLine(
 		"bogosBinted/rysunek.svg", "SkibidiEdge2k13", "white",
@@ -350,6 +350,30 @@ let c1u1e6v1 = new MyEvent(
 	)],
 	"Przewiń dalej",
 	"Wyłącz telefon",
+	function (){
+		//stats
+
+		//nextOptionToRun
+
+		console.log("OpcjaL")
+	},
+	function (){
+		//stats
+
+		//nextOptionToRun
+
+		console.log("OpcjaP")
+	}
+)
+
+let c1u1e7 = new MyEvent(
+	"bogosBinted/rysunek.svg",
+	[new MyLine(
+		"bogosBinted/rysunek.svg", "PanMirek", "yellow",
+		"Długo będzie jeszcze tam pan stał? Ja mam inne kursy!"
+	)],
+	"O, to już? Szybki pan jest!",
+	"Ale spokojnie, gdzie się panu tak śpieszy?",
 	function (){
 		//stats
 
