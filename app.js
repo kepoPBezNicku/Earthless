@@ -107,7 +107,7 @@ function doTheEvent(ob) {
 	ob.line.forEach((element) => {
 		let whoinfo = document.createElement("div")
 		whoinfo.classList.add("whoInfo");
-		newBigPhoto.insertAdjacentElement('afterend', whoinfo)
+		middlediv.insertAdjacentElement('beforeend', whoinfo)
 
 		let newPhoto = document.createElement("img");
 		newPhoto.setAttribute("src", element.photoPath);
@@ -337,7 +337,7 @@ let c1u1e5v1 = new MyEvent(
 let c1u1e6v1 = new MyEvent(
 	"bogosBinted/rysunek.svg",
 	[new MyLine(
-		"bogosBinted/rysunek.svg", "SkididiEdge2k13", "white",
+		"bogosBinted/rysunek.svg", "SkibidiEdge2k13", "white",
 		"Halo?? Dziś jest prima aprilis czy ja o czymś nie wiem???"
 	),
 	new MyLine(
