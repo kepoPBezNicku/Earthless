@@ -8,12 +8,12 @@ let burger = document.getElementById('burger');
 
 // ===== RESOURCE'S PSEUDOELEMENTS =====
 
-let questionMark1 = document.querySelector('#header-section nav #resources ul li:nth-of-type(1)::after');
-let questionMark2 = document.querySelector('#header-section nav #resources ul li:nth-of-type(2)::after');
-let questionMark3 = document.querySelector('#header-section nav #resources ul li:nth-of-type(3)::after');
-let people = document.querySelector('#header-section nav #resources #right-header-container li:nth-of-type(1)');
+let questionMark1 = document.querySelector('#header-section nav #left-header-container li:nth-of-type(1)');
+let questionMark2 = document.querySelector('#header-section nav #left-header-container li:nth-of-type(2)');
+let questionMark3 = document.querySelector('#header-section nav #left-header-container li:nth-of-type(3)');
+let publicOpinion = document.querySelector('#header-section nav #resources #right-header-container li:nth-of-type(1)');
 let fuel = document.querySelector('#header-section nav #resources #right-header-container li:nth-of-type(2)');
-let money = document.querySelector('#header-section nav #resources ul li:nth-of-type(6)::after');
+let money = document.querySelector('#header-section nav #resources #right-header-container li:nth-of-type(3)');
 
 // ====================== LEAVING SITE ALERT ======================
 window.addEventListener('beforeunload', function (e) {
@@ -85,6 +85,10 @@ let data = {
 	isBreakfastEaten : false
 };
 
+
+publicOpinion.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')')
+fuel.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')')
+money.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')')
 
 
 class MyEvent {
@@ -160,8 +164,6 @@ function doTheEvent(ob) {
 
 //wstawić jakiś sen (insp. Adamem Mickiewiczem XDDDD)
 
-people.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')')
-
 let c1u1e1 = new MyEvent(
 	"bogosBinted/rysunek.svg",	//budzik.svg
 	[
@@ -172,18 +174,20 @@ let c1u1e1 = new MyEvent(
 	],
 	"O co chodziło z tym snem?",
 	"Zaraz się spóźnię!",
+	// TA FUNKCJA JEST WZOREM DO RESZTY OBIEKTOW
 	function () {
-		people.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')')
+		publicOpinion.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')')
 		buttonRight.addEventListener("mouseover", function() {
-			people.style.setProperty("--transform", "scaleY(0.9)")
+			publicOpinion.style.setProperty("--transform", "scaleY(0.9)")
 		})
 		buttonRight.addEventListener("mouseout", function() {
-			people.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')')
+			publicOpinion.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')')
 		})
 		doTheEvent(c1u1e2v1);
 		buttonRight.addEventListener("click", function() {
-			people.style.setProperty("--transform", "scaleY(0.9)")
+			publicOpinion.style.setProperty("--transform", "scaleY(0.9)")
 			data.stats.publicOpinion = 0.9;
+			// DO ZMIANY (TEST)
 		})
 	},
 	function () {
