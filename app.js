@@ -299,7 +299,7 @@ let c1u1e5v1 = new MyEvent(
 	function (){
 		//stats
 
-		doTheEvent(c1u1e6v2)
+		// doTheEvent(c1u1e6v2)
 	}
 )
 
@@ -315,10 +315,10 @@ let c1u1e6v1 = new MyEvent(
 	),
 	new MyLine(
 		"bogosBinted/rysunek.svg", "NwordEnjoyer", "white",
-		"No to zaczynamy szturm foliarzy XDDD"
+		"No to zaczynamy szturm foliarzy XDDD nie ma szans że to prawda, pewnie jakieś AI"
 	)],
-	"LewaOpcja",
-	"PrawaOpcja",
+	"Przewiń dalej",
+	"Wyłącz telefon",
 	function (){
 		//stats
 
