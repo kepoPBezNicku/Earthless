@@ -6,7 +6,18 @@ let newDiv = document.querySelector('.respNav');
 let resources = document.getElementById('resources')
 let burger = document.getElementById('burger');
 
-// Otwieranie repsonsywnego menu przyciskiem
+// ====================== LEAVING SITE ALERT ======================
+window.addEventListener('beforeunload', function (e) {
+	var confirmationMessage = 'Czy na pewno chcesz opuścić stronę?';
+	e.returnValue = confirmationMessage;
+	return confirmationMessage;
+});
+
+window.addEventListener('unload', function () {
+	console.log('Strona jest odświeżana lub opuszczana.');
+});
+
+// ==== Otwieranie repsonsywnego menu przyciskiem ====
 
 burger.addEventListener('click', function() {
     if (resources.className == "") {
@@ -18,11 +29,24 @@ burger.addEventListener('click', function() {
     }
 })
 
+// ============ LOADING SCREEN ============
+
+function loadingScreen() {
+	setTimeout(
+		function() {
+			let loadingScreen = document.querySelector("#loading-screen");
+			loadingScreen.style.setProperty("display", "none");
+			loadingScreen.style.setProperty("opacity", 0);
+		}, 3190)
+}
+
+loadingScreen();
+
 // =========================================================
 
 let middlediv = document.querySelector("div#middlediv");
-let buttonLeft = document.querySelector("input#left");
-let buttonRight = document.querySelector("input#right");
+let buttonLeft = document.querySelector("button#left");
+let buttonRight = document.querySelector("button#right");
 
 let data = {
 	chapter: 1,
@@ -109,12 +133,16 @@ function doTheEvent(ob) {
 		);
 	});
 
-	buttonLeft.value = ob.opL;
-	buttonRight.value = ob.opP;
+	buttonLeft.textContent = ob.opL;
+	buttonRight.textContent = ob.opP;
 
 	buttonLeft.addEventListener("click", ob.fL);
 	buttonRight.addEventListener("click", ob.fP);
 }
+
+// =================== MOUSEOUVER ===================
+
+
 
 //====================CHAPTER 1====================
 //=====Underchapter 1=====
@@ -133,6 +161,9 @@ let c1u1e1 = new MyEvent(
 	"Zaraz się spóźnię!",
 	function () {
 		doTheEvent(c1u1e2v1);
+		buttonLeft.addEventListener("mouseover", function() {
+			
+		})
 	},
 	function () {
 		doTheEvent(c1u1e2v2)
@@ -336,6 +367,8 @@ let c1u1e6v1 = new MyEvent(
 )
 
 doTheEvent(c1u1e1);
+
+
 /*
 let cuev = new MyEvent(
 	"bogosBinted/rysunek.svg",
@@ -361,3 +394,5 @@ let cuev = new MyEvent(
 	}
 )
 */
+
+

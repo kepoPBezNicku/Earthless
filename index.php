@@ -8,14 +8,13 @@
     <link rel="stylesheet" href="style.css">
     <?php include 'zm.php' ?>
 </head>
-
 <body>
     <header id="head-ind">
         <section id="header-section">
             <nav id="headerNav-index">
                 <div>
-                    <h1>Gra</h1>
-                    <h5>xdx</h5>
+                    <!-- <h1>Gra</h1>
+                    <h5>xdx</h5> -->
                 </div>
             </nav>
         </section>
