@@ -6,6 +6,15 @@ let newDiv = document.querySelector('.respNav');
 let resources = document.getElementById('resources')
 let burger = document.getElementById('burger');
 
+// ===== RESOURCE'S PSEUDOELEMENTS =====
+
+let questionMark1 = document.querySelector('#header-section nav #left-header-container li:nth-of-type(1)');
+let questionMark2 = document.querySelector('#header-section nav #left-header-container li:nth-of-type(2)');
+let questionMark3 = document.querySelector('#header-section nav #left-header-container li:nth-of-type(3)');
+let publicOpinion = document.querySelector('#header-section nav #resources #right-header-container li:nth-of-type(1)');
+let fuel = document.querySelector('#header-section nav #resources #right-header-container li:nth-of-type(2)');
+let money = document.querySelector('#header-section nav #resources #right-header-container li:nth-of-type(3)');
+
 // ====================== LEAVING SITE ALERT ======================
 window.addEventListener('beforeunload', function (e) {
 	var confirmationMessage = 'Czy na pewno chcesz opuścić stronę?';
@@ -52,9 +61,9 @@ let data = {
 	chapter: 1,
 	underchapter: 1,
 	stats: {
-		publicOpinion: 50, //%
-		currency: 100, //(n)
-		fuel: 0, //n
+		publicOpinion: 0.5, //%
+		currency: 0.5, //(n)
+		fuel: 0.5, //n
 		relations: {
 			//%
 			chemist: 50,
@@ -75,6 +84,11 @@ let data = {
 	isCoffeDrunk : false,
 	isBreakfastEaten : false
 };
+
+
+publicOpinion.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')');
+money.style.setProperty("--transform", "scaleY("+data.stats.currency+')');
+fuel.style.setProperty("--transform", "scaleY("+data.stats.fuel+')');
 
 class MyEvent {
 	constructor(photoPath, line, opL, opP, fL, fP) {
@@ -159,15 +173,25 @@ let c1u1e1 = new MyEvent(
 	],
 	"O co chodziło z tym snem?",
 	"Zaraz się spóźnię!",
+	// TA FUNKCJA JEST WZOREM DO RESZTY OBIEKTOW
 	function () {
+		publicOpinion.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')')
+		buttonRight.addEventListener("mouseover", function() {
+			publicOpinion.style.setProperty("--transform", "scaleY(0.9)")
+		})
+		buttonRight.addEventListener("mouseout", function() {
+			publicOpinion.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')')
+		})
 		doTheEvent(c1u1e2v1);
-		buttonLeft.addEventListener("mouseover", function() {
-			
+		buttonRight.addEventListener("click", function() {
+			publicOpinion.style.setProperty("--transform", "scaleY(0.9)")
+			data.stats.publicOpinion = 0.9;
+			// DO ZMIANY (TEST)
 		})
 	},
 	function () {
 		doTheEvent(c1u1e2v2)
-	}
+	},
 );
 
 let c1u1e2v1 = new MyEvent(
@@ -181,6 +205,7 @@ let c1u1e2v1 = new MyEvent(
 	"Zaraz się spóźnię!",
 	"Nie mam czasu, muszę się zbierać",
 	function () {
+		// people.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')')
 		data.notimeleft = true;
 
 		doTheEvent(c1u1e2v1);
