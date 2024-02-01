@@ -62,8 +62,8 @@ let data = {
 	underchapter: 1,
 	stats: {
 		publicOpinion: 0.5, //%
-		currency: 100, //(n)
-		fuel: 0, //n
+		currency: 0.5, //(n)
+		fuel: 0.5, //n
 		relations: {
 			//%
 			chemist: 50,
@@ -86,10 +86,9 @@ let data = {
 };
 
 
-publicOpinion.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')')
-fuel.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')')
-money.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')')
-
+publicOpinion.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')');
+money.style.setProperty("--transform", "scaleY("+data.stats.currency+')');
+fuel.style.setProperty("--transform", "scaleY("+data.stats.fuel+')');
 
 class MyEvent {
 	constructor(photoPath, line, opL, opP, fL, fP) {
