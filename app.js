@@ -303,15 +303,19 @@ let c1u1e5v1 = new MyEvent(
 	}
 )
 
-let cxuxexvx = new MyEvent(
+let c1u1e6v1 = new MyEvent(
 	"bogosBinted/rysunek.svg",
 	[new MyLine(
-		"bogosBinted/rysunek.svg", "NICK", "red",
+		"bogosBinted/rysunek.svg", "SkididiEdge2k13", "white",
 		"Halo?? Dziś jest prima aprilis czy ja o czymś nie wiem???"
 	),
 	new MyLine(
-		"bogosBinted/rysunek.svg", "NICK", "red", 
-		"Myślicie że ten wyciek był prawdziwy? Przecież by nam"
+		"bogosBinted/rysunek.svg", "ArchUserUWU", "white", 
+		"Myślicie że ten wyciek był prawdziwy? Przecież by nam powiedzieli o czymś takim..."
+	),
+	new MyLine(
+		"bogosBinted/rysunek.svg", "NwordEnjoyer", "white",
+		"No to zaczynamy szturm foliarzy XDDD"
 	)],
 	"LewaOpcja",
 	"PrawaOpcja",
@@ -333,7 +337,7 @@ let cxuxexvx = new MyEvent(
 
 doTheEvent(c1u1e1);
 /*
-let cxuxexvx = new MyEvent(
+let cuev = new MyEvent(
 	"bogosBinted/rysunek.svg",
 	[new MyLine(
 		"bogosBinted/rysunek.svg", "Jakub", "red",
