@@ -6,6 +6,15 @@ let newDiv = document.querySelector('.respNav');
 let resources = document.getElementById('resources')
 let burger = document.getElementById('burger');
 
+// ===== RESOURCE'S PSEUDOELEMENTS =====
+
+let questionMark1 = document.querySelector('#header-section nav #resources ul li:nth-of-type(1)::after');
+let questionMark2 = document.querySelector('#header-section nav #resources ul li:nth-of-type(2)::after');
+let questionMark3 = document.querySelector('#header-section nav #resources ul li:nth-of-type(3)::after');
+let people = document.querySelector('#header-section nav #resources #right-header-container li:nth-of-type(1)');
+let fuel = document.querySelector('#header-section nav #resources #right-header-container li:nth-of-type(2)');
+let money = document.querySelector('#header-section nav #resources ul li:nth-of-type(6)::after');
+
 // ====================== LEAVING SITE ALERT ======================
 window.addEventListener('beforeunload', function (e) {
 	var confirmationMessage = 'Czy na pewno chcesz opuścić stronę?';
@@ -52,7 +61,7 @@ let data = {
 	chapter: 1,
 	underchapter: 1,
 	stats: {
-		publicOpinion: 50, //%
+		publicOpinion: 0.5, //%
 		currency: 100, //(n)
 		fuel: 0, //n
 		relations: {
@@ -75,6 +84,8 @@ let data = {
 	isCoffeDrunk : false,
 	isBreakfastEaten : false
 };
+
+
 
 class MyEvent {
 	constructor(photoPath, line, opL, opP, fL, fP) {
@@ -149,6 +160,8 @@ function doTheEvent(ob) {
 
 //wstawić jakiś sen (insp. Adamem Mickiewiczem XDDDD)
 
+people.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')')
+
 let c1u1e1 = new MyEvent(
 	"bogosBinted/rysunek.svg",	//budzik.svg
 	[
@@ -160,14 +173,22 @@ let c1u1e1 = new MyEvent(
 	"O co chodziło z tym snem?",
 	"Zaraz się spóźnię!",
 	function () {
+		people.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')')
+		buttonRight.addEventListener("mouseover", function() {
+			people.style.setProperty("--transform", "scaleY(0.9)")
+		})
+		buttonRight.addEventListener("mouseout", function() {
+			people.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')')
+		})
 		doTheEvent(c1u1e2v1);
-		buttonLeft.addEventListener("mouseover", function() {
-			
+		buttonRight.addEventListener("click", function() {
+			people.style.setProperty("--transform", "scaleY(0.9)")
+			data.stats.publicOpinion = 0.9;
 		})
 	},
 	function () {
 		doTheEvent(c1u1e2v2)
-	}
+	},
 );
 
 let c1u1e2v1 = new MyEvent(
@@ -181,6 +202,7 @@ let c1u1e2v1 = new MyEvent(
 	"Zaraz się spóźnię!",
 	"Nie mam czasu, muszę się zbierać",
 	function () {
+		// people.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')')
 		data.notimeleft = true;
 
 		doTheEvent(c1u1e2v1);

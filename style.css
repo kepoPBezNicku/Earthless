@@ -15,8 +15,7 @@ body {
     --chapter-background-color: #434c5e;
     --main-containers-color: #4c566a;
     --font-family: "Outfit", Segoe UI, sans-serif;
-    --left-button: #bf616a;
-    --right-button: #a3be8c;
+    --button: #d8dee9;
 }
 
 html {
@@ -136,9 +135,23 @@ header {
     font-size: 2rem;
     margin: 0px 20px;
     text-align: center;
+    display: inline-block;
+    /* --transform: scaleY(0.5); */
 }
 
-
+#header-section nav #resources ul li::after {
+    content: "";
+    /* background-color: green; */
+    margin-left: 10px;
+    /* height: 50%; */
+    border-right: 5px solid green;
+    height: 100%;
+    display: block;
+    transform-origin: bottom right;
+    float: right;
+    transform: var(--transform);
+    transition: 0.2s ease transform;
+}
 
 #burger {
     display: none;
@@ -299,20 +312,19 @@ header {
     border-radius: 5px;
     padding: 10px 25px;
     font-size: 1rem;
-    color: white;
     font-weight: bold;
     width: fit-content;
+    color: black;
+    background-color: var(--button);
+    cursor: pointer;
+    border: 0px;
+    transition: 0.2s ease;
+    transition-property: background-color, color;
 }
 
-#left {
-    background-color: var(--left-button);
-    border: 4px solid #d08770;
-}
-
-#right {
-    background-color: var(--right-button);
-    border: 4px solid #88c0d0;
-
+#main-section .choice #decision-button button:hover {
+    background-color: #4c566a;
+    color: var(--button);
 }
 
 @media only screen and (max-width: 1000px) {
