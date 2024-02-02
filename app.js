@@ -85,13 +85,8 @@ let data = {
 };
 
 class MyEvent {
-<<<<<<< HEAD
 	constructor(photoPath, line, opL, opP, fL, fP, sL, sP) {
-		this.photoPath = photoPath; //ex rysunek.svg
-=======
-	constructor(photoPath, line, opL, opP, fL, fP) {
 		this.photoPath = photoPath; //ex rysunek.png
->>>>>>> MojciechWazur
 		this.line = line; //list of obiects (path,who, color, line)
 		this.opL = opL; //string
 		this.opP = opP; //string
@@ -160,27 +155,6 @@ function doTheEvent(ob) {
 	//tutaj dodamy mouseover
 }
 
-<<<<<<< HEAD
-=======
-// =================== MOUSEOUVER ===================
-
-function statsChanger(object,cos,cos,cos,pOp,mon,fue) {
-	// object.removeEventListener('click'),
-	publicOpinion.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')')
-	object.addEventListener("mouseover", function() {
-		publicOpinion.style.setProperty("--transform", "scaleY("+pOp+')')
-		// console.log("GUWNWANOWNOONWOWOWO")
-	})
-	object.addEventListener("mouseout", function() {
-		publicOpinion.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')')
-	})
-	object.addEventListener("click", function() {
-		publicOpinion.style.setProperty("--transform", "scaleY("+pOp+')')
-		data.stats.publicOpinion = pOp;
-	})
-}
-
->>>>>>> MojciechWazur
 //====================CHAPTER 1====================
 //=====Underchapter 1=====
 
@@ -195,15 +169,8 @@ let c1u1e1 = new MyEvent(
 	],
 	"O co chodziło z tym snem?",
 	"Zaraz się spóźnię!",
-<<<<<<< HEAD
 	function () {
 		doTheEvent(c1u1e2v1);
-=======
-	
-	function () {
-		doTheEvent(c1u1e2v1);
-		
->>>>>>> MojciechWazur
 	},
 	
 	function () {
@@ -226,7 +193,6 @@ let c1u1e2v1 = new MyEvent(
 	"Nie mam czasu, muszę się zbierać",
 	function () {
 		data.notimeleft = true;
-<<<<<<< HEAD
 
 		doTheEvent(c1u1e2v2);
 	},
@@ -235,16 +201,6 @@ let c1u1e2v1 = new MyEvent(
 
 		doTheEvent(c1u1e2v2);
 	}
-=======
-		
-	},
-	function () {
-		data.notimeleft = true;
-		
-	},
-	// statsChanger(buttonLeft,null,null,null,1.2,null,null),
-	// statsChanger(buttonRight,null,null,null,-1,null,null)
->>>>>>> MojciechWazur
 );
 
 let c1u1e2v2 = new MyEvent(
