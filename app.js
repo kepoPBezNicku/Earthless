@@ -146,13 +146,8 @@ function doTheEvent(ob) {
 	buttonLeft.textContent = ob.opL;
 	buttonRight.textContent = ob.opP;
 
-	buttonLeft.removeEventListener('click', ob.fL),
-	buttonRight.removeEventListener('click', ob.fP),
-
 	buttonLeft.addEventListener("click", ob.fL);
 	buttonRight.addEventListener("click", ob.fP);
-
-	//tutaj dodamy mouseover
 }
 
 //====================CHAPTER 1====================
@@ -177,8 +172,6 @@ let c1u1e1 = new MyEvent(
 		doTheEvent(c1u1e2v2)
 		
 	},
-	statsChanger(buttonLeft,null,null,null,0.3),
-	statsChanger(buttonRight,null,null,null,0.9)
 );
 
 let c1u1e2v1 = new MyEvent(
@@ -346,9 +339,9 @@ let c1u1e5v1 = new MyEvent(
 )
 
 let c1u1e6 = new MyEvent(
-	"bogosBinted/rysunek.svg",
+	"bogosBinted/rysunek.png",
 	[new MyLine(
-		"bogosBinted/rysunek.svg", "SkibidiEdge2k13", "white",
+		"bogosBinted/rysunek.png", "SkibidiEdge2k13", "white",
 		"Halo?? Dziś jest prima aprilis czy ja o czymś nie wiem???"
 	),
 	new MyLine(
@@ -374,9 +367,9 @@ let c1u1e6 = new MyEvent(
 )
 
 let c1u1e7 = new MyEvent(
-	"bogosBinted/rysunek.svg",
+	"bogosBinted/rysunek.png",
 	[new MyLine(
-		"bogosBinted/rysunek.svg", "Pan Mirek", "yellow",
+		"bogosBinted/rysunek.png", "Pan Mirek", "yellow",
 		"Długo będzie jeszcze tam pan stał? Ja mam inne kursy!"
 	)],
 	"O, to już? Szybki pan jest!",
@@ -396,21 +389,21 @@ let c1u1e7 = new MyEvent(
 )
 
 let c1u1e8 = new MyEvent(
-	"bogosBinted/rysunek.svg",
+	"bogosBinted/rysunek.png",
 	[new MyLine(
-		"bogosBinted/rysunek.svg", "Pan Mirek", "yellow",
+		"bogosBinted/rysunek.png", "Pan Mirek", "yellow",
 		"Puścić panu coś?"
 	),
 	new MyLine(
-		"bogosBinted/rysunek.svg", "Jakub", "green",
+		"bogosBinted/rysunek.png", "Jakub", "green",
 		"Czemu nie? To pan puści radio gulasz może"
 	),
 	new MyLine(
-		"bogosBinted/rysunek.svg", "*kobiecy głos z radia*", "red",
-		"Przerywamy porgram by wydać nowy komunikat rzecznika sekretarza ONZ: Tak, to prawda. W związku z obecnymi zagrożeniami naturalnymi jesteśmy zmuszeni jako ludzkość ewakuwać się na inną planetę. Apeluję o zachowanie spokoju, zdrowego rozsądku i wiarę, że wyjdziemy z tego problemu cało."
+		"bogosBinted/rysunek.png", "*kobiecy głos z radia*", "red",
+		"Przerywamy porgram by wydać nowy komunikat rzecznika sekretarza ONZ: Tak, to prawda. W związku z nadchodzącymi zagrożeniami naturalnymi jesteśmy zmuszeni jako ludzkość ewakuwać się na inną planetę. Apeluję o zachowanie spokoju, zdrowego rozsądku i wiarę, że wyjdziemy z tego problemu cało."
 	),
 	new MyLine(
-		"bogosBinted/rysunek.svg", "Jakub", "green",
+		"bogosBinted/rysunek.png", "Jakub", "green",
 		"Czyli zaczyna się..."
 	)],
 	"LewaOpcja",
