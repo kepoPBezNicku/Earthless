@@ -6,12 +6,24 @@ let newDiv = document.querySelector('.respNav');
 let resources = document.getElementById('resources')
 let burger = document.getElementById('burger');
 
-// ===== RESOURCE'S PSEUDOELEMENTS =====
+// ============ SPRAWDZANIE CZY ELEMENT MA DANY EVENT ============
+
+// function hasEvent(element, eventName) {
+//     const events = getEventListeners(element);
+
+//     if (events && events[eventName] && events[eventName].length > 0) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+// ============ RESOURCE'S PSEUDOELEMENTS ============
 
 let questionMark1 = document.querySelector('#header-section nav #left-header-container li:nth-of-type(1)');
 let questionMark2 = document.querySelector('#header-section nav #left-header-container li:nth-of-type(2)');
 let questionMark3 = document.querySelector('#header-section nav #left-header-container li:nth-of-type(3)');
-let publicOpinion = document.querySelector('#header-section nav #resources #right-header-container li:nth-of-type(1)');
+let publicOp = document.querySelector('#header-section nav #resources #right-header-container li:nth-of-type(1)');
 let fuel = document.querySelector('#header-section nav #resources #right-header-container li:nth-of-type(2)');
 let money = document.querySelector('#header-section nav #resources #right-header-container li:nth-of-type(3)');
 
@@ -61,7 +73,7 @@ let data = {
 	chapter: 1,
 	underchapter: 1,
 	stats: {
-		publicOpinion: 0.5, 
+		publicOpinion: 0.5,
 		currency: 0.5,
 		fuel: 0.5,
 		relations: {
@@ -84,6 +96,38 @@ let data = {
 	isBreakfastEaten : false
 };
 
+function statsChanger(element1,list) {
+	console.log(list)
+
+	// publicOp.style.setProperty("--transform", "scaleY("+pOp+')')
+	element1.addEventListener("mouseover", function hover() {
+		let pOp = data.stats.publicOpinion+list[0];
+		let fue = data.stats.fuel+list[1];
+		let mon = data.stats.currency+list[2];
+		publicOp.style.setProperty("--transform", "scaleY("+pOp+')')
+		fuel.style.setProperty("--transform", "scaleY("+fue+')')
+		money.style.setProperty("--transform", "scaleY("+mon+')')
+	});
+	element1.addEventListener("mouseout", function out() {
+		publicOp.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')');
+		fuel.style.setProperty("--transform", "scaleY("+data.stats.fuel+')');
+		money.style.setProperty("--transform", "scaleY("+data.stats.currency+')');
+	});
+	element1.addEventListener("click", function change() {
+		data.stats.publicOpinion += list[0];
+		data.stats.fuel += list[1];
+		data.stats.currency += list[2];
+		publicOp.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')');
+		fuel.style.setProperty("--transform", "scaleY("+data.stats.fuel+')');
+		money.style.setProperty("--transform", "scaleY("+data.stats.currency+')');
+	});
+
+}
+
+publicOp.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')');
+money.style.setProperty("--transform", "scaleY("+data.stats.currency+')');
+fuel.style.setProperty("--transform", "scaleY("+data.stats.fuel+')');
+
 class MyEvent {
 	constructor(photoPath, line, opL, opP, fL, fP, sL, sP) {
 		this.photoPath = photoPath; //ex rysunek.svg
@@ -92,8 +136,8 @@ class MyEvent {
 		this.opP = opP; //string
 		this.fL = fL; //function
 		this.fP = fP; //function
-		this.sL = sL; //2-dimension list
-		this.sP = sP; //2-dimension list
+		this.sL = sL; //list
+		this.sP = sP; //list
 	}
 }
 
@@ -105,6 +149,13 @@ class MyLine {
 		this.text = text;
 	}
 }
+
+// ============= KLONOWANIE (USUWANIE EVENTOW) =============
+
+// buttonLeft.replaceWith(buttonLeft.cloneNode(true));
+// buttonRight.replaceWith(buttonRight.cloneNode(true));
+
+// =========================================================
 
 function doTheEvent(ob) {
 	middlediv.textContent = "";
@@ -145,12 +196,12 @@ function doTheEvent(ob) {
 
 	buttonLeft.textContent = ob.opL;
 	buttonRight.textContent = ob.opP;
-
-	buttonLeft.removeEventListener('click', ob.fL),
-	buttonRight.removeEventListener('click', ob.fP),
-
+	
 	buttonLeft.addEventListener("click", ob.fL);
 	buttonRight.addEventListener("click", ob.fP);
+
+	statsChanger(buttonLeft, ob.sL);
+	statsChanger(buttonRight, ob.sP);
 
 	//tutaj dodamy mouseover
 }
@@ -170,15 +221,22 @@ let c1u1e1 = new MyEvent(
 	"O co chodziło z tym snem?",
 	"Zaraz się spóźnię!",
 	function () {
+		
+		// buttonLeft.replaceWith(buttonLeft.cloneNode(true));
+		// buttonRight.replaceWith(buttonRight.cloneNode(true));
 		doTheEvent(c1u1e2v1);
 	},
 	
 	function () {
-		doTheEvent(c1u1e2v2)
 		
+		// buttonLeft.replaceWith(buttonLeft.cloneNode(true));
+		// buttonRight.replaceWith(buttonRight.cloneNode(true));
+		doTheEvent(c1u1e2v2)
 	},
-	statsChanger(buttonLeft,null,null,null,0.3),
-	statsChanger(buttonRight,null,null,null,0.9)
+
+	[-0.3,0.1,0.2],
+	[0.2,-0.2,-0.1]
+	
 );
 
 let c1u1e2v1 = new MyEvent(
@@ -200,7 +258,11 @@ let c1u1e2v1 = new MyEvent(
 		data.notimeleft = true;
 
 		doTheEvent(c1u1e2v2);
-	}
+	},
+
+	[0,0.1,0.5],
+	[0,0.7,0.3]
+
 );
 
 let c1u1e2v2 = new MyEvent(
@@ -223,6 +285,9 @@ let c1u1e2v2 = new MyEvent(
 		if(data.notimeleft==true) doTheEvent(c1u1e3v4)
 		else doTheEvent(c1u1e3v2)
 	}
+
+	[0,0.1,0.5],
+	[0,0.7,0.3]
 )
 
 let c1u1e3v1 = new MyEvent(
@@ -243,6 +308,9 @@ let c1u1e3v1 = new MyEvent(
 
 		doTheEvent(c1u1e4v1)
 	}
+
+	[0,0.1,0.5],
+	[0,0.7,0.3]
 )
 
 let c1u1e3v2 = new MyEvent(
