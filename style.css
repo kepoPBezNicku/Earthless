@@ -135,16 +135,23 @@ header {
     font-size: 2rem;
     margin: 0px 20px;
     text-align: center;
-    display: inline-block;
+    display: flex;
+    justify-content: space-between;
     /* --transform: scaleY(0.5); */
 }
 
-#header-section nav #resources ul li::after {
-    content: "";
-    /* background-color: green; */
+#header-section nav #resources ul li div {
+    width: 5px;
+    display: block;
+    border: 1px solid black;
+    box-sizing: content-box;
     margin-left: 10px;
-    /* height: 50%; */
-    border-right: 5px solid green;
+}
+
+#header-section nav #resources ul li div::after {
+    content: "";
+    background-color: green;
+    width: 5px;
     height: 100%;
     display: block;
     transform-origin: bottom right;
