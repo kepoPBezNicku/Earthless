@@ -61,22 +61,21 @@ let data = {
 	chapter: 1,
 	underchapter: 1,
 	stats: {
-		publicOpinion: 0.5, //%
-		currency: 0.5, //(n)
-		fuel: 0.5, //n
+		publicOpinion: 0.5, 
+		currency: 0.5,
+		fuel: 0.5,
 		relations: {
-			//%
-			chemist: 50,
-			biologist: 50,
-			physicist: 50,
-			farmer: 50,
-			handler: 50,
-			translator: 50,
+			chemist: 0.5,
+			biologist: 0.5,
+			physicist: 0.5,
+			farmer: 0.5,
+			handler: 0.5,
+			translator: 0.5,
 		},
 		alienRelations: {
-			Nerds: 50,
-			Magicals: 50,
-			AgreSuS: 50,
+			Nerds: 0.5,
+			Magicals: 0.5,
+			AgreSuS: 0.5,
 		},
 	},
 	notimeleft: false,
@@ -85,19 +84,16 @@ let data = {
 	isBreakfastEaten : false
 };
 
-
-publicOpinion.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')');
-money.style.setProperty("--transform", "scaleY("+data.stats.currency+')');
-fuel.style.setProperty("--transform", "scaleY("+data.stats.fuel+')');
-
 class MyEvent {
-	constructor(photoPath, line, opL, opP, fL, fP) {
-		this.photoPath = photoPath; //ex rysunek.png
+	constructor(photoPath, line, opL, opP, fL, fP, sL, sP) {
+		this.photoPath = photoPath; //ex rysunek.svg
 		this.line = line; //list of obiects (path,who, color, line)
 		this.opL = opL; //string
 		this.opP = opP; //string
 		this.fL = fL; //function
 		this.fP = fP; //function
+		this.sL = sL; //2-dimension list
+		this.sP = sP; //2-dimension list
 	}
 }
 
@@ -121,7 +117,7 @@ function doTheEvent(ob) {
 	ob.line.forEach((element) => {
 		let whoinfo = document.createElement("div")
 		whoinfo.classList.add("whoInfo");
-		newBigPhoto.insertAdjacentElement('afterend', whoinfo)
+		middlediv.insertAdjacentElement('beforeend', whoinfo)
 
 		let newPhoto = document.createElement("img");
 		newPhoto.setAttribute("src", element.photoPath);
@@ -155,24 +151,8 @@ function doTheEvent(ob) {
 
 	buttonLeft.addEventListener("click", ob.fL);
 	buttonRight.addEventListener("click", ob.fP);
-}
 
-// =================== MOUSEOUVER ===================
-
-function statsChanger(object,cos,cos,cos,pOp,mon,fue) {
-	// object.removeEventListener('click'),
-	publicOpinion.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')')
-	object.addEventListener("mouseover", function() {
-		publicOpinion.style.setProperty("--transform", "scaleY("+pOp+')')
-		// console.log("GUWNWANOWNOONWOWOWO")
-	})
-	object.addEventListener("mouseout", function() {
-		publicOpinion.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')')
-	})
-	object.addEventListener("click", function() {
-		publicOpinion.style.setProperty("--transform", "scaleY("+pOp+')')
-		data.stats.publicOpinion = pOp;
-	})
+	//tutaj dodamy mouseover
 }
 
 //====================CHAPTER 1====================
@@ -189,10 +169,8 @@ let c1u1e1 = new MyEvent(
 	],
 	"O co chodziło z tym snem?",
 	"Zaraz się spóźnię!",
-	
 	function () {
 		doTheEvent(c1u1e2v1);
-		
 	},
 	
 	function () {
@@ -214,16 +192,15 @@ let c1u1e2v1 = new MyEvent(
 	"Zaraz się spóźnię!",
 	"Nie mam czasu, muszę się zbierać",
 	function () {
-		// people.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')')
 		data.notimeleft = true;
-		
+
+		doTheEvent(c1u1e2v2);
 	},
 	function () {
 		data.notimeleft = true;
-		
-	},
-	// statsChanger(buttonLeft,null,null,null,1.2,null,null),
-	// statsChanger(buttonRight,null,null,null,-1,null,null)
+
+		doTheEvent(c1u1e2v2);
+	}
 );
 
 let c1u1e2v2 = new MyEvent(
@@ -359,19 +336,19 @@ let c1u1e5v1 = new MyEvent(
 	function (){
 		//stats
 
-		doTheEvent(c1u1e6v1)
+		doTheEvent(c1u1e6)
 	},
 	function (){
 		//stats
 
-		// doTheEvent(c1u1e6v2)
+		doTheEvent(c1u1e7)
 	}
 )
 
-let c1u1e6v1 = new MyEvent(
-	"bogosBinted/rysunek.png",
+let c1u1e6 = new MyEvent(
+	"bogosBinted/rysunek.svg",
 	[new MyLine(
-		"bogosBinted/rysunek.png", "SkididiEdge2k13", "white",
+		"bogosBinted/rysunek.svg", "SkibidiEdge2k13", "white",
 		"Halo?? Dziś jest prima aprilis czy ja o czymś nie wiem???"
 	),
 	new MyLine(
@@ -384,6 +361,60 @@ let c1u1e6v1 = new MyEvent(
 	)],
 	"Przewiń dalej",
 	"Wyłącz telefon",
+	function (){
+		//stats
+
+		doTheEvent(c1u1e7);
+	},
+	function (){
+		//stats
+
+		doTheEvent(c1u1e7);
+	}
+)
+
+let c1u1e7 = new MyEvent(
+	"bogosBinted/rysunek.svg",
+	[new MyLine(
+		"bogosBinted/rysunek.svg", "Pan Mirek", "yellow",
+		"Długo będzie jeszcze tam pan stał? Ja mam inne kursy!"
+	)],
+	"O, to już? Szybki pan jest!",
+	"Ale spokojnie, gdzie się panu tak śpieszy?",
+	function (){
+		//stats
+
+		doTheEvent(c1u1e8)
+	},
+	function (){
+		//stats
+
+		doTheEvent(c1u1e8)
+
+		console.log("OpcjaP")
+	}
+)
+
+let c1u1e8 = new MyEvent(
+	"bogosBinted/rysunek.svg",
+	[new MyLine(
+		"bogosBinted/rysunek.svg", "Pan Mirek", "yellow",
+		"Puścić panu coś?"
+	),
+	new MyLine(
+		"bogosBinted/rysunek.svg", "Jakub", "green",
+		"Czemu nie? To pan puści radio gulasz może"
+	),
+	new MyLine(
+		"bogosBinted/rysunek.svg", "*kobiecy głos z radia*", "red",
+		"Przerywamy porgram by wydać nowy komunikat rzecznika sekretarza ONZ: Tak, to prawda. W związku z obecnymi zagrożeniami naturalnymi jesteśmy zmuszeni jako ludzkość ewakuwać się na inną planetę. Apeluję o zachowanie spokoju, zdrowego rozsądku i wiarę, że wyjdziemy z tego problemu cało."
+	),
+	new MyLine(
+		"bogosBinted/rysunek.svg", "Jakub", "green",
+		"Czyli zaczyna się..."
+	)],
+	"LewaOpcja",
+	"PrawaOpcja",
 	function (){
 		//stats
 
@@ -425,7 +456,9 @@ let cuev = new MyEvent(
 		//nextOptionToRun
 
 		console.log("OpcjaP")
-	}
+	},
+	[["",0.1]["",0.2]],
+	[["",0.1]["",0.2]]
 )
 */
 
