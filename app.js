@@ -130,7 +130,7 @@ fuel.style.setProperty("--transform", "scaleY("+data.stats.fuel+')');
 
 class MyEvent {
 	constructor(photoPath, line, opL, opP, fL, fP, sL, sP) {
-		this.photoPath = photoPath; //ex rysunek.svg
+		this.photoPath = photoPath; //ex rysunek.png
 		this.line = line; //list of obiects (path,who, color, line)
 		this.opL = opL; //string
 		this.opP = opP; //string
@@ -237,8 +237,8 @@ let c1u1e1 = new MyEvent(
 		doTheEvent(c1u1e2v2);
 	},
 
-	[0.1,0.1,0.1],
-	[0.1,0.1,0.1]
+	[0, 0, 0],
+	[0, 0, 0]
 	
 );
 
@@ -289,8 +289,8 @@ let c1u1e2v2 = new MyEvent(
 		else doTheEvent(c1u1e3v2)
 	},
 
-	[0.1,0.1,0.1],
-	[0.1,0.1,0.1]
+	[0, 0, 0],
+	[0, 0, 0]
 )
 
 let c1u1e3v1 = new MyEvent(
@@ -312,8 +312,8 @@ let c1u1e3v1 = new MyEvent(
 		doTheEvent(c1u1e4v1)
 	},
 
-	[-0.1,-0.1,-0.1],
-	[-0.1,-0.1,-0.1]
+	[0, 0, 0],
+	[0, 0, 0]
 )
 
 let c1u1e3v2 = new MyEvent(
@@ -334,8 +334,8 @@ let c1u1e3v2 = new MyEvent(
 
 		doTheEvent(c1u1e3v3)
 	},
-	[0.1,0.1,0.1],
-	[0.1,0.1,0.1]
+	[0, 0, 0],
+	[0, 0, 0]
 )
 
 let c1u1e3v3 = new MyEvent(
@@ -347,17 +347,13 @@ let c1u1e3v3 = new MyEvent(
 	"Wezmę zwykłą taxówkę, każdy grosz się liczy.",
 	"Zamówię sobie taxi premium, niech wiedzą, że mnie stać",
 	function (){
-
-
 		doTheEvent(c1u1e5v1)
 	},
 	function (){
-
-
 		doTheEvent(c1u1e5v1)
 	},
-	[-0.1,-0.1,-0.1],
-	[-0.1,-0.1,-0.1]
+	[0, 0, -0.1],
+	[0, 0, -0.2]
 )
 
 let c1u1e3v4 = new MyEvent(
@@ -369,16 +365,13 @@ let c1u1e3v4 = new MyEvent(
 	"Wezmę zwykłą taxówkę, każdy grosz się liczy.",
 	"Zamówię sobie taxi premium, niech wiedzą, że mnie stać",
 	function (){
-		
 		doTheEvent(c1u1e5v1)
 	},
 	function (){
-
-
 		doTheEvent(c1u1e5v1)
 	},
-	[0.1,0.1,0.1],
-	[0.1,0.1,0.1]
+	[0, 0, -0.1],
+	[0, 0, -0.2]
 )
 
 let c1u1e4v1 = new MyEvent(
@@ -390,16 +383,13 @@ let c1u1e4v1 = new MyEvent(
 	"Wezmę zwykłą taxówkę, każdy grosz się liczy.",
 	"Zamówię sobie taxi premium, niech wiedzą, że mnie stać",
 	function (){
-		
 		doTheEvent(c1u1e5v1)
 	},
 	function (){
-
-
 		doTheEvent(c1u1e5v1)
 	},
-	[-0.1,-0.1,-0.1],
-	[-0.1,-0.1,-0.1]
+	[0, 0, -0.1],
+	[0, 0, -0.2]
 )
 
 let c1u1e5v1 = new MyEvent(
@@ -411,21 +401,19 @@ let c1u1e5v1 = new MyEvent(
 	"Zobaczę co się dzieje na Y",
 	"Po prostu poczekam w samotności, lepiej odpocznę przed wywiadem",
 	function (){
-		eventsRemover();
 		doTheEvent(c1u1e6)
 	},
 	function (){
-		eventsRemover();
 		doTheEvent(c1u1e7)
 	},
-	[0.1,0.1,0.1],
-	[0.1,0.1,0.1]
+	[0, 0, 0],
+	[0, 0, 0]
 )
 
 let c1u1e6 = new MyEvent(
-	"bogosBinted/rysunek.svg",
+	"bogosBinted/rysunek.png",
 	[new MyLine(
-		"bogosBinted/rysunek.svg", "SkibidiEdge2k13", "white",
+		"bogosBinted/rysunek.png", "SkibidiEdge2k13", "white",
 		"Halo?? Dziś jest prima aprilis czy ja o czymś nie wiem???"
 	),
 	new MyLine(
@@ -439,59 +427,49 @@ let c1u1e6 = new MyEvent(
 	"Przewiń dalej",
 	"Wyłącz telefon",
 	function (){
-		//stats
-
 		doTheEvent(c1u1e7);
 	},
 	function (){
-		//stats
-
 		doTheEvent(c1u1e7);
 	},
-	[-0.1,-0.1,-0.1],
-	[-0.1,-0.1,-0.1]
+	[0, 0, 0],
+	[0, 0, 0]
 )
 
 let c1u1e7 = new MyEvent(
-	"bogosBinted/rysunek.svg",
+	"bogosBinted/rysunek.png",
 	[new MyLine(
-		"bogosBinted/rysunek.svg", "Pan Mirek", "yellow",
+		"bogosBinted/rysunek.png", "Pan Mirek", "yellow",
 		"Długo będzie jeszcze tam pan stał? Ja mam inne kursy!"
 	)],
 	"O, to już? Szybki pan jest!",
 	"Ale spokojnie, gdzie się panu tak śpieszy?",
 	function (){
-		//stats
-
 		doTheEvent(c1u1e8)
 	},
 	function (){
-		//stats
-
 		doTheEvent(c1u1e8)
-
-		console.log("OpcjaP")
 	},
-	[0.1,0.1,0.1],
-	[0.1,0.1,0.1]
+	[0, 0, 0],
+	[0, 0, 0]
 )
 
 let c1u1e8 = new MyEvent(
-	"bogosBinted/rysunek.svg",
+	"bogosBinted/rysunek.png",
 	[new MyLine(
-		"bogosBinted/rysunek.svg", "Pan Mirek", "yellow",
+		"bogosBinted/rysunek.png", "Pan Mirek", "yellow",
 		"Puścić panu coś?"
 	),
 	new MyLine(
-		"bogosBinted/rysunek.svg", "Jakub", "green",
+		"bogosBinted/rysunek.png", "Jakub", "green",
 		"Czemu nie? To pan puści radio gulasz może"
 	),
 	new MyLine(
-		"bogosBinted/rysunek.svg", "*kobiecy głos z radia*", "red",
-		"Przerywamy porgram by wydać nowy komunikat rzecznika sekretarza ONZ: Tak, to prawda. W związku z obecnymi zagrożeniami naturalnymi jesteśmy zmuszeni jako ludzkość ewakuwać się na inną planetę. Apeluję o zachowanie spokoju, zdrowego rozsądku i wiarę, że wyjdziemy z tego problemu cało."
+		"bogosBinted/rysunek.png", "*kobiecy głos z radia*", "red",
+		"Przerywamy porgram by wydać nowy komunikat rzecznika sekretarza ONZ: Tak, to prawda. W związku z nadchodzącymi zagrożeniami naturalnymi jesteśmy zmuszeni jako ludzkość ewakuwać się na inną planetę. Apeluję o zachowanie spokoju, zdrowego rozsądku i wiarę, że wyjdziemy z tego problemu cało."
 	),
 	new MyLine(
-		"bogosBinted/rysunek.svg", "Jakub", "green",
+		"bogosBinted/rysunek.png", "Jakub", "green",
 		"Czyli zaczyna się..."
 	)],
 	"LewaOpcja",
@@ -510,8 +488,8 @@ let c1u1e8 = new MyEvent(
 
 		console.log("OpcjaP")
 	},
-	[-0.1,-0.1,-0.1],
-	[-0.1,-0.1,-0.1]
+	[0, 0, 0],
+	[0, 0, 0]
 )
 
 doTheEvent(c1u1e1);
@@ -527,21 +505,21 @@ let cuev = new MyEvent(
 	"LewaOpcja",
 	"PrawaOpcja",
 	function (){
-		//stats
+		//hiddenStats
 
 		//nextOptionToRun
 
 		console.log("OpcjaL")
 	},
 	function (){
-		//stats
+		//hiddenStats
 
 		//nextOptionToRun
 
 		console.log("OpcjaP")
 	},
-	[["",0.1]["",0.2]],
-	[["",0.1]["",0.2]]
+	[0, 0, 0],
+	[0, 0, 0]
 )
 */
 
