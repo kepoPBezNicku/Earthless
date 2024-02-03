@@ -146,6 +146,8 @@ function doTheEvent(ob) {
 	buttonLeft.textContent = ob.opL;
 	buttonRight.textContent = ob.opP;
 
+	
+
 	buttonLeft.addEventListener("click", ob.fL);
 	buttonRight.addEventListener("click", ob.fP);
 }
@@ -450,8 +452,6 @@ let cuev = new MyEvent(
 
 		console.log("OpcjaP")
 	},
-	[["",0.1]["",0.2]],
-	[["",0.1]["",0.2]]
 )
 */
 
