@@ -237,8 +237,8 @@ let c1u1e1 = new MyEvent(
 		doTheEvent(c1u1e2v2);
 	},
 
-	[0.1,0.1,0.1],
-	[0.1,0.1,0.1]
+	[0, 0, 0],
+	[0, 0, 0]
 	
 );
 
@@ -289,8 +289,8 @@ let c1u1e2v2 = new MyEvent(
 		else doTheEvent(c1u1e3v2)
 	},
 
-	[0.1,0.1,0.1],
-	[0.1,0.1,0.1]
+	[0, 0, 0],
+	[0, 0, 0]
 )
 
 let c1u1e3v1 = new MyEvent(
@@ -312,8 +312,8 @@ let c1u1e3v1 = new MyEvent(
 		doTheEvent(c1u1e4v1)
 	},
 
-	[-0.1,-0.1,-0.1],
-	[-0.1,-0.1,-0.1]
+	[0, 0, 0],
+	[0, 0, 0]
 )
 
 let c1u1e3v2 = new MyEvent(
@@ -334,8 +334,8 @@ let c1u1e3v2 = new MyEvent(
 
 		doTheEvent(c1u1e3v3)
 	},
-	[0.1,0.1,0.1],
-	[0.1,0.1,0.1]
+	[0, 0, 0],
+	[0, 0, 0]
 )
 
 let c1u1e3v3 = new MyEvent(
@@ -347,17 +347,13 @@ let c1u1e3v3 = new MyEvent(
 	"Wezmę zwykłą taxówkę, każdy grosz się liczy.",
 	"Zamówię sobie taxi premium, niech wiedzą, że mnie stać",
 	function (){
-
-
 		doTheEvent(c1u1e5v1)
 	},
 	function (){
-
-
 		doTheEvent(c1u1e5v1)
 	},
-	[-0.1,-0.1,-0.1],
-	[-0.1,-0.1,-0.1]
+	[0, 0, -0.1],
+	[0, 0, -0.2]
 )
 
 let c1u1e3v4 = new MyEvent(
@@ -369,16 +365,13 @@ let c1u1e3v4 = new MyEvent(
 	"Wezmę zwykłą taxówkę, każdy grosz się liczy.",
 	"Zamówię sobie taxi premium, niech wiedzą, że mnie stać",
 	function (){
-		
 		doTheEvent(c1u1e5v1)
 	},
 	function (){
-
-
 		doTheEvent(c1u1e5v1)
 	},
-	[0.1,0.1,0.1],
-	[0.1,0.1,0.1]
+	[0, 0, -0.1],
+	[0, 0, -0.2]
 )
 
 let c1u1e4v1 = new MyEvent(
@@ -390,16 +383,13 @@ let c1u1e4v1 = new MyEvent(
 	"Wezmę zwykłą taxówkę, każdy grosz się liczy.",
 	"Zamówię sobie taxi premium, niech wiedzą, że mnie stać",
 	function (){
-		
 		doTheEvent(c1u1e5v1)
 	},
 	function (){
-
-
 		doTheEvent(c1u1e5v1)
 	},
-	[-0.1,-0.1,-0.1],
-	[-0.1,-0.1,-0.1]
+	[0, 0, -0.1],
+	[0, 0, -0.2]
 )
 
 let c1u1e5v1 = new MyEvent(
@@ -411,15 +401,13 @@ let c1u1e5v1 = new MyEvent(
 	"Zobaczę co się dzieje na Y",
 	"Po prostu poczekam w samotności, lepiej odpocznę przed wywiadem",
 	function (){
-		eventsRemover();
 		doTheEvent(c1u1e6)
 	},
 	function (){
-		eventsRemover();
 		doTheEvent(c1u1e7)
 	},
-	[0.1,0.1,0.1],
-	[0.1,0.1,0.1]
+	[0, 0, 0],
+	[0, 0, 0]
 )
 
 let c1u1e6 = new MyEvent(
@@ -439,17 +427,13 @@ let c1u1e6 = new MyEvent(
 	"Przewiń dalej",
 	"Wyłącz telefon",
 	function (){
-		//stats
-
 		doTheEvent(c1u1e7);
 	},
 	function (){
-		//stats
-
 		doTheEvent(c1u1e7);
 	},
-	[-0.1,-0.1,-0.1],
-	[-0.1,-0.1,-0.1]
+	[0, 0, 0],
+	[0, 0, 0]
 )
 
 let c1u1e7 = new MyEvent(
@@ -461,19 +445,13 @@ let c1u1e7 = new MyEvent(
 	"O, to już? Szybki pan jest!",
 	"Ale spokojnie, gdzie się panu tak śpieszy?",
 	function (){
-		//stats
-
 		doTheEvent(c1u1e8)
 	},
 	function (){
-		//stats
-
 		doTheEvent(c1u1e8)
-
-		console.log("OpcjaP")
 	},
-	[0.1,0.1,0.1],
-	[0.1,0.1,0.1]
+	[0, 0, 0],
+	[0, 0, 0]
 )
 
 let c1u1e8 = new MyEvent(
@@ -510,8 +488,8 @@ let c1u1e8 = new MyEvent(
 
 		console.log("OpcjaP")
 	},
-	[-0.1,-0.1,-0.1],
-	[-0.1,-0.1,-0.1]
+	[0, 0, 0],
+	[0, 0, 0]
 )
 
 doTheEvent(c1u1e1);
@@ -527,19 +505,21 @@ let cuev = new MyEvent(
 	"LewaOpcja",
 	"PrawaOpcja",
 	function (){
-		//stats
+		//hiddenStats
 
 		//nextOptionToRun
 
 		console.log("OpcjaL")
 	},
 	function (){
-		//stats
+		//hiddenStats
 
 		//nextOptionToRun
 
 		console.log("OpcjaP")
 	},
+	[0, 0, 0],
+	[0, 0, 0]
 )
 */
 
