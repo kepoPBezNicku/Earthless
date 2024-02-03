@@ -284,7 +284,8 @@ header {
 }
 
 #main-section .choice #middlediv .bigPhoto {
-    width: 400px;
+    width: 80%;
+    max-width: 400px;
     margin: 0px auto;
     border-radius: 20px;
 }
@@ -304,7 +305,6 @@ header {
 }
 
 #main-section .choice #middlediv .lineText {
-    width: 100%;
     /* grid-area: text; */
     margin: 10px;
 }
@@ -364,10 +364,23 @@ header {
     #main-section div {
         width: 100%;
     }
-    /* #main-section .choice #middlediv .lineText {
-        width: 70%;
-        margin: 0px auto;
-    } */
+    #main-section .choice #middlediv .whoInfo {
+        display: grid;
+        /* grid-template-columns: 0.2fr 1fr; */
+        grid-template:
+        "photo name name name name name name name name"
+        "text text text text text text text text text";
+    }
+    #main-section .choice #middlediv .linePhoto {
+        grid-area: photo;
+        margin: 0px 0px 0px auto;
+    }
+    #main-section .choice #middlediv .lineWho {
+        grid-area: name;
+    }
+    #main-section .choice #middlediv .lineText {
+        grid-area: text;
+    }
     #main-section .choice #decision-button {
         flex-direction: column-reverse;
     }
@@ -379,6 +392,15 @@ header {
 @media only screen and (max-width: 650px) {
     main {
         padding-top: 130px
+    }
+    #loading-screen li {
+        font-size: 30px;
+        margin: 0px 5px;
+    }
+    @keyframes loadingScreen {
+        0% {font-size: 60px; margin: 0px 100px; color: var(--chapter-background-color)}
+        70% {font-size: 30px; margin: 0px 5px; color: var(--chapter-background-color)}
+        100% {color: white}
     }
 }
 
