@@ -393,7 +393,7 @@ let c1u1e4v1 = new MyEvent(
 )
 
 let c1u1e5v1 = new MyEvent(
-	"bogosBinted/rysunek.png",
+	"bogosBinted/rysunek.png", //telefon.png
 	[new MyLine(
 		"bogosBinted/rysunek.png", "Jakub", "green",
 		"Zaraz powinna być, w tym czasie może..."
@@ -411,7 +411,7 @@ let c1u1e5v1 = new MyEvent(
 )
 
 let c1u1e6 = new MyEvent(
-	"bogosBinted/rysunek.png",
+	"bogosBinted/rysunek.png", //telefon.png
 	[new MyLine(
 		"bogosBinted/rysunek.png", "SkibidiEdge2k13", "white",
 		"Halo?? Dziś jest prima aprilis czy ja o czymś nie wiem???"
@@ -437,9 +437,9 @@ let c1u1e6 = new MyEvent(
 )
 
 let c1u1e7 = new MyEvent(
-	"bogosBinted/rysunek.png",
+	"bogosBinted/rysunek.png", //taxi.png
 	[new MyLine(
-		"bogosBinted/rysunek.png", "Pan Mirek", "yellow",
+		"bogosBinted/rysunek.png", "Pan Mirek", "yellow", //panmirek.png
 		"Długo będzie jeszcze tam pan stał? Ja mam inne kursy!"
 	)],
 	"O, to już? Szybki pan jest!",
@@ -457,32 +457,50 @@ let c1u1e7 = new MyEvent(
 let c1u1e8 = new MyEvent(
 	"bogosBinted/rysunek.png",
 	[new MyLine(
-		"bogosBinted/rysunek.png", "Pan Mirek", "yellow",
-		"Puścić panu coś?"
+		"rysunek.png", "Pan Mirek", "yellow",
+		"Słyszał pan tego szefa czegoś tam? Mówił, że niby lecimy w kosmos ha! Większej głupoty nie słyszałem."
 	),
 	new MyLine(
-		"bogosBinted/rysunek.png", "Jakub", "green",
-		"Czemu nie? To pan puści radio gulasz może"
-	),
-	new MyLine(
-		"bogosBinted/rysunek.png", "*kobiecy głos z radia*", "red",
-		"Przerywamy porgram by wydać nowy komunikat rzecznika sekretarza ONZ: Tak, to prawda. W związku z nadchodzącymi zagrożeniami naturalnymi jesteśmy zmuszeni jako ludzkość ewakuwać się na inną planetę. Apeluję o zachowanie spokoju, zdrowego rozsądku i wiarę, że wyjdziemy z tego problemu cało."
-	),
-	new MyLine(
-		"bogosBinted/rysunek.png", "Jakub", "green",
-		"Czyli zaczyna się..."
+		"rysunek.png", "Jakub", "green",
+		"Czekają nas ciekawe czasy, bardzo ciekawe..." 
 	)],
 	"LewaOpcja",
 	"PrawaOpcja",
 	function (){
+		doTheEvent(c1u2e1)
+	},
+	function (){
 		//stats
+
+		//nextOptionToRun
+
+		doTheEvent(c1u2e1)
+	},
+	[0, 0, 0],
+	[0, 0, 0]
+)
+
+let c1u2e1 = new MyEvent(
+	"bogosBinted/rysunek.png", //
+	[new MyLine(
+		"bogosBinted/rysunek.png", "Marcin", "blue", //marcin.png
+		'... po czym powiesz "również dziekuję, miłego dnia", uśmiechniesz się i wyjdziesz ze studia. Wszystko jasne?'
+	),
+	new MyLine(
+		"bogosBinted/rysunek.png", "Jakub", "green",
+		"Raczej tak "
+	)],
+	"LewaOpcja",
+	"PrawaOpcja",
+	function (){
+		//hiddenStats
 
 		//nextOptionToRun
 
 		console.log("OpcjaL")
 	},
 	function (){
-		//stats
+		//hiddenStats
 
 		//nextOptionToRun
 
@@ -492,7 +510,6 @@ let c1u1e8 = new MyEvent(
 	[0, 0, 0]
 )
 
-doTheEvent(c1u1e1);
 
 
 /*
@@ -523,4 +540,4 @@ let cuev = new MyEvent(
 )
 */
 
-
+doTheEvent(c1u1e1);
