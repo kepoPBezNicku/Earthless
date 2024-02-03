@@ -162,6 +162,10 @@ function eventsRemover() {
 function doTheEvent(ob) {
 	middlediv.textContent = "";
 
+	publicOp.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')');
+	fuel.style.setProperty("--transform", "scaleY("+data.stats.fuel+')');
+	money.style.setProperty("--transform", "scaleY("+data.stats.currency+')');
+
 	eventsRemover();
 
 	let buttonLeft = document.querySelector("button#left");
