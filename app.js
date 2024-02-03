@@ -66,8 +66,8 @@ loadingScreen();
 // =========================================================
 
 let middlediv = document.querySelector("div#middlediv");
-let buttonLeft = document.querySelector("button#left");
-let buttonRight = document.querySelector("button#right");
+var buttonLeft = document.querySelector("button#left");
+var buttonRight = document.querySelector("button#right");
 
 let data = {
 	chapter: 1,
@@ -152,13 +152,22 @@ class MyLine {
 
 // ============= KLONOWANIE (USUWANIE EVENTOW) =============
 
-// buttonLeft.replaceWith(buttonLeft.cloneNode(true));
-// buttonRight.replaceWith(buttonRight.cloneNode(true));
+function eventsRemover() {
+	let buttonLeft = document.querySelector("button#left");
+	let buttonRight = document.querySelector("button#right");
+	buttonLeft.replaceWith(buttonLeft.cloneNode(true));
+	buttonRight.replaceWith(buttonRight.cloneNode(true));
+}
 
 // =========================================================
 
 function doTheEvent(ob) {
 	middlediv.textContent = "";
+
+	eventsRemover();
+
+	let buttonLeft = document.querySelector("button#left");
+	let buttonRight = document.querySelector("button#right");
 
 	let newBigPhoto = document.createElement("img");
 	newBigPhoto.setAttribute("src", ob.photoPath);
@@ -221,21 +230,15 @@ let c1u1e1 = new MyEvent(
 	"O co chodziło z tym snem?",
 	"Zaraz się spóźnię!",
 	function () {
-		
-		// buttonLeft.replaceWith(buttonLeft.cloneNode(true));
-		// buttonRight.replaceWith(buttonRight.cloneNode(true));
 		doTheEvent(c1u1e2v1);
 	},
 	
 	function () {
-		
-		// buttonLeft.replaceWith(buttonLeft.cloneNode(true));
-		// buttonRight.replaceWith(buttonRight.cloneNode(true));
-		doTheEvent(c1u1e2v2)
+		doTheEvent(c1u1e2v2);
 	},
 
-	[-0.3,0.1,0.2],
-	[0.2,-0.2,-0.1]
+	[0.1,0.1,0.1],
+	[0.1,0.1,0.1]
 	
 );
 
@@ -260,8 +263,8 @@ let c1u1e2v1 = new MyEvent(
 		doTheEvent(c1u1e2v2);
 	},
 
-	[0,0.1,0.5],
-	[0,0.7,0.3]
+	[-0.1,-0.1,-0.1],
+	[-0.1,-0.1,-0.1]
 
 );
 
@@ -284,10 +287,10 @@ let c1u1e2v2 = new MyEvent(
 
 		if(data.notimeleft==true) doTheEvent(c1u1e3v4)
 		else doTheEvent(c1u1e3v2)
-	}
+	},
 
-	[0,0.1,0.5],
-	[0,0.7,0.3]
+	[0.1,0.1,0.1],
+	[0.1,0.1,0.1]
 )
 
 let c1u1e3v1 = new MyEvent(
@@ -307,10 +310,10 @@ let c1u1e3v1 = new MyEvent(
 		data.isBreakfastEaten = true;
 
 		doTheEvent(c1u1e4v1)
-	}
+	},
 
-	[0,0.1,0.5],
-	[0,0.7,0.3]
+	[-0.1,-0.1,-0.1],
+	[-0.1,-0.1,-0.1]
 )
 
 let c1u1e3v2 = new MyEvent(
@@ -330,7 +333,9 @@ let c1u1e3v2 = new MyEvent(
 		data.isCoffeDrunk = true
 
 		doTheEvent(c1u1e3v3)
-	}
+	},
+	[0.1,0.1,0.1],
+	[0.1,0.1,0.1]
 )
 
 let c1u1e3v3 = new MyEvent(
@@ -342,15 +347,17 @@ let c1u1e3v3 = new MyEvent(
 	"Wezmę zwykłą taxówkę, każdy grosz się liczy.",
 	"Zamówię sobie taxi premium, niech wiedzą, że mnie stać",
 	function (){
-		data.stats.currency-=15
+
 
 		doTheEvent(c1u1e5v1)
 	},
 	function (){
-		data.stats.currency-=30
+
 
 		doTheEvent(c1u1e5v1)
-	}
+	},
+	[-0.1,-0.1,-0.1],
+	[-0.1,-0.1,-0.1]
 )
 
 let c1u1e3v4 = new MyEvent(
@@ -362,15 +369,16 @@ let c1u1e3v4 = new MyEvent(
 	"Wezmę zwykłą taxówkę, każdy grosz się liczy.",
 	"Zamówię sobie taxi premium, niech wiedzą, że mnie stać",
 	function (){
-		data.stats.currency-=15
-
+		
 		doTheEvent(c1u1e5v1)
 	},
 	function (){
-		data.stats.currency-=30
+
 
 		doTheEvent(c1u1e5v1)
-	}
+	},
+	[0.1,0.1,0.1],
+	[0.1,0.1,0.1]
 )
 
 let c1u1e4v1 = new MyEvent(
@@ -382,15 +390,16 @@ let c1u1e4v1 = new MyEvent(
 	"Wezmę zwykłą taxówkę, każdy grosz się liczy.",
 	"Zamówię sobie taxi premium, niech wiedzą, że mnie stać",
 	function (){
-		data.stats.currency-=15
-
+		
 		doTheEvent(c1u1e5v1)
 	},
 	function (){
-		data.stats.currency-=30
+
 
 		doTheEvent(c1u1e5v1)
-	}
+	},
+	[-0.1,-0.1,-0.1],
+	[-0.1,-0.1,-0.1]
 )
 
 let c1u1e5v1 = new MyEvent(
@@ -402,15 +411,15 @@ let c1u1e5v1 = new MyEvent(
 	"Zobaczę co się dzieje na Y",
 	"Po prostu poczekam w samotności, lepiej odpocznę przed wywiadem",
 	function (){
-		//stats
-
+		eventsRemover();
 		doTheEvent(c1u1e6)
 	},
 	function (){
-		//stats
-
+		eventsRemover();
 		doTheEvent(c1u1e7)
-	}
+	},
+	[0.1,0.1,0.1],
+	[0.1,0.1,0.1]
 )
 
 let c1u1e6 = new MyEvent(
@@ -438,7 +447,9 @@ let c1u1e6 = new MyEvent(
 		//stats
 
 		doTheEvent(c1u1e7);
-	}
+	},
+	[-0.1,-0.1,-0.1],
+	[-0.1,-0.1,-0.1]
 )
 
 let c1u1e7 = new MyEvent(
@@ -460,7 +471,9 @@ let c1u1e7 = new MyEvent(
 		doTheEvent(c1u1e8)
 
 		console.log("OpcjaP")
-	}
+	},
+	[0.1,0.1,0.1],
+	[0.1,0.1,0.1]
 )
 
 let c1u1e8 = new MyEvent(
@@ -496,7 +509,9 @@ let c1u1e8 = new MyEvent(
 		//nextOptionToRun
 
 		console.log("OpcjaP")
-	}
+	},
+	[-0.1,-0.1,-0.1],
+	[-0.1,-0.1,-0.1]
 )
 
 doTheEvent(c1u1e1);
