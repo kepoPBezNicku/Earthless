@@ -98,8 +98,35 @@ let data = {
 
 function statsChanger(element1,list) {
 	console.log(list)
+	let color1 = window.getComputedStyle(publicOp).getPropertyValue("--pseudoElColor");
+	let color2 = window.getComputedStyle(fuel).getPropertyValue("--pseudoElColor");
+	let color3 = window.getComputedStyle(money).getPropertyValue("--pseudoElColor");
+	function colorChanger(pOp1, fue1, mon1) {
+		if(pOp1 > 0.7) {
+			publicOp.style.setProperty("--pseudoElColor", "green");
+		} else if (pOp1 >= 0.4 && pOp1 <= 0.7) {
+			publicOp.style.setProperty("--pseudoElColor", "yellow");
+		} else if (pOp1 > 0 && pOp1 < 0.4) {
+			publicOp.style.setProperty("--pseudoElColor", "red");
+		}
 
-	// publicOp.style.setProperty("--transform", "scaleY("+pOp+')')
+		if (fue1 > 0.7) {
+			fuel.style.setProperty("--pseudoElColor", "green");
+		} else if (fue1 >= 0.4 && fue1 <= 0.7) {
+			fuel.style.setProperty("--pseudoElColor", "yellow");
+		} else if (fue1 > 0 && fue1 < 0.4) {
+			fuel.style.setProperty("--pseudoElColor", "red");
+		}
+
+		if (mon1 > 0.7) {
+			money.style.setProperty("--pseudoElColor", "green");
+		} else if (mon1 >= 0.4 && mon1 <= 0.7) {
+			money.style.setProperty("--pseudoElColor", "yellow");
+		} else if (mon1 > 0 && mon1 < 0.4) {
+			money.style.setProperty("--pseudoElColor", "red");
+		}
+	}
+
 	element1.addEventListener("mouseover", function hover() {
 		let pOp = data.stats.publicOpinion+list[0];
 		let fue = data.stats.fuel+list[1];
@@ -107,11 +134,15 @@ function statsChanger(element1,list) {
 		publicOp.style.setProperty("--transform", "scaleY("+pOp+')')
 		fuel.style.setProperty("--transform", "scaleY("+fue+')')
 		money.style.setProperty("--transform", "scaleY("+mon+')')
+		colorChanger(pOp, fue, mon);
 	});
 	element1.addEventListener("mouseout", function out() {
 		publicOp.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')');
 		fuel.style.setProperty("--transform", "scaleY("+data.stats.fuel+')');
 		money.style.setProperty("--transform", "scaleY("+data.stats.currency+')');
+		publicOp.style.setProperty("--pseudoElColor", color1);
+		fuel.style.setProperty("--pseudoElColor", color2);
+		money.style.setProperty("--pseudoElColor", color3);
 	});
 	element1.addEventListener("click", function change() {
 		data.stats.publicOpinion += list[0];
@@ -120,9 +151,9 @@ function statsChanger(element1,list) {
 		publicOp.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')');
 		fuel.style.setProperty("--transform", "scaleY("+data.stats.fuel+')');
 		money.style.setProperty("--transform", "scaleY("+data.stats.currency+')');
+		colorChanger();
 	});
-
-}
+};
 
 publicOp.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')');
 money.style.setProperty("--transform", "scaleY("+data.stats.currency+')');
@@ -164,11 +195,13 @@ function eventsRemover() {
 function doTheEvent(ob) {
 	middlediv.textContent = "";
 
+	eventsRemover();
+
 	publicOp.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')');
 	fuel.style.setProperty("--transform", "scaleY("+data.stats.fuel+')');
 	money.style.setProperty("--transform", "scaleY("+data.stats.currency+')');
 
-	eventsRemover();
+
 
 	let buttonLeft = document.querySelector("button#left");
 	let buttonRight = document.querySelector("button#right");
@@ -241,7 +274,7 @@ let c1u1e1 = new MyEvent(
 		doTheEvent(c1u1e2v2);
 	},
 
-	[0, 0, 0],
+	[-0.3, 0.3, -0.3],
 	[0, 0, 0]
 	
 );
@@ -267,7 +300,8 @@ let c1u1e2v1 = new MyEvent(
 		doTheEvent(c1u1e2v2);
 	},
 
-	[-0.1,-0.1,-0.1],
+	// [-0.1,-0.1,-0.1],
+	[0.2,0.1,0.3],
 	[-0.1,-0.1,-0.1]
 
 );

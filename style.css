@@ -138,6 +138,7 @@ header {
     display: flex;
     justify-content: space-between;
     /* --transform: scaleY(0.5); */
+    --pseudoElColor: yellow;
 }
 
 #header-section nav #resources ul li div {
@@ -150,14 +151,16 @@ header {
 
 #header-section nav #resources ul li div::after {
     content: "";
-    background-color: green;
+    background-color: var(--pseudoElColor);
+    /* transition-property: background-color; */
     width: 5px;
     height: 100%;
     display: block;
     transform-origin: bottom right;
     float: right;
     transform: var(--transform);
-    transition: 0.2s ease transform;
+    transition: 0.2s ease;
+    transition-property: background-color, transform;
 }
 
 #burger {
