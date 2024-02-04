@@ -127,14 +127,38 @@ function statsChanger(element1,list) {
 		}
 	}
 
-	// publicOp.style.setProperty("--transform", "scaleY("+pOp+')')
+	function statsFuse(pOp2,fue2,mon2) {
+		if (pOp2 >= 0 && pOp2 <=1) {
+			publicOp.style.setProperty("--transform", "scaleY("+pOp2+')');
+		} else if (pOp2 > 1) {
+			publicOp.style.setProperty("--transform", "scaleY(1)");
+		} else {
+			publicOp.style.setProperty("--transform", "scaleY(0)");
+		}
+
+		if (fue2 >= 0 && fue2 <=1) {
+			fuel.style.setProperty("--transform", "scaleY("+fue2+')');
+		} else if (fue2 > 1) {
+			fuel.style.setProperty("--transform", "scaleY(1)");
+		} else {
+			fuel.style.setProperty("--transform", "scaleY(0)");
+		}
+
+		if (mon2 >= 0 && mon2 <=1) {
+			money.style.setProperty("--transform", "scaleY("+mon2+')');
+		} else if (mon2 > 1) {
+			money.style.setProperty("--transform", "scaleY(1)");
+		} else {
+			money.style.setProperty("--transform", "scaleY(0)");
+		}
+	}
+
 	element1.addEventListener("mouseover", function hover() {
 		let pOp = data.stats.publicOpinion+list[0];
 		let fue = data.stats.fuel+list[1];
 		let mon = data.stats.currency+list[2];
-		publicOp.style.setProperty("--transform", "scaleY("+pOp+')')
-		fuel.style.setProperty("--transform", "scaleY("+fue+')')
-		money.style.setProperty("--transform", "scaleY("+mon+')')
+
+		statsFuse(pOp, fue, mon)
 		colorChanger(pOp, fue, mon);
 	});
 	element1.addEventListener("mouseout", function out() {
@@ -149,10 +173,35 @@ function statsChanger(element1,list) {
 		data.stats.publicOpinion += list[0];
 		data.stats.fuel += list[1];
 		data.stats.currency += list[2];
+		if (data.stats.publicOpinion < 0) {
+			data.stats.publicOpinion = 0;
+		} else if (data.stats.publicOpinion > 1) {
+			data.stats.publicOpinion = 1;
+		}
+
+		if (data.stats.fuel < 0) {
+			data.stats.fuel = 0;
+		} else if (data.stats.fuel > 1) {
+			data.stats.fuel = 1;
+		}
+
+		if (data.stats.currency < 0) {
+			data.stats.currency = 0;
+		} else if (data.stats.currency > 1) {
+			data.stats.currency = 1;
+		}
+
 		publicOp.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')');
 		fuel.style.setProperty("--transform", "scaleY("+data.stats.fuel+')');
 		money.style.setProperty("--transform", "scaleY("+data.stats.currency+')');
+
+		statsFuse(data.stats.publicOpinion, data.stats.fuel, data.stats.currency);
 		colorChanger();
+		// console.log(data.stats.publicOpinion);
+		// console.log(data.stats.fuel);
+		// console.log(data.stats.currency);
+
+		// ↑ NIE WYWALAC CONSOLLOGUF DOPOKI NIE BEDZIEMY ODDAWAC PROJEKTU
 	});
 };
 
@@ -275,7 +324,7 @@ let c1u1e1 = new MyEvent(
 		doTheEvent(c1u1e2v2);
 	},
 
-	[-0.3, 0.3, -0.3],
+	[0, 0, 0],
 	[0, 0, 0]
 	
 );
@@ -301,8 +350,7 @@ let c1u1e2v1 = new MyEvent(
 		doTheEvent(c1u1e2v2);
 	},
 
-	// [-0.1,-0.1,-0.1],
-	[0.2,0.1,0.3],
+	[-0.1,-0.1,-0.1],
 	[-0.1,-0.1,-0.1]
 
 );
