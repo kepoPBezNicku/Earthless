@@ -1,0 +1,1 @@
+parodia loga x

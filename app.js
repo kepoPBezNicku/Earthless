@@ -127,6 +127,7 @@ function statsChanger(element1,list) {
 		}
 	}
 
+	// publicOp.style.setProperty("--transform", "scaleY("+pOp+')')
 	element1.addEventListener("mouseover", function hover() {
 		let pOp = data.stats.publicOpinion+list[0];
 		let fue = data.stats.fuel+list[1];
@@ -431,7 +432,7 @@ let c1u1e4v1 = new MyEvent(
 )
 
 let c1u1e5v1 = new MyEvent(
-	"bogosBinted/rysunek.png",
+	"bogosBinted/rysunek.png", //telefon.png
 	[new MyLine(
 		"bogosBinted/rysunek.png", "Jakub", "green",
 		"Zaraz powinna być, w tym czasie może..."
@@ -449,7 +450,7 @@ let c1u1e5v1 = new MyEvent(
 )
 
 let c1u1e6 = new MyEvent(
-	"bogosBinted/rysunek.png",
+	"bogosBinted/rysunek.png", //y.png
 	[new MyLine(
 		"bogosBinted/rysunek.png", "SkibidiEdge2k13", "white",
 		"Halo?? Dziś jest prima aprilis czy ja o czymś nie wiem???"
@@ -475,9 +476,9 @@ let c1u1e6 = new MyEvent(
 )
 
 let c1u1e7 = new MyEvent(
-	"bogosBinted/rysunek.png",
+	"bogosBinted/rysunek.png", //taxi.png
 	[new MyLine(
-		"bogosBinted/rysunek.png", "Pan Mirek", "yellow",
+		"bogosBinted/rysunek.png", "Pan Mirek", "yellow", //panmirek.png
 		"Długo będzie jeszcze tam pan stał? Ja mam inne kursy!"
 	)],
 	"O, to już? Szybki pan jest!",
@@ -488,50 +489,167 @@ let c1u1e7 = new MyEvent(
 	function (){
 		doTheEvent(c1u1e8)
 	},
-	[0, 0, 0],
-	[0, 0, 0]
+	[0.1, 0, 0],
+	[-0.1, 0, 0]
 )
 
 let c1u1e8 = new MyEvent(
 	"bogosBinted/rysunek.png",
 	[new MyLine(
 		"bogosBinted/rysunek.png", "Pan Mirek", "yellow",
-		"Puścić panu coś?"
+		"Słyszał pan tego szefa czegoś tam? Mówił, że niby lecimy w kosmos ha! Większej głupoty nie słyszałem."
 	),
 	new MyLine(
 		"bogosBinted/rysunek.png", "Jakub", "green",
-		"Czemu nie? To pan puści radio gulasz może"
-	),
-	new MyLine(
-		"bogosBinted/rysunek.png", "*kobiecy głos z radia*", "red",
-		"Przerywamy porgram by wydać nowy komunikat rzecznika sekretarza ONZ: Tak, to prawda. W związku z nadchodzącymi zagrożeniami naturalnymi jesteśmy zmuszeni jako ludzkość ewakuwać się na inną planetę. Apeluję o zachowanie spokoju, zdrowego rozsądku i wiarę, że wyjdziemy z tego problemu cało."
-	),
-	new MyLine(
-		"bogosBinted/rysunek.png", "Jakub", "green",
-		"Czyli zaczyna się..."
+		"Czekają nas ciekawe czasy, bardzo ciekawe... ale jedźmy już, czeka na mnie mój doradca" 
 	)],
-	"LewaOpcja",
-	"PrawaOpcja",
+	"Jedźmy pod siedzibę radio PDF FM.",
+	"Ruszajmy pod radio PDF FM",
 	function (){
-		//stats
-
-		//nextOptionToRun
-
-		console.log("OpcjaL")
+		doTheEvent(c1u2e1) //przejście
 	},
 	function (){
-		//stats
-
-		//nextOptionToRun
-
-		console.log("OpcjaP")
+		doTheEvent(c1u2e1) //przejście
 	},
 	[0, 0, 0],
 	[0, 0, 0]
 )
 
-doTheEvent(c1u1e1);
+//=====Underchapter 2===== 
 
+let c1u2e1 = new MyEvent(
+	"bogosBinted/rysunek.png", //marcin.png
+	[new MyLine(
+		"bogosBinted/rysunek.png", "Marcin", "blue", //marcin.png
+		'... po czym powiesz "również dziekuję, miłego dnia", uśmiechniesz się i wyjdziesz ze studia. Wszystko jasne?'
+	),
+	new MyLine(
+		"bogosBinted/rysunek.png", "Jakub", "green",
+		"Raczej tak... "
+	)],
+	"ale co jak zapyta o Operację Earthless?",
+	"wszystko jasne.",
+	function (){
+		//hiddenStats
+
+		doTheEvent(c1u2e2v1)
+	},
+	function (){
+		doTheEvent(c1u2e2v2)
+	},
+	[0, 0, 0],
+	[0, 0, 0]
+)
+
+let c1u2e2v1 = new MyEvent(
+	"bogosBinted/rysunek.png", //marcin.png
+	[new MyLine(
+		"bogosBinted/rysunek.png", "Marcin", "blue", //marcin.png
+		"Słuchaj, tu jeszcze nikt tam niczego nie potwierdził opinii publicznej, po prostu unikaj tematu. Jeszcze wezmą nas za ludzi, którzy wierzą we wszystko co jest w internecie."
+	)],
+	"Dobra, będę go unikał",
+	"Ludziom należy się prawda!",
+	function (){
+		doTheEvent(c1u2e2v2)
+	},
+	function (){
+		doTheEvent(c1u2e3v1)
+	},
+	[0, 0, 0], //+0.1 dla Marcina
+	[0, 0, 0] //-0.1 dla Marcina
+)
+
+let c1u2e2v2 = new MyEvent(
+	"bogosBinted/rysunek.png", //chmurka.png
+	[new MyLine(
+		"bogosBinted/rysunek.png", "Jakub", "green",
+		"Jutro wybory, przed nami globalny kryzys, a ja wciąż nie wiem co mam o tym powiedzieć ludziom!"
+	),
+	new MyLine(
+		"bogosBinted/rysunek.png", "Jakub", "green",
+		"To najbardziej stresujący dzień mojego życia, nie wiem jak bym sobie poradził bez mojego doradcy Marcina Kwiatkowskiego. Poznałem go na początku tej przygody i jest to jedyna osoba której ufam w tym kłamliwym politycznym świecie."
+	)],
+	"Wróc do rozmowy",
+	"Wróć do rozmowy",
+	function (){
+		doTheEvent(c1u2e4v1)
+	},
+	function (){
+		doTheEvent(c1u2e4v1)
+	},
+	[0, 0, 0],
+	[0, 0, 0]
+)
+
+let c1u2e3v1 = new MyEvent(
+	"bogosBinted/rysunek.png",
+	[new MyLine(
+		"bogosBinted/rysunek.png", "Jakub", "blue",
+		"Stary, ty masz wygrać wybory a nie być jakimś poszukiwaczem prawdy i sprawiedliwości. To jest zły pomysł, ale zrobisz jak uważasz."
+	)],
+	"A żebyś wiedział że zrobię!",
+	"Jeszcze się zastanowię",
+	function (){
+		doTheEvent(c1u2e2v2)
+	},
+	function (){
+		doTheEvent(c1u2e2v2)
+	},
+	[0, 0, 0],
+	[0, 0, 0]
+)
+
+let c1u2e4v1 = new MyEvent(
+	"bogosBinted/rysunek.png", //glosnik.png
+	[new MyLine(
+		"bogosBinted/rysunek.png", "*młody męski głos*", "orange", //nopfp.png
+		"Zapraszamy pana Jakuba Zielińskiego do studia. Wchodzimy za 2 minuty!"
+	)],
+	"Dzięki że przyszedłeś, a teraz życz mi powodzenia. Cześć!",
+	"Lecę, widzimy się za 20 minut",
+	function (){
+		doTheEvent(c1u2e5v1)
+	},
+	function (){
+		doTheEvent(c1u2e5v1)
+	},
+	[0, 0, 0], //Marcin +0.05
+	[0, 0, 0]
+)
+
+let c1u2e5v1 = new MyEvent(
+	"bogosBinted/rysunek.png", //radio.png
+	[new MyLine(
+		"bogosBinted/rysunek.png", "*wysoka kobieta ubrana na czerwono*", "red", //becia.png
+		"Cześć gotowy? Za 15 sekund wchodzimy."
+	),
+	new MyLine(
+		"bogosBinted/rysunek.png", "Jakub", "green",
+		"Tak odrazu? Myślałem że jeszcze zostało trochę cza..."
+	),
+	new MyLine(
+		"bogosBinted/rysunek.png", "*wysoka kobieta ubrana na czerwono*", "red",
+		"Trzy, dwa, jeden... Witamy w wywiadzie dnia radia PDF FM, jest piątek godzina 10, z tej strony Beata Kowalczyk a moim dzisiejszym gościem jest pan Kuba Zieliński, kandydat na prezydent RP 2045. Witam serdecznie! Pojutrze ważny dzień, prawda?"
+	),
+	new MyLine(
+		"bogosBinted/rysunek.png", "Jakub", "green",
+		"Również witam, tak, z pewnością jeden z najważniejszych dni dla współczesnej Polski. Wybory prezydenckie napewno znacząco wpłyną na losy naszego państwa"
+	),
+	new MyLine(
+		"bogosBinted/rysunek.png", "*wysoka kobieta ubrana na czerwono*", "red",
+		"Dobrze, zanim jeszcze przejdziemy do serca sedna naszego spotkania... ponoć miał pan z wosu 2 na światectwie!"
+	)],
+	"To prawda, przyznaję, że w tym wieku nie bardzo uważałem na oceny. Najważniejsze że zdałem, prawda? Haha",
+	"To tylko plotka, w szkole byłem piątkowym uczniem, a tym bardziej z wosu!",
+	function (){
+		doTheEvent(c1u2e6v1)
+	},
+	function (){
+		doTheEvent(c1u2e6v2)
+	},
+	[-0.1, 0, 0],
+	[0, 0, 0]
+)
 
 /*
 let cuev = new MyEvent(
@@ -545,20 +663,20 @@ let cuev = new MyEvent(
 	function (){
 		//hiddenStats
 
-		//nextOptionToRun
+		//doTheEvent(cuev)
 
 		console.log("OpcjaL")
 	},
 	function (){
 		//hiddenStats
 
-		//nextOptionToRun
+		//doTheEvent(cuev)
 
 		console.log("OpcjaP")
 	},
-	[0, 0, 0],
-	[0, 0, 0]
+	[0, 0, 0], //
+	[0, 0, 0] //
 )
 */
 
-
+doTheEvent(c1u1e1);
