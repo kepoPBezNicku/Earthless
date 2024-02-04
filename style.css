@@ -281,7 +281,7 @@ header {
     display: grid;
     grid-template-columns: 0.1fr 1fr;
     grid-template-rows:  0.5fr 1fr;
-    user-select: none;
+
 }
 
 #main-section .choice #middlediv .bigPhoto {
@@ -311,6 +311,10 @@ header {
     display: flex;
     justify-content: space-evenly;
     gap: 20px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 #main-section .choice #decision-button button {
