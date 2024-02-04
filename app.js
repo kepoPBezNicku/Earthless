@@ -97,30 +97,113 @@ let data = {
 };
 
 function statsChanger(element1,list) {
-	// publicOp.style.setProperty("--transform", "scaleY("+pOp+')')
+	console.log(list)
+	let color1 = window.getComputedStyle(publicOp).getPropertyValue("--pseudoElColor");
+	let color2 = window.getComputedStyle(fuel).getPropertyValue("--pseudoElColor");
+	let color3 = window.getComputedStyle(money).getPropertyValue("--pseudoElColor");
+	function colorChanger(pOp1, fue1, mon1) {
+		if(pOp1 > 0.7) {
+			publicOp.style.setProperty("--pseudoElColor", "green");
+		} else if (pOp1 >= 0.4 && pOp1 <= 0.7) {
+			publicOp.style.setProperty("--pseudoElColor", "yellow");
+		} else if (pOp1 > 0 && pOp1 < 0.4) {
+			publicOp.style.setProperty("--pseudoElColor", "red");
+		}
+
+		if (fue1 > 0.7) {
+			fuel.style.setProperty("--pseudoElColor", "green");
+		} else if (fue1 >= 0.4 && fue1 <= 0.7) {
+			fuel.style.setProperty("--pseudoElColor", "yellow");
+		} else if (fue1 > 0 && fue1 < 0.4) {
+			fuel.style.setProperty("--pseudoElColor", "red");
+		}
+
+		if (mon1 > 0.7) {
+			money.style.setProperty("--pseudoElColor", "green");
+		} else if (mon1 >= 0.4 && mon1 <= 0.7) {
+			money.style.setProperty("--pseudoElColor", "yellow");
+		} else if (mon1 > 0 && mon1 < 0.4) {
+			money.style.setProperty("--pseudoElColor", "red");
+		}
+	}
+
+	function statsFuse(pOp2,fue2,mon2) {
+		if (pOp2 >= 0 && pOp2 <=1) {
+			publicOp.style.setProperty("--transform", "scaleY("+pOp2+')');
+		} else if (pOp2 > 1) {
+			publicOp.style.setProperty("--transform", "scaleY(1)");
+		} else {
+			publicOp.style.setProperty("--transform", "scaleY(0)");
+		}
+
+		if (fue2 >= 0 && fue2 <=1) {
+			fuel.style.setProperty("--transform", "scaleY("+fue2+')');
+		} else if (fue2 > 1) {
+			fuel.style.setProperty("--transform", "scaleY(1)");
+		} else {
+			fuel.style.setProperty("--transform", "scaleY(0)");
+		}
+
+		if (mon2 >= 0 && mon2 <=1) {
+			money.style.setProperty("--transform", "scaleY("+mon2+')');
+		} else if (mon2 > 1) {
+			money.style.setProperty("--transform", "scaleY(1)");
+		} else {
+			money.style.setProperty("--transform", "scaleY(0)");
+		}
+	}
+
 	element1.addEventListener("mouseover", function hover() {
 		let pOp = data.stats.publicOpinion+list[0];
 		let fue = data.stats.fuel+list[1];
 		let mon = data.stats.currency+list[2];
-		publicOp.style.setProperty("--transform", "scaleY("+pOp+')')
-		fuel.style.setProperty("--transform", "scaleY("+fue+')')
-		money.style.setProperty("--transform", "scaleY("+mon+')')
+
+		statsFuse(pOp, fue, mon)
+		colorChanger(pOp, fue, mon);
 	});
 	element1.addEventListener("mouseout", function out() {
 		publicOp.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')');
 		fuel.style.setProperty("--transform", "scaleY("+data.stats.fuel+')');
 		money.style.setProperty("--transform", "scaleY("+data.stats.currency+')');
+		publicOp.style.setProperty("--pseudoElColor", color1);
+		fuel.style.setProperty("--pseudoElColor", color2);
+		money.style.setProperty("--pseudoElColor", color3);
 	});
 	element1.addEventListener("click", function change() {
 		data.stats.publicOpinion += list[0];
 		data.stats.fuel += list[1];
 		data.stats.currency += list[2];
+		if (data.stats.publicOpinion < 0) {
+			data.stats.publicOpinion = 0;
+		} else if (data.stats.publicOpinion > 1) {
+			data.stats.publicOpinion = 1;
+		}
+
+		if (data.stats.fuel < 0) {
+			data.stats.fuel = 0;
+		} else if (data.stats.fuel > 1) {
+			data.stats.fuel = 1;
+		}
+
+		if (data.stats.currency < 0) {
+			data.stats.currency = 0;
+		} else if (data.stats.currency > 1) {
+			data.stats.currency = 1;
+		}
+
 		publicOp.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')');
 		fuel.style.setProperty("--transform", "scaleY("+data.stats.fuel+')');
 		money.style.setProperty("--transform", "scaleY("+data.stats.currency+')');
-	});
 
-}
+		statsFuse(data.stats.publicOpinion, data.stats.fuel, data.stats.currency);
+		colorChanger();
+		// console.log(data.stats.publicOpinion);
+		// console.log(data.stats.fuel);
+		// console.log(data.stats.currency);
+
+		// ↑ NIE WYWALAC CONSOLLOGUF DOPOKI NIE BEDZIEMY ODDAWAC PROJEKTU
+	});
+};
 
 publicOp.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')');
 money.style.setProperty("--transform", "scaleY("+data.stats.currency+')');
@@ -162,11 +245,13 @@ function eventsRemover() {
 function doTheEvent(ob) {
 	middlediv.textContent = "";
 
+	eventsRemover();
+
 	publicOp.style.setProperty("--transform", "scaleY("+data.stats.publicOpinion+')');
 	fuel.style.setProperty("--transform", "scaleY("+data.stats.fuel+')');
 	money.style.setProperty("--transform", "scaleY("+data.stats.currency+')');
 
-	eventsRemover();
+
 
 	let buttonLeft = document.querySelector("button#left");
 	let buttonRight = document.querySelector("button#right");
