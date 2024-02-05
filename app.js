@@ -5,18 +5,6 @@ let resources = document.getElementById("resources");
 let alienRelationsContainer = document.getElementById("alien-relations");
 let burger = document.getElementById("burger");
 
-// ============ SPRAWDZANIE CZY ELEMENT MA DANY EVENT ============
-
-// function hasEvent(element, eventName) {
-//     const events = getEventListeners(element);
-
-//     if (events && events[eventName] && events[eventName].length > 0) {
-//         return true;
-//     } else {
-//         return false;
-//     }
-// }
-
 // ============ RESOURCE'S PSEUDOELEMENTS ============
 
 let nerds = document.querySelector("#alien-relations li:nth-of-type(1)");
@@ -46,9 +34,11 @@ window.addEventListener("unload", function () {
 burger.addEventListener("click", function () {
 	if (resources.className == "") {
 		resources.className = "open";
+		alienRelationsContainer.className = "open";
 		burger.className = "fa-solid fa-circle-xmark";
 	} else if (resources.className == "open") {
 		resources.className = "";
+		alienRelationsContainer.className = "";
 		burger.className = "fa-solid fa-chart-simple";
 	}
 });
@@ -86,7 +76,7 @@ let data = {
 		alienRelations: {
 			nerds: 0.5,
 			magicals: 0.5,
-			advisergreSuS: 0.5,
+			agreSuS: 0.5,
 		},
 	},
 	notimeleft: false,
@@ -303,9 +293,9 @@ function statsChanger(element1, list) {
 		data.stats.food += list[8];
 
 		if (data.stats.alienRelations.nerds <= 0) {
-			data.alienRelations.nerds = 0;
-		} else if (data.alienRelations.nerds > 1) {
-			data.alienRelations.nerdsn = 1;
+			data.stats.alienRelations.nerds = 0;
+		} else if (data.stats.alienRelations.nerds > 1) {
+			data.stats.alienRelations.nerdsn = 1;
 		}
 
 		if (data.stats.alienRelations.magicals <= 0) {
@@ -528,7 +518,7 @@ let c1u1e1 = new MyEvent(
 	},
 
 	[0.1, 0.2, -0.1, 0.3, 0.1, -0.4, 0.3, 0.2, -0.4],
-	[0, 0, 0]
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 );
 
 let c1u1e2v1 = new MyEvent(
@@ -550,8 +540,8 @@ let c1u1e2v1 = new MyEvent(
 		doTheEvent(c1u1e2v2);
 	},
 
-	[-0.1, -0.1, -0.1],
-	[-0.1, -0.1, -0.1]
+	[-0.1, -0.1, -0.1, 0, 0, 0, 0, 0, 0],
+	[-0.1, -0.1, -0.1, 0, 0, 0, 0, 0, 0]
 );
 
 let c1u1e2v2 = new MyEvent(
@@ -577,8 +567,8 @@ let c1u1e2v2 = new MyEvent(
 		else doTheEvent(c1u1e3v2);
 	},
 
-	[0, 0, 0],
-	[0, 0, 0]
+	[0, 0, 0, 0, 1, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 );
 
 let c1u1e3v1 = new MyEvent(
@@ -602,8 +592,8 @@ let c1u1e3v1 = new MyEvent(
 		doTheEvent(c1u1e4v1);
 	},
 
-	[0, 0, 0],
-	[0, 0, 0]
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 );
 
 let c1u1e3v2 = new MyEvent(
@@ -626,8 +616,8 @@ let c1u1e3v2 = new MyEvent(
 
 		doTheEvent(c1u1e3v3);
 	},
-	[0, 0, 0],
-	[0, 0, 0]
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 );
 
 let c1u1e3v3 = new MyEvent(
@@ -646,8 +636,8 @@ let c1u1e3v3 = new MyEvent(
 	function () {
 		doTheEvent(c1u1e5v1);
 	},
-	[0, 0, -0.1],
-	[0, 0, -0.2]
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 );
 
 let c1u1e3v4 = new MyEvent(
@@ -666,8 +656,8 @@ let c1u1e3v4 = new MyEvent(
 	function () {
 		doTheEvent(c1u1e5v1);
 	},
-	[0, 0, -0.1],
-	[0, 0, -0.2]
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 );
 
 let c1u1e4v1 = new MyEvent(
@@ -686,8 +676,8 @@ let c1u1e4v1 = new MyEvent(
 	function () {
 		doTheEvent(c1u1e5v1);
 	},
-	[0, 0, -0.1],
-	[0, 0, -0.2]
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 );
 
 let c1u1e5v1 = new MyEvent(
@@ -706,8 +696,8 @@ let c1u1e5v1 = new MyEvent(
 	function () {
 		doTheEvent(c1u1e7);
 	},
-	[0, 0, 0],
-	[0, 0, 0]
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 );
 
 let c1u1e6 = new MyEvent(
@@ -734,8 +724,8 @@ let c1u1e6 = new MyEvent(
 	function () {
 		doTheEvent(c1u1e7);
 	},
-	[0, 0, 0],
-	[0, 0, 0]
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 );
 
 let c1u1e7 = new MyEvent(
@@ -754,8 +744,8 @@ let c1u1e7 = new MyEvent(
 	function () {
 		doTheEvent(c1u1e8);
 	},
-	[0.1, 0, 0],
-	[-0.1, 0, 0]
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 );
 
 let c1u1e8 = new MyEvent(
@@ -779,8 +769,8 @@ let c1u1e8 = new MyEvent(
 	function () {
 		doTheEvent(c1u2e1); //przejście
 	},
-	[0, 0, 0],
-	[0, 0, 0]
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 );
 
 //=====Underchapter 2=====
@@ -807,8 +797,8 @@ let c1u2e1 = new MyEvent(
 	function () {
 		doTheEvent(c1u2e2v2);
 	},
-	[0, 0, 0],
-	[0, 0, 0]
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 );
 
 let c1u2e2v1 = new MyEvent(
@@ -827,8 +817,8 @@ let c1u2e2v1 = new MyEvent(
 	function () {
 		doTheEvent(c1u2e3v1);
 	},
-	[0, 0, 0], //+0.1 dla Marcina
-	[0, 0, 0] //-0.1 dla Marcina
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 );
 
 let c1u2e2v2 = new MyEvent(
@@ -851,8 +841,8 @@ let c1u2e2v2 = new MyEvent(
 	function () {
 		doTheEvent(c1u2e4v1);
 	},
-	[0, 0, 0],
-	[0, 0, 0]
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 );
 
 let c1u2e3v1 = new MyEvent(
@@ -871,8 +861,8 @@ let c1u2e3v1 = new MyEvent(
 	function () {
 		doTheEvent(c1u2e2v2);
 	},
-	[0, 0, 0],
-	[0, 0, 0]
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 );
 
 let c1u2e4v1 = new MyEvent(
@@ -891,8 +881,8 @@ let c1u2e4v1 = new MyEvent(
 	function () {
 		doTheEvent(c1u2e5v1);
 	},
-	[0, 0, 0], //Marcin +0.05
-	[0, 0, 0]
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 );
 
 let c1u2e5v1 = new MyEvent(
@@ -927,8 +917,8 @@ let c1u2e5v1 = new MyEvent(
 	function () {
 		doTheEvent(c1u2e6v1);
 	},
-	[0.05, 0, 0],
-	[0.1, 0, 0]
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 );
 
 let c1u2e6v1 = new MyEvent(
@@ -956,8 +946,8 @@ let c1u2e6v1 = new MyEvent(
 	function () {
 		doTheEvent(c1u2e7v2);
 	},
-	[0, 0, 0], //
-	[0, 0, 0] //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 );
 
 let c1u2e7v1 = new MyEvent(
@@ -980,8 +970,8 @@ let c1u2e7v1 = new MyEvent(
 	function () {
 		doTheEvent(c1u2e8v2);
 	},
-	[0, 0, 0], //
-	[0, 0, 0] //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 );
 
 let c1u2e7v2 = new MyEvent(
@@ -1004,8 +994,8 @@ let c1u2e7v2 = new MyEvent(
 	function () {
 		doTheEvent(c1u2e8v2);
 	},
-	[0, 0, 0], //
-	[0, 0, 0] //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 );
 
 let c1u2e8v1 = new MyEvent(
@@ -1028,8 +1018,8 @@ let c1u2e8v1 = new MyEvent(
 	function () {
 		doTheEvent(c1u2e9v2);
 	},
-	[0, 0, 0], //
-	[0, 0, 0] //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 );
 
 let c1u2e8v2 = new MyEvent(
@@ -1048,8 +1038,8 @@ let c1u2e8v2 = new MyEvent(
 	function () {
 		doTheEvent(c1u2e9v2);
 	},
-	[0, 0, 0], //
-	[0, 0, 0] //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 );
 
 let c1u2e9v1 = new MyEvent(
@@ -1081,8 +1071,8 @@ let c1u2e9v1 = new MyEvent(
 			doTheEvent(c1u2e10v4);
 		}
 	},
-	[0, 0, 0], //
-	[0, 0, 0] //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 );
 
 let c1u2e9v2 = new MyEvent(
@@ -1101,15 +1091,15 @@ let c1u2e9v2 = new MyEvent(
 	function () {
 		doTheEvent(c1u2e10v1)
 	},
-	[0, 0, 0], //
-	[0, 0, 0] //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 );
 
 let c1u2e10v1 = new MyEvent(
 	"bogosBinted/rysunek.png",
 	[new MyLine(
 		"bogosBinted/rysunek.png", "Jakub", "green",
-		"Sama rozmowa bardzo mi się udała! Dzięki temu, że rano nabrałem energii, bardzo sprytnie odpowiadałem na pytania Beaty. To napewno pomoże mi w kampanii."
+		"Rozmowa bardzo mi się udała! Dzięki temu, że rano nabrałem energii, bardzo sprytnie odpowiadałem na pytania Beaty. To napewno pomoże mi w kampanii."
 	)],
 	"Kontynuuj wywiad",
 	"Kontynuuj wywiad",
@@ -1119,8 +1109,80 @@ let c1u2e10v1 = new MyEvent(
 	function (){
 		doTheEvent(c1u2e11v1)
 	},
-	[0, 0, 0], //
-	[0, 0, 0] //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
+)
+
+let c1u2e10v2 = new MyEvent(
+	"bogosBinted/rysunek.png",
+	[new MyLine(
+		"bogosBinted/rysunek.png", "Jakub", "green",
+		"Dałem z siebie wszystko, ale przez to, że rano nie miałem czasu ani na śniadanie ani na kawę, nie byłem dokońca skupiony. Powiedziałem kilka głupich rzeczy, a wyborcy mogą mi tego nie wybaczyć."
+	)],
+	"Kontynuuj wywiad",
+	"Kontynuuj wywiad",
+	function (){
+		doTheEvent(c1u2e11v1)
+	},
+	function (){
+		doTheEvent(c1u2e11v1)
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
+)
+
+let c1u2e10v3 = new MyEvent(
+	"bogosBinted/rysunek.png",
+	[new MyLine(
+		"bogosBinted/rysunek.png", "Jakub", "green",
+		"Starałem się nie wychodzić za bardzo przed szereg i wyszło mi to całkiem dobrze. Dzięki temu, że rano nabrałem siły na cały dzień udało mi się zachować skupienie i zimną krew. To wyjdzie mi na plus w kampanii."
+	)],
+	"Kontynuuj wywiad",
+	"Kontynuuj wywiad",
+	function (){
+		doTheEvent(c1u2e11v1)
+	},
+	function (){
+		doTheEvent(c1u2e11v1)
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
+)
+
+let c1u2e10v4 = new MyEvent(
+	"bogosBinted/rysunek.png",
+	[new MyLine(
+		"bogosBinted/rysunek.png", "Jakub", "green", //wodą się na nawodnisz debilu ~ Wojciech 2024
+		"Dziś rano nie miałem czasu nabrać siły na ten dzień, więc postanowiłem starać się unikać nie wygodnych pytań co mimo wszystko nie zawsze mi wychodziło. Na szczęście nic aż tak głupiego nie powiedziałem w sumie to nie wyszło aż tak źle"
+	)],
+	"Kontynuuj wywiad",
+	"Kontynuuj wywiad",
+	function (){
+		doTheEvent(c1u2e11v1)
+	},
+	function (){
+		doTheEvent(c1u2e11v1)
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
+)
+
+let c1u2e11v1 = new MyEvent(
+	"bogosBinted/rysunek.png",
+	[new MyLine(
+		"bogosBinted/rysunek.png", "Jakub", "red",
+		"testline"
+	)],
+	"LewaOpcja",
+	"PrawaOpcja",
+	function (){
+		//doTheEvent(cuev)
+	},
+	function (){
+		//doTheEvent(cuev)
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 )
 
 /*
@@ -1170,4 +1232,4 @@ let cuev = new MyEvent(
 #060d23
 */
 
-doTheEvent(c1u1e1);
+doTheEvent(c1u1e1);  

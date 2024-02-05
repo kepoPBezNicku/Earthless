@@ -136,21 +136,10 @@ header {
 	gap: 30px;
 }
 
-#alien-relations {
-	margin: 0px;
-	padding: 5px;
-	width: fit-content;
-}
-
 #header-section nav #resources ul, #alien-relations {
 	display: flex;
 	justify-content: center;
-	/* align-items: center; */
 	padding: 0px;
-}
-
-ul#alien-relations {
-	/* display: none; */
 }
 
 #header-section nav #resources ul li, #alien-relations li {
@@ -160,11 +149,10 @@ ul#alien-relations {
 	text-align: center;
 	display: flex;
 	justify-content: space-between;
-	/* --transform: scaleY(0.5); */
 	--pseudoElColor: yellow;
 }
 
-#alien-relations {
+ul#alien-relations {
 	display: flex;
 	flex-direction: column;
 	background-color: var(--main-containers-color);
@@ -172,6 +160,7 @@ ul#alien-relations {
 	border-bottom-right-radius: 10px;
 	position: fixed;
 	top: 94px;
+	margin: 0px;
 	width: fit-content;
 }
 
@@ -252,8 +241,16 @@ ul#alien-relations {
 		transition: 0.3s ease transform;
 		flex-direction: column;
 	}
-	#alien-relations {
-		top: 0px;
+	ul#alien-relations {
+		margin: 0px;
+		padding: 15px;
+		top: 0;
+		width: fit-content;
+		transform: translateX(-160px);
+		transition: 0.3s ease transform;
+	}
+	ul#alien-relations.open {
+		transform: translateX(0px);
 	}
 	#header-section nav #resources.open {
 		transform: translateX(0px);
