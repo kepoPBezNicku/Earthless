@@ -86,7 +86,6 @@ let data = {
 };
 
 function statsChanger(element1, list) {
-	console.log(list);
 	let colorNerds = window.getComputedStyle(nerds).getPropertyValue("--pseudoElColor");
 	let colorMagicals = window.getComputedStyle(magicals).getPropertyValue("--pseudoElColor");
 	let colorAgreSuS = window.getComputedStyle(agreSuS).getPropertyValue("--pseudoElColor");
@@ -423,15 +422,9 @@ function doTheEvent(ob) {
 
 	eventsRemover();
 
-	publicOp.style.setProperty(
-		"--transform",
-		"scaleY(" + data.stats.publicOpinion + ")"
-	);
+	publicOp.style.setProperty("--transform","scaleY(" + data.stats.publicOpinion + ")");
 	fuel.style.setProperty("--transform", "scaleY(" + data.stats.fuel + ")");
-	money.style.setProperty(
-		"--transform",
-		"scaleY(" + data.stats.currency + ")"
-	);
+	money.style.setProperty("--transform","scaleY(" + data.stats.currency + ")");
 
 	let buttonLeft = document.querySelector("button#left");
 	let buttonRight = document.querySelector("button#right");
@@ -478,8 +471,6 @@ function doTheEvent(ob) {
 
 	statsChanger(buttonLeft, ob.sL);
 	statsChanger(buttonRight, ob.sP);
-
-	//tutaj dodamy mouseover
 }
 
 function changeChapterPlace(x, place) {
@@ -562,12 +553,11 @@ let c1u1e2v2 = new MyEvent(
 	},
 	function () {
 		data.areTeethBrushed = true;
-
 		if (data.notimeleft == true) doTheEvent(c1u1e3v4);
 		else doTheEvent(c1u1e3v2);
 	},
 
-	[0, 0, 0, 0, 1, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 );
 
