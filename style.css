@@ -149,6 +149,10 @@ header {
 	padding: 0px;
 }
 
+ul#alien-relations {
+	/* display: none; */
+}
+
 #header-section nav #resources ul li, #alien-relations li {
 	list-style-type: none;
 	font-size: 2rem;
