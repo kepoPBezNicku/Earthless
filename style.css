@@ -59,7 +59,7 @@ body {
     display: inline-block;
     list-style-type: none;
     margin: 0px;
-    font-family: Outfit;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     animation-name: loadingScreen;
     animation-duration: 2s;
     animation-timing-function: ease;
