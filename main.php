@@ -32,20 +32,23 @@
                 </section>
 
                 <section id="resources">
-                    <ul id="left-header-container">
-                        <li><i class="fa-regular fa-circle-question"></i><div></div></li>
-                        <li><i class="fa-regular fa-circle-question"></i><div></div></li>
-                        <li><i class="fa-regular fa-circle-question"></i><div></div></li>
-                    </ul>
-                    <ul id="right-header-container">
+                    <ul id="resources-container">
                         <li><i class="fa-solid fa-person"></i><div></div></li>
-                        <li><i class="fa-solid fa-gas-pump"></i><div></div></li>
                         <li><i class="fa-solid fa-sack-dollar"></i><div></div></li>
+                        <li><i class="fa-regular fa-circle-question"></i><div></div></li>
+                        <li><i class="fa-regular fa-circle-question"></i><div></div></li>
+                        <li><i class="fa-regular fa-circle-question"></i><div></div></li>
+                        <li><i class="fa-regular fa-circle-question"></i><div></div></li>
                     </ul>
                 </section>
             </nav>
         </section>
     </header>
+    <ul id="alien-relations">
+        <li><i class="fa-regular fa-circle-question"></i><div></div></li>
+        <li><i class="fa-regular fa-circle-question"></i><div></div></li>
+        <li><i class="fa-regular fa-circle-question"></i><div></div></li>
+    </ul>
     <main>
         <section id="main-section">
             <div class="choice">
