@@ -408,6 +408,9 @@ ul#alien-relations {
 }
 
 @media only screen and (max-width: 1000px) {
+	.main-index {
+		margin-top: 200px
+	}
 	#main-section-index {
 		width: 70%;
 	}
@@ -462,10 +465,10 @@ ul#alien-relations {
 
 @media only screen and (max-width: 650px) {
 	.main-index {
-		margin-top: 150px;
+		margin-top: 70px;
 	}
 	#main-section-index {
-		height: 600px;
+		height: 450px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
