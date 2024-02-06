@@ -508,7 +508,7 @@ let c1u1e1 = new MyEvent(
 		doTheEvent(c1u1e2v2);
 	},
 
-	[0.1, 0.2, -0.1, 0.3, 0.1, -0.4, 0.3, 0.2, -0.4],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 );
 
@@ -531,8 +531,8 @@ let c1u1e2v1 = new MyEvent(
 		doTheEvent(c1u1e2v2);
 	},
 
-	[-0.1, -0.1, -0.1, 0, 0, 0, 0, 0, 0],
-	[-0.1, -0.1, -0.1, 0, 0, 0, 0, 0, 0]
+	[-0.1, 0.1, -0.2, 0.2, -0.3, 0.3, -0.4, 0.4, -0.5],
+	[0.1, -0.1, 0.2, -0.2, 0.3, -0.3, 0.4, -0.4, 0.5]
 );
 
 let c1u1e2v2 = new MyEvent(
@@ -626,8 +626,8 @@ let c1u1e3v3 = new MyEvent(
 	function () {
 		doTheEvent(c1u1e5v1);
 	},
-	[0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0, 0, 0, 0]
+	[0, 0, 0, 0, -0.05, 0, 0, 0, 0],
+	[0, 0, 0, 0, -0.15, 0, 0, 0, 0]
 );
 
 let c1u1e3v4 = new MyEvent(
@@ -646,8 +646,8 @@ let c1u1e3v4 = new MyEvent(
 	function () {
 		doTheEvent(c1u1e5v1);
 	},
-	[0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0, 0, 0, 0]
+	[0, 0, 0, 0, -0.05, 0, 0, 0, 0],
+	[0, 0, 0, 0, -0.15, 0, 0, 0, 0]
 );
 
 let c1u1e4v1 = new MyEvent(
@@ -666,8 +666,8 @@ let c1u1e4v1 = new MyEvent(
 	function () {
 		doTheEvent(c1u1e5v1);
 	},
-	[0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0, 0, 0, 0]
+	[0, 0, 0, 0, -0.05, 0, 0, 0, 0],
+	[0, 0, 0, 0, -0.15, 0, 0, 0, 0]
 );
 
 let c1u1e5v1 = new MyEvent(
@@ -734,8 +734,8 @@ let c1u1e7 = new MyEvent(
 	function () {
 		doTheEvent(c1u1e8);
 	},
-	[0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0, 0, 0, 0]
+	[0, 0, 0, 0.1, 0, 0, 0, 0, 0],
+	[0, 0, 0, -0.1, 0, 0, 0, 0, 0]
 );
 
 let c1u1e8 = new MyEvent(
@@ -808,7 +808,7 @@ let c1u2e2v1 = new MyEvent(
 		doTheEvent(c1u2e3v1);
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0, 0, 0, 0]
+	[0, 0, 0, 0, 0, -0.1, 0, 0, 0]
 );
 
 let c1u2e2v2 = new MyEvent(
@@ -860,7 +860,7 @@ let c1u2e4v1 = new MyEvent(
 	[
 		new MyLine(
 			"bogosBinted/rysunek.png","*młody męski głos*","orange", //nopfp.png
-			"Zapraszamy pana Jakuba Zielińskiego do studia. Wchodzimy za 2 minuty!"
+			"Zapraszamy pana Jakuba B do studia. Wchodzimy za 2 minuty!"
 		),
 	],
 	"Dzięki że przyszedłeś, a teraz życz mi powodzenia. Cześć!",
@@ -871,8 +871,8 @@ let c1u2e4v1 = new MyEvent(
 	function () {
 		doTheEvent(c1u2e5v1);
 	},
-	[0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0, 0, 0, 0]
+	[0, 0, 0, 0, 0, 0.1, 0, 0, 0],
+	[0, 0, 0, 0, 0, -0.05, 0, 0, 0]
 );
 
 let c1u2e5v1 = new MyEvent(
@@ -888,7 +888,7 @@ let c1u2e5v1 = new MyEvent(
 		),
 		new MyLine(
 			"bogosBinted/rysunek.png","*wysoka kobieta ubrana na czerwono*","red",
-			"Trzy, dwa, jeden... Witamy w wywiadzie dnia radia PDF FM, jest piątek godzina 10, z tej strony Beata Kowalczyk a moim dzisiejszym gościem jest pan Kuba Zieliński, kandydat na prezydent RP 2045. Witam serdecznie! Pojutrze ważny dzień, prawda?"
+			"Trzy, dwa, jeden... Witamy w wywiadzie dnia radia PDF FM, jest piątek godzina 10, z tej strony Beata Kowalczyk a moim dzisiejszym gościem jest pan Kuba Bukaj, kandydat na prezydent RP 2045. Witam serdecznie! Pojutrze ważny dzień, prawda?"
 		),
 		new MyLine(
 			"bogosBinted/rysunek.png","Jakub","green",
@@ -907,8 +907,8 @@ let c1u2e5v1 = new MyEvent(
 	function () {
 		doTheEvent(c1u2e6v1);
 	},
-	[0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0, 0, 0, 0]
+	[0, 0, 0, 0.1, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0.05, 0, 0, 0, 0, 0]
 );
 
 let c1u2e6v1 = new MyEvent(
@@ -918,22 +918,26 @@ let c1u2e6v1 = new MyEvent(
 			"bogosBinted/rysunek.png","Becia","red",
 			"Pytam, bo każdy prezydent powinien znać podstawowe struktury organizacji państwa, dlatego zorganizowałam dla Pana test."
 		),
-		new MyLine("bogosBinted/rysunek.png", "Jakub", "green", "Jaki test?"),
+		new MyLine(
+			"bogosBinted/rysunek.png", "Jakub", "green",
+			"Jaki test?"),
 		new MyLine(
 			"bogosBinted/rysunek.png","Becia","red",
 			"Zadam kilka prostych pytań z wiedzy o społeczeństwie, Zaczynamy!"
 		),
 		new MyLine(
 			"bogosBinted/rysunek.png","Becia","red",
-			"Pytanie pierwsze: Ilu posłów liczy senat?"
+			"Pytanie pierwsze: Ilu senatorów liczy senat?"
 		),
 	],
 	"460",
 	"100",
 	function () {
+		data.stats.publicOpinion-=.1
 		doTheEvent(c1u2e7v1);
 	},
 	function () {
+		data.stats.publicOpinion+=.05
 		doTheEvent(c1u2e7v2);
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -955,9 +959,11 @@ let c1u2e7v1 = new MyEvent(
 	"Wspólną obradą sejmu i senatu",
 	"Wspólną obradą senatu i prezydenta",
 	function () {
+		data.stats.publicOpinion+=.05
 		doTheEvent(c1u2e8v1);
 	},
 	function () {
+		data.stats.publicOpinion-=.1
 		doTheEvent(c1u2e8v2);
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -979,9 +985,11 @@ let c1u2e7v2 = new MyEvent(
 	"Wspólną obradą sejmu i senatu",
 	"Wspólną obradą senatu i prezydenta",
 	function () {
+		data.stats.publicOpinion+=.05
 		doTheEvent(c1u2e8v1);
 	},
 	function () {
+		data.stats.publicOpinion-=.1
 		doTheEvent(c1u2e8v2);
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -1003,9 +1011,11 @@ let c1u2e8v1 = new MyEvent(
 	"30 Lat",
 	"21 Lat",
 	function () {
+		data.stats.publicOpinion-=.1
 		doTheEvent(c1u2e9v1);
 	},
 	function () {
+		data.stats.publicOpinion+=.05
 		doTheEvent(c1u2e9v2);
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -1023,9 +1033,11 @@ let c1u2e8v2 = new MyEvent(
 	"30 Lat",
 	"21 Lat",
 	function () {
+		data.stats.publicOpinion-=.1
 		doTheEvent(c1u2e9v1);
 	},
 	function () {
+		data.stats.publicOpinion+=.05
 		doTheEvent(c1u2e9v2);
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -1044,10 +1056,10 @@ let c1u2e9v1 = new MyEvent(
 	"*podejdź do wywiadu na spokojnie, z humorem, unikaj trudnych pytań*",
 	function () {
 		if(data.isCoffeDrunk||data.isBreakfastEaten){
-			//poparcie +.3
+			data.stats.publicOpinion+=.3
 			doTheEvent(c1u2e10v1);
 		}else{
-			//poparcie -.2
+			data.stats.publicOpinion-=.2
 			doTheEvent(c1u2e10v2);
 		}
 		
@@ -1055,9 +1067,10 @@ let c1u2e9v1 = new MyEvent(
 	},
 	function () {
 		if(data.isCoffeDrunk||data.isBreakfastEaten){
-			//poparcie +.1
+			data.stats.publicOpinion+=.1
 			doTheEvent(c1u2e10v3);
 		}else{
+			data.stats.publicOpinion-=.1
 			doTheEvent(c1u2e10v4);
 		}
 	},
@@ -1076,10 +1089,22 @@ let c1u2e9v2 = new MyEvent(
 	"*podejdź do wywiadu na poważnie, nie unikaj trudnych pytań (wymaga skupienia)*",
 	"*podejdź do wywiadu na spokojnie, z humorem, unikaj trudnych pytań*",
 	function () {
-		doTheEvent(c1u2e10v1)
+		if(data.isCoffeDrunk||data.isBreakfastEaten){
+			data.stats.publicOpinion+=.3
+			doTheEvent(c1u2e10v1);
+		}else{
+			data.stats.publicOpinion-=.2
+			doTheEvent(c1u2e10v2);
+		}
 	},
 	function () {
-		doTheEvent(c1u2e10v1)
+		if(data.isCoffeDrunk||data.isBreakfastEaten){
+			data.stats.publicOpinion+=.1
+			doTheEvent(c1u2e10v3);
+		}else{
+			data.stats.publicOpinion-=.1
+			doTheEvent(c1u2e10v4);
+		}
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
