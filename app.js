@@ -5,6 +5,8 @@ let resources = document.getElementById("resources");
 let alienRelationsContainer = document.getElementById("alien-relations");
 let burger = document.getElementById("burger");
 
+let backgroundImage = document.querySelector(".background-image-index")
+
 // ============ RESOURCE'S PSEUDOELEMENTS ============
 
 let nerds = document.querySelector("#alien-relations li:nth-of-type(1)");
