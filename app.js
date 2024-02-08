@@ -5,6 +5,8 @@ let resources = document.getElementById("resources");
 let alienRelationsContainer = document.getElementById("alien-relations");
 let burger = document.getElementById("burger");
 
+let backgroundImage = document.querySelector(".background-image-index")
+
 // ============ RESOURCE'S PSEUDOELEMENTS ============
 
 let nerds = document.querySelector("#alien-relations li:nth-of-type(1)");
@@ -501,7 +503,7 @@ let c1u1e1 = new MyEvent(
 	"Zaraz się spóźnię!",
 	function () {
 		doTheEvent(c1u1e2v1);
-		changeChapterPlace(2, "Proxima Centauri");
+		// changeChapterPlace(2, "Proxima Centauri");
 	},
 
 	function () {
