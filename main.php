@@ -35,7 +35,7 @@
                     <ul id="resources-container">
                         <li><i class="fa-solid fa-person"></i><div></div></li>
                         <li><i class="fa-solid fa-sack-dollar"></i><div></div></li>
-                        <li><i class="fa-regular fa-circle-question"></i><div></div></li>
+                        <li><i class="fa-regular fa-circle-question"></i><div></div></li> <!--Pobrać resztę ikon żeby dodać w js-->
                         <li><i class="fa-regular fa-circle-question"></i><div></div></li>
                         <li><i class="fa-regular fa-circle-question"></i><div></div></li>
                         <li><i class="fa-regular fa-circle-question"></i><div></div></li>
