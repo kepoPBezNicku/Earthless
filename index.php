@@ -8,25 +8,11 @@
     <title><?php echo $title ?></title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header id="head-ind">
-        <section id="header-section">
-            <nav id="headerNav-index">
-                <div>
-                    <!-- <h1>Gra</h1>
-                    <h5>xdx</h5> -->
-                </div>
-            </nav>
-        </section>
-    </header>
-    <main>
-        <section id="main-section">
-            <a href="main.php">
-                <div id="start">
-                    <h1>Start</h1>
-                </div>
-            </a>
-        </section>
+<body class="background-image-index">
+    <main class="main-index">
+        <a href="main.php" id="main-section-index">
+            <h1>Start</h1>
+        </a>
     </main>
     <script src="app.js"></script>
 </body>
