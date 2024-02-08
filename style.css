@@ -285,9 +285,7 @@ ul#alien-relations {
 /* ---------------------------------------------------- */
 
 .background-image-index {
-	--x: 0px;
-	--y: 0px;
-	background-image: url(bogosBinted/PANORAMA-GPT4.png);
+	background-image: url(bogosBinted/background.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
@@ -298,7 +296,7 @@ ul#alien-relations {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-top: 2	00px;
+	margin-top: 200px;
 }
 
 #main-section-index {
