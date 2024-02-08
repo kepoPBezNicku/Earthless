@@ -503,7 +503,7 @@ let c1u1e1 = new MyEvent(
 	"Zaraz się spóźnię!",
 	function () {
 		doTheEvent(c1u1e2v1);
-		changeChapterPlace(2, "Proxima Centauri");
+		// changeChapterPlace(2, "Proxima Centauri");
 	},
 
 	function () {
