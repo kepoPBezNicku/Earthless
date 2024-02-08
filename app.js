@@ -59,6 +59,12 @@ function loadingScreen() {
 
 // loadingScreen();
 
+// ============ DISPLAYING ICONS ============
+
+function showIcons() {
+	
+}
+
 // =========================================================
 
 let middlediv = document.querySelector("div#middlediv");
@@ -1187,7 +1193,25 @@ let c1u2e10v4 = new MyEvent(
 let c1u2e11v1 = new MyEvent(
 	"bogosBinted/rysunek.png",
 	[new MyLine(
-		"bogosBinted/rysunek.png", "Jakub", "red",
+		"bogosBinted/rysunek.png", "Becia", "red",
+		"Właśnie dostaliśmy wiadomość z ostatniej chwili! Sekretarz generalny ONZ potwierdziił rzetelność nagrania które było uważane za podrobione sztuczę inteligencją.  Panie Jakubie, co teraz? Czy jesteśmy na to gotowi?"
+	)],
+	"Jak najbardziej, program Earthless...",
+	"Myślę, że napewno sobię poradzimy.",
+	function (){
+		doTheEvent(c1u2e12v1)
+	},
+	function (){
+		doTheEvent(c1u2e12v2)
+	},
+	[0, 0, 0, .2, 0, -.2, 0, 0, 0],
+	[0, 0, 0, -.2, 0, .2, 0, 0, 0]
+)
+
+let c1u2e12v1 = new MyEvent(
+	"bogosBinted/rysunek.png", //
+	[new MyLine(
+		"bogosBinted/rysunek.png", "Jakub", "green",
 		"testline"
 	)],
 	"LewaOpcja",
@@ -1198,8 +1222,8 @@ let c1u2e11v1 = new MyEvent(
 	function (){
 		//doTheEvent(cuev)
 	},
-	[0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0, 0, 0, 0]
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
 )
 
 /*
@@ -1217,8 +1241,8 @@ let cuev = new MyEvent(
 	function (){
 		//doTheEvent(cuev)
 	},
-	[0, 0, 0], //
-	[0, 0, 0] //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
 )
 */
 
