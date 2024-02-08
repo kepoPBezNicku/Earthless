@@ -76,7 +76,7 @@ function showIcons(icon) {
 
 // =========================================================
 
-let middlediv = document.querySelector("div#middlediv");
+let middleDiv = document.querySelector("div#middleDiv");
 var buttonLeft = document.querySelector("button#left");
 var buttonRight = document.querySelector("button#right");
 
@@ -436,7 +436,7 @@ function eventsRemover() {
 // =========================================================
 
 function doTheEvent(ob) {
-	middlediv.textContent = "";
+	middleDiv.textContent = "";
 
 	eventsRemover();
 
@@ -449,13 +449,13 @@ function doTheEvent(ob) {
 
 	let newBigPhoto = document.createElement("img");
 	newBigPhoto.setAttribute("src", ob.photoPath);
-	middlediv.insertAdjacentElement("beforeend", newBigPhoto);
+	middleDiv.insertAdjacentElement("beforeend", newBigPhoto);
 	newBigPhoto.classList.add("bigPhoto");
 
 	ob.line.forEach((element) => {
 		let whoinfo = document.createElement("div");
 		whoinfo.classList.add("whoInfo");
-		middlediv.insertAdjacentElement("beforeend", whoinfo);
+		middleDiv.insertAdjacentElement("beforeend", whoinfo);
 
 		let newPhoto = document.createElement("img");
 		newPhoto.setAttribute("src", element.photoPath);
@@ -475,10 +475,7 @@ function doTheEvent(ob) {
 		newSpan.insertAdjacentElement("afterend", newText);
 		newText.classList.add("lineText");
 
-		middlediv.insertAdjacentElement(
-			"beforeend",
-			document.createElement("br")
-		);
+		middleDiv.insertAdjacentElement("beforeend", document.createElement("br"));
 	});
 
 	buttonLeft.textContent = ob.opL;
@@ -503,24 +500,22 @@ function changeChapterPlace(x, place) {
 }
 
 
-function gameOverFunction(path, cuase) {
-	class GameOver {
-		constructor(photoPath, cause) {
-			this.photoPath = photoPath;
-			this.cause = casue;
-		}
-	}
-	let gameOverScreen = new GameOver (
-		'bogosBinted/' + path , cause
-	)
+function gameOverFunction(path, cause) {
+	// let mainSection = document.getElementById("main-section");
+	let decisionButton = document.getElementById("decision-button");
 
-	function createObjects() {
-		let mainSection = document.getElementById("main-section");
-		mainSection.textContent = "";
-		mainSection.insertAdjacentElement("beforeend", );
-	}
+	middleDiv.textContent = "";
+	let newImg = document.createElement("img");
+	newImg.setAttribute("src", path);
+	middleDiv.insertAdjacentElement("beforeend", newImg)
+	newImg.className = "gameOverImage";
 
-	createObjects();
+	decisionButton.textContent = "";
+	let newP = document.createElement("p");
+	let caseNode = document.createTextNode(cause);
+	newP.appendChild(caseNode);
+	decisionButton.insertAdjacentElement("beforeend", newP);
+	// decisionButton.insertAdjacentElement("beforeend", decisionButton);
 }
 
 //==================== CHAPTER 1 ====================
@@ -540,9 +535,6 @@ let c1u1e1 = new MyEvent(
 	"Zaraz się spóźnię!",
 	function () {
 		doTheEvent(c1u1e2v1);
-		// changeChapterPlace(2, "Proxima Centauri");4
-		showIcons(alienRelationsContainer);
-		gameOverFunction("sniadanie", "GUWNO")
 	},
 
 	function () {
@@ -574,6 +566,10 @@ let c1u1e2v1 = new MyEvent(
 
 	[-0.1, 0.1, -0.2, 0.2, -0.3, 0.3, -0.4, 0.4, -0.5],
 	[0.1, -0.1, 0.2, -0.2, 0.3, -0.3, 0.4, -0.4, 0.5]
+
+	// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	// !!!!!!!!! DO ZMIANY TE STATY (ALIENRELATIONS I RESZTA NIE SA WIDOCZNE DLA GRACZA) !!!!!!!!!
+	// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 );
 
 let c1u1e2v2 = new MyEvent(
@@ -1306,6 +1302,8 @@ let c1u2e13v1 = new MyEvent(
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
 )
+
+// ZEBY WLACZYC KOLEJNA IKONKE STATOW TRZEBA WPISAC showIcons(np. nerds/alienRelations)
 
 /*
 let cuev = new MyEvent(

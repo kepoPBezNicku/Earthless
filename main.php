@@ -52,7 +52,7 @@
     <main>
         <section id="main-section">
             <div class="choice">
-                <div id="middlediv">Default</div>
+                <div id="middleDiv">Default</div>
                 <div id="decision-button">
                     <button id="left"></button>
                     <button id="right"></button>
