@@ -62,7 +62,6 @@ body {
 #loading-screen li {
 	display: inline-block;
 	list-style-type: none;
-	margin: 0px;
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 	animation-name: loadingScreen;
 	animation-duration: 2s;
@@ -152,11 +151,15 @@ header {
 	--pseudoElColor: yellow;
 }
 
+#header-section nav #resources ul li:nth-child(1n+3) {
+	display: none;
+}
+
 ul#alien-relations {
-	display: flex;
+	display: none;
 	flex-direction: column;
 	background-color: var(--main-containers-color);
-	padding: 15px 15px;
+	padding: 15px;
 	border-bottom-right-radius: 10px;
 	position: fixed;
 	top: 94px;
@@ -217,7 +220,6 @@ ul#alien-relations {
 		margin: 0px 0px 0px auto;
 		border-bottom-left-radius: 25px;
 		background-color: rgba(0, 0, 0, 0);
-		/* transform: translateX(120px); */
 		transition: 0.2s ease transform;
 		right: 0;
 	}
@@ -239,7 +241,7 @@ ul#alien-relations {
 		flex-direction: column;
 	}
 	#header-section nav #resources {
-		padding: 10px;
+		padding: 10px 10px 20px;
 		gap: 0px;
 		font-size: 2rem;
 		background-color: var(--chapter-background-color);
@@ -250,7 +252,6 @@ ul#alien-relations {
 	}
 	ul#alien-relations {
 		margin: 0px;
-		padding: 15px;
 		top: 0;
 		width: fit-content;
 		transform: translateX(-160px);
@@ -297,7 +298,7 @@ ul#alien-relations {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-top: 200px;
+	margin-top: 2	00px;
 }
 
 #main-section-index {

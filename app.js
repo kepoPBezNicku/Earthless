@@ -7,6 +7,15 @@ let burger = document.getElementById("burger");
 
 let backgroundImage = document.querySelector(".background-image-index")
 
+let colors = {
+	jakub:'#496a4b', //colors["jakub"]
+	marcin:'#3a71a6', //colors["marcin"]
+	chuj:'value2',
+	chuj:'value2',
+	chuj:'value2',
+	chuj:'value2',
+	chuj:'value2',}
+
 // ============ RESOURCE'S PSEUDOELEMENTS ============
 
 let nerds = document.querySelector("#alien-relations li:nth-of-type(1)");
@@ -61,8 +70,8 @@ function loadingScreen() {
 
 // ============ DISPLAYING ICONS ============
 
-function showIcons() {
-	
+function showIcons(icon) {
+	icon.style.setProperty("display", "flex");
 }
 
 // =========================================================
@@ -414,6 +423,7 @@ class MyLine {
 	}
 }
 
+
 // ============= KLONOWANIE (USUWANIE EVENTOW) =============
 
 function eventsRemover() {
@@ -492,6 +502,27 @@ function changeChapterPlace(x, place) {
 	chapterPlace.textContent = place;
 }
 
+
+function gameOverFunction(path, cuase) {
+	class GameOver {
+		constructor(photoPath, cause) {
+			this.photoPath = photoPath;
+			this.cause = casue;
+		}
+	}
+	let gameOverScreen = new GameOver (
+		'bogosBinted/' + path , cause
+	)
+
+	function createObjects() {
+		let mainSection = document.getElementById("main-section");
+		mainSection.textContent = "";
+		mainSection.insertAdjacentElement("beforeend", );
+	}
+
+	createObjects();
+}
+
 //==================== CHAPTER 1 ====================
 changeChapterPlace(1, "Dom Jakuba");
 //===== Underchapter 1 =====
@@ -509,7 +540,9 @@ let c1u1e1 = new MyEvent(
 	"Zaraz się spóźnię!",
 	function () {
 		doTheEvent(c1u1e2v1);
-		// changeChapterPlace(2, "Proxima Centauri");
+		// changeChapterPlace(2, "Proxima Centauri");4
+		showIcons(alienRelationsContainer);
+		gameOverFunction("sniadanie", "GUWNO")
 	},
 
 	function () {
@@ -555,7 +588,6 @@ let c1u1e2v2 = new MyEvent(
 	"Wymyj zęby",
 	function () {
 		data.isCoffeDrunk = true;
-
 		if (data.notimeleft == true) doTheEvent(c1u1e3v3);
 		else doTheEvent(c1u1e3v1);
 	},
@@ -761,11 +793,12 @@ let c1u1e8 = new MyEvent(
 	"Jedźmy pod siedzibę radio PDF FM.",
 	"Ruszajmy pod radio PDF FM",
 	function () {
-		doTheEvent(c1u2e1); //przejście
-		//changeChapter(2)
+		changeChapterPlace(1, "PDF FM");
+		doTheEvent(c1u2e1);
 	},
 	function () {
-		doTheEvent(c1u2e1); //przejście
+		changeChapterPlace(1, "PDF FM");
+		doTheEvent(c1u2e1);
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -1194,7 +1227,7 @@ let c1u2e11v1 = new MyEvent(
 	"bogosBinted/rysunek.png",
 	[new MyLine(
 		"bogosBinted/rysunek.png", "Becia", "red",
-		"Właśnie dostaliśmy wiadomość z ostatniej chwili! Sekretarz generalny ONZ potwierdziił rzetelność nagrania które było uważane za podrobione sztuczę inteligencją.  Panie Jakubie, co teraz? Czy jesteśmy na to gotowi?"
+		"Właśnie dostaliśmy wiadomość z ostatniej chwili! Sekretarz generalny ONZ potwierdziił rzetelność nagrania które było uważane za podrobione sztuczę inteligencją. Panie Jakubie, co teraz? Czy jesteśmy na to gotowi?"
 	)],
 	"Jak najbardziej, program Earthless...",
 	"Myślę, że napewno sobię poradzimy.",
@@ -1209,9 +1242,57 @@ let c1u2e11v1 = new MyEvent(
 )
 
 let c1u2e12v1 = new MyEvent(
-	"bogosBinted/rysunek.png", //
+	"bogosBinted/rysunek.png", //3
 	[new MyLine(
 		"bogosBinted/rysunek.png", "Jakub", "green",
+		"Jak najbardziej, program Earthless jest odpowiedzią na ten problem. We wspłpracy z najlepszymi Polskimi naukowcami stworzyliśmy plan emigracji wszystkich Polaków w kosmos. Mamy ambitnych ludzi, nowoczesne narzędzia i dopracowany plan. Teraz jedyne czego potrzebuję żeby go wprowadzić w życie to mnie jako prezydenta. To jest jedyny sposób na zapewnienie bezpieczeństwia Polakom."
+	),new MyLine(
+		"bogosBinted/rysunek.png", "Becia", "red",
+		"A to był wywiad dnia radia PDF FM! Panie Jakbie, dziękuję bardzo za rozmowę."
+	)],
+	"Również dziękuję, miłego dnia.",
+	"Dzięki wielkie, pamiętajcie Bukaj2060!",
+	function (){
+		doTheEvent(c1u2e13v1)
+	},
+	function (){
+		doTheEvent(c1u2e13v1)
+	},
+	[0, 0, 0, 0, 0, .05, 0, 0, 0], 
+	[0, 0, 0, .05, 0, -.1, 0, 0, 0] 
+)
+
+let c1u2e12v2 = new MyEvent(
+	"bogosBinted/rysunek.png", 
+	[new MyLine(
+		"bogosBinted/rysunek.png", "Jakub", "green",
+		"Muszę przyznać, że tak jak większość uważaliśmy ten film za nieprawdziwy. W tej sytuacji jedynie co mogę zrobić to zapewnić, że napewno sobie jakoś poradzimy."
+	),new MyLine(
+		"bogosBinted/rysunek.png", "Becia", "red",
+		"Czy jest coś co może pan zapewnić obywatelom jako możliwy przyszły prezydent Polski?"
+	),new MyLine(
+		"bogosBinted/rysunek.png", "Jakub", "green",
+		"Mój sztab napewno już się tym zajmuje i zapewniam, że zrobimy wszystko żeby przygotować na to obywateli."
+	),new MyLine(
+		"bogosBinted/rysunek.png", "Becia", "red",
+		"A to był wywiad dnia radia PDF FM! Panie Jakbie, dziękuję bardzo za rozmowę."
+	)],
+	"Również dziękuję, miłego dnia.",
+	"Dzięki wielkie, pamiętajcie Bukaj2060!",
+	function (){
+		doTheEvent(c1u2e13v1)
+	},
+	function (){
+		doTheEvent(c1u2e13v1)
+	},
+	[0, 0, 0, 0, 0, .05, 0, 0, 0], //
+	[0, 0, 0, .05, 0, -.1, 0, 0, 0] //
+)
+
+let c1u2e13v1 = new MyEvent(
+	"bogosBinted/rysunek.png",
+	[new MyLine(
+		"bogosBinted/rysunek.png", "Jakub", "red",
 		"testline"
 	)],
 	"LewaOpcja",
@@ -1245,11 +1326,10 @@ let cuev = new MyEvent(
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
 )
 */
-
 /*
 #c7af42
 #a58449
-#496a4b
+#496a4b Jakub
 #364962
 #63798c
 #b3c5c2
