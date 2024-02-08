@@ -310,54 +310,63 @@ function statsChanger(element1, list) {
 
 		if (data.stats.alienRelations.nerds <= 0) {
 			data.stats.alienRelations.nerds = 0;
+			// gameOverFunction(path, cause);
 		} else if (data.stats.alienRelations.nerds > 1) {
 			data.stats.alienRelations.nerdsn = 1;
 		}
 
 		if (data.stats.alienRelations.magicals <= 0) {
 			data.stats.alienRelations.magicals = 0;
+			// gameOverFunction(path, cause);
 		} else if (data.stats.alienRelations.magicals > 1) {
 			data.stats.alienRelations.magicals = 1;
 		}
 
 		if (data.stats.alienRelations.agreSuS <= 0) {
 			data.stats.alienRelations.agreSuS = 0;
+			// gameOverFunction(path, cause);
 		} else if (data.stats.alienRelations.agreSuS > 1) {
 			data.stats.alienRelations.agreSuS = 1;
 		}
 
 		if (data.stats.publicOpinion <= 0) {
 			data.stats.publicOpinion = 0;
+			// gameOverFunction(path, cause);
 		} else if (data.stats.publicOpinion > 1) {
 			data.stats.publicOpinion = 1;
 		}
 
 		if (data.stats.currency <= 0) {
 			data.stats.currency = 0;
+			// gameOverFunction(path, cause);
 		} else if (data.stats.currency > 1) {
 			data.stats.currency = 1;
 		}
 
 		if (data.stats.adviser <= 0) {
 			data.stats.adviser = 0;
+			// gameOverFunction(path, cause);
 		} else if (data.stats.adviser > 1) {
 			data.stats.adviser = 1;
 		}
 
 		if (data.stats.research <= 0) {
 			data.stats.research = 0;
+			// gameOverFunction(path, cause);
 		} else if (data.stats.research > 1) {
 			data.stats.research = 1;
 		}
 		
 		if (data.stats.fuel <= 0) {
 			data.stats.fuel = 0;
+			// gameOverFunction(path, cause);
 		} else if (data.stats.fuel > 1) {
 			data.stats.fuel = 1;
 		}
 
 		if (data.stats.food <= 0) {
 			data.stats.food = 0;
+			// gameOverFunction(path, cause);
 		} else if (data.stats.food > 1) {
 			data.stats.food = 1;
 		}
