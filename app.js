@@ -739,10 +739,10 @@ let c1u1e7 = new MyEvent(
 );
 
 let c1u1e8 = new MyEvent(
-	"bogosBinted/rysunek.png",
+	"bogosBinted/rysunek.png", //panmirek.png
 	[
 		new MyLine(
-			"bogosBinted/rysunek.png","Pan Mirek","yellow",
+			"bogosBinted/rysunek.png","Pan Mirek","yellow", //panmirek.png
 			"Słyszał pan tego szefa czegoś tam? Mówił, że niby lecimy w kosmos ha! Większej głupoty nie słyszałem."
 		),
 		new MyLine(
@@ -836,10 +836,10 @@ let c1u2e2v2 = new MyEvent(
 );
 
 let c1u2e3v1 = new MyEvent(
-	"bogosBinted/rysunek.png",
+	"bogosBinted/rysunek.png", //marcin.png
 	[
 		new MyLine(
-			"bogosBinted/rysunek.png","Jakub","blue",
+			"bogosBinted/rysunek.png","Jakub","blue", //marcin.png
 			"Stary, ty masz wygrać wybory a nie być jakimś poszukiwaczem prawdy i sprawiedliwości. To jest zły pomysł, ale zrobisz jak uważasz."
 		),
 	],
@@ -887,7 +887,7 @@ let c1u2e5v1 = new MyEvent(
 			"Tak odrazu? Myślałem że jeszcze zostało trochę cza..."
 		),
 		new MyLine(
-			"bogosBinted/rysunek.png","*wysoka kobieta ubrana na czerwono*","red",
+			"bogosBinted/rysunek.png","*wysoka kobieta ubrana na czerwono*","red", //becia.png
 			"Trzy, dwa, jeden... Witamy w wywiadzie dnia radia PDF FM, jest piątek godzina 10, z tej strony Beata Kowalczyk a moim dzisiejszym gościem jest pan Kuba Bukaj, kandydat na prezydent RP 2045. Witam serdecznie! Pojutrze ważny dzień, prawda?"
 		),
 		new MyLine(
@@ -895,7 +895,7 @@ let c1u2e5v1 = new MyEvent(
 			"Również witam, tak, z pewnością jeden z najważniejszych dni dla współczesnej Polski. Wybory prezydenckie napewno znacząco wpłyną na losy naszego państwa"
 		),
 		new MyLine(
-			"bogosBinted/rysunek.png","Becia","red",
+			"bogosBinted/rysunek.png","Becia","red", //becia.png
 			"Dobrze, zanim jeszcze przejdziemy do serca sedna naszego spotkania... ponoć miał pan z wosu 2 na światectwie!"
 		),
 	],
@@ -915,18 +915,18 @@ let c1u2e6v1 = new MyEvent(
 	"bogosBinted/rysunek.png", //radio.png
 	[
 		new MyLine(
-			"bogosBinted/rysunek.png","Becia","red",
+			"bogosBinted/rysunek.png","Becia","red", //becia.png
 			"Pytam, bo każdy prezydent powinien znać podstawowe struktury organizacji państwa, dlatego zorganizowałam dla Pana test."
 		),
 		new MyLine(
-			"bogosBinted/rysunek.png", "Jakub", "green",
+			"bogosBinted/rysunek.png", "Jakub", "green", 
 			"Jaki test?"),
 		new MyLine(
-			"bogosBinted/rysunek.png","Becia","red",
+			"bogosBinted/rysunek.png","Becia","red", //becia.png
 			"Zadam kilka prostych pytań z wiedzy o społeczeństwie, Zaczynamy!"
 		),
 		new MyLine(
-			"bogosBinted/rysunek.png","Becia","red",
+			"bogosBinted/rysunek.png","Becia","red", //becia.png
 			"Pytanie pierwsze: Ilu senatorów liczy senat?"
 		),
 	],
@@ -948,11 +948,11 @@ let c1u2e7v1 = new MyEvent(
 	"bogosBinted/rysunek.png",
 	[
 		new MyLine(
-			"bogosBinted/rysunek.png","Becia","red",
+			"bogosBinted/rysunek.png","Becia","red", //becia.png
 			"Źle! Senat liczy 100 senatorów, możliwe, że pomyliło się panu z liczbą posłów w sejmie, która wynosi 460. Lecimy dalej."
 		),
 		new MyLine(
-			"bogosBinted/rysunek.png","Becia","red",
+			"bogosBinted/rysunek.png","Becia","red", //becia.png
 			"Pytanie drugie: Czym jest zgromadzenie narodowe?"
 		),
 	],
@@ -974,11 +974,11 @@ let c1u2e7v2 = new MyEvent(
 	"bogosBinted/rysunek.png",
 	[
 		new MyLine(
-			"bogosBinted/rysunek.png","Becia","red",
+			"bogosBinted/rysunek.png","Becia","red", //becia.png
 			"Dobrze! Senat liczy 100 senatorów, natomiast sejm liczy 460 posłów. Lecimy dalej."
 		),
 		new MyLine(
-			"bogosBinted/rysunek.png","Becia","red",
+			"bogosBinted/rysunek.png","Becia","red", //becia.png
 			"Pytanie drugie: Czym jest zgromadzenie narodowe?"
 		),
 	],
@@ -1000,11 +1000,11 @@ let c1u2e8v1 = new MyEvent(
 	"bogosBinted/rysunek.png",
 	[
 		new MyLine(
-			"bogosBinted/rysunek.png","Becia","red",
+			"bogosBinted/rysunek.png","Becia","red", //becia.png
 			"Poprawna odpowiedź! Jest zwoływane np podczas odebranie przysięgi nowo wybranego prezydenta."
 		),
 		new MyLine(
-			"bogosBinted/rysunek.png","Becia","red",
+			"bogosBinted/rysunek.png","Becia","red", //becia.png
 			"Ostatnie pytanie: Ile lat trzeba mieć żeby zostać posłem?"
 		),
 	],
@@ -1026,8 +1026,8 @@ let c1u2e8v2 = new MyEvent(
 	"bogosBinted/rysunek.png",
 	[
 		new MyLine(
-			"bogosBinted/rysunek.png","Becia","red",
-			"Niestesty, zła odpowiedź. Zgromdzenie narodowe jest zebraniem senatu nie z prezydentem a z sejmem. Jest zwoływane np. podczas odebranie przysięgi nowo wybranego prezydenta.c"
+			"bogosBinted/rysunek.png","Becia","red", //becia.png
+			"Niestesty, zła odpowiedź. Zgromdzenie narodowe jest zebraniem senatu nie z prezydentem a z sejmem. Jest zwoływane np. podczas odebranie przysięgi nowo wybranego prezydenta."
 		),
 	],
 	"30 Lat",
@@ -1048,7 +1048,7 @@ let c1u2e9v1 = new MyEvent(
 	"bogosBinted/rysunek.png",
 	[
 		new MyLine(
-			"bogosBinted/rysunek.png", "Jakub", "red",
+			"bogosBinted/rysunek.png", "Jakub", "red", //becia.png
 			"No nie, żeby zostać posłem wystarczy ukończyć 21 rok życia i do tego mieć prawa wyborcze. Dobrze, skoro pytania mamy za sobą, możemy przejść do właciwej częsci wywiadu. Jak pan się przygoto..."
 		),
 	],
@@ -1082,7 +1082,7 @@ let c1u2e9v2 = new MyEvent(
 	"bogosBinted/rysunek.png",
 	[
 		new MyLine(
-			"bogosBinted/rysunek.png", "Jakub", "red",
+			"bogosBinted/rysunek.png", "Jakub", "red", //becia.png
 			"Zgadza się! Wystaczy ukończyć 21 rok życia i mieć prawa wyborcze. Dobrze, skoro pytania mamy za sobą, możemy przejść do właciwej częsci wywiadu. Jak pan się przygoto..."
 		),
 	],
@@ -1166,8 +1166,8 @@ let c1u2e10v3 = new MyEvent(
 
 let c1u2e10v4 = new MyEvent(
 	"bogosBinted/rysunek.png",
-	[new MyLine(
-		"bogosBinted/rysunek.png", "Jakub", "green", //wodą się na nawodnisz debilu ~ Wojciech 2024
+	[new MyLine( //wodą się na nawodnisz debilu ~ Wojciech 2024
+		"bogosBinted/rysunek.png", "Jakub", "green", 
 		"Dziś rano nie miałem czasu nabrać siły na ten dzień, więc postanowiłem starać się unikać nie wygodnych pytań co mimo wszystko nie zawsze mi wychodziło. Na szczęście nic aż tak głupiego nie powiedziałem w sumie to nie wyszło aż tak źle"
 	)],
 	"Kontynuuj wywiad",
