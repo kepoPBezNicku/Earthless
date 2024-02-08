@@ -501,7 +501,6 @@ function changeChapterPlace(x, place) {
 
 
 function gameOverFunction(path, cause) {
-	// let mainSection = document.getElementById("main-section");
 	let decisionButton = document.getElementById("decision-button");
 
 	middleDiv.textContent = "";
@@ -515,7 +514,6 @@ function gameOverFunction(path, cause) {
 	let caseNode = document.createTextNode(cause);
 	newP.appendChild(caseNode);
 	decisionButton.insertAdjacentElement("beforeend", newP);
-	// decisionButton.insertAdjacentElement("beforeend", decisionButton);
 }
 
 //==================== CHAPTER 1 ====================
