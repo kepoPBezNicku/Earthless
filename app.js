@@ -591,7 +591,7 @@ let c1u1e3v2 = new MyEvent(
 	[
 		new MyLine(
 			"bogosBinted/rysunek.png","Jakub","green",
-			"No, i takie ząbki ma człowiek sukcesu :DD teraz zostało mi jeszcze trochę czasu żeby .."
+			"No, takie ząbki ma człowiek sukcesu :DD teraz zostało mi jeszcze trochę czasu żeby..."
 		),
 	],
 	"Zjeść śniadanie",
@@ -615,7 +615,7 @@ let c1u1e3v3 = new MyEvent(
 	[
 		new MyLine(
 			"bogosBinted/rysunek.png","Jakub","green",
-			"Dzień bez kawy to dzień stracony! No ale już nic innego nie zdążę zrobić, pójdę złapać taxi."
+			"Dzień bez kawy to dzień stracony! Już nic innego nie zdążę zrobić, pójdę złapać taxi."
 		),
 	],
 	"Wezmę zwykłą taxówkę, każdy grosz się liczy.",
@@ -635,7 +635,7 @@ let c1u1e3v4 = new MyEvent(
 	[
 		new MyLine(
 			"bogosBinted/rysunek.png","Jakub","green",
-			"No, i takie ząbki ma człowiek sukcesu :DD Dobra, dość tego gapienia się w lustro, lepiej zamówię taxi."
+			"No, takie ząbki ma człowiek sukcesu :DD Dobra, dość tego gapienia się w lustro, lepiej zamówię taxi."
 		),
 	],
 	"Wezmę zwykłą taxówkę, każdy grosz się liczy.",
@@ -655,7 +655,7 @@ let c1u1e4v1 = new MyEvent(
 	[
 		new MyLine(
 			"bogosBinted/rysunek.png","Jakub","green",
-			"Dobra, najadłem się, teraz lece zamówić taxi. "
+			"Dobra, najadłem się, teraz lecę zamówić taxi. "
 		),
 	],
 	"Wezmę zwykłą taxówkę, każdy grosz się liczy.",
@@ -770,7 +770,7 @@ let c1u2e1 = new MyEvent(
 	[
 		new MyLine(
 			"bogosBinted/rysunek.png","Marcin","blue", //marcin.png
-			'... po czym powiesz "również dziekuję, miłego dnia", uśmiechniesz się i wyjdziesz ze studia. Wszystko jasne?'
+			'... Po czym powiesz "również dziekuję, miłego dnia", uśmiechniesz się i wyjdziesz ze studia. Wszystko jasne?'
 		),
 		new MyLine(
 			"bogosBinted/rysunek.png","Jakub","green",
@@ -796,7 +796,7 @@ let c1u2e2v1 = new MyEvent(
 	[
 		new MyLine(
 			"bogosBinted/rysunek.png","Marcin","blue", //marcin.png
-			"Słuchaj, tu jeszcze nikt tam niczego nie potwierdził opinii publicznej, po prostu unikaj tematu. Jeszcze wezmą nas za ludzi, którzy wierzą we wszystko co jest w internecie."
+			"Słuchaj, jeszcze nikt tam niczego nie potwierdził opinii publicznej, po prostu unikaj tematu. Jeszcze wezmą nas za ludzi, którzy wierzą we wszystko co jest w internecie."
 		),
 	],
 	"Dobra, będę go unikał",
@@ -880,7 +880,7 @@ let c1u2e5v1 = new MyEvent(
 	[
 		new MyLine(
 			"bogosBinted/rysunek.png","*wysoka kobieta ubrana na czerwono*","red", //becia.png
-			"Cześć gotowy? Za 15 sekund wchodzimy."
+			"Cześć, jesteś gotowy? Za 15 sekund wchodzimy."
 		),
 		new MyLine(
 			"bogosBinted/rysunek.png","Jakub","green",
@@ -1114,7 +1114,7 @@ let c1u2e10v1 = new MyEvent(
 	"bogosBinted/rysunek.png",
 	[new MyLine(
 		"bogosBinted/rysunek.png", "Jakub", "green",
-		"Rozmowa bardzo mi się udała! Dzięki temu, że rano nabrałem energii, bardzo sprytnie odpowiadałem na pytania Beaty. To napewno pomoże mi w kampanii."
+		"Rozmowa bardzo mi się udała! Dzięki temu, że rano nabrałem energii, sprytnie odpowiadałem na pytania Beaty. To na pewno pomoże mi w kampanii."
 	)],
 	"Kontynuuj wywiad",
 	"Kontynuuj wywiad",
@@ -1132,7 +1132,7 @@ let c1u2e10v2 = new MyEvent(
 	"bogosBinted/rysunek.png",
 	[new MyLine(
 		"bogosBinted/rysunek.png", "Jakub", "green",
-		"Dałem z siebie wszystko, ale przez to, że rano nie miałem czasu ani na śniadanie ani na kawę, nie byłem dokońca skupiony. Powiedziałem kilka głupich rzeczy, a wyborcy mogą mi tego nie wybaczyć."
+		"Dałem z siebie wszystko, ale przez to, że rano nie miałem czasu ani na śniadanie ani na kawę, nie byłem do końca skupiony. Powiedziałem kilka głupich rzeczy, a wyborcy mogą mi tego nie wybaczyć."
 	)],
 	"Kontynuuj wywiad",
 	"Kontynuuj wywiad",
@@ -1168,7 +1168,7 @@ let c1u2e10v4 = new MyEvent(
 	"bogosBinted/rysunek.png",
 	[new MyLine(
 		"bogosBinted/rysunek.png", "Jakub", "green", //wodą się na nawodnisz debilu ~ Wojciech 2024
-		"Dziś rano nie miałem czasu nabrać siły na ten dzień, więc postanowiłem starać się unikać nie wygodnych pytań co mimo wszystko nie zawsze mi wychodziło. Na szczęście nic aż tak głupiego nie powiedziałem w sumie to nie wyszło aż tak źle"
+		"Dziś rano nie miałem czasu nabrać siły na ten dzień, więc postanowiłem starać się unikać niewygodnych pytań co mimo wszystko nie zawsze mi wychodziło. Na szczęście nic aż tak głupiego nie powiedziałem w sumie to nie wyszło aż tak źle"
 	)],
 	"Kontynuuj wywiad",
 	"Kontynuuj wywiad",
