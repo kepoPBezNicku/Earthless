@@ -11,11 +11,21 @@ body {
 
 :root {
 	--background-color: #364962;
-	--header-color: #3b4252;
+	--header-color: #364962;
 	--chapter-background-color: #63798c;
 	--main-containers-color: #63798c;
 	--font-family: "Outfit", Segoe UI, sans-serif;
 	--button: #d8dee9;
+	--color: black;
+	--border-header-contrast: none;
+}
+
+:root.contrast {
+	--border-header-contrast: 3px solid yellow;
+	--chapter-background-color: black;
+	--header-color: black;
+	--button: black;
+	--color: white;
 }
 
 html {
@@ -26,10 +36,15 @@ html {
 body {
 	background-color: var(--background-color);
 	position: relative;
+	background-image: url(bogosBinted/background-main1.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center
 }
 
 #loading-screen {
-	position: absolute;
+	position: fixed;
 	right: 0;
 	top: 0;
 	background-color: #0b0c0f;
@@ -62,7 +77,6 @@ body {
 #loading-screen li {
 	display: inline-block;
 	list-style-type: none;
-	margin: 0px;
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 	animation-name: loadingScreen;
 	animation-duration: 2s;
@@ -97,9 +111,12 @@ body {
 
 header {
 	background-color: var(--header-color);
+	transition: 0.3s ease background-color;
 	font-family: var(--font-family);
 	position: sticky;
 	top: 0;
+	box-shadow: 0px 0px 15px 0px #efece8;
+	border: var(--border-header-contrast);
 }
 
 #header-section {
@@ -115,6 +132,8 @@ header {
 
 #header-section #chapter-burger #chapter {
 	background-color: var(--chapter-background-color);
+	border: var(--border-header-contrast);
+	transition: 0.3s ease background-color;
 	font-size: 1.7rem;
 	position: relative;
 	top: 20px;
@@ -128,11 +147,23 @@ header {
 	white-space: nowrap;
 }
 
+#contrast-and-font-size {
+	font-size: 1.75rem;
+	user-select: none;
+}
+
+#contrast-and-font-size i {
+	cursor: pointer;
+	margin: 5px 10px;
+	transition: 0.2s ease color;
+}
+
 #header-section #resources {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	width: fit-content;
+	border: var(--border-header-contrast);
 	gap: 30px;
 }
 
@@ -152,11 +183,15 @@ header {
 	--pseudoElColor: yellow;
 }
 
+#header-section nav #resources ul li:nth-child(1n+3) {
+	display: none;
+}
+
 ul#alien-relations {
-	display: flex;
+	display: none;
 	flex-direction: column;
 	background-color: var(--main-containers-color);
-	padding: 15px 15px;
+	padding: 15px;
 	border-bottom-right-radius: 10px;
 	position: fixed;
 	top: 94px;
@@ -176,18 +211,19 @@ ul#alien-relations {
 }
 
 #header-section nav #resources ul li div, #alien-relations li div {
-	width: 5px;
+	width: 7px;
 	display: block;
-	border: 1px solid black;
+	border: 1px solid white;
 	box-sizing: content-box;
 	margin-left: 10px;
+	border-radius: 3px;
 }
 
 #header-section nav #resources ul li div::after, #alien-relations li div::after {
 	content: "";
 	background-color: var(--pseudoElColor);
 	/* transition-property: background-color; */
-	width: 5px;
+	width: 7px;
 	height: 100%;
 	display: block;
 	transform-origin: bottom right;
@@ -217,13 +253,20 @@ ul#alien-relations {
 		margin: 0px 0px 0px auto;
 		border-bottom-left-radius: 25px;
 		background-color: rgba(0, 0, 0, 0);
-		/* transform: translateX(120px); */
 		transition: 0.2s ease transform;
 		right: 0;
+		box-shadow: none;
+		border: 0px;
 	}
 	#header-section #chapter-burger {
 		display: flex;
 		flex-direction: row;
+	}
+	#contrast-and-font-size {
+		position: fixed;
+		top: 20px;
+		left: 50%;
+		transform: translate(-50%);
 	}
 	#header-section #chapter-burger #chapter {
 		margin: 0px;
@@ -239,7 +282,7 @@ ul#alien-relations {
 		flex-direction: column;
 	}
 	#header-section nav #resources {
-		padding: 10px;
+		padding: 10px 10px 20px;
 		gap: 0px;
 		font-size: 2rem;
 		background-color: var(--chapter-background-color);
@@ -250,7 +293,6 @@ ul#alien-relations {
 	}
 	ul#alien-relations {
 		margin: 0px;
-		padding: 15px;
 		top: 0;
 		width: fit-content;
 		transform: translateX(-160px);
@@ -284,9 +326,7 @@ ul#alien-relations {
 /* ---------------------------------------------------- */
 
 .background-image-index {
-	--x: 0px;
-	--y: 0px;
-	background-image: url(bogosBinted/PANORAMA-GPT4.png);
+	background-image: url(bogosBinted/background.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
@@ -298,6 +338,11 @@ ul#alien-relations {
 	justify-content: center;
 	align-items: center;
 	margin-top: 200px;
+}
+
+main {
+	display: flex;
+	justify-content: center;
 }
 
 #main-section-index {
@@ -313,15 +358,14 @@ ul#alien-relations {
 	width: 45%;
 	text-decoration: none;
 	color: var(--button)
-
 }
 
 #main-section {
 	display: flex;
 	justify-content: space-evenly;
 	font-family: var(--font-family);
-	width: 700px;
-	margin: 0px auto 40px;
+	width: 100%;
+	margin: 0px 0px 40px;
 	padding-top: 50px;
 }
 
@@ -337,15 +381,16 @@ ul#alien-relations {
 #main-section .choice {
 	display: flex;
 	flex-direction: column;
+	width: 100%;
 }
 
-#main-section .choice #middlediv {
+#main-section .choice #middleDiv {
 	display: flex;
 	flex-direction: column;
-	margin-bottom: 15px;
+	margin: 0px auto 15px;
 }
 
-#main-section .choice #middlediv .whoInfo {
+#main-section .choice #middleDiv .whoInfo {
 	align-items: center;
 	width: 100%;
 	gap: 0px;
@@ -355,25 +400,25 @@ ul#alien-relations {
 	grid-template-rows: 0.5fr 1fr;
 }
 
-#main-section .choice #middlediv .bigPhoto {
+#main-section .choice #middleDiv img {
 	width: 80%;
 	max-width: 400px;
 	margin: 0px auto;
 	border-radius: 20px;
 }
 
-#main-section .choice #middlediv .linePhoto {
+#main-section .choice #middleDiv .linePhoto {
 	width: 50px;
 	border-radius: 10px;
 }
 
-#main-section .choice #middlediv .lineWho {
+#main-section .choice #middleDiv .lineWho {
 	width: fit-content;
 	font-size: 2rem;
 	margin: 0px 0px 0px 10px;
 }
 
-#main-section .choice #middlediv .lineText {
+#main-section .choice #middleDiv .lineText {
 	grid-column: 1/3;
 	margin: 10px;
 }
@@ -394,10 +439,10 @@ ul#alien-relations {
 	font-size: 1rem;
 	font-weight: bold;
 	width: fit-content;
-	color: black;
+	color: var(--color);
 	background-color: var(--button);
 	cursor: pointer;
-	border: 0px;
+	border: var(--border-header-contrast);
 	transition: 0.2s ease;
 	transition-property: background-color, color;
 }
@@ -405,6 +450,20 @@ ul#alien-relations {
 #main-section .choice #decision-button button:hover {
 	background-color: #4c566a;
 	color: var(--button);
+}
+
+.gameOverImage {
+	/* position: fixed; */
+	/* top: 0; */
+	max-width: 100vw;
+	margin: 0px auto;
+	width: 100%;
+}
+
+@media only screen and (max-width: 1100px) {
+	main {
+		padding-top: 40px;
+	}
 }
 
 @media only screen and (max-width: 1000px) {
@@ -423,9 +482,6 @@ ul#alien-relations {
 }
 
 @media only screen and (max-width: 920px) {
-	main {
-		padding-top: 70px;
-	}
 	.main-index {
 		padding: 0px;
 	}
@@ -437,23 +493,23 @@ ul#alien-relations {
 @media only screen and (max-width: 750px) {
 	#main-section {
 		flex-direction: column;
-		margin: 10px auto;
-		padding: 0px 15px;
+		margin: 0px auto;
+		padding: 50px 15px 60px;
 		width: fit-content;
 		gap: 60px;
 	}
 	#main-section div {
 		width: 100%;
 	}
-	/* #main-section .choice #middlediv .whoInfo {
+	/* #main-section .choice #middleDiv .whoInfo {
 	} */
-	#main-section .choice #middlediv .linePhoto {
+	#main-section .choice #middleDiv .linePhoto {
 		margin: 0px 0px 0px auto;
 	}
-	#main-section .choice #middlediv .lineWho {
+	#main-section .choice #middleDiv .lineWho {
 		font-size: 1.5rem;
 	}
-	/* #main-section .choice #middlediv .lineText {
+	/* #main-section .choice #middleDiv .lineText {
 	} */
 	#main-section .choice #decision-button {
 		flex-direction: column-reverse;
@@ -474,7 +530,10 @@ ul#alien-relations {
 		justify-content: center;
 	}
 	main {
-		padding-top: 130px;
+		padding-top: 60px;
+	}
+	#contrast-and-font-size {
+		left: 30%;
 	}
 	#loading-screen li {
 		font-size: 30px;
@@ -496,6 +555,25 @@ ul#alien-relations {
 		}
 	}
 }
+
+@media only screen and (max-width: 500px) {
+	main {
+		padding-top: 60px;
+	}
+	#contrast-and-font-size {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		top: 10px;
+		left: 40px;
+	}
+}
+
+/* @media only screen and (max-width: 430px) {
+	#contrast-and-font-size {
+
+	}
+} */
 
 /* ---------------------------------------------------- */
 /* ---------------------- FOOTER ---------------------- */

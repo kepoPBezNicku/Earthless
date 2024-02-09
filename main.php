@@ -30,7 +30,10 @@
                         <h1>Z DŻEJ ESA OPIS</h1>
                     </div>
                 </section>
-
+                <section id="contrast-and-font-size">
+                    <i class="fa-solid fa-a smaller"></i>
+                    <i class="fa-solid fa-circle-half-stroke contrastOFF"></i>
+                </section>
                 <section id="resources">
                     <ul id="resources-container">
                         <li><i class="fa-solid fa-person"></i><div></div></li>
@@ -52,7 +55,7 @@
     <main>
         <section id="main-section">
             <div class="choice">
-                <div id="middlediv">Default</div>
+                <div id="middleDiv">Default</div>
                 <div id="decision-button">
                     <button id="left"></button>
                     <button id="right"></button>
