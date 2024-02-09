@@ -16,7 +16,16 @@ body {
 	--main-containers-color: #63798c;
 	--font-family: "Outfit", Segoe UI, sans-serif;
 	--button: #d8dee9;
+	--color: black;
 	--border-header-contrast: none;
+}
+
+:root.contrast {
+	--border-header-contrast: 3px solid yellow;
+	--chapter-background-color: black;
+	--header-color: black;
+	--button: black;
+	--color: white;
 }
 
 html {
@@ -107,7 +116,7 @@ header {
 	position: sticky;
 	top: 0;
 	box-shadow: 0px 0px 15px 0px #efece8;
-	border: 2px solid var(--border-header-contrast)
+	border: var(--border-header-contrast);
 }
 
 #header-section {
@@ -123,6 +132,7 @@ header {
 
 #header-section #chapter-burger #chapter {
 	background-color: var(--chapter-background-color);
+	border: var(--border-header-contrast);
 	transition: 0.3s ease background-color;
 	font-size: 1.7rem;
 	position: relative;
@@ -153,6 +163,7 @@ header {
 	flex-direction: row;
 	justify-content: space-between;
 	width: fit-content;
+	border: var(--border-header-contrast);
 	gap: 30px;
 }
 
@@ -428,10 +439,10 @@ main {
 	font-size: 1rem;
 	font-weight: bold;
 	width: fit-content;
-	color: black;
+	color: var(--color);
 	background-color: var(--button);
 	cursor: pointer;
-	border: 0px;
+	border: var(--border-header-contrast);
 	transition: 0.2s ease;
 	transition-property: background-color, color;
 }

@@ -83,31 +83,13 @@ contrast.addEventListener("mouseout", function contrastOut() {
 	let buttonLeft = document.querySelector("button#left");
 	let buttonRight = document.querySelector("button#right");
 	if (contrast.classList.contains("contrastON")) {
-		document.documentElement.style.setProperty("--header-color", "black");
-		document.documentElement.style.setProperty("--border-header-contrast", "yellow");
-		buttonLeft.style.setProperty("background-color", "black");
-		buttonRight.style.setProperty("background-color", "black");
-		buttonLeft.style.setProperty("color", "white");
-		buttonRight.style.setProperty("color", "white");
-		buttonLeft.style.setProperty("border", "3px solid yellow");
-		buttonRight.style.setProperty("border", "3px solid yellow");
-		document.documentElement.style.setProperty("--chapter-background-color", "black");
-		chapter.style.setProperty("border", "3px solid yellow");
-
+		document.documentElement.className = "contrast";
 		contrast.style.setProperty("color", "green");
-	} else if (contrast.classList.contains("contrastOFF")) {
-		document.documentElement.style.setProperty("--header-color", "#364962");
-		document.documentElement.style.setProperty("--border-header-contrast", "none");
-		buttonLeft.style.setProperty("color", "black");
-		buttonRight.style.setProperty("color", "black");
-		buttonLeft.style.setProperty("background-color", "#d8dee9");
-		buttonRight.style.setProperty("background-color", "#d8dee9");
-		buttonLeft.style.setProperty("border", "none");
-		buttonRight.style.setProperty("border", "none");
-		document.documentElement.style.setProperty("--chapter-background-color", "#63798c");
-		chapter.style.setProperty("border", "none");
 
+	} else if (contrast.classList.contains("contrastOFF")) {
+		document.documentElement.className = "";
 		contrast.style.setProperty("color", "white");
+		
 	}
 })
 
@@ -115,32 +97,13 @@ contrast.addEventListener("mouseover", function contrastHover() {
 	let buttonLeft = document.querySelector("button#left");
 	let buttonRight = document.querySelector("button#right");
 	if (contrast.classList.contains("contrastON")) {
-		document.documentElement.style.setProperty("--header-color", "#364962");
-		document.documentElement.style.setProperty("--border-header-contrast", "none");
-		document.documentElement.style.setProperty("--button", "black");
-		buttonLeft.style.setProperty("color", "black");
-		buttonRight.style.setProperty("color", "black");
-		buttonLeft.style.setProperty("background-color", "#d8dee9");
-		buttonRight.style.setProperty("background-color", "#d8dee9");
-		buttonLeft.style.setProperty("border", "none");
-		buttonRight.style.setProperty("border", "none");
-		document.documentElement.style.setProperty("--chapter-background-color", "#63798c");
-		chapter.style.setProperty("border", "none");
-
+		document.documentElement.className = "";
 		contrast.style.setProperty("color", "white");
-	} else if (contrast.classList.contains("contrastOFF")) {
-		document.documentElement.style.setProperty("--header-color", "black");
-		document.documentElement.style.setProperty("--border-header-contrast", "yellow");
-		buttonLeft.style.setProperty("background-color", "black");
-		buttonRight.style.setProperty("background-color", "black");
-		buttonLeft.style.setProperty("color", "white");
-		buttonRight.style.setProperty("color", "white");
-		buttonLeft.style.setProperty("border", "3px solid yellow");
-		buttonRight.style.setProperty("border", "3px solid yellow");
-		document.documentElement.style.setProperty("--chapter-background-color", "black");
-		chapter.style.setProperty("border", "3px solid yellow");
 
+	} else if (contrast.classList.contains("contrastOFF")) {
+		document.documentElement.className = "contrast";
 		contrast.style.setProperty("color", "green");
+
 	}
 })
 
@@ -150,34 +113,16 @@ contrast.addEventListener("click", function contrastChange() {
 	let buttonRight = document.querySelector("button#right");
 	if (contrast.classList.contains("contrastON")) {
 		contrast.classList.remove("contrastON");
-		document.documentElement.style.setProperty("--header-color", "#364962");
-		document.documentElement.style.setProperty("--border-header-contrast", "none");
-		buttonLeft.style.setProperty("color", "black");
-		buttonRight.style.setProperty("color", "black");
-		buttonLeft.style.setProperty("background-color", "#d8dee9");
-		buttonRight.style.setProperty("background-color", "#d8dee9");
-		buttonLeft.style.setProperty("border", "none");
-		buttonRight.style.setProperty("border", "none");
-		document.documentElement.style.setProperty("--chapter-background-color", "#63798c");
-		chapter.style.setProperty("border", "none");
-
+		document.documentElement.className = "";
 		contrast.style.setProperty("color", "white");
 		contrast.classList.add("contrastOFF");
+
 	} else if (contrast.classList.contains("contrastOFF")) {
 		contrast.classList.remove("contrastOFF");
-		document.documentElement.style.setProperty("--header-color", "black");
-		document.documentElement.style.setProperty("--border-header-contrast", "yellow");
-		buttonLeft.style.setProperty("background-color", "black");
-		buttonRight.style.setProperty("background-color", "black");
-		buttonLeft.style.setProperty("color", "white");
-		buttonRight.style.setProperty("color", "white");
-		buttonLeft.style.setProperty("border", "3px solid yellow");
-		buttonRight.style.setProperty("border", "3px solid yellow");
-		document.documentElement.style.setProperty("--chapter-background--color", "black");
-		chapter.style.setProperty("border", "3px solid yellow");
-
+		document.documentElement.className = "contrast";
 		contrast.style.setProperty("color", "green");
 		contrast.classList.add("contrastON");
+
 	}
 })
 
