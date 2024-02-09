@@ -190,7 +190,9 @@ header {
 ul#alien-relations {
 	display: none;
 	flex-direction: column;
-	background-color: var(--main-containers-color);
+	background-color: var(--chapter-background-color);
+	color: white;
+	border: var(--border-header-contrast);
 	padding: 15px;
 	border-bottom-right-radius: 10px;
 	position: fixed;
