@@ -59,72 +59,73 @@ burger.addEventListener("click", function () {
 
 // ============ KONTRAST I CZCIONKA ============
 
-let font = document.querySelector("#contrast-and-font-size i:first-of-type");
-let contrast = document.querySelector("#contrast-and-font-size i:nth-of-type(2)");
+function fontAndContrast() {
+	let font = document.querySelector("#contrast-and-font-size i:first-of-type");
+	let contrast = document.querySelector("#contrast-and-font-size i:nth-of-type(2)");
 
-font.addEventListener("click", function fontChange() {
-	if (font.classList.contains("bigger")) {
-		font.classList.remove("bigger");
-		font.classList.add("smaller");
-		document.documentElement.style.setProperty("font-size", "17px");
+	font.addEventListener("click", function fontChange() {
+		if (font.classList.contains("bigger")) {
+			font.classList.remove("bigger");
+			font.classList.add("smaller");
+			document.documentElement.style.setProperty("font-size", "17px");
 
-		font.style.setProperty("color", "white");
-	} else if (font.classList.contains("smaller")) {
-		font.classList.remove("smaller");
-		font.classList.add("bigger");
-		document.documentElement.style.setProperty("font-size", "23px");
+			font.style.setProperty("color", "white");
+		} else if (font.classList.contains("smaller")) {
+			font.classList.remove("smaller");
+			font.classList.add("bigger");
+			document.documentElement.style.setProperty("font-size", "23px");
 
-		font.style.setProperty("color", "green");
-	}
-})
-
-
-contrast.addEventListener("mouseout", function contrastOut() {
-	let buttonLeft = document.querySelector("button#left");
-	let buttonRight = document.querySelector("button#right");
-	if (contrast.classList.contains("contrastON")) {
-		document.documentElement.className = "contrast";
-		contrast.style.setProperty("color", "green");
-
-	} else if (contrast.classList.contains("contrastOFF")) {
-		document.documentElement.className = "";
-		contrast.style.setProperty("color", "white");
-		
-	}
-})
-
-contrast.addEventListener("mouseover", function contrastHover() {
-	let buttonLeft = document.querySelector("button#left");
-	let buttonRight = document.querySelector("button#right");
-	if (contrast.classList.contains("contrastON")) {
-		document.documentElement.className = "";
-		contrast.style.setProperty("color", "white");
-
-	} else if (contrast.classList.contains("contrastOFF")) {
-		document.documentElement.className = "contrast";
-		contrast.style.setProperty("color", "green");
-
-	}
-})
+			font.style.setProperty("color", "green");
+		}
+	})
 
 
-contrast.addEventListener("click", function contrastChange() {
-	let buttonLeft = document.querySelector("button#left");
-	let buttonRight = document.querySelector("button#right");
-	if (contrast.classList.contains("contrastON")) {
-		contrast.classList.remove("contrastON");
-		document.documentElement.className = "";
-		contrast.style.setProperty("color", "white");
-		contrast.classList.add("contrastOFF");
+	contrast.addEventListener("mouseout", function contrastOut() {
+		let buttonLeft = document.querySelector("button#left");
+		let buttonRight = document.querySelector("button#right");
+		if (contrast.classList.contains("contrastON")) {
+			document.documentElement.className = "contrast";
+			contrast.style.setProperty("color", "green");
 
-	} else if (contrast.classList.contains("contrastOFF")) {
-		contrast.classList.remove("contrastOFF");
-		document.documentElement.className = "contrast";
-		contrast.style.setProperty("color", "green");
-		contrast.classList.add("contrastON");
+		} else if (contrast.classList.contains("contrastOFF")) {
+			document.documentElement.className = "";
+			contrast.style.setProperty("color", "white");
+		}
+	})
 
-	}
-})
+	contrast.addEventListener("mouseover", function contrastHover() {
+		let buttonLeft = document.querySelector("button#left");
+		let buttonRight = document.querySelector("button#right");
+		if (contrast.classList.contains("contrastON")) {
+			document.documentElement.className = "";
+			contrast.style.setProperty("color", "white");
+
+		} else if (contrast.classList.contains("contrastOFF")) {
+			document.documentElement.className = "contrast";
+			contrast.style.setProperty("color", "green");
+		}
+	})
+
+
+	contrast.addEventListener("click", function contrastChange() {
+		let buttonLeft = document.querySelector("button#left");
+		let buttonRight = document.querySelector("button#right");
+		if (contrast.classList.contains("contrastON")) {
+			contrast.classList.remove("contrastON");
+			document.documentElement.className = "";
+			contrast.style.setProperty("color", "white");
+			contrast.classList.add("contrastOFF");
+
+		} else if (contrast.classList.contains("contrastOFF")) {
+			contrast.classList.remove("contrastOFF");
+			document.documentElement.className = "contrast";
+			contrast.style.setProperty("color", "green");
+			contrast.classList.add("contrastON");
+		}
+	})
+}
+
+fontAndContrast();
 
 // ============ LOADING SCREEN ============
 
