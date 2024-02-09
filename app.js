@@ -1168,15 +1168,9 @@ let c1u2e10v3 = new MyEvent(
 
 let c1u2e10v4 = new MyEvent(
 	"bogosBinted/rysunek.png",
-<<<<<<< HEAD
-	[new MyLine( //wodą się na nawodnisz debilu ~ Wojciech 2024
-		"bogosBinted/rysunek.png", "Jakub", "green", 
-		"Dziś rano nie miałem czasu nabrać siły na ten dzień, więc postanowiłem starać się unikać nie wygodnych pytań co mimo wszystko nie zawsze mi wychodziło. Na szczęście nic aż tak głupiego nie powiedziałem w sumie to nie wyszło aż tak źle"
-=======
 	[new MyLine(
 		"bogosBinted/rysunek.png", "Jakub", "green", //wodą się na nawodnisz debilu ~ Wojciech 2024
 		"Dziś rano nie miałem czasu nabrać siły na ten dzień, więc postanowiłem starać się unikać niewygodnych pytań co mimo wszystko nie zawsze mi wychodziło. Na szczęście nic aż tak głupiego nie powiedziałem w sumie to nie wyszło aż tak źle"
->>>>>>> 34fe93a316883b9333262ae9368edac180573624
 	)],
 	"Kontynuuj wywiad",
 	"Kontynuuj wywiad",
