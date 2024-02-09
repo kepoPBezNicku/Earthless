@@ -39,7 +39,7 @@
                         <li><i class="fa-solid fa-person"></i><div></div></li>
                         <li><i class="fa-solid fa-sack-dollar"></i><div></div></li>
                         <li><i class="fa-solid fa-comment-medical"></i><div></div></li> <!--Pobrać resztę ikon żeby dodać w js-->
-                        <li><i class="fa-solid fa-book"></i><div></div></li>
+                        <li><i class="fa-solid fa-flask-vial"></i><div></div></li>
                         <li><i class="fa-solid fa-gas-pump"></i><div></div></li>
                         <li><i class="fa-solid fa-utensils"></i><div></div></li>
                     </ul>
