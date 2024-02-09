@@ -30,7 +30,10 @@
                         <h1>Z DŻEJ ESA OPIS</h1>
                     </div>
                 </section>
-
+                <section id="contrast-and-font-size">
+                    <i class="fa-solid fa-a smaller"></i>
+                    <i class="fa-solid fa-circle-half-stroke contrastOFF"></i>
+                </section>
                 <section id="resources">
                     <ul id="resources-container">
                         <li><i class="fa-solid fa-person"></i><div></div></li>

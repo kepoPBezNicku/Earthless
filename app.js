@@ -5,12 +5,15 @@ let resources = document.getElementById("resources");
 let alienRelationsContainer = document.getElementById("alien-relations");
 let burger = document.getElementById("burger");
 
+var buttonLeft = document.querySelector("button#left");
+var buttonRight = document.querySelector("button#right");
+
 let backgroundImage = document.querySelector(".background-image-index")
 
 let colors = {
 	jakub:'#496a4b', //colors["jakub"]
 	marcin:'#3a71a6', //colors["marcin"]
-	chuj:'value2',
+	playAgainColor:'#ce5263',
 	chuj:'value2',
 	chuj:'value2',
 	chuj:'value2',
@@ -54,6 +57,130 @@ burger.addEventListener("click", function () {
 	}
 });
 
+// ============ KONTRAST I CZCIONKA ============
+
+let font = document.querySelector("#contrast-and-font-size i:first-of-type");
+let contrast = document.querySelector("#contrast-and-font-size i:nth-of-type(2)");
+
+font.addEventListener("click", function fontChange() {
+	if (font.classList.contains("bigger")) {
+		font.classList.remove("bigger");
+		font.classList.add("smaller");
+		document.documentElement.style.setProperty("font-size", "17px");
+
+		font.style.setProperty("color", "white");
+	} else if (font.classList.contains("smaller")) {
+		font.classList.remove("smaller");
+		font.classList.add("bigger");
+		document.documentElement.style.setProperty("font-size", "23px");
+
+		font.style.setProperty("color", "green");
+	}
+})
+
+
+contrast.addEventListener("mouseout", function contrastOut() {
+	let buttonLeft = document.querySelector("button#left");
+	let buttonRight = document.querySelector("button#right");
+	if (contrast.classList.contains("contrastON")) {
+		document.documentElement.style.setProperty("--header-color", "black");
+		document.documentElement.style.setProperty("--border-header-contrast", "yellow");
+		buttonLeft.style.setProperty("background-color", "black");
+		buttonRight.style.setProperty("background-color", "black");
+		buttonLeft.style.setProperty("color", "white");
+		buttonRight.style.setProperty("color", "white");
+		buttonLeft.style.setProperty("border", "3px solid yellow");
+		buttonRight.style.setProperty("border", "3px solid yellow");
+		document.documentElement.style.setProperty("--chapter-background-color", "black");
+		chapter.style.setProperty("border", "3px solid yellow");
+
+		contrast.style.setProperty("color", "green");
+	} else if (contrast.classList.contains("contrastOFF")) {
+		document.documentElement.style.setProperty("--header-color", "#364962");
+		document.documentElement.style.setProperty("--border-header-contrast", "none");
+		buttonLeft.style.setProperty("color", "black");
+		buttonRight.style.setProperty("color", "black");
+		buttonLeft.style.setProperty("background-color", "#d8dee9");
+		buttonRight.style.setProperty("background-color", "#d8dee9");
+		buttonLeft.style.setProperty("border", "none");
+		buttonRight.style.setProperty("border", "none");
+		document.documentElement.style.setProperty("--chapter-background-color", "#63798c");
+		chapter.style.setProperty("border", "none");
+
+		contrast.style.setProperty("color", "white");
+	}
+})
+
+contrast.addEventListener("mouseover", function contrastHover() {
+	let buttonLeft = document.querySelector("button#left");
+	let buttonRight = document.querySelector("button#right");
+	if (contrast.classList.contains("contrastON")) {
+		document.documentElement.style.setProperty("--header-color", "#364962");
+		document.documentElement.style.setProperty("--border-header-contrast", "none");
+		document.documentElement.style.setProperty("--button", "black");
+		buttonLeft.style.setProperty("color", "black");
+		buttonRight.style.setProperty("color", "black");
+		buttonLeft.style.setProperty("background-color", "#d8dee9");
+		buttonRight.style.setProperty("background-color", "#d8dee9");
+		buttonLeft.style.setProperty("border", "none");
+		buttonRight.style.setProperty("border", "none");
+		document.documentElement.style.setProperty("--chapter-background-color", "#63798c");
+		chapter.style.setProperty("border", "none");
+
+		contrast.style.setProperty("color", "white");
+	} else if (contrast.classList.contains("contrastOFF")) {
+		document.documentElement.style.setProperty("--header-color", "black");
+		document.documentElement.style.setProperty("--border-header-contrast", "yellow");
+		buttonLeft.style.setProperty("background-color", "black");
+		buttonRight.style.setProperty("background-color", "black");
+		buttonLeft.style.setProperty("color", "white");
+		buttonRight.style.setProperty("color", "white");
+		buttonLeft.style.setProperty("border", "3px solid yellow");
+		buttonRight.style.setProperty("border", "3px solid yellow");
+		document.documentElement.style.setProperty("--chapter-background-color", "black");
+		chapter.style.setProperty("border", "3px solid yellow");
+
+		contrast.style.setProperty("color", "green");
+	}
+})
+
+
+contrast.addEventListener("click", function contrastChange() {
+	let buttonLeft = document.querySelector("button#left");
+	let buttonRight = document.querySelector("button#right");
+	if (contrast.classList.contains("contrastON")) {
+		contrast.classList.remove("contrastON");
+		document.documentElement.style.setProperty("--header-color", "#364962");
+		document.documentElement.style.setProperty("--border-header-contrast", "none");
+		buttonLeft.style.setProperty("color", "black");
+		buttonRight.style.setProperty("color", "black");
+		buttonLeft.style.setProperty("background-color", "#d8dee9");
+		buttonRight.style.setProperty("background-color", "#d8dee9");
+		buttonLeft.style.setProperty("border", "none");
+		buttonRight.style.setProperty("border", "none");
+		document.documentElement.style.setProperty("--chapter-background-color", "#63798c");
+		chapter.style.setProperty("border", "none");
+
+		contrast.style.setProperty("color", "white");
+		contrast.classList.add("contrastOFF");
+	} else if (contrast.classList.contains("contrastOFF")) {
+		contrast.classList.remove("contrastOFF");
+		document.documentElement.style.setProperty("--header-color", "black");
+		document.documentElement.style.setProperty("--border-header-contrast", "yellow");
+		buttonLeft.style.setProperty("background-color", "black");
+		buttonRight.style.setProperty("background-color", "black");
+		buttonLeft.style.setProperty("color", "white");
+		buttonRight.style.setProperty("color", "white");
+		buttonLeft.style.setProperty("border", "3px solid yellow");
+		buttonRight.style.setProperty("border", "3px solid yellow");
+		document.documentElement.style.setProperty("--chapter-background--color", "black");
+		chapter.style.setProperty("border", "3px solid yellow");
+
+		contrast.style.setProperty("color", "green");
+		contrast.classList.add("contrastON");
+	}
+})
+
 // ============ LOADING SCREEN ============
 
 function loadingScreen() {
@@ -77,8 +204,7 @@ function showIcons(icon) {
 // =========================================================
 
 let middleDiv = document.querySelector("div#middleDiv");
-var buttonLeft = document.querySelector("button#left");
-var buttonRight = document.querySelector("button#right");
+
 
 let data = {
 	chapter: 1,
@@ -310,63 +436,63 @@ function statsChanger(element1, list) {
 
 		if (data.stats.alienRelations.nerds <= 0) {
 			data.stats.alienRelations.nerds = 0;
-			// gameOverFunction(path, cause);
+			gameOverFunction("bogosBinted/gameOverSmierc", "Twoje relacje z cywilizacją nerdów spadła do zera.");
 		} else if (data.stats.alienRelations.nerds > 1) {
 			data.stats.alienRelations.nerdsn = 1;
 		}
 
 		if (data.stats.alienRelations.magicals <= 0) {
 			data.stats.alienRelations.magicals = 0;
-			// gameOverFunction(path, cause);
+			gameOverFunction("bogosBinted/gameOverSmierc", "Twoje relacje z magami nerdów spadła do zera.");
 		} else if (data.stats.alienRelations.magicals > 1) {
 			data.stats.alienRelations.magicals = 1;
 		}
 
 		if (data.stats.alienRelations.agreSuS <= 0) {
 			data.stats.alienRelations.agreSuS = 0;
-			// gameOverFunction(path, cause);
+			gameOverFunction("bogosBinted/gameOverSmierc", "Twoje relacje z cywilizacją agresorów spadła do zera.");
 		} else if (data.stats.alienRelations.agreSuS > 1) {
 			data.stats.alienRelations.agreSuS = 1;
 		}
 
 		if (data.stats.publicOpinion <= 0) {
 			data.stats.publicOpinion = 0;
-			// gameOverFunction(path, cause);
+			gameOverFunction("bogosBinted/gameOver", "Twoja reputacja spadła do zera.");
 		} else if (data.stats.publicOpinion > 1) {
 			data.stats.publicOpinion = 1;
 		}
 
 		if (data.stats.currency <= 0) {
 			data.stats.currency = 0;
-			// gameOverFunction(path, cause);
+			gameOverFunction("bogosBinted/gameOver", "Straciłeś/aś wszystkie pieniądze.");
 		} else if (data.stats.currency > 1) {
 			data.stats.currency = 1;
 		}
 
 		if (data.stats.adviser <= 0) {
 			data.stats.adviser = 0;
-			// gameOverFunction(path, cause);
+			gameOverFunction("bogosBinted/gameOver", "Twoja reputacja spadła do zera.");
 		} else if (data.stats.adviser > 1) {
 			data.stats.adviser = 1;
 		}
 
 		if (data.stats.research <= 0) {
 			data.stats.research = 0;
-			// gameOverFunction(path, cause);
+			gameOverFunction("bogosBinted/gameOver", "");
 		} else if (data.stats.research > 1) {
 			data.stats.research = 1;
 		}
 		
 		if (data.stats.fuel <= 0) {
 			data.stats.fuel = 0;
-			// gameOverFunction(path, cause);
+			gameOverFunction(path, cause);
 		} else if (data.stats.fuel > 1) {
 			data.stats.fuel = 1;
 		}
 
 		if (data.stats.food <= 0) {
 			data.stats.food = 0;
-			// gameOverFunction(path, cause);
+			gameOverFunction(path, cause);
 		} else if (data.stats.food > 1) {
 			data.stats.food = 1;
 		}
@@ -523,6 +649,12 @@ function gameOverFunction(path, cause) {
 	let caseNode = document.createTextNode(cause);
 	newP.appendChild(caseNode);
 	decisionButton.insertAdjacentElement("beforeend", newP);
+
+	let playAgain = document.createElement("button");
+	let buttonNode = document.createTextNode("Zagraj ponownie");
+	playAgain.appendChild(buttonNode);
+	playAgain.style.setProperty("color", colors[playAgainColor])
+	decisionButton("afterend", playAgain);
 }
 
 //==================== CHAPTER 1 ====================
@@ -571,8 +703,8 @@ let c1u1e2v1 = new MyEvent(
 		doTheEvent(c1u1e2v2);
 	},
 
-	[-0.1, 0.1, -0.2, 0.2, -0.3, 0.3, -0.4, 0.4, -0.5],
-	[0.1, -0.1, 0.2, -0.2, 0.3, -0.3, 0.4, -0.4, 0.5]
+	[0, 0, 0, 0.2, -0.3, 0, 0, 0, 0],
+	[0, 0, 0, -0.2, 0.3, 0, 0, 0, 0]
 
 	// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	// !!!!!!!!! DO ZMIANY TE STATY (ALIENRELATIONS I RESZTA NIE SA WIDOCZNE DLA GRACZA) !!!!!!!!!

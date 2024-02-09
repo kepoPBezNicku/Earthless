@@ -11,11 +11,12 @@ body {
 
 :root {
 	--background-color: #364962;
-	--header-color: #3b4252;
+	--header-color: #364962;
 	--chapter-background-color: #63798c;
 	--main-containers-color: #63798c;
 	--font-family: "Outfit", Segoe UI, sans-serif;
 	--button: #d8dee9;
+	--border-header-contrast: none;
 }
 
 html {
@@ -26,10 +27,15 @@ html {
 body {
 	background-color: var(--background-color);
 	position: relative;
+	background-image: url(bogosBinted/background-main1.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center
 }
 
 #loading-screen {
-	position: absolute;
+	position: fixed;
 	right: 0;
 	top: 0;
 	background-color: #0b0c0f;
@@ -96,9 +102,12 @@ body {
 
 header {
 	background-color: var(--header-color);
+	transition: 0.3s ease background-color;
 	font-family: var(--font-family);
 	position: sticky;
 	top: 0;
+	box-shadow: 0px 0px 15px 0px #efece8;
+	border: 2px solid var(--border-header-contrast)
 }
 
 #header-section {
@@ -114,6 +123,7 @@ header {
 
 #header-section #chapter-burger #chapter {
 	background-color: var(--chapter-background-color);
+	transition: 0.3s ease background-color;
 	font-size: 1.7rem;
 	position: relative;
 	top: 20px;
@@ -125,6 +135,17 @@ header {
 #header-section nav h1 {
 	margin: 0px;
 	white-space: nowrap;
+}
+
+#contrast-and-font-size {
+	font-size: 1.75rem;
+	user-select: none;
+}
+
+#contrast-and-font-size i {
+	cursor: pointer;
+	margin: 5px 10px;
+	transition: 0.2s ease color;
 }
 
 #header-section #resources {
@@ -179,18 +200,19 @@ ul#alien-relations {
 }
 
 #header-section nav #resources ul li div, #alien-relations li div {
-	width: 5px;
+	width: 7px;
 	display: block;
-	border: 1px solid black;
+	border: 1px solid white;
 	box-sizing: content-box;
 	margin-left: 10px;
+	border-radius: 3px;
 }
 
 #header-section nav #resources ul li div::after, #alien-relations li div::after {
 	content: "";
 	background-color: var(--pseudoElColor);
 	/* transition-property: background-color; */
-	width: 5px;
+	width: 7px;
 	height: 100%;
 	display: block;
 	transform-origin: bottom right;
@@ -222,10 +244,17 @@ ul#alien-relations {
 		background-color: rgba(0, 0, 0, 0);
 		transition: 0.2s ease transform;
 		right: 0;
+		box-shadow: none;
 	}
 	#header-section #chapter-burger {
 		display: flex;
 		flex-direction: row;
+	}
+	#contrast-and-font-size {
+		position: fixed;
+		top: 20px;
+		left: 50%;
+		transform: translate(-50%);
 	}
 	#header-section #chapter-burger #chapter {
 		margin: 0px;
@@ -312,7 +341,6 @@ ul#alien-relations {
 	width: 45%;
 	text-decoration: none;
 	color: var(--button)
-
 }
 
 #main-section {
@@ -411,6 +439,12 @@ ul#alien-relations {
 	color: var(--button);
 }
 
+@media only screen and (max-width: 1100px) {
+	main {
+		padding-top: 40px;
+	}
+}
+
 @media only screen and (max-width: 1000px) {
 	.main-index {
 		margin-top: 200px
@@ -427,9 +461,6 @@ ul#alien-relations {
 }
 
 @media only screen and (max-width: 920px) {
-	main {
-		padding-top: 70px;
-	}
 	.main-index {
 		padding: 0px;
 	}
@@ -441,8 +472,8 @@ ul#alien-relations {
 @media only screen and (max-width: 750px) {
 	#main-section {
 		flex-direction: column;
-		margin: 10px auto;
-		padding: 0px 15px;
+		margin: 0px auto;
+		padding: 50px 15px 60px;
 		width: fit-content;
 		gap: 60px;
 	}
@@ -478,7 +509,10 @@ ul#alien-relations {
 		justify-content: center;
 	}
 	main {
-		padding-top: 130px;
+		padding-top: 60px;
+	}
+	#contrast-and-font-size {
+		left: 30%;
 	}
 	#loading-screen li {
 		font-size: 30px;
@@ -500,6 +534,25 @@ ul#alien-relations {
 		}
 	}
 }
+
+@media only screen and (max-width: 500px) {
+	main {
+		padding-top: 60px;
+	}
+	#contrast-and-font-size {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		top: 10px;
+		left: 40px;
+	}
+}
+
+/* @media only screen and (max-width: 430px) {
+	#contrast-and-font-size {
+
+	}
+} */
 
 /* ---------------------------------------------------- */
 /* ---------------------- FOOTER ---------------------- */
