@@ -644,7 +644,6 @@ function gameOverFunction(path, cause) {
 	middleDiv.insertAdjacentElement("beforeend", newImg)
 	newImg.className = "gameOverImage";
 	middleDiv.style.setProperty("width", "100%");
-	newImg.style.setProperty("margin", "0px");
 
 	decisionButton.textContent = "";
 	let newP = document.createElement("p");
