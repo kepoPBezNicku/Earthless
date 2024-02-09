@@ -382,63 +382,63 @@ function statsChanger(element1, list) {
 
 		if (data.stats.alienRelations.nerds <= 0) {
 			data.stats.alienRelations.nerds = 0;
-			gameOverFunction("bogosBinted/gameOverSmierc.png", "Twoje relacje z cywilizacją nerdów spadła do zera.");
+			gameOverFunction("gameOverDeath", "Twoje relacje z cywilizacją nerdów spadły do zera.");
 		} else if (data.stats.alienRelations.nerds > 1) {
 			data.stats.alienRelations.nerdsn = 1;
 		}
 
 		if (data.stats.alienRelations.magicals <= 0) {
 			data.stats.alienRelations.magicals = 0;
-			gameOverFunction("bogosBinted/gameOverSmierc.png", "Twoje relacje z magami nerdów spadła do zera.");
+			gameOverFunction("gameOverDeath", "Twoje relacje z magami nerdów spadły do zera.");
 		} else if (data.stats.alienRelations.magicals > 1) {
 			data.stats.alienRelations.magicals = 1;
 		}
 
 		if (data.stats.alienRelations.agreSuS <= 0) {
 			data.stats.alienRelations.agreSuS = 0;
-			gameOverFunction("bogosBinted/gameOverSmierc.png", "Twoje relacje z cywilizacją agresorów spadła do zera.");
+			gameOverFunction("gameOverDeath", "Twoje relacje z cywilizacją agresorów spadły	 do zera.");
 		} else if (data.stats.alienRelations.agreSuS > 1) {
 			data.stats.alienRelations.agreSuS = 1;
 		}
 
 		if (data.stats.publicOpinion <= 0) {
 			data.stats.publicOpinion = 0;
-			gameOverFunction("bogosBinted/gameOver.png", "Twoja reputacja spadła do zera.");
+			gameOverFunction("gameOver", "Twoja reputacja spadła do zera.");
 		} else if (data.stats.publicOpinion > 1) {
 			data.stats.publicOpinion = 1;
 		}
 
 		if (data.stats.currency <= 0) {
 			data.stats.currency = 0;
-			gameOverFunction("bogosBinted/gameOver.png", "Straciłeś/aś wszystkie pieniądze.");
+			gameOverFunction("gameOver", "Straciłeś/aś wszystkie pieniądze.");
 		} else if (data.stats.currency > 1) {
 			data.stats.currency = 1;
 		}
 
 		if (data.stats.adviser <= 0) {
 			data.stats.adviser = 0;
-			gameOverFunction("bogosBinted/gameOver.png", "Twoja reputacja spadła do zera.");
+			gameOverFunction("gameOver", "Twoja reputacja spadła do zera.");
 		} else if (data.stats.adviser > 1) {
 			data.stats.adviser = 1;
 		}
 
 		if (data.stats.research <= 0) {
 			data.stats.research = 0;
-			gameOverFunction("bogosBinted/gameOver.png", "Za mały poziom badań.");
+			gameOverFunction("gameOver", "Za mały poziom badań.");
 		} else if (data.stats.research > 1) {
 			data.stats.research = 1;
 		}
 		
 		if (data.stats.fuel <= 0) {
 			data.stats.fuel = 0;
-			gameOverFunction("bogosBinted/gameOver.png", "Za mały poziom paliwa.");
+			gameOverFunction("gameOver", "Za mały poziom paliwa.");
 		} else if (data.stats.fuel > 1) {
 			data.stats.fuel = 1;
 		}
 
 		if (data.stats.food <= 0) {
 			data.stats.food = 0;
-			gameOverFunction("bogosBinted/gameOverSmierc.png", "Śmierć spowodowana brakiem jedzenia.");
+			gameOverFunction("gameOverDeath", "Śmierć spowodowana brakiem jedzenia.");
 		} else if (data.stats.food > 1) {
 			data.stats.food = 1;
 		}
@@ -581,28 +581,28 @@ function changeChapterPlace(x, place) {
 }
 
 
-function gameOverFunction(path, cause) {
-	let decisionButton = document.getElementById("decision-button");
+function gameOverFunction(gameOverClassName, cause) {
+	let body = document.querySelector("body");
 
-	middleDiv.textContent = "";
-	let newImg = document.createElement("img");
-	newImg.setAttribute("src", path);
-	middleDiv.insertAdjacentElement("beforeend", newImg)
-	newImg.className = "gameOverImage";
-	middleDiv.style.setProperty("width", "100%");
+	body.textContent = "";
+	body.style.setProperty("background-color", "black")
+	body.className = gameOverClassName;
+	let div = document.createElement("div");
+	body.insertAdjacentElement("afterbegin", div);
+	div.className = "gameOverContainer"
 
-	decisionButton.textContent = "";
 	let newP = document.createElement("p");
 	let caseNode = document.createTextNode(cause);
 	newP.appendChild(caseNode);
-	decisionButton.insertAdjacentElement("beforeend", newP);
+	div.insertAdjacentElement("afterbegin", newP);
+	newP.className = "gameOverP";
 
 	let playAgain = document.createElement("a");
 	let buttonNode = document.createTextNode("Zagraj ponownie");
 	playAgain.setAttribute("href", "main.php")
 	playAgain.appendChild(buttonNode);
-	playAgain.style.setProperty("color", colors['playAgainColor'])
-	decisionButton.insertAdjacentElement("afterend", playAgain);
+	playAgain.className = "playAgain"
+	div.insertAdjacentElement("beforeend", playAgain);
 }
 
 //==================== CHAPTER 1 ====================
@@ -628,7 +628,7 @@ let c1u1e1 = new MyEvent(
 		doTheEvent(c1u1e2v2);
 	},
 
-	[0, 0, 0, -1, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 );
 
