@@ -366,7 +366,7 @@ main {
 	display: flex;
 	justify-content: space-evenly;
 	font-family: var(--font-family);
-	width: 100%;
+	width: 70%;
 	margin: 0px 0px 40px;
 	padding-top: 50px;
 }
