@@ -190,7 +190,9 @@ header {
 ul#alien-relations {
 	display: none;
 	flex-direction: column;
-	background-color: var(--main-containers-color);
+	background-color: var(--chapter-background-color);
+	color: white;
+	border: var(--border-header-contrast);
 	padding: 15px;
 	border-bottom-right-radius: 10px;
 	position: fixed;
@@ -364,7 +366,7 @@ main {
 	display: flex;
 	justify-content: space-evenly;
 	font-family: var(--font-family);
-	width: 100%;
+	width: 70%;
 	margin: 0px 0px 40px;
 	padding-top: 50px;
 }
@@ -452,12 +454,64 @@ main {
 	color: var(--button);
 }
 
+.gameOver {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: black;
+	background-attachment: fixed;
+	background-image: url(bogosBinted/gameOver.png);
+	position: relative;
+}
+
+.gameOverDeath {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: black;
+	background-attachment: fixed;
+	background-image: url(bogosBinted/gameOverSmierc.png);
+}
+
+@media only screen and (max-width: 700px) {
+	.gameOver {
+		background-image: url(bogosBinted/gameOverResp.png);
+	}	
+}
+
+.gameOverContainer {
+	position: absolute;
+	top: 600px;
+	width: 80%;
+	text-align: center;
+	left: 50%;
+	transform: translate(-50%);
+}
+
 .gameOverImage {
-	/* position: fixed; */
-	/* top: 0; */
 	max-width: 100vw;
 	margin: 0px auto;
-	width: 100%;
+	width: 100vw;
+	position: fixed;
+	top: 0;
+}
+
+.gameOverP {
+	font-family: Outfit, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	color: white;
+	font-size: 2rem;
+	text-align: center;
+}
+
+.playAgain {
+	font-family: Rubik, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	border: 2px solid red;
+	border-radius: 10px;
+	padding: 5px;
+	text-decoration: none;
+	font-weight: bold;
+	color: black;
+	background-color: #ce5263;
 }
 
 @media only screen and (max-width: 1100px) {
