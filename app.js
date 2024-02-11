@@ -468,6 +468,10 @@ function statsChanger(element1, list) {
 		// console.log(data.stats.currency);
 
 		// ↑ NIE WYWALAC CONSOLLOGUF DOPOKI NIE BEDZIEMY ODDAWAC PROJEKTU
+
+		// ale pierdol sie
+
+		//naprawde
 	});
 }
 
@@ -852,9 +856,11 @@ let c1u1e7 = new MyEvent(
 	"O, to już? Szybki pan jest!",
 	"Ale spokojnie, gdzie się panu tak śpieszy?",
 	function () {
+		showIcons(adviser);
 		doTheEvent(c1u1e8);
 	},
 	function () {
+		showIcons(adviser);
 		doTheEvent(c1u1e8);
 	},
 	[0, 0, 0, 0.1, 0, 0, 0, 0, 0],
@@ -865,8 +871,8 @@ let c1u1e8 = new MyEvent(
 	"bogosBinted/jakub.png",
 	[
 		new MyLine(
-			"bogosBinted/jakub.png","Pan Mirek","yellow",
-			"Słyszał pan tego szefa czegoś tam? Mówił, że niby lecimy w kosmos ha! Większej głupoty nie słyszałem."
+			"bogosBinted/rysunek.png","Pan Mirek","yellow",
+			"Widział pan ten filmik z tym jakimś szefem ONZ? Mówił, że niby lecimy w kosmos ha! Większej głupoty nie słyszałem."
 		),
 		new MyLine(
 			"bogosBinted/jakub.png","Jakub","green",
