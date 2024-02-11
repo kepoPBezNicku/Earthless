@@ -818,18 +818,18 @@ let c1u1e5v1 = new MyEvent(
 );
 
 let c1u1e6 = new MyEvent(
-	"bogosBinted/jakub.png", //y.png
+	"bogosBinted/Y.png", //y.png
 	[
 		new MyLine(
-			"bogosBinted/jakub.png","SkibidiEdge2k13","white",
+			"bogosBinted/noPfpUser.png","SkibidiEdge2k13","white",
 			"Halo?? Dziś jest prima aprilis czy ja o czymś nie wiem???"
 		),
 		new MyLine(
-			"bogosBinted/jakub.png","ArchUserUWU","white",
+			"bogosBinted/noPfpUser.png","ArchUserUWU","white",
 			"Myślicie że ten wyciek był prawdziwy? Przecież by nam powiedzieli o czymś takim..."
 		),
 		new MyLine(
-			"bogosBinted/jakub.png","NwordEnjoyer","white",
+			"bogosBinted/noPfpUser.png","NwordEnjoyer","white",
 			"No to zaczynamy szturm foliarzy XDDD nie ma szans że to prawda, pewnie jakieś AI"
 		),
 	],
@@ -846,10 +846,10 @@ let c1u1e6 = new MyEvent(
 );
 
 let c1u1e7 = new MyEvent(
-	"bogosBinted/jakub.png", //taxi.png
+	"bogosBinted/mirek.png", //taxi.png
 	[
 		new MyLine(
-			"bogosBinted/jakub.png","Pan Mirek","yellow", //panmirek.png
+			"bogosBinted/mirek.png","Pan Mirek","yellow", //panmirek.png
 			"Długo będzie jeszcze tam pan stał? Ja mam inne kursy!"
 		),
 	],
@@ -868,10 +868,10 @@ let c1u1e7 = new MyEvent(
 );
 
 let c1u1e8 = new MyEvent(
-	"bogosBinted/jakub.png",
+	"bogosBinted/mirek.png",
 	[
 		new MyLine(
-			"bogosBinted/rysunek.png","Pan Mirek","yellow",
+			"bogosBinted/mirek.png","Pan Mirek","yellow",
 			"Widział pan ten filmik z tym jakimś szefem ONZ? Mówił, że niby lecimy w kosmos ha! Większej głupoty nie słyszałem."
 		),
 		new MyLine(
@@ -1006,10 +1006,10 @@ let c1u2e4v1 = new MyEvent(
 );
 
 let c1u2e5v1 = new MyEvent(
-	"bogosBinted/jakub.png", //radio.png
+	"bogosBinted/radio.png", //radio.png
 	[
 		new MyLine(
-			"bogosBinted/jakub.png","*wysoka kobieta ubrana na czerwono*","red", //becia.png
+			"bogosBinted/becia.png","*wysoka kobieta ubrana na czerwono*","red", //becia.png
 			"Cześć gotowy? Za 15 sekund wchodzimy."
 		),
 		new MyLine(
@@ -1017,7 +1017,7 @@ let c1u2e5v1 = new MyEvent(
 			"Tak odrazu? Myślałem że jeszcze zostało trochę cza..."
 		),
 		new MyLine(
-			"bogosBinted/jakub.png","*wysoka kobieta ubrana na czerwono*","red",
+			"bogosBinted/becia.png","*wysoka kobieta ubrana na czerwono*","red",
 			"Trzy, dwa, jeden... Witamy w wywiadzie dnia radia PDF FM, jest piątek godzina 10, z tej strony Beata Kowalczyk a moim dzisiejszym gościem jest pan Kuba Bukaj, kandydat na prezydent RP 2045. Witam serdecznie! Pojutrze ważny dzień, prawda?"
 		),
 		new MyLine(
@@ -1025,7 +1025,7 @@ let c1u2e5v1 = new MyEvent(
 			"Również witam, tak, z pewnością jeden z najważniejszych dni dla współczesnej Polski. Wybory prezydenckie napewno znacząco wpłyną na losy naszego państwa"
 		),
 		new MyLine(
-			"bogosBinted/jakub.png","Becia","red",
+			"bogosBinted/becia.png","Becia","red",
 			"Dobrze, zanim jeszcze przejdziemy do serca sedna naszego spotkania... ponoć miał pan z wosu 2 na światectwie!"
 		),
 	],

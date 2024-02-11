@@ -369,6 +369,7 @@ main {
 	width: 70%;
 	margin: 0px 0px 40px;
 	padding-top: 50px;
+	max-width: 800px;
 }
 
 #main-section a {
@@ -402,9 +403,10 @@ main {
 	grid-template-rows: 0.5fr 1fr;
 }
 
-#main-section .choice #middleDiv img {
+#main-section .choice #middleDiv .bigPhoto {
 	width: 80%;
 	max-width: 400px;
+	min-width: 400px;
 	margin: 0px auto;
 	border-radius: 20px;
 }
@@ -620,6 +622,9 @@ main {
 		align-items: center;
 		top: 10px;
 		left: 40px;
+	}
+	#main-section .choice #middleDiv .bigPhoto {
+		min-width: 200px;
 	}
 }
 
