@@ -896,10 +896,10 @@ let c1u1e8 = new MyEvent(
 //=====Underchapter 2=====
 
 let c1u2e1 = new MyEvent(
-	"bogosBinted/jakub.png", //marcin.png
+	"bogosBinted/marcin.png", //marcin.png
 	[
 		new MyLine(
-			"bogosBinted/jakub.png","Marcin","blue", //marcin.png
+			"bogosBinted/marcin.png","Marcin","blue", //marcin.png
 			'... po czym powiesz "również dziekuję, miłego dnia", uśmiechniesz się i wyjdziesz ze studia. Wszystko jasne?'
 		),
 		new MyLine(
@@ -922,10 +922,10 @@ let c1u2e1 = new MyEvent(
 );
 
 let c1u2e2v1 = new MyEvent(
-	"bogosBinted/jakub.png", //marcin.png
+	"bogosBinted/marcin.png", //marcin.png
 	[
 		new MyLine(
-			"bogosBinted/jakub.png","Marcin","blue", //marcin.png
+			"bogosBinted/marcin.png","Marcin","blue", //marcin.png
 			"Słuchaj, tu jeszcze nikt tam niczego nie potwierdził opinii publicznej, po prostu unikaj tematu. Jeszcze wezmą nas za ludzi, którzy wierzą we wszystko co jest w internecie."
 		),
 	],
@@ -1042,21 +1042,21 @@ let c1u2e5v1 = new MyEvent(
 );
 
 let c1u2e6v1 = new MyEvent(
-	"bogosBinted/jakub.png", //radio.png
+	"bogosBinted/radio.png", //radio.png
 	[
 		new MyLine(
-			"bogosBinted/jakub.png","Becia","red",
+			"bogosBinted/becia.png","Becia","red",
 			"Pytam, bo każdy prezydent powinien znać podstawowe struktury organizacji państwa, dlatego zorganizowałam dla Pana test."
 		),
 		new MyLine(
 			"bogosBinted/jakub.png", "Jakub", "green",
 			"Jaki test?"),
 		new MyLine(
-			"bogosBinted/jakub.png","Becia","red",
+			"bogosBinted/becia.png","Becia","red",
 			"Zadam kilka prostych pytań z wiedzy o społeczeństwie, Zaczynamy!"
 		),
 		new MyLine(
-			"bogosBinted/jakub.png","Becia","red",
+			"bogosBinted/becia.png","Becia","red",
 			"Pytanie pierwsze: Ilu senatorów liczy senat?"
 		),
 	],
@@ -1075,14 +1075,14 @@ let c1u2e6v1 = new MyEvent(
 );
 
 let c1u2e7v1 = new MyEvent(
-	"bogosBinted/jakub.png",
+	"bogosBinted/radio.png",
 	[
 		new MyLine(
-			"bogosBinted/jakub.png","Becia","red",
+			"bogosBinted/becia.png","Becia","red",
 			"Źle! Senat liczy 100 senatorów, możliwe, że pomyliło się panu z liczbą posłów w sejmie, która wynosi 460. Lecimy dalej."
 		),
 		new MyLine(
-			"bogosBinted/jakub.png","Becia","red",
+			"bogosBinted/becia.png","Becia","red",
 			"Pytanie drugie: Czym jest zgromadzenie narodowe?"
 		),
 	],
@@ -1101,14 +1101,14 @@ let c1u2e7v1 = new MyEvent(
 );
 
 let c1u2e7v2 = new MyEvent(
-	"bogosBinted/jakub.png",
+	"bogosBinted/radio.png",
 	[
 		new MyLine(
-			"bogosBinted/jakub.png","Becia","red",
+			"bogosBinted/becia.png","Becia","red",
 			"Dobrze! Senat liczy 100 senatorów, natomiast sejm liczy 460 posłów. Lecimy dalej."
 		),
 		new MyLine(
-			"bogosBinted/jakub.png","Becia","red",
+			"bogosBinted/becia.png","Becia","red",
 			"Pytanie drugie: Czym jest zgromadzenie narodowe?"
 		),
 	],
@@ -1127,14 +1127,14 @@ let c1u2e7v2 = new MyEvent(
 );
 
 let c1u2e8v1 = new MyEvent(
-	"bogosBinted/jakub.png",
+	"bogosBinted/radio.png",
 	[
 		new MyLine(
-			"bogosBinted/jakub.png","Becia","red",
+			"bogosBinted/becia.png","Becia","red",
 			"Poprawna odpowiedź! Jest zwoływane np podczas odebranie przysięgi nowo wybranego prezydenta."
 		),
 		new MyLine(
-			"bogosBinted/jakub.png","Becia","red",
+			"bogosBinted/becia.png","Becia","red",
 			"Ostatnie pytanie: Ile lat trzeba mieć żeby zostać posłem?"
 		),
 	],
@@ -1153,10 +1153,10 @@ let c1u2e8v1 = new MyEvent(
 );
 
 let c1u2e8v2 = new MyEvent(
-	"bogosBinted/jakub.png",
+	"bogosBinted/radio.png",
 	[
 		new MyLine(
-			"bogosBinted/jakub.png","Becia","red",
+			"bogosBinted/becia.png","Becia","red",
 			"Niestesty, zła odpowiedź. Zgromdzenie narodowe jest zebraniem senatu nie z prezydentem a z sejmem. Jest zwoływane np. podczas odebranie przysięgi nowo wybranego prezydenta.c"
 		),
 	],
@@ -1175,10 +1175,10 @@ let c1u2e8v2 = new MyEvent(
 );
 
 let c1u2e9v1 = new MyEvent(
-	"bogosBinted/jakub.png",
+	"bogosBinted/chmurka.png",
 	[
 		new MyLine(
-			"bogosBinted/jakub.png", "Jakub", "red",
+			"bogosBinted/becia.png", "Becia", "red",
 			"No nie, żeby zostać posłem wystarczy ukończyć 21 rok życia i do tego mieć prawa wyborcze. Dobrze, skoro pytania mamy za sobą, możemy przejść do właciwej częsci wywiadu. Jak pan się przygoto..."
 		),
 	],
@@ -1209,10 +1209,10 @@ let c1u2e9v1 = new MyEvent(
 );
 
 let c1u2e9v2 = new MyEvent(
-	"bogosBinted/jakub.png",
+	"bogosBinted/radio.png",
 	[
 		new MyLine(
-			"bogosBinted/jakub.png", "Jakub", "red",
+			"bogosBinted/becia.png", "Becia", "red",
 			"Zgadza się! Wystaczy ukończyć 21 rok życia i mieć prawa wyborcze. Dobrze, skoro pytania mamy za sobą, możemy przejść do właciwej częsci wywiadu. Jak pan się przygoto..."
 		),
 	],
@@ -1241,7 +1241,7 @@ let c1u2e9v2 = new MyEvent(
 );
 
 let c1u2e10v1 = new MyEvent(
-	"bogosBinted/jakub.png",
+	"bogosBinted/radio.png",
 	[new MyLine(
 		"bogosBinted/jakub.png", "Jakub", "green",
 		"Rozmowa bardzo mi się udała! Dzięki temu, że rano nabrałem energii, bardzo sprytnie odpowiadałem na pytania Beaty. To napewno pomoże mi w kampanii."
@@ -1259,7 +1259,7 @@ let c1u2e10v1 = new MyEvent(
 )
 
 let c1u2e10v2 = new MyEvent(
-	"bogosBinted/jakub.png",
+	"bogosBinted/radio.png",
 	[new MyLine(
 		"bogosBinted/jakub.png", "Jakub", "green",
 		"Dałem z siebie wszystko, ale przez to, że rano nie miałem czasu ani na śniadanie ani na kawę, nie byłem dokońca skupiony. Powiedziałem kilka głupich rzeczy, a wyborcy mogą mi tego nie wybaczyć."
@@ -1295,10 +1295,10 @@ let c1u2e10v3 = new MyEvent(
 )
 
 let c1u2e10v4 = new MyEvent(
-	"bogosBinted/jakub.png",
+	"bogosBinted/radio.png",
 	[new MyLine(
-		"bogosBinted/jakub.png", "Jakub", "green", //wodą się na nawodnisz debilu ~ Wojciech 2024
-		"Dziś rano nie miałem czasu nabrać siły na ten dzień, więc postanowiłem starać się unikać nie wygodnych pytań co mimo wszystko nie zawsze mi wychodziło. Na szczęście nic aż tak głupiego nie powiedziałem w sumie to nie wyszło aż tak źle"
+		"bogosBinted/jakub.png", "Jakub", "green", //wodą się nie nawodnisz debilu ~ Wojciech 2024
+		"Dziś rano nie miałem czasu nabrać siły na ten dzień, więc postanowiłem starać się unikać niewygodnych pytań co mimo wszystko nie zawsze mi wychodziło. Na szczęście nic aż tak głupiego nie powiedziałem w sumie to nie wyszło aż tak źle"
 	)],
 	"Kontynuuj wywiad",
 	"Kontynuuj wywiad",
@@ -1313,9 +1313,9 @@ let c1u2e10v4 = new MyEvent(
 )
 
 let c1u2e11v1 = new MyEvent(
-	"bogosBinted/jakub.png",
+	"bogosBinted/radio.png",
 	[new MyLine(
-		"bogosBinted/jakub.png", "Becia", "red",
+		"bogosBinted/becia.png", "Becia", "red",
 		"Właśnie dostaliśmy wiadomość z ostatniej chwili! Sekretarz generalny ONZ potwierdziił rzetelność nagrania które było uważane za podrobione sztuczę inteligencją. Panie Jakubie, co teraz? Czy jesteśmy na to gotowi?"
 	)],
 	"Jak najbardziej, program Earthless...",
@@ -1331,12 +1331,12 @@ let c1u2e11v1 = new MyEvent(
 )
 
 let c1u2e12v1 = new MyEvent(
-	"bogosBinted/jakub.png", //3
+	"bogosBinted/radio.png", //3
 	[new MyLine(
 		"bogosBinted/jakub.png", "Jakub", "green",
 		"Jak najbardziej, program Earthless jest odpowiedzią na ten problem. We wspłpracy z najlepszymi Polskimi naukowcami stworzyliśmy plan emigracji wszystkich Polaków w kosmos. Mamy ambitnych ludzi, nowoczesne narzędzia i dopracowany plan. Teraz jedyne czego potrzebuję żeby go wprowadzić w życie to mnie jako prezydenta. To jest jedyny sposób na zapewnienie bezpieczeństwia Polakom."
 	),new MyLine(
-		"bogosBinted/jakub.png", "Becia", "red",
+		"bogosBinted/becia.png", "Becia", "red",
 		"A to był wywiad dnia radia PDF FM! Panie Jakbie, dziękuję bardzo za rozmowę."
 	)],
 	"Również dziękuję, miłego dnia.",
@@ -1352,18 +1352,18 @@ let c1u2e12v1 = new MyEvent(
 )
 
 let c1u2e12v2 = new MyEvent(
-	"bogosBinted/jakub.png", 
+	"bogosBinted/radio.png", 
 	[new MyLine(
 		"bogosBinted/jakub.png", "Jakub", "green",
 		"Muszę przyznać, że tak jak większość uważaliśmy ten film za nieprawdziwy. W tej sytuacji jedynie co mogę zrobić to zapewnić, że napewno sobie jakoś poradzimy."
 	),new MyLine(
-		"bogosBinted/jakub.png", "Becia", "red",
+		"bogosBinted/becia.png", "Becia", "red",
 		"Czy jest coś co może pan zapewnić obywatelom jako możliwy przyszły prezydent Polski?"
 	),new MyLine(
 		"bogosBinted/jakub.png", "Jakub", "green",
 		"Mój sztab napewno już się tym zajmuje i zapewniam, że zrobimy wszystko żeby przygotować na to obywateli."
 	),new MyLine(
-		"bogosBinted/jakub.png", "Becia", "red",
+		"bogosBinted/becia.png", "Becia", "red",
 		"A to był wywiad dnia radia PDF FM! Panie Jakbie, dziękuję bardzo za rozmowę."
 	)],
 	"Również dziękuję, miłego dnia.",
