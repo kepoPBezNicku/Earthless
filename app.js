@@ -488,7 +488,7 @@ food.style.setProperty("--transform", "scaleY(" + data.stats.food + ")");
 
 class MyEvent {
 	constructor(photoPath, line, opL, opP, fL, fP, sL, sP) {
-		this.photoPath = photoPath; //ex rysunek.png
+		this.photoPath = photoPath; //ex jakub.png
 		this.line = line; //list of obiects (path,who, color, line)
 		this.opL = opL; //string
 		this.opP = opP; //string
@@ -615,10 +615,10 @@ changeChapterPlace(1, "Dom Jakuba");
 
 //wstawić jakiś sen (insp. Adamem Mickiewiczem XDDDD)
 let c1u1e1 = new MyEvent(
-	"bogosBinted/rysunek.png", //budzik.png
+	"bogosBinted/jakub.png", //budzik.png
 	[
 		new MyLine(
-			"bogosBinted/rysunek.png", "Jakub", "green",
+			"bogosBinted/jakub.png", "Jakub", "green",
 			"Ooh, co to... co ty było? Co to niby miało... JUŻ 8, ZASPAŁEM! Ale ten sen..."
 		),
 	],
@@ -637,10 +637,10 @@ let c1u1e1 = new MyEvent(
 );
 
 let c1u1e2v1 = new MyEvent(
-	"bogosBinted/rysunek.png", //chmurka.png
+	"bogosBinted/jakub.png", //chmurka.png
 	[
-		new MyLine("bogosBinted/rysunek.png", "Jakub", "green", "Nigga"),
-		new MyLine("bogosBinted/rysunek.png", "bukaJ", "red", "Nigga2"),
+		new MyLine("bogosBinted/jakub.png", "Jakub", "green", "Testowy tekst 1"),
+		new MyLine("bogosBinted/jakub.png", "bukaJ", "red", "Testowy tekst 2"),
 	],
 	"Zaraz się spóźnię!",
 	"Nie mam czasu, muszę się zbierać",
@@ -664,10 +664,10 @@ let c1u1e2v1 = new MyEvent(
 );
 
 let c1u1e2v2 = new MyEvent(
-	"bogosBinted/rysunek.png", //budzik.png
+	"bogosBinted/jakub.png", //budzik.png
 	[
 		new MyLine(
-			"bogosBinted/rysunek.png", "Jakub", "green",
+			"bogosBinted/jakub.png", "Jakub", "green",
 			"Na dzisiejszym wywiadzie muszę się dobrze prezentować! Ale mogę nie zdążyć ze wszystkim."
 		),
 	],
@@ -689,10 +689,10 @@ let c1u1e2v2 = new MyEvent(
 );
 
 let c1u1e3v1 = new MyEvent(
-	"bogosBinted/rysunek.png", //kawa.png
+	"bogosBinted/jakub.png", //kawa.png
 	[
 		new MyLine(
-			"bogosBinted/rysunek.png","Jakub", "green",
+			"bogosBinted/jakub.png","Jakub", "green",
 			"Dzień bez kawy to dzień stracony! Dobra, na szczęscie zostało mi trochę czasu na..."
 		),
 	],
@@ -714,10 +714,10 @@ let c1u1e3v1 = new MyEvent(
 );
 
 let c1u1e3v2 = new MyEvent(
-	"bogosBinted/rysunek.png", //zeby.png
+	"bogosBinted/jakub.png", //zeby.png
 	[
 		new MyLine(
-			"bogosBinted/rysunek.png","Jakub","green",
+			"bogosBinted/jakub.png","Jakub","green",
 			"No, i takie ząbki ma człowiek sukcesu :DD teraz zostało mi jeszcze trochę czasu żeby .."
 		),
 	],
@@ -738,10 +738,10 @@ let c1u1e3v2 = new MyEvent(
 );
 
 let c1u1e3v3 = new MyEvent(
-	"bogosBinted/rysunek.png", //kawa.png
+	"bogosBinted/jakub.png", //kawa.png
 	[
 		new MyLine(
-			"bogosBinted/rysunek.png","Jakub","green",
+			"bogosBinted/jakub.png","Jakub","green",
 			"Dzień bez kawy to dzień stracony! No ale już nic innego nie zdążę zrobić, pójdę złapać taxi."
 		),
 	],
@@ -758,10 +758,10 @@ let c1u1e3v3 = new MyEvent(
 );
 
 let c1u1e3v4 = new MyEvent(
-	"bogosBinted/rysunek.png", //zeby,png
+	"bogosBinted/jakub.png", //zeby,png
 	[
 		new MyLine(
-			"bogosBinted/rysunek.png","Jakub","green",
+			"bogosBinted/jakub.png","Jakub","green",
 			"No, i takie ząbki ma człowiek sukcesu :DD Dobra, dość tego gapienia się w lustro, lepiej zamówię taxi."
 		),
 	],
@@ -778,10 +778,10 @@ let c1u1e3v4 = new MyEvent(
 );
 
 let c1u1e4v1 = new MyEvent(
-	"bogosBinted/rysunek.png", //jedzenie.png
+	"bogosBinted/jakub.png", //jedzenie.png
 	[
 		new MyLine(
-			"bogosBinted/rysunek.png","Jakub","green",
+			"bogosBinted/jakub.png","Jakub","green",
 			"Dobra, najadłem się, teraz lece zamówić taxi. "
 		),
 	],
@@ -798,10 +798,10 @@ let c1u1e4v1 = new MyEvent(
 );
 
 let c1u1e5v1 = new MyEvent(
-	"bogosBinted/rysunek.png", //telefon.png
+	"bogosBinted/jakub.png", //telefon.png
 	[
 		new MyLine(
-			"bogosBinted/rysunek.png","Jakub","green",
+			"bogosBinted/jakub.png","Jakub","green",
 			"Zaraz powinna być, w tym czasie może..."
 		),
 	],
@@ -818,18 +818,18 @@ let c1u1e5v1 = new MyEvent(
 );
 
 let c1u1e6 = new MyEvent(
-	"bogosBinted/rysunek.png", //y.png
+	"bogosBinted/Y.png", //y.png
 	[
 		new MyLine(
-			"bogosBinted/rysunek.png","SkibidiEdge2k13","white",
+			"bogosBinted/noPfpUser.png","SkibidiEdge2k13","white",
 			"Halo?? Dziś jest prima aprilis czy ja o czymś nie wiem???"
 		),
 		new MyLine(
-			"bogosBinted/rysunek.png","ArchUserUWU","white",
+			"bogosBinted/noPfpUser.png","ArchUserUWU","white",
 			"Myślicie że ten wyciek był prawdziwy? Przecież by nam powiedzieli o czymś takim..."
 		),
 		new MyLine(
-			"bogosBinted/rysunek.png","NwordEnjoyer","white",
+			"bogosBinted/noPfpUser.png","NwordEnjoyer","white",
 			"No to zaczynamy szturm foliarzy XDDD nie ma szans że to prawda, pewnie jakieś AI"
 		),
 	],
@@ -846,10 +846,10 @@ let c1u1e6 = new MyEvent(
 );
 
 let c1u1e7 = new MyEvent(
-	"bogosBinted/rysunek.png", //taxi.png
+	"bogosBinted/mirek.png", //taxi.png
 	[
 		new MyLine(
-			"bogosBinted/rysunek.png","Pan Mirek","yellow", //panmirek.png
+			"bogosBinted/mirek.png","Pan Mirek","yellow", //panmirek.png
 			"Długo będzie jeszcze tam pan stał? Ja mam inne kursy!"
 		),
 	],
@@ -868,14 +868,14 @@ let c1u1e7 = new MyEvent(
 );
 
 let c1u1e8 = new MyEvent(
-	"bogosBinted/rysunek.png",
+	"bogosBinted/mirek.png",
 	[
 		new MyLine(
-			"bogosBinted/rysunek.png","Pan Mirek","yellow",
+			"bogosBinted/mirek.png","Pan Mirek","yellow",
 			"Widział pan ten filmik z tym jakimś szefem ONZ? Mówił, że niby lecimy w kosmos ha! Większej głupoty nie słyszałem."
 		),
 		new MyLine(
-			"bogosBinted/rysunek.png","Jakub","green",
+			"bogosBinted/jakub.png","Jakub","green",
 			"Czekają nas ciekawe czasy, bardzo ciekawe... ale jedźmy już, czeka na mnie mój doradca"
 		),
 	],
@@ -896,14 +896,14 @@ let c1u1e8 = new MyEvent(
 //=====Underchapter 2=====
 
 let c1u2e1 = new MyEvent(
-	"bogosBinted/rysunek.png", //marcin.png
+	"bogosBinted/marcin.png", //marcin.png
 	[
 		new MyLine(
-			"bogosBinted/rysunek.png","Marcin","blue", //marcin.png
+			"bogosBinted/marcin.png","Marcin","blue", //marcin.png
 			'... po czym powiesz "również dziekuję, miłego dnia", uśmiechniesz się i wyjdziesz ze studia. Wszystko jasne?'
 		),
 		new MyLine(
-			"bogosBinted/rysunek.png","Jakub","green",
+			"bogosBinted/jakub.png","Jakub","green",
 			"Raczej tak... "
 		),
 	],
@@ -922,10 +922,10 @@ let c1u2e1 = new MyEvent(
 );
 
 let c1u2e2v1 = new MyEvent(
-	"bogosBinted/rysunek.png", //marcin.png
+	"bogosBinted/marcin.png", //marcin.png
 	[
 		new MyLine(
-			"bogosBinted/rysunek.png","Marcin","blue", //marcin.png
+			"bogosBinted/marcin.png","Marcin","blue", //marcin.png
 			"Słuchaj, tu jeszcze nikt tam niczego nie potwierdził opinii publicznej, po prostu unikaj tematu. Jeszcze wezmą nas za ludzi, którzy wierzą we wszystko co jest w internecie."
 		),
 	],
@@ -942,14 +942,14 @@ let c1u2e2v1 = new MyEvent(
 );
 
 let c1u2e2v2 = new MyEvent(
-	"bogosBinted/rysunek.png", //chmurka.png
+	"bogosBinted/jakub.png", //chmurka.png
 	[
 		new MyLine(
-			"bogosBinted/rysunek.png","Jakub","green",
+			"bogosBinted/jakub.png","Jakub","green",
 			"Jutro wybory, przed nami globalny kryzys, a ja wciąż nie wiem co mam o tym powiedzieć ludziom!"
 		),
 		new MyLine(
-			"bogosBinted/rysunek.png","Jakub","green",
+			"bogosBinted/jakub.png","Jakub","green",
 			"To najbardziej stresujący dzień mojego życia, nie wiem jak bym sobie poradził bez mojego doradcy Marcina Kwiatkowskiego. Poznałem go na początku tej przygody i jest to jedyna osoba której ufam w tym kłamliwym politycznym świecie."
 		),
 	],
@@ -966,10 +966,10 @@ let c1u2e2v2 = new MyEvent(
 );
 
 let c1u2e3v1 = new MyEvent(
-	"bogosBinted/rysunek.png",
+	"bogosBinted/jakub.png",
 	[
 		new MyLine(
-			"bogosBinted/rysunek.png","Jakub","blue",
+			"bogosBinted/jakub.png","Jakub","blue",
 			"Stary, ty masz wygrać wybory a nie być jakimś poszukiwaczem prawdy i sprawiedliwości. To jest zły pomysł, ale zrobisz jak uważasz."
 		),
 	],
@@ -986,10 +986,10 @@ let c1u2e3v1 = new MyEvent(
 );
 
 let c1u2e4v1 = new MyEvent(
-	"bogosBinted/rysunek.png", //glosnik.png
+	"bogosBinted/jakub.png", //glosnik.png
 	[
 		new MyLine(
-			"bogosBinted/rysunek.png","*młody męski głos*","orange", //nopfp.png
+			"bogosBinted/jakub.png","*młody męski głos*","orange", //nopfp.png
 			"Zapraszamy pana Jakuba B do studia. Wchodzimy za 2 minuty!"
 		),
 	],
@@ -1006,26 +1006,26 @@ let c1u2e4v1 = new MyEvent(
 );
 
 let c1u2e5v1 = new MyEvent(
-	"bogosBinted/rysunek.png", //radio.png
+	"bogosBinted/radio.png", //radio.png
 	[
 		new MyLine(
-			"bogosBinted/rysunek.png","*wysoka kobieta ubrana na czerwono*","red", //becia.png
+			"bogosBinted/becia.png","*wysoka kobieta ubrana na czerwono*","red", //becia.png
 			"Cześć gotowy? Za 15 sekund wchodzimy."
 		),
 		new MyLine(
-			"bogosBinted/rysunek.png","Jakub","green",
+			"bogosBinted/jakub.png","Jakub","green",
 			"Tak odrazu? Myślałem że jeszcze zostało trochę cza..."
 		),
 		new MyLine(
-			"bogosBinted/rysunek.png","*wysoka kobieta ubrana na czerwono*","red",
+			"bogosBinted/becia.png","*wysoka kobieta ubrana na czerwono*","red",
 			"Trzy, dwa, jeden... Witamy w wywiadzie dnia radia PDF FM, jest piątek godzina 10, z tej strony Beata Kowalczyk a moim dzisiejszym gościem jest pan Kuba Bukaj, kandydat na prezydent RP 2045. Witam serdecznie! Pojutrze ważny dzień, prawda?"
 		),
 		new MyLine(
-			"bogosBinted/rysunek.png","Jakub","green",
+			"bogosBinted/jakub.png","Jakub","green",
 			"Również witam, tak, z pewnością jeden z najważniejszych dni dla współczesnej Polski. Wybory prezydenckie napewno znacząco wpłyną na losy naszego państwa"
 		),
 		new MyLine(
-			"bogosBinted/rysunek.png","Becia","red",
+			"bogosBinted/becia.png","Becia","red",
 			"Dobrze, zanim jeszcze przejdziemy do serca sedna naszego spotkania... ponoć miał pan z wosu 2 na światectwie!"
 		),
 	],
@@ -1042,21 +1042,21 @@ let c1u2e5v1 = new MyEvent(
 );
 
 let c1u2e6v1 = new MyEvent(
-	"bogosBinted/rysunek.png", //radio.png
+	"bogosBinted/radio.png", //radio.png
 	[
 		new MyLine(
-			"bogosBinted/rysunek.png","Becia","red",
+			"bogosBinted/becia.png","Becia","red",
 			"Pytam, bo każdy prezydent powinien znać podstawowe struktury organizacji państwa, dlatego zorganizowałam dla Pana test."
 		),
 		new MyLine(
-			"bogosBinted/rysunek.png", "Jakub", "green",
+			"bogosBinted/jakub.png", "Jakub", "green",
 			"Jaki test?"),
 		new MyLine(
-			"bogosBinted/rysunek.png","Becia","red",
+			"bogosBinted/becia.png","Becia","red",
 			"Zadam kilka prostych pytań z wiedzy o społeczeństwie, Zaczynamy!"
 		),
 		new MyLine(
-			"bogosBinted/rysunek.png","Becia","red",
+			"bogosBinted/becia.png","Becia","red",
 			"Pytanie pierwsze: Ilu senatorów liczy senat?"
 		),
 	],
@@ -1075,14 +1075,14 @@ let c1u2e6v1 = new MyEvent(
 );
 
 let c1u2e7v1 = new MyEvent(
-	"bogosBinted/rysunek.png",
+	"bogosBinted/radio.png",
 	[
 		new MyLine(
-			"bogosBinted/rysunek.png","Becia","red",
+			"bogosBinted/becia.png","Becia","red",
 			"Źle! Senat liczy 100 senatorów, możliwe, że pomyliło się panu z liczbą posłów w sejmie, która wynosi 460. Lecimy dalej."
 		),
 		new MyLine(
-			"bogosBinted/rysunek.png","Becia","red",
+			"bogosBinted/becia.png","Becia","red",
 			"Pytanie drugie: Czym jest zgromadzenie narodowe?"
 		),
 	],
@@ -1101,14 +1101,14 @@ let c1u2e7v1 = new MyEvent(
 );
 
 let c1u2e7v2 = new MyEvent(
-	"bogosBinted/rysunek.png",
+	"bogosBinted/radio.png",
 	[
 		new MyLine(
-			"bogosBinted/rysunek.png","Becia","red",
+			"bogosBinted/becia.png","Becia","red",
 			"Dobrze! Senat liczy 100 senatorów, natomiast sejm liczy 460 posłów. Lecimy dalej."
 		),
 		new MyLine(
-			"bogosBinted/rysunek.png","Becia","red",
+			"bogosBinted/becia.png","Becia","red",
 			"Pytanie drugie: Czym jest zgromadzenie narodowe?"
 		),
 	],
@@ -1127,14 +1127,14 @@ let c1u2e7v2 = new MyEvent(
 );
 
 let c1u2e8v1 = new MyEvent(
-	"bogosBinted/rysunek.png",
+	"bogosBinted/radio.png",
 	[
 		new MyLine(
-			"bogosBinted/rysunek.png","Becia","red",
+			"bogosBinted/becia.png","Becia","red",
 			"Poprawna odpowiedź! Jest zwoływane np podczas odebranie przysięgi nowo wybranego prezydenta."
 		),
 		new MyLine(
-			"bogosBinted/rysunek.png","Becia","red",
+			"bogosBinted/becia.png","Becia","red",
 			"Ostatnie pytanie: Ile lat trzeba mieć żeby zostać posłem?"
 		),
 	],
@@ -1153,10 +1153,10 @@ let c1u2e8v1 = new MyEvent(
 );
 
 let c1u2e8v2 = new MyEvent(
-	"bogosBinted/rysunek.png",
+	"bogosBinted/radio.png",
 	[
 		new MyLine(
-			"bogosBinted/rysunek.png","Becia","red",
+			"bogosBinted/becia.png","Becia","red",
 			"Niestesty, zła odpowiedź. Zgromdzenie narodowe jest zebraniem senatu nie z prezydentem a z sejmem. Jest zwoływane np. podczas odebranie przysięgi nowo wybranego prezydenta.c"
 		),
 	],
@@ -1175,10 +1175,10 @@ let c1u2e8v2 = new MyEvent(
 );
 
 let c1u2e9v1 = new MyEvent(
-	"bogosBinted/rysunek.png",
+	"bogosBinted/chmurka.png",
 	[
 		new MyLine(
-			"bogosBinted/rysunek.png", "Jakub", "red",
+			"bogosBinted/becia.png", "Becia", "red",
 			"No nie, żeby zostać posłem wystarczy ukończyć 21 rok życia i do tego mieć prawa wyborcze. Dobrze, skoro pytania mamy za sobą, możemy przejść do właciwej częsci wywiadu. Jak pan się przygoto..."
 		),
 	],
@@ -1209,10 +1209,10 @@ let c1u2e9v1 = new MyEvent(
 );
 
 let c1u2e9v2 = new MyEvent(
-	"bogosBinted/rysunek.png",
+	"bogosBinted/radio.png",
 	[
 		new MyLine(
-			"bogosBinted/rysunek.png", "Jakub", "red",
+			"bogosBinted/becia.png", "Becia", "red",
 			"Zgadza się! Wystaczy ukończyć 21 rok życia i mieć prawa wyborcze. Dobrze, skoro pytania mamy za sobą, możemy przejść do właciwej częsci wywiadu. Jak pan się przygoto..."
 		),
 	],
@@ -1241,9 +1241,9 @@ let c1u2e9v2 = new MyEvent(
 );
 
 let c1u2e10v1 = new MyEvent(
-	"bogosBinted/rysunek.png",
+	"bogosBinted/radio.png",
 	[new MyLine(
-		"bogosBinted/rysunek.png", "Jakub", "green",
+		"bogosBinted/jakub.png", "Jakub", "green",
 		"Rozmowa bardzo mi się udała! Dzięki temu, że rano nabrałem energii, bardzo sprytnie odpowiadałem na pytania Beaty. To napewno pomoże mi w kampanii."
 	)],
 	"Kontynuuj wywiad",
@@ -1259,9 +1259,9 @@ let c1u2e10v1 = new MyEvent(
 )
 
 let c1u2e10v2 = new MyEvent(
-	"bogosBinted/rysunek.png",
+	"bogosBinted/radio.png",
 	[new MyLine(
-		"bogosBinted/rysunek.png", "Jakub", "green",
+		"bogosBinted/jakub.png", "Jakub", "green",
 		"Dałem z siebie wszystko, ale przez to, że rano nie miałem czasu ani na śniadanie ani na kawę, nie byłem dokońca skupiony. Powiedziałem kilka głupich rzeczy, a wyborcy mogą mi tego nie wybaczyć."
 	)],
 	"Kontynuuj wywiad",
@@ -1277,9 +1277,9 @@ let c1u2e10v2 = new MyEvent(
 )
 
 let c1u2e10v3 = new MyEvent(
-	"bogosBinted/rysunek.png",
+	"bogosBinted/jakub.png",
 	[new MyLine(
-		"bogosBinted/rysunek.png", "Jakub", "green",
+		"bogosBinted/jakub.png", "Jakub", "green",
 		"Starałem się nie wychodzić za bardzo przed szereg i wyszło mi to całkiem dobrze. Dzięki temu, że rano nabrałem siły na cały dzień udało mi się zachować skupienie i zimną krew. To wyjdzie mi na plus w kampanii."
 	)],
 	"Kontynuuj wywiad",
@@ -1295,10 +1295,10 @@ let c1u2e10v3 = new MyEvent(
 )
 
 let c1u2e10v4 = new MyEvent(
-	"bogosBinted/rysunek.png",
+	"bogosBinted/radio.png",
 	[new MyLine(
-		"bogosBinted/rysunek.png", "Jakub", "green", //wodą się na nawodnisz debilu ~ Wojciech 2024
-		"Dziś rano nie miałem czasu nabrać siły na ten dzień, więc postanowiłem starać się unikać nie wygodnych pytań co mimo wszystko nie zawsze mi wychodziło. Na szczęście nic aż tak głupiego nie powiedziałem w sumie to nie wyszło aż tak źle"
+		"bogosBinted/jakub.png", "Jakub", "green", //wodą się nie nawodnisz debilu ~ Wojciech 2024
+		"Dziś rano nie miałem czasu nabrać siły na ten dzień, więc postanowiłem starać się unikać niewygodnych pytań co mimo wszystko nie zawsze mi wychodziło. Na szczęście nic aż tak głupiego nie powiedziałem w sumie to nie wyszło aż tak źle"
 	)],
 	"Kontynuuj wywiad",
 	"Kontynuuj wywiad",
@@ -1313,9 +1313,9 @@ let c1u2e10v4 = new MyEvent(
 )
 
 let c1u2e11v1 = new MyEvent(
-	"bogosBinted/rysunek.png",
+	"bogosBinted/radio.png",
 	[new MyLine(
-		"bogosBinted/rysunek.png", "Becia", "red",
+		"bogosBinted/becia.png", "Becia", "red",
 		"Właśnie dostaliśmy wiadomość z ostatniej chwili! Sekretarz generalny ONZ potwierdziił rzetelność nagrania które było uważane za podrobione sztuczę inteligencją. Panie Jakubie, co teraz? Czy jesteśmy na to gotowi?"
 	)],
 	"Jak najbardziej, program Earthless...",
@@ -1331,12 +1331,12 @@ let c1u2e11v1 = new MyEvent(
 )
 
 let c1u2e12v1 = new MyEvent(
-	"bogosBinted/rysunek.png", //3
+	"bogosBinted/radio.png", //3
 	[new MyLine(
-		"bogosBinted/rysunek.png", "Jakub", "green",
+		"bogosBinted/jakub.png", "Jakub", "green",
 		"Jak najbardziej, program Earthless jest odpowiedzią na ten problem. We wspłpracy z najlepszymi Polskimi naukowcami stworzyliśmy plan emigracji wszystkich Polaków w kosmos. Mamy ambitnych ludzi, nowoczesne narzędzia i dopracowany plan. Teraz jedyne czego potrzebuję żeby go wprowadzić w życie to mnie jako prezydenta. To jest jedyny sposób na zapewnienie bezpieczeństwia Polakom."
 	),new MyLine(
-		"bogosBinted/rysunek.png", "Becia", "red",
+		"bogosBinted/becia.png", "Becia", "red",
 		"A to był wywiad dnia radia PDF FM! Panie Jakbie, dziękuję bardzo za rozmowę."
 	)],
 	"Również dziękuję, miłego dnia.",
@@ -1352,18 +1352,18 @@ let c1u2e12v1 = new MyEvent(
 )
 
 let c1u2e12v2 = new MyEvent(
-	"bogosBinted/rysunek.png", 
+	"bogosBinted/radio.png", 
 	[new MyLine(
-		"bogosBinted/rysunek.png", "Jakub", "green",
+		"bogosBinted/jakub.png", "Jakub", "green",
 		"Muszę przyznać, że tak jak większość uważaliśmy ten film za nieprawdziwy. W tej sytuacji jedynie co mogę zrobić to zapewnić, że napewno sobie jakoś poradzimy."
 	),new MyLine(
-		"bogosBinted/rysunek.png", "Becia", "red",
+		"bogosBinted/becia.png", "Becia", "red",
 		"Czy jest coś co może pan zapewnić obywatelom jako możliwy przyszły prezydent Polski?"
 	),new MyLine(
-		"bogosBinted/rysunek.png", "Jakub", "green",
+		"bogosBinted/jakub.png", "Jakub", "green",
 		"Mój sztab napewno już się tym zajmuje i zapewniam, że zrobimy wszystko żeby przygotować na to obywateli."
 	),new MyLine(
-		"bogosBinted/rysunek.png", "Becia", "red",
+		"bogosBinted/becia.png", "Becia", "red",
 		"A to był wywiad dnia radia PDF FM! Panie Jakbie, dziękuję bardzo za rozmowę."
 	)],
 	"Również dziękuję, miłego dnia.",
@@ -1379,9 +1379,9 @@ let c1u2e12v2 = new MyEvent(
 )
 
 let c1u2e13v1 = new MyEvent(
-	"bogosBinted/rysunek.png",
+	"bogosBinted/jakub.png",
 	[new MyLine(
-		"bogosBinted/rysunek.png", "Jakub", "red",
+		"bogosBinted/jakub.png", "Jakub", "red",
 		"testline"
 	)],
 	"LewaOpcja",
@@ -1400,9 +1400,9 @@ let c1u2e13v1 = new MyEvent(
 
 /*
 let cuev = new MyEvent(
-	"bogosBinted/rysunek.png",
+	"bogosBinted/jakub.png",
 	[new MyLine(
-		"bogosBinted/rysunek.png", "Jakub", "red",
+		"bogosBinted/jakub.png", "Jakub", "red",
 		"testline"
 	)],
 	"LewaOpcja",
