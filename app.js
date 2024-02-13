@@ -1369,9 +1369,11 @@ let c1u2e12v2 = new MyEvent(
 	"Również dziękuję, miłego dnia.",
 	"Dzięki wielkie, pamiętajcie Bukaj2060!",
 	function (){
+		changeChapterPlace(1, "Siedziba Earthless - Bydgoszcz, Ziemia")
 		doTheEvent(c1u2e13v1)
 	},
 	function (){
+		changeChapterPlace(1, "Siedziba Earthless - Bydgoszcz, Ziemia")
 		doTheEvent(c1u2e13v1)
 	},
 	[0, 0, 0, 0, 0, .05, 0, 0, 0], //
