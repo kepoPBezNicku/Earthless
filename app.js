@@ -603,7 +603,7 @@ function gameOverFunction(gameOverClassName, cause) {
 
 	let playAgain = document.createElement("a");
 	let buttonNode = document.createTextNode("Zagraj ponownie");
-	playAgain.setAttribute("href", "main.php")
+	playAgain.setAttribute("href", "main.html")
 	playAgain.appendChild(buttonNode);
 	playAgain.className = "playAgain"
 	div.insertAdjacentElement("beforeend", playAgain);
