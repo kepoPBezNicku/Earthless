@@ -1505,7 +1505,7 @@ let c1u2e15v1 = new MyEvent(
 		"bogosBinted/marcin.png", "Marcin", "blue",
 		"Mam nadzieję że ta zniesiona cisza wyborcza nam nie zaszkodzi. Ale za to mamy narzędzie to kamapnii nawet w dzień wyborów!"
 	),new MyLine(
-		"bogosBinted/"
+		"bogosBinted/krzys.png"
 
 	)],
 	"LewaOpcja",
