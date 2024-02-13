@@ -675,7 +675,9 @@ let c1u1e2v2 = new MyEvent(
 	"Wymyj zęby",
 	function () {
 		data.isCoffeDrunk = true;
-		if (data.notimeleft == true) doTheEvent(c1u1e3v3);
+		if (data.notimeleft == true) {
+			data.stats.publicOpinion-=.05;
+			doTheEvent(c1u1e3v3);}
 		else doTheEvent(c1u1e3v1);
 	},
 	function () {
@@ -705,6 +707,7 @@ let c1u1e3v1 = new MyEvent(
 	},
 	function () {
 		data.isBreakfastEaten = true;
+		data.stats.publicOpinion-=0.05;
 
 		doTheEvent(c1u1e4v1);
 	},
@@ -1383,6 +1386,30 @@ let c1u2e12v2 = new MyEvent(
 let c1u2e13v1 = new MyEvent(
 	"bogosBinted/jakub.png",
 	[new MyLine(
+		"bogosBinted/jakub.png", "Jakub", "green",
+		"Co sądzicie, dobrze tam wypadłem?"
+	),new MyLine(
+		"bogosBinted/amina.png", "Amina", "red",
+		"Póki co nie jesteś wyzywany na Y więc chyba nie jest źle"
+	),new MyLine(
+		"bogosBinted/jakub.png", "x(rolnik)", "red",
+		"Spokojnie, zaraz pewnie ktoś coś wytnie z kontekstu i zaraz to obleci cały internet. Kuba, może wejdź tam i zobacz co się dzieje."
+	)],
+	"Dobra, zobaczmy",
+	"Nie bardzo mnie to teraz obchodzi, po prostu czekajmy na wyniki. Musimy być gotowi.",
+	function (){
+		//doTheEvent(cuev)
+	},
+	function (){
+		//doTheEvent(cuev)
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+
+let cuev = new MyEvent(
+	"bogosBinted/jakub.png",
+	[new MyLine(
 		"bogosBinted/jakub.png", "Jakub", "red",
 		"testline"
 	)],
@@ -1399,6 +1426,7 @@ let c1u2e13v1 = new MyEvent(
 )
 
 // ZEBY WLACZYC KOLEJNA IKONKE STATOW TRZEBA WPISAC showIcons(np. nerds/alienRelations)
+// szczerze?
 
 /*
 let cuev = new MyEvent(
@@ -1419,6 +1447,7 @@ let cuev = new MyEvent(
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
 )
 */
+
 /*
 #c7af42
 #a58449
