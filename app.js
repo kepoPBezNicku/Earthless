@@ -436,14 +436,14 @@ function statsChanger(element1, list) {
 
 		if (data.stats.publicOpinion <= 0) {
 			data.stats.publicOpinion = 0;
-			gameOverFunction("gameOver", "Twoja reputacja spadła do zera.");
+			gameOverFunction("gameOver", "Obywatele cię znienawidzili, nie potrafisz być przywódcą! Twoja głowa została sprzedana na wolnym rynku.");
 		} else if (data.stats.publicOpinion > 1) {
 			data.stats.publicOpinion = 1;
 		}
 
 		if (data.stats.currency <= 0) {
 			data.stats.currency = 0;
-			gameOverFunction("gameOver", "Straciłeś/aś wszystkie pieniądze.");
+			gameOverFunction("gameOver", "Nie potrafisz.");
 		} else if (data.stats.currency > 1) {
 			data.stats.currency = 1;
 		}
@@ -1193,8 +1193,12 @@ let c1u2e8v2 = new MyEvent(
 	[
 		new MyLine(
 			"bogosBinted/becia.png","Becia","red",
-			"Niestesty, zła odpowiedź. Zgromdzenie narodowe jest zebraniem senatu nie z prezydentem a z sejmem. Jest zwoływane np. podczas odebranie przysięgi nowo wybranego prezydenta.c"
-		),
+			"Niestesty, zła odpowiedź. Zgromdzenie narodowe jest zebraniem senatu nie z prezydentem a z sejmem. Jest zwoływane np. podczas odebranie przysięgi nowo wybranego prezydenta."
+			),
+		new MyLine(
+			"bogosBinted/becia.png","Becia","red",
+			"Ostatnie pytanie: Ile lat trzeba mieć żeby zostać posłem?"
+			),
 	],
 	"30 Lat",
 	"21 Lat",
@@ -1417,7 +1421,7 @@ let c1u2e12v2 = new MyEvent(
 )
 
 let c1u2e13v1 = new MyEvent(
-	"bogosBinted/jakub.png",
+	"bogosBinted/stol.png",
 	[new MyLine(
 		"bogosBinted/jakub.png", "Jakub", colors['green'],
 		"Co sądzicie, dobrze tam wypadłem?"
@@ -1425,11 +1429,39 @@ let c1u2e13v1 = new MyEvent(
 		"bogosBinted/amina.png", "Amina", "red",
 		"Póki co nie jesteś wyzywany na Y więc chyba nie jest źle"
 	),new MyLine(
-		"bogosBinted/jakub.png", "x(rolnik)", "red",
+		"bogosBinted/jakub.png", "Henryk", "red",
 		"Spokojnie, zaraz pewnie ktoś coś wytnie z kontekstu i zaraz to obleci cały internet. Kuba, może wejdź tam i zobacz co się dzieje."
 	)],
 	"Dobra, zobaczmy",
 	"Nie bardzo mnie to teraz obchodzi, po prostu czekajmy na wyniki. Musimy być gotowi.",
+	function (){
+		if (data.areTeethBrushed = true) doTheEvent(c1u2e14v1)
+		else doTheEvent(c1u2e14v2)
+	},
+	function (){
+		//doTheEvent(c1u2e15v1)
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+
+let c1u2e14v1 = new MyEvent(
+	"bogosBinted/Y.png",
+	[new MyLine(
+		"bogosBinted/noPfpUser.png", "FreePenguin", "white",
+		"Jakub zaorał wszystkich innych kandydatów! Idol xddd"
+	),new MyLine(
+		"bogosBinted/noPfpUser.png", "segga_crappost", "white",
+		"Chłop po raz pierwszy zaczął gadać z sensem? Wow"
+	),new MyLine(
+		"bogosBinted/noPfpUser.png", "polish-player-2k09", "white",
+		"MÓJ PREZYDENT BUKAJ2060!!11!!11"
+	),new MyLine(
+		"bogosBinted/noPfpUser.png", "marsrekin", "white",
+		"Dziś go podwiozłem pod radio, spoko człowiek!"
+	)],
+	"Chyba nie jest tak źle",
+	"Jest świtnie! Naprawdę mam szansę to wygrać!",
 	function (){
 		//doTheEvent(cuev)
 	},
@@ -1440,11 +1472,41 @@ let c1u2e13v1 = new MyEvent(
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
 )
 
-let cuev = new MyEvent(
-	"bogosBinted/jakub.png",
+let c1u2e14v2 = new MyEvent(
+	"bogosBinted/Y.png",
 	[new MyLine(
-		"bogosBinted/jakub.png", "Jakub", "red",
-		"testline"
+		"bogosBinted/noPfpUser.png", "FreePenguin", "white",
+		"Jakub zaorał wszystkich innych kandydatów! Idol xddd"
+	),new MyLine(
+		"bogosBinted/noPfpUser.png", "segga_crappost", "white",
+		"Chłop po raz pierwszy zaczął gadać z sensem? Wow"
+	),new MyLine(
+		"bogosBinted/noPfpUser.png", "marsrekin", "white",
+		"Dziś go podwiozłem pod radio, tak strasznie mu śmierdziało z buzi... Ten człowiek chyba nie myje zębów! Ja mu nie ufam"
+	),new MyLine(
+		"bogosBinted/noPfpUser.png", "polish-player-2k09", "white",
+		"MÓJ PREZYDENT BUKAJ2060!!11!!11"
+	)],
+	"Chyba nie jest tak źle",
+	"Jest świetnie! Naprawdę mam szansę to wygrać!",
+	function (){
+		//doTheEvent(cuev)
+	},
+	function (){
+		//doTheEvent(cuev)
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+
+let c1u2e15v1 = new MyEvent(
+	"bogosBinted/stol.png",
+	[new MyLine(
+		"bogosBinted/marcin.png", "Marcin", "blue",
+		"Mam nadzieję że ta zniesiona cisza wyborcza nam nie zaszkodzi. Ale za to mamy narzędzie to kamapnii nawet w dzień wyborów!"
+	),new MyLine(
+		"bogosBinted/"
+
 	)],
 	"LewaOpcja",
 	"PrawaOpcja",
