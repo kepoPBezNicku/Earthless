@@ -642,10 +642,43 @@ function gameOverFunction(gameOverClassName, cause) {
 	div.insertAdjacentElement("beforeend", playAgain);
 }
 
+let leftDiv = document.getElementById("leftDiv");
+let rightDiv = document.getElementById("rightDiv")
+
+function tutorialBox(element, text, isFirst, left, top) {
+	if (isFirst == true) {
+		let samouczekDiv = document.createElement("div");
+		element.style.setProperty("position", "relative");
+		samouczekDiv.className = "samouczek";
+		samouczekDiv.textContent = text;
+		samouczekDiv.style.setProperty("display", "block");
+		element.insertAdjacentElement("beforeend", samouczekDiv);
+		samouczekDiv.style.setProperty("left", left+"px");
+		samouczekDiv.style.setProperty("top", top+"px")
+	} else {
+		let removeThisDiv = document.querySelector(".samouczek");
+		removeThisDiv.remove();
+		let samouczekDiv = document.createElement("div");
+		element.style.setProperty("position", "relative");
+		samouczekDiv.className = "samouczek"
+		samouczekDiv.textContent = text;
+		samouczekDiv.style.setProperty("display", "block");
+		element.insertAdjacentElement("beforeend", samouczekDiv);
+		samouczekDiv.style.setProperty("left", left+"px");
+		samouczekDiv.style.setProperty("top", top+"px")
+	}
+
+}
+
+// samouczekDiv.forEach(el => {
+// 	console.log(1)
+// })
+
 //==================== CHAPTER 1 ====================
 changeChapterPlace(1, "Dom Jakuba");
 //===== Underchapter 1 =====
-
+tutorialBox(leftDiv, "Przycisk lewy od decyzji (PODGLAD ZMIANY STATYSTYK PO PRZYTRZYMANIU)", true, 0, 50);
+// tutorialBox(leftDiv, 6, "Przycisk lewy od decyzji");
 //wstawić jakiś sen (insp. Adamem Mickiewiczem XDDDD)
 let c1u1e1 = new MyEvent(
 	"bogosBinted/jakub.png", //budzik.png
@@ -659,10 +692,12 @@ let c1u1e1 = new MyEvent(
 	"Zaraz się spóźnię!",
 	function () {
 		doTheEvent(c1u1e2v1);
+		tutorialBox(rightDiv, "Przycisk prawy od decyzji (PODGLAD ZMIANY STATYSTYK PO PRZYTRZYMANIU)", false, 0, 50);
 	},
 
 	function () {
 		doTheEvent(c1u1e2v2);
+		tutorialBox(rightDiv, "Przycisk prawy od decyzji (PODGLAD ZMIANY STATYSTYK PO PRZYTRZYMANIU)", false, 0, 50);
 	},
 
 	[0, 0, 0, -0.3, 0.2, 0, 0, 0, 0],
@@ -679,17 +714,17 @@ let c1u1e2v1 = new MyEvent(
 	"Nie mam czasu, muszę się zbierać",
 	function () {
 		data.notimeleft = true;
-
 		doTheEvent(c1u1e2v2);
+		tutorialBox(publicOp, "Przycisk prawy od decyzji (PODGLAD ZMIANY STATYSTYK PO PRZYTRZYMANIU)", false, -50, 50);
 	},
 	function () {
 		data.notimeleft = true;
-
 		doTheEvent(c1u1e2v2);
+		tutorialBox(publicOp, "Przycisk prawy od decyzji (PODGLAD ZMIANY STATYSTYK PO PRZYTRZYMANIU)", false, 0, 50);
 	},
 
-	[0, 0, 0, 0.2, -0.3, 0, 0, 0, 0],
-	[0, 0, 0, -0.2, 0.3, 0, 0, 0, 0]
+	[0, 0, 0, 0.2, -0.2, 0, 0, 0, 0],
+	[0, 0, 0, -0.1, 0.3, 0, 0, 0, 0]
 
 	// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	// !!!!!!!!! DO ZMIANY TE STATY (ALIENRELATIONS I RESZTA NIE SA WIDOCZNE DLA GRACZA) !!!!!!!!!
@@ -748,3 +783,5 @@ let c1u1e3v1 = new MyEvent(
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 );
+
+doTheEvent(c1u1e1);
