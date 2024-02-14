@@ -207,17 +207,20 @@ let data = {
 	isBreakfastEaten: false,
 };
 
-function statsChanger(element1, list) {
-	let colorNerds = window.getComputedStyle(nerds).getPropertyValue("--pseudoElColor");
-	let colorMagicals = window.getComputedStyle(magicals).getPropertyValue("--pseudoElColor");
-	let colorAgreSuS = window.getComputedStyle(agreSuS).getPropertyValue("--pseudoElColor");
+var colorNerds = window.getComputedStyle(nerds).getPropertyValue("--pseudoElColor");
+var colorMagicals = window.getComputedStyle(magicals).getPropertyValue("--pseudoElColor");
+var colorAgreSuS = window.getComputedStyle(agreSuS).getPropertyValue("--pseudoElColor");
 
-	let colorPublicOp = window.getComputedStyle(publicOp).getPropertyValue("--pseudoElColor");
-	let colorMoney = window.getComputedStyle(money).getPropertyValue("--pseudoElColor");
-	let colorAdviser = window.getComputedStyle(adviser).getPropertyValue("--pseudoElColor");
-	let colorResearch = window.getComputedStyle(research).getPropertyValue("--pseudoElColor");
-	let colorFuel = window.getComputedStyle(fuel).getPropertyValue("--pseudoElColor");
-	let colorFood = window.getComputedStyle(food).getPropertyValue("--pseudoElColor");
+var colorPublicOp = window.getComputedStyle(publicOp).getPropertyValue("--pseudoElColor");
+var colorMoney = window.getComputedStyle(money).getPropertyValue("--pseudoElColor");
+
+var colorAdviser = window.getComputedStyle(adviser).getPropertyValue("--pseudoElColor");
+var colorResearch = window.getComputedStyle(research).getPropertyValue("--pseudoElColor");
+var colorFuel = window.getComputedStyle(fuel).getPropertyValue("--pseudoElColor");
+var colorFood = window.getComputedStyle(food).getPropertyValue("--pseudoElColor");
+
+
+function statsChanger(element1, list) {
 	function colorChanger(nerds1, magicals1, agreSuS1, pOp1, mon1, adviser1, research1, fue1, food1) {
 		if (nerds1 > 0.7) {
 			nerds.style.setProperty("--pseudoElColor", colors['green']);
@@ -226,7 +229,7 @@ function statsChanger(element1, list) {
 		} else if (nerds1 > 0 && nerds1 < 0.4) {
 			nerds.style.setProperty("--pseudoElColor", "red");
 		}
-
+	
 		if (magicals1 > 0.7) {
 			magicals.style.setProperty("--pseudoElColor", colors['green']);
 		} else if (magicals1 >= 0.4 && magicals1 <= 0.7) {
@@ -234,7 +237,7 @@ function statsChanger(element1, list) {
 		} else if (magicals1 > 0 && magicals1 < 0.4) {
 			magicals.style.setProperty("--pseudoElColor", "red");
 		}
-
+	
 		if (agreSuS1 > 0.7) {
 			agreSuS.style.setProperty("--pseudoElColor", colors['green']);
 		} else if (agreSuS1 >= 0.4 && agreSuS1 <= 0.7) {
@@ -242,7 +245,7 @@ function statsChanger(element1, list) {
 		} else if (agreSuS1 > 0 && agreSuS1 < 0.4) {
 			agreSuS.style.setProperty("--pseudoElColor", "red");
 		}
-
+	
 		if (pOp1 > 0.7) {
 			publicOp.style.setProperty("--pseudoElColor", colors['green']);
 		} else if (pOp1 >= 0.4 && pOp1 <= 0.7) {
@@ -250,7 +253,7 @@ function statsChanger(element1, list) {
 		} else if (pOp1 > 0 && pOp1 < 0.4) {
 			publicOp.style.setProperty("--pseudoElColor", "red");
 		}
-
+	
 		if (mon1 > 0.7) {
 			money.style.setProperty("--pseudoElColor", colors['green']);
 		} else if (mon1 >= 0.4 && mon1 <= 0.7) {
@@ -258,7 +261,7 @@ function statsChanger(element1, list) {
 		} else if (mon1 > 0 && mon1 < 0.4) {
 			money.style.setProperty("--pseudoElColor", "red");
 		}
-
+	
 		if (adviser1 > 0.7) {
 			adviser.style.setProperty("--pseudoElColor", colors['green']);
 		} else if (adviser1 >= 0.4 && adviser1 <= 0.7) {
@@ -266,7 +269,7 @@ function statsChanger(element1, list) {
 		} else if (adviser1 > 0 && adviser1 < 0.4) {
 			adviser.style.setProperty("--pseudoElColor", "red");
 		}
-
+	
 		if (research1 > 0.7) {
 			research.style.setProperty("--pseudoElColor", colors['green']);
 		} else if (research1 >= 0.4 && research1 <= 0.7) {
@@ -274,7 +277,7 @@ function statsChanger(element1, list) {
 		} else if (research1 > 0 && research1 < 0.4) {
 			research.style.setProperty("--pseudoElColor", "red");
 		}
-
+	
 		if (fue1 > 0.7) {
 			fuel.style.setProperty("--pseudoElColor", colors['green']);
 		} else if (fue1 >= 0.4 && fue1 <= 0.7) {
@@ -282,7 +285,7 @@ function statsChanger(element1, list) {
 		} else if (fue1 > 0 && fue1 < 0.4) {
 			fuel.style.setProperty("--pseudoElColor", "red");
 		}
-
+	
 		if (food1 > 0.7) {
 			food.style.setProperty("--pseudoElColor", colors['green']);
 		} else if (food1 >= 0.4 && food1 <= 0.7) {
@@ -300,7 +303,7 @@ function statsChanger(element1, list) {
 		} else {
 			nerds.style.setProperty("--transform", "scaleY(0)");
 		}
-
+	
 		if (magicals2 >= 0 && magicals2 <= 1) {
 			magicals.style.setProperty("--transform", "scaleY(" + magicals2 + ")");
 		} else if (magicals2 > 1) {
@@ -308,7 +311,7 @@ function statsChanger(element1, list) {
 		} else {
 			magicals.style.setProperty("--transform", "scaleY(0)");
 		}
-
+	
 		if (agreSuS2 >= 0 && agreSuS2 <= 1) {
 			agreSuS.style.setProperty("--transform", "scaleY(" + agreSuS2 + ")");
 		} else if (agreSuS2 > 1) {
@@ -316,7 +319,7 @@ function statsChanger(element1, list) {
 		} else {
 			agreSuS.style.setProperty("--transform", "scaleY(0)");
 		}
-
+	
 		if (pOp2 >= 0 && pOp2 <= 1) {
 			publicOp.style.setProperty("--transform", "scaleY(" + pOp2 + ")");
 		} else if (pOp2 > 1) {
@@ -324,7 +327,7 @@ function statsChanger(element1, list) {
 		} else {
 			publicOp.style.setProperty("--transform", "scaleY(0)");
 		}
-
+	
 		if (mon2 >= 0 && mon2 <= 1) {
 			money.style.setProperty("--transform", "scaleY(" + mon2 + ")");
 		} else if (mon2 > 1) {
@@ -332,7 +335,7 @@ function statsChanger(element1, list) {
 		} else {
 			money.style.setProperty("--transform", "scaleY(0)");
 		}
-
+	
 		if (adviser2 >= 0 && adviser2 <= 1) {
 			adviser.style.setProperty("--transform", "scaleY(" + adviser2 + ")");
 		} else if (adviser2 > 1) {
@@ -340,7 +343,7 @@ function statsChanger(element1, list) {
 		} else {
 			adviser.style.setProperty("--transform", "scaleY(0)");
 		}
-
+	
 		if (research2 >= 0 && research2 <= 1) {
 			research.style.setProperty("--transform", "scaleY(" + research2 + ")");
 		} else if (research2 > 1) {
@@ -356,7 +359,7 @@ function statsChanger(element1, list) {
 		} else {
 			fuel.style.setProperty("--transform", "scaleY(0)");
 		}
-
+	
 		if (food2 >= 0 && food2 <= 1) {
 			food.style.setProperty("--transform", "scaleY(" + food2 + ")");
 		} else if (food2 > 1) {
@@ -364,7 +367,7 @@ function statsChanger(element1, list) {
 		} else {
 			food.style.setProperty("--transform", "scaleY(0)");
 		}
-	}
+	}	
 
 	element1.addEventListener("mouseover", function hover() {
 		let ner = data.stats.alienRelations.nerds + list[0];
@@ -380,28 +383,9 @@ function statsChanger(element1, list) {
 		statsFuse(ner, mag, agreS, pOp, mon, adv, res, fue, foo);
 		colorChanger(ner, mag, agreS, pOp, mon, adv, res, fue, foo);
 	});
-	element1.addEventListener("mouseout", function out() {
-		nerds.style.setProperty("--transform","scaleY(" + data.stats.alienRelations.nerds + ")");
-		magicals.style.setProperty("--transform","scaleY(" + data.stats.alienRelations.magicals + ")");
-		agreSuS.style.setProperty("--transform","scaleY(" + data.stats.alienRelations.agreSuS + ")");
-		publicOp.style.setProperty("--transform","scaleY(" + data.stats.publicOpinion + ")");
-		money.style.setProperty("--transform","scaleY(" + data.stats.currency + ")");
-		adviser.style.setProperty("--transform","scaleY(" + data.stats.adviser + ")");
-		research.style.setProperty("--transform","scaleY(" + data.stats.research + ")");
-		fuel.style.setProperty("--transform","scaleY(" + data.stats.fuel + ")");
-		food.style.setProperty("--transform","scaleY(" + data.stats.food + ")");
 
 
-		nerds.style.setProperty("--pseudoElColor", colorNerds);
-		magicals.style.setProperty("--pseudoElColor", colorMagicals);
-		agreSuS.style.setProperty("--pseudoElColor", colorAgreSuS);
-		publicOp.style.setProperty("--pseudoElColor", colorPublicOp);
-		money.style.setProperty("--pseudoElColor", colorMoney);
-		adviser.style.setProperty("--pseudoElColor", colorAdviser);
-		research.style.setProperty("--pseudoElColor", colorResearch);
-		fuel.style.setProperty("--pseudoElColor", colorFuel);
-		food.style.setProperty("--pseudoElColor", colorFood);
-	});
+
 	element1.addEventListener("click", function change() {
 		data.stats.alienRelations.nerds += list[0];
 		data.stats.alienRelations.magicals += list[1];
@@ -412,6 +396,18 @@ function statsChanger(element1, list) {
 		data.stats.research += list[6];
 		data.stats.fuel += list[7];
 		data.stats.food += list[8];
+
+		let ner = data.stats.alienRelations.nerds
+		let mag = data.stats.alienRelations.magicals
+		let agreS = data.stats.alienRelations.agreSuS
+		let pOp = data.stats.publicOpinion
+		let mon = data.stats.currency
+		let adv = data.stats.adviser
+		let res = data.stats.research
+		let fue = data.stats.fuel
+		let foo = data.stats.food
+
+		console.log(mon)
 
 		if (data.stats.alienRelations.nerds <= 0) {
 			data.stats.alienRelations.nerds = 0;
@@ -443,7 +439,7 @@ function statsChanger(element1, list) {
 
 		if (data.stats.currency <= 0) {
 			data.stats.currency = 0;
-			gameOverFunction("gameOver", "Nie potrafisz.");
+			gameOverFunction("gameOver", "Zbankrutowałeś.");
 		} else if (data.stats.currency > 1) {
 			data.stats.currency = 1;
 		}
@@ -495,16 +491,47 @@ function statsChanger(element1, list) {
 				data.stats.research,
 				data.stats.fuel,
 				data.stats.food);
-		colorChanger();
-		// console.log(data.stats.publicOpinion);
-		// console.log(data.stats.fuel);
-		// console.log(data.stats.currency);
 
-		// ↑ NIE WYWALAC CONSOLLOGUF DOPOKI NIE BEDZIEMY ODDAWAC PROJEKTU
+		colorChanger(ner, mag, agreS, pOp, mon, adv, res, fue, foo);
+
+
+		colorNerds = window.getComputedStyle(nerds).getPropertyValue("--pseudoElColor");
+		colorMagicals = window.getComputedStyle(magicals).getPropertyValue("--pseudoElColor");
+		colorAgreSuS = window.getComputedStyle(agreSuS).getPropertyValue("--pseudoElColor");
+	
+		colorPublicOp = window.getComputedStyle(publicOp).getPropertyValue("--pseudoElColor");
+		colorMoney = window.getComputedStyle(money).getPropertyValue("--pseudoElColor");
+
+		colorAdviser = window.getComputedStyle(adviser).getPropertyValue("--pseudoElColor");
+		colorResearch = window.getComputedStyle(research).getPropertyValue("--pseudoElColor");
+		colorFuel = window.getComputedStyle(fuel).getPropertyValue("--pseudoElColor");
+		colorFood = window.getComputedStyle(food).getPropertyValue("--pseudoElColor");
 
 		// ale pierdol sie
 
 		//naprawde
+	});
+	element1.addEventListener("mouseout", function out() {
+		nerds.style.setProperty("--transform","scaleY(" + data.stats.alienRelations.nerds + ")");
+		magicals.style.setProperty("--transform","scaleY(" + data.stats.alienRelations.magicals + ")");
+		agreSuS.style.setProperty("--transform","scaleY(" + data.stats.alienRelations.agreSuS + ")");
+		publicOp.style.setProperty("--transform","scaleY(" + data.stats.publicOpinion + ")");
+		money.style.setProperty("--transform","scaleY(" + data.stats.currency + ")");
+		adviser.style.setProperty("--transform","scaleY(" + data.stats.adviser + ")");
+		research.style.setProperty("--transform","scaleY(" + data.stats.research + ")");
+		fuel.style.setProperty("--transform","scaleY(" + data.stats.fuel + ")");
+		food.style.setProperty("--transform","scaleY(" + data.stats.food + ")");
+
+		console.log("!!!!" + colorPublicOp + "!!!")
+		nerds.style.setProperty("--pseudoElColor", colorNerds);
+		magicals.style.setProperty("--pseudoElColor", colorMagicals);
+		agreSuS.style.setProperty("--pseudoElColor", colorAgreSuS);
+		publicOp.style.setProperty("--pseudoElColor", colorPublicOp);
+		money.style.setProperty("--pseudoElColor", colorMoney);
+		adviser.style.setProperty("--pseudoElColor", colorAdviser);
+		research.style.setProperty("--pseudoElColor", colorResearch);
+		fuel.style.setProperty("--pseudoElColor", colorFuel);
+		food.style.setProperty("--pseudoElColor", colorFood);
 	});
 }
 
@@ -557,10 +584,6 @@ function doTheEvent(ob) {
 	middleDiv.textContent = "";
 
 	eventsRemover();
-
-	publicOp.style.setProperty("--transform","scaleY(" + data.stats.publicOpinion + ")");
-	fuel.style.setProperty("--transform", "scaleY(" + data.stats.fuel + ")");
-	money.style.setProperty("--transform","scaleY(" + data.stats.currency + ")");
 
 	let buttonLeft = document.querySelector("button#left");
 	let buttonRight = document.querySelector("button#right");
@@ -688,8 +711,13 @@ let c1u1e2v1 = new MyEvent(
 		doTheEvent(c1u1e2v2);
 	},
 
+<<<<<<< HEAD
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
+=======
+	[0, 0, 0, 0.2, -1, 0, 0, 0, 0],
+	[0, 0, 0, -0.2, 0.3, 0, 0, 0, 0]
+>>>>>>> MojciechWazur
 
 	// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	// !!!!!!!!! DO ZMIANY TE STATY (ALIENRELATIONS I RESZTA NIE SA WIDOCZNE DLA GRACZA) !!!!!!!!!

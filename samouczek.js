@@ -541,6 +541,16 @@ class MyLine {
 	}
 }
 
+class Samouczek {
+	constructor(element, text, isFirst, left, top) {
+		this.element = element;
+		this.text = text;
+		this.isFirst = isFirst;
+		this.left = left;
+		this.top = top;
+	}
+}
+
 
 // ============= KLONOWANIE (USUWANIE EVENTOW) =============
 
@@ -645,28 +655,30 @@ function gameOverFunction(gameOverClassName, cause) {
 let leftDiv = document.getElementById("leftDiv");
 let rightDiv = document.getElementById("rightDiv")
 
-function tutorialBox(element, text, isFirst, left, top) {
-	if (isFirst == true) {
-		let samouczekDiv = document.createElement("div");
-		element.style.setProperty("position", "relative");
-		samouczekDiv.className = "samouczek";
-		samouczekDiv.textContent = text;
-		samouczekDiv.style.setProperty("display", "block");
-		element.insertAdjacentElement("beforeend", samouczekDiv);
-		samouczekDiv.style.setProperty("left", left+"px");
-		samouczekDiv.style.setProperty("top", top+"px")
-	} else {
-		let removeThisDiv = document.querySelector(".samouczek");
-		removeThisDiv.remove();
-		let samouczekDiv = document.createElement("div");
-		element.style.setProperty("position", "relative");
-		samouczekDiv.className = "samouczek"
-		samouczekDiv.textContent = text;
-		samouczekDiv.style.setProperty("display", "block");
-		element.insertAdjacentElement("beforeend", samouczekDiv);
-		samouczekDiv.style.setProperty("left", left+"px");
-		samouczekDiv.style.setProperty("top", top+"px")
-	}
+function tutorialBox(ob) {
+	ob.line.forEach((el) => {
+		if (el.isFirst == true) {
+			let samouczekDiv = document.createElement("div");
+			el.element.style.setProperty("position", "relative");
+			samouczekDiv.className = "samouczek";
+			samouczekDiv.textContent = el.text;
+			samouczekDiv.style.setProperty("display", "block");
+			el.element.insertAdjacentElement("beforeend", samouczekDiv);
+			samouczekDiv.style.setProperty("left", el.left+"px");
+			samouczekDiv.style.setProperty("top", el.top+"px")
+		} else {
+			let removeThisDiv = document.querySelector(".samouczek");
+			removeThisDiv.remove();
+			let samouczekDiv = document.createElement("div");
+			el.element.style.setProperty("position", "relative");
+			samouczekDiv.className = "samouczek"
+			samouczekDiv.textContent = el.text;
+			samouczekDiv.style.setProperty("display", "block");
+			el.element.insertAdjacentElement("beforeend", samouczekDiv);
+			samouczekDiv.style.setProperty("left", left+"px");
+			samouczekDiv.style.setProperty("top", top+"px")
+		}
+	})
 
 }
 
@@ -677,7 +689,17 @@ function tutorialBox(element, text, isFirst, left, top) {
 //==================== CHAPTER 1 ====================
 changeChapterPlace(1, "Dom Jakuba");
 //===== Underchapter 1 =====
-tutorialBox(leftDiv, "Przycisk lewy od decyzji (PODGLAD ZMIANY STATYSTYK PO PRZYTRZYMANIU)", true, 0, 50);
+// tutorialBox(leftDiv, "Przycisk lewy od decyzji (PODGLAD ZMIANY STATYSTYK PO PRZYTRZYMANIU)", true, 0, 50);
+tutorialBox
+let s1 = new Samouczek (
+	leftDiv,
+	"Przycisk lewy od decyzji (PODGLAD ZMIANY STATYSTYK PO PRZYTRZYMANIU)",
+	true,
+	0,
+	50
+)
+
+tutorialBox(s1)
 // tutorialBox(leftDiv, 6, "Przycisk lewy od decyzji");
 //wstawić jakiś sen (insp. Adamem Mickiewiczem XDDDD)
 let c1u1e1 = new MyEvent(
@@ -692,96 +714,14 @@ let c1u1e1 = new MyEvent(
 	"Zaraz się spóźnię!",
 	function () {
 		doTheEvent(c1u1e2v1);
-		tutorialBox(rightDiv, "Przycisk prawy od decyzji (PODGLAD ZMIANY STATYSTYK PO PRZYTRZYMANIU)", false, 0, 50);
 	},
 
 	function () {
-		doTheEvent(c1u1e2v2);
-		tutorialBox(rightDiv, "Przycisk prawy od decyzji (PODGLAD ZMIANY STATYSTYK PO PRZYTRZYMANIU)", false, 0, 50);
+		doTheEvent(c1u1e2v1);
 	},
 
 	[0, 0, 0, -0.3, 0.2, 0, 0, 0, 0],
 	[0, 0, 0, 0.3, -0.2, 0, 0, 0, 0]
-);
-
-let c1u1e2v1 = new MyEvent(
-	"bogosBinted/jakub.png", //chmurka.png
-	[
-		new MyLine("bogosBinted/jakub.png", "Jakub", colors['green'], "Testowy tekst 1"),
-		new MyLine("bogosBinted/jakub.png", "bukaJ", "red", "Testowy tekst 2"),
-	],
-	"Zaraz się spóźnię!",
-	"Nie mam czasu, muszę się zbierać",
-	function () {
-		data.notimeleft = true;
-		doTheEvent(c1u1e2v2);
-		tutorialBox(publicOp, "Przycisk prawy od decyzji (PODGLAD ZMIANY STATYSTYK PO PRZYTRZYMANIU)", false, -50, 50);
-	},
-	function () {
-		data.notimeleft = true;
-		doTheEvent(c1u1e2v2);
-		tutorialBox(publicOp, "Przycisk prawy od decyzji (PODGLAD ZMIANY STATYSTYK PO PRZYTRZYMANIU)", false, 0, 50);
-	},
-
-	[0, 0, 0, 0.2, -0.2, 0, 0, 0, 0],
-	[0, 0, 0, -0.1, 0.3, 0, 0, 0, 0]
-
-	// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-	// !!!!!!!!! DO ZMIANY TE STATY (ALIENRELATIONS I RESZTA NIE SA WIDOCZNE DLA GRACZA) !!!!!!!!!
-	// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-);
-
-let c1u1e2v2 = new MyEvent(
-	"bogosBinted/jakub.png", //budzik.png
-	[
-		new MyLine(
-			"bogosBinted/jakub.png", "Jakub", colors['green'],
-			"Na dzisiejszym wywiadzie muszę się dobrze prezentować! Ale mogę nie zdążyć ze wszystkim."
-		),
-	],
-	"Wypij kawę",
-	"Wymyj zęby",
-	function () {
-		data.isCoffeDrunk = true;
-		if (data.notimeleft == true) {
-			data.stats.publicOpinion-=.05;
-			doTheEvent(c1u1e3v3);}
-		else doTheEvent(c1u1e3v1);
-	},
-	function () {
-		data.areTeethBrushed = true;
-		if (data.notimeleft == true) doTheEvent(c1u1e3v4);
-		else doTheEvent(c1u1e3v2);
-	},
-
-	[0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0, 0, 0, 0]
-);
-
-let c1u1e3v1 = new MyEvent(
-	"bogosBinted/jakub.png", //kawa.png
-	[
-		new MyLine(
-			"bogosBinted/jakub.png","Jakub", colors['green'],
-			"Dzień bez kawy to dzień stracony! Dobra, na szczęscie zostało mi trochę czasu na..."
-		),
-	],
-	"Wymycie zębów",
-	"Szbykie śniadanie",
-	function () {
-		data.areTeethBrushed = true;
-
-		doTheEvent(c1u1e3v4);
-	},
-	function () {
-		data.isBreakfastEaten = true;
-		data.stats.publicOpinion-=0.05;
-
-		doTheEvent(c1u1e4v1);
-	},
-
-	[0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 );
 
 doTheEvent(c1u1e1);
