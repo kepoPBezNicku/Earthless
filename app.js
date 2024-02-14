@@ -584,7 +584,7 @@ function doTheEvent(ob) {
 	middleDiv.textContent = "";
 
 	eventsRemover();
-	
+
 	let buttonLeft = document.querySelector("button#left");
 	let buttonRight = document.querySelector("button#right");
 
