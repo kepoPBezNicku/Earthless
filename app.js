@@ -688,8 +688,8 @@ let c1u1e2v1 = new MyEvent(
 		doTheEvent(c1u1e2v2);
 	},
 
-	[0, 0, 0, 0.2, -0.3, 0, 0, 0, 0],
-	[0, 0, 0, -0.2, 0.3, 0, 0, 0, 0]
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 	// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	// !!!!!!!!! DO ZMIANY TE STATY (ALIENRELATIONS I RESZTA NIE SA WIDOCZNE DLA GRACZA) !!!!!!!!!
@@ -1439,7 +1439,7 @@ let c1u2e13v1 = new MyEvent(
 		else doTheEvent(c1u2e14v2)
 	},
 	function (){
-		//doTheEvent(c1u2e15v1)
+		doTheEvent(c1u2e15v1)
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
@@ -1463,10 +1463,10 @@ let c1u2e14v1 = new MyEvent(
 	"Chyba nie jest tak źle",
 	"Jest świtnie! Naprawdę mam szansę to wygrać!",
 	function (){
-		//doTheEvent(cuev)
+		doTheEvent(c1u2e15v1)
 	},
 	function (){
-		//doTheEvent(cuev)
+		doTheEvent(c1u2e15v1)
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
@@ -1490,10 +1490,10 @@ let c1u2e14v2 = new MyEvent(
 	"Chyba nie jest tak źle",
 	"Jest świetnie! Naprawdę mam szansę to wygrać!",
 	function (){
-		//doTheEvent(cuev)
+		doTheEvent(c1u2e15v1)
 	},
 	function (){
-		//doTheEvent(cuev)
+		doTheEvent(c1u2e15v1)
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
@@ -1507,6 +1507,33 @@ let c1u2e15v1 = new MyEvent(
 	),new MyLine(
 		"bogosBinted/krzys.png", "Krzychu", "purple",
 		"Chodźcie, jest ogłoszenie wyników!"
+	)],
+	"Chwila prawdy.",
+	"To tylko formalność, ale zobaczmy.",
+	function (){
+		doTheEvent(c1u2e16v1)
+	},
+	function (){
+		doTheEvent(c1u2e16v1)
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+
+let c1u2e16v1 = new MyEvent(
+	"bogosBinted/radio.png",
+	[new MyLine(
+		"bogosBinted/becia.png", "Becia", "red",
+		"Uwaga, Państwowa Komisja Wyborcza podała wyniki wyborów prezydenckich 2060! Wy.ory rozstrzygły się w pierwszej turze, a ich zwycięzcą zostaje Jakub Bukaj zdobywając 65% głosów, gratualacje dla Pana prezydenta!"
+	),new MyLine(
+		"bogosBinted/jakub.png", "Marcin", "red",
+		"MAMY TO!"
+	),new MyLine(
+		"bogosBinted/jakub.png", "Ilia", "red",
+		"Udało się!"
+	),new MyLine(
+		"bogosBinted/jakub.png", "Jakub", "red",
+		"A więc Panie i Panowie - bierzemy się do pracy! Amina, Henryk i Ilia przygotujcie prezentacje waszych badań, Krzychu idź do X, a ja z Marcinem idziemy nagrać przemówienie."
 	)],
 	"LewaOpcja",
 	"PrawaOpcja",
@@ -1542,7 +1569,5 @@ let cuev = new MyEvent(
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
 )
 */
-
-
 
 doTheEvent(c1u1e1);  
