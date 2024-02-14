@@ -1533,7 +1533,7 @@ let c1u2e16v1 = new MyEvent(
 		"Udało się!"
 	),new MyLine(
 		"bogosBinted/jakub.png", "Jakub", "red",
-		"A więc Panie i Panowie - bierzemy się do pracy! Amina, Henryk i Ilia przygotujcie prezentacje waszych badań, Krzychu idź do X, a ja z Marcinem idziemy nagrać przemówienie."
+		"A więc Panie i Panowie - bierzemy się do pracy! Amina, Henryk i Ilia przygotujcie prezentacje waszych badań, Krzychu idź do Alberta, a ja z Marcinem idziemy nagrać przemówienie."
 	)],
 	"LewaOpcja",
 	"PrawaOpcja",
