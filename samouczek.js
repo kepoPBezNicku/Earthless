@@ -696,7 +696,7 @@ let c1u1e1 = new MyEvent(
 	},
 
 	function () {
-		doTheEvent(c1u1e2v2);
+		doTheEvent(c1u1e2v1);
 		tutorialBox(rightDiv, "Przycisk prawy od decyzji (PODGLAD ZMIANY STATYSTYK PO PRZYTRZYMANIU)", false, 0, 50);
 	},
 
@@ -715,12 +715,14 @@ let c1u1e2v1 = new MyEvent(
 	function () {
 		data.notimeleft = true;
 		doTheEvent(c1u1e2v2);
-		tutorialBox(publicOp, "Przycisk prawy od decyzji (PODGLAD ZMIANY STATYSTYK PO PRZYTRZYMANIU)", false, -50, 50);
+		tutorialBox(publicOp, "Przycisk prawy od decyzji (PODGLAD ZMIANY STATYSTYK PO PRZYTRZYMANIU)", false, -300, 50);
+		resources.className = "open";
 	},
 	function () {
 		data.notimeleft = true;
 		doTheEvent(c1u1e2v2);
-		tutorialBox(publicOp, "Przycisk prawy od decyzji (PODGLAD ZMIANY STATYSTYK PO PRZYTRZYMANIU)", false, 0, 50);
+		tutorialBox(publicOp, "Przycisk prawy od decyzji (PODGLAD ZMIANY STATYSTYK PO PRZYTRZYMANIU)", false, -300, 50);
+		resources.className = "open";
 	},
 
 	[0, 0, 0, 0.2, -0.2, 0, 0, 0, 0],
@@ -745,13 +747,17 @@ let c1u1e2v2 = new MyEvent(
 		data.isCoffeDrunk = true;
 		if (data.notimeleft == true) {
 			data.stats.publicOpinion-=.05;
-			doTheEvent(c1u1e3v3);}
+			doTheEvent(c1u1e3v1);}
 		else doTheEvent(c1u1e3v1);
+		tutorialBox(money, "Przycisk prawy od decyzji (PODGLAD ZMIANY STATYSTYK PO PRZYTRZYMANIU)", false, -300, 50);
+		resources.className = "open";
 	},
 	function () {
 		data.areTeethBrushed = true;
-		if (data.notimeleft == true) doTheEvent(c1u1e3v4);
-		else doTheEvent(c1u1e3v2);
+		if (data.notimeleft == true) doTheEvent(c1u1e3v1);
+		else doTheEvent(c1u1e3v1);
+		tutorialBox(money, "Przycisk prawy od decyzji (PODGLAD ZMIANY STATYSTYK PO PRZYTRZYMANIU)", false, -300, 50);
+		resources.className = "open";
 	},
 
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -759,6 +765,110 @@ let c1u1e2v2 = new MyEvent(
 );
 
 let c1u1e3v1 = new MyEvent(
+	"bogosBinted/jakub.png", //kawa.png
+	[
+		new MyLine(
+			"bogosBinted/jakub.png","Jakub", colors['green'],
+			"Dzień bez kawy to dzień stracony! Dobra, na szczęscie zostało mi trochę czasu na..."
+		),
+	],
+	"Wymycie zębów",
+	"Szbykie śniadanie",
+	function () {
+		data.areTeethBrushed = true;
+
+		doTheEvent(c1u1e3v2);
+	},
+	function () {
+		data.isBreakfastEaten = true;
+		data.stats.publicOpinion-=0.05;
+
+		doTheEvent(c1u1e3v2);
+	},
+
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
+);
+
+let c1u1e3v2 = new MyEvent(
+	"bogosBinted/jakub.png", //kawa.png
+	[
+		new MyLine(
+			"bogosBinted/jakub.png","Jakub", colors['green'],
+			"Dzień bez kawy to dzień stracony! Dobra, na szczęscie zostało mi trochę czasu na..."
+		),
+	],
+	"Wymycie zębów",
+	"Szbykie śniadanie",
+	function () {
+		data.areTeethBrushed = true;
+
+		doTheEvent(c1u1e3v4);
+	},
+	function () {
+		data.isBreakfastEaten = true;
+		data.stats.publicOpinion-=0.05;
+
+		doTheEvent(c1u1e4v1);
+	},
+
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
+);
+
+let c1u1e3v3 = new MyEvent(
+	"bogosBinted/jakub.png", //kawa.png
+	[
+		new MyLine(
+			"bogosBinted/jakub.png","Jakub", colors['green'],
+			"Dzień bez kawy to dzień stracony! Dobra, na szczęscie zostało mi trochę czasu na..."
+		),
+	],
+	"Wymycie zębów",
+	"Szbykie śniadanie",
+	function () {
+		data.areTeethBrushed = true;
+
+		doTheEvent(c1u1e3v4);
+	},
+	function () {
+		data.isBreakfastEaten = true;
+		data.stats.publicOpinion-=0.05;
+
+		doTheEvent(c1u1e4v1);
+	},
+
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
+);
+
+let c1u1e3v4 = new MyEvent(
+	"bogosBinted/jakub.png", //kawa.png
+	[
+		new MyLine(
+			"bogosBinted/jakub.png","Jakub", colors['green'],
+			"Dzień bez kawy to dzień stracony! Dobra, na szczęscie zostało mi trochę czasu na..."
+		),
+	],
+	"Wymycie zębów",
+	"Szbykie śniadanie",
+	function () {
+		data.areTeethBrushed = true;
+
+		doTheEvent(c1u1e3v4);
+	},
+	function () {
+		data.isBreakfastEaten = true;
+		data.stats.publicOpinion-=0.05;
+
+		doTheEvent(c1u1e4v1);
+	},
+
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
+);
+
+let c1u1e3v5 = new MyEvent(
 	"bogosBinted/jakub.png", //kawa.png
 	[
 		new MyLine(
