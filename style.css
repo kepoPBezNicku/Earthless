@@ -108,6 +108,34 @@ body {
 }
 
 /* ---------------------------------------------------- */
+/* --------------------- SAMOUCZEK -------------------- */
+/* ---------------------------------------------------- */
+
+.samouczek {
+	position: absolute;
+	width: max-content;
+	border-radius: 20px;
+	color: black;
+	background-color: white;
+	padding: 5px 10px;
+	font-size: 17px;
+	max-width: 350px;
+	display: none;
+	border: 5px solid red;
+	animation-name: samouczek-animacja;
+	animation-duration: 1s;
+	animation-timing-function: ease;
+	font-weight: bold;
+	animation-iteration-count: infinite;
+}
+
+@keyframes  samouczek-animacja {
+	0% {background-color: rgb(255, 136, 136); color: black}
+	50% {background-color: white; color: black}
+	to {background-color: rgb(255, 136, 136); color: black}
+}
+
+/* ---------------------------------------------------- */
 /* ---------------------- HEADER ---------------------- */
 /* ---------------------------------------------------- */
 
@@ -220,7 +248,7 @@ ul#alien-relations {
 	margin: 0px auto;
 }
 
-#header-section nav #resources ul li div, #alien-relations li div {
+#header-section nav #resources ul li div:first-of-type, #alien-relations li div:first-of-type {
 	width: 7px;
 	display: block;
 	border: 1px solid white;
@@ -229,7 +257,7 @@ ul#alien-relations {
 	border-radius: 3px;
 }
 
-#header-section nav #resources ul li div::after, #alien-relations li div::after {
+#header-section nav #resources ul li div:first-of-type::after, #alien-relations li div:first-of-type::after {
 	content: "";
 	background-color: var(--pseudoElColor);
 	/* transition-property: background-color; */
@@ -353,6 +381,7 @@ ul#alien-relations {
 main {
 	display: flex;
 	justify-content: center;
+	margin: 0px 0px 50px;
 }
 
 #main-section-index {
@@ -375,7 +404,6 @@ main {
 	justify-content: space-evenly;
 	font-family: var(--font-family);
 	width: 70%;
-	margin: 0px 0px 40px;
 	padding-top: 50px;
 	max-width: 800px;
 }
@@ -443,6 +471,11 @@ main {
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
+}
+
+#main-section .choice #decision-button div {
+	display: flex;
+	justify-content: center;
 }
 
 #main-section .choice #decision-button button {
