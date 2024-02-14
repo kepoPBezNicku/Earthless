@@ -1062,7 +1062,7 @@ let c1u2e5v1 = new MyEvent(
 		),
 		new MyLine(
 			"bogosBinted/becia.png","Becia","red",
-			"Dobrze, zanim jeszcze przejdziemy do serca sedna naszego spotkania... ponoć miał pan z wosu 2 na światectwie!"
+			"Dobrze, zanim jeszcze przejdziemy do sedna naszego spotkania... ponoć miał pan z wosu 2 na światectwie!"
 		),
 	],
 	"To prawda, przyznaję, że w tym wieku nie bardzo uważałem na oceny. Najważniejsze że zdałem, prawda? Haha",
@@ -1435,7 +1435,7 @@ let c1u2e13v1 = new MyEvent(
 	"Dobra, zobaczmy",
 	"Nie bardzo mnie to teraz obchodzi, po prostu czekajmy na wyniki. Musimy być gotowi.",
 	function (){
-		if (data.areTeethBrushed = true) doTheEvent(c1u2e14v1)
+		if (data.areTeethBrushed) doTheEvent(c1u2e14v1)
 		else doTheEvent(c1u2e14v2)
 	},
 	function (){
@@ -1569,5 +1569,5 @@ let cuev = new MyEvent(
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
 )
 */
-
-doTheEvent(c1u1e1);  
+console.log("nega")
+doTheEvent(c1u1e1);
