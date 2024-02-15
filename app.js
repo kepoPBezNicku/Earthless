@@ -1601,8 +1601,27 @@ let c1u2e18v1 = new MyEvent(
 	"bogosBinted/gsg.png",
 	[new MyLine(
 		"bogosBinted/albert.png", "Albert", "red",
-		"Już tłumaczę o co chodzi! Stworzyłem "
+		"Już tłumaczę o co chodzi. Za pomocą kilku skomplikowanych układów elektrycznych, których nikt po za MNĄ nie byłby w stanie zrozumieć swoim małym móżdżkiem, stworzyłem narzędzie opierające się o działaniu nagęszczacza metrii. Zagęszcza on tyle materii, ile potrzeba żeby wytworzyć dane pole grawitacyj..."
 	)],
+	"Wiesz co, śpieszy mi się...",
+	"Mhm, a czym jest ten zagęszczacz materii?",
+	function (){
+		//doTheEvent(cuev)
+	},
+	function (){
+		doTheEvent(c1u2e19v1)
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+
+let c1u2e19v1 = new MyEvent(
+	"bogosBinted/albert.png",
+	[new MyLine(
+		"bogosBinted/albert.png", "Albert", "red",
+		"Cieszę się, że pytasz! Zagęszczacz materii... ha! Co to takiego? To nie jest zwykłe urządzenie, to przełomowa technologia, która wyrywa nas z ram ograniczeń fizyki, to maszyna, która zmienia naszą percepcję rzeczywistości! Wyobraźcie sobie, że mogę skoncentrować całą masę Wszechświata w jednym punkcie, na tyle małym, że nie mieści się w waszym wyobrażeniu!. Ale jak to możliwe, zapytacie? Otóż ja, wyjątkowy umysł, odkryłem sekrety teoretycznej fizyki kwantowej, a następnie przeniosłem je do praktyki! Zagęszczacz materii wykorzystuje połączenie skomplikowanych manipulacji polami kwantowymi, promieniowaniem gamma i... no cóż, skomplikowanymi obwodami elektronicznymi, których funkcjonowanie przechodzi wasze zwykłe pojęcie!"
+	)//dobra robota, teraz zajmij sie następnym...
+	],
 	"LewaOpcja",
 	"PrawaOpcja",
 	function (){
