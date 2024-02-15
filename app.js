@@ -711,13 +711,8 @@ let c1u1e2v1 = new MyEvent(
 		doTheEvent(c1u1e2v2);
 	},
 
-<<<<<<< HEAD
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
-=======
-	[0, 0, 0, 0.2, -1, 0, 0, 0, 0],
-	[0, 0, 0, -0.2, 0.3, 0, 0, 0, 0]
->>>>>>> MojciechWazur
 
 	// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	// !!!!!!!!! DO ZMIANY TE STATY (ALIENRELATIONS I RESZTA NIE SA WIDOCZNE DLA GRACZA) !!!!!!!!!
@@ -910,10 +905,10 @@ let c1u1e6 = new MyEvent(
 );
 
 let c1u1e7 = new MyEvent(
-	"bogosBinted/mirek.png", //taxi.png
+	"bogosBinted/taxi.png",
 	[
 		new MyLine(
-			"bogosBinted/mirek.png","Pan Mirek","yellow", //panmirek.png
+			"bogosBinted/mirek.png","Pan Mirek","yellow",
 			"Długo będzie jeszcze tam pan stał? Ja mam inne kursy!"
 		),
 	],
@@ -1562,6 +1557,27 @@ let c1u2e16v1 = new MyEvent(
 	),new MyLine(
 		"bogosBinted/jakub.png", "Jakub", "red",
 		"A więc Panie i Panowie - bierzemy się do pracy! Amina, Henryk i Ilia przygotujcie prezentacje waszych badań, Krzychu idź do Alberta, a ja z Marcinem idziemy nagrać przemówienie."
+	),new MyLine(
+		"bogosBinted/krzychu.png", "Krzychu", "red",
+		"Kuba, czekaj! Alber ma do ciebie sprawę."
+	)],
+	"Co ten staruch znowu chce?",
+	"Nie mam na to teraz czasu, musimy to natychmiast nagrać.1",
+	function (){
+		doTheEvent(c1u2e17v1)
+	},
+	function (){
+		doTheEvent(c1u2e17v2)
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+
+let c1u2e17v1 = new MyEvent(
+	"bogosBinted/jakub.png",
+	[new MyLine(
+		"bogosBinted/jakub.png", "Jakub", "red",
+		"testline"
 	)],
 	"LewaOpcja",
 	"PrawaOpcja",
