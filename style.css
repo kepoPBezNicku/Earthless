@@ -481,6 +481,10 @@ main {
 	justify-content: center;
 }
 
+#main-section .choice #decision-button div {
+	border-radius: 5px;
+}
+
 #main-section .choice #decision-button button {
 	border-radius: 5px;
 	padding: 10px 25px;

@@ -650,8 +650,8 @@ function gameOverFunction(gameOverClassName, cause) {
 	div.insertAdjacentElement("beforeend", playAgain);
 }
 
-let leftDiv = document.getElementById("left");
-let rightDiv = document.getElementById("right")
+let leftDiv = document.getElementById("leftDiv");
+let rightDiv = document.getElementById("rightDiv")
 
 function tutorialBox(ob) {
 	// if (ob.isFirst == true) {
@@ -679,6 +679,7 @@ function tutorialBox(ob) {
 	let samouczekDiv = document.getElementById("samouczek");
 
 	if (ob.isFirst == true) {
+		console.log(ob)
 		ob.element.style.setProperty("border", "2px solid red");
 		samouczekDiv.textContent = ob.text;
 	} else {
@@ -722,8 +723,9 @@ let test1 = new MyEvent(
 	"O co chodziło z tym snem?",
 	"Zaraz się spóźnię!",
 	function () {
+		s1.element.style.setProperty("border", "0px");
+		console.log(s1)
 		tutorialBox(s2)
-		s1.element.style.setProperty("border", "0px")
 		doTheEvent(test2)
 	},
 
@@ -748,8 +750,8 @@ let test2 = new MyEvent(
 	},
 
 	function () {
-		tutorialBox(s3)
 		s2.element.style.setProperty("border", "0px")
+		tutorialBox(s3)
 		doTheEvent(test3)
 	},
 
