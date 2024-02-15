@@ -546,8 +546,6 @@ class Samouczek {
 		this.element = element;
 		this.text = text;
 		this.isFirst = isFirst;
-		this.left = left;
-		this.top = top;
 	}
 }
 
@@ -652,57 +650,68 @@ function gameOverFunction(gameOverClassName, cause) {
 	div.insertAdjacentElement("beforeend", playAgain);
 }
 
-let leftDiv = document.getElementById("leftDiv");
-let rightDiv = document.getElementById("rightDiv")
+let leftDiv = document.getElementById("left");
+let rightDiv = document.getElementById("right")
 
 function tutorialBox(ob) {
-	ob.line.forEach((el) => {
-		if (el.isFirst == true) {
-			let samouczekDiv = document.createElement("div");
-			el.element.style.setProperty("position", "relative");
-			samouczekDiv.className = "samouczek";
-			samouczekDiv.textContent = el.text;
-			samouczekDiv.style.setProperty("display", "block");
-			el.element.insertAdjacentElement("beforeend", samouczekDiv);
-			samouczekDiv.style.setProperty("left", el.left+"px");
-			samouczekDiv.style.setProperty("top", el.top+"px")
-		} else {
-			let removeThisDiv = document.querySelector(".samouczek");
-			removeThisDiv.remove();
-			let samouczekDiv = document.createElement("div");
-			el.element.style.setProperty("position", "relative");
-			samouczekDiv.className = "samouczek"
-			samouczekDiv.textContent = el.text;
-			samouczekDiv.style.setProperty("display", "block");
-			el.element.insertAdjacentElement("beforeend", samouczekDiv);
-			samouczekDiv.style.setProperty("left", left+"px");
-			samouczekDiv.style.setProperty("top", top+"px")
-		}
-	})
+	// if (ob.isFirst == true) {
+	// 	let samouczekDiv = document.createElement("div");
+	// 	ob.element.style.setProperty("position", "relative");
+	// 	samouczekDiv.className = "samouczek";
+	// 	samouczekDiv.textContent = ob.text;
+	// 	samouczekDiv.style.setProperty("display", "block");
+	// 	ob.element.insertAdjacentElement("beforeend", samouczekDiv);
+	// 	samouczekDiv.style.setProperty("left", ob.left+"px");
+	// 	samouczekDiv.style.setProperty("top", ob.top+"px")
+	// } else {
+	// 	let removeThisDiv = document.querySelector(".samouczek");
+	// 	removeThisDiv.remove();
+	// 	let samouczekDiv = document.createElement("div");
+	// 	ob.element.style.setProperty("position", "relative");
+	// 	samouczekDiv.className = "samouczek"
+	// 	samouczekDiv.textContent = ob.text;
+	// 	samouczekDiv.style.setProperty("display", "block");
+	// 	ob.element.insertAdjacentElement("beforeend", samouczekDiv);
+	// 	samouczekDiv.style.setProperty("left", ob.left+"px");
+	// 	samouczekDiv.style.setProperty("top", ob.top+"px")
+	// }
 
+	let samouczekDiv = document.getElementById("samouczek");
+
+	if (ob.isFirst == true) {
+		ob.element.style.setProperty("border", "2px solid red");
+		samouczekDiv.textContent = ob.text;
+	} else {
+		ob.element.style.setProperty("border", "0px");
+		samouczekDiv.textContent = ob.text;
+
+	}
 }
-
-// samouczekDiv.forEach(el => {
-// 	console.log(1)
-// })
 
 //==================== CHAPTER 1 ====================
 changeChapterPlace(1, "Dom Jakuba");
 //===== Underchapter 1 =====
 // tutorialBox(leftDiv, "Przycisk lewy od decyzji (PODGLAD ZMIANY STATYSTYK PO PRZYTRZYMANIU)", true, 0, 50);
-tutorialBox
 let s1 = new Samouczek (
 	leftDiv,
 	"Przycisk lewy od decyzji (PODGLAD ZMIANY STATYSTYK PO PRZYTRZYMANIU)",
-	true,
-	0,
-	50
+	true
 )
 
-tutorialBox(s1)
+let s2 = new Samouczek (
+	rightDiv,
+	"Przycisk prawy od decyzji. Przytrzymaj go aby sprawdzić, jak zmienią się statystyki.",
+	false
+)
+
+let s3 = new Samouczek (
+	money,
+	"Przycisk prawy od decyzji. Przytrzymaj przycisk aby ",
+	false
+)
 // tutorialBox(leftDiv, 6, "Przycisk lewy od decyzji");
 //wstawić jakiś sen (insp. Adamem Mickiewiczem XDDDD)
-let c1u1e1 = new MyEvent(
+let test1 = new MyEvent(
 	"bogosBinted/jakub.png", //budzik.png
 	[
 		new MyLine(
@@ -713,15 +722,40 @@ let c1u1e1 = new MyEvent(
 	"O co chodziło z tym snem?",
 	"Zaraz się spóźnię!",
 	function () {
-		doTheEvent(c1u1e2v1);
+		tutorialBox(s2)
+		s1.element.style.setProperty("border", "0px")
+		doTheEvent(test2)
 	},
 
 	function () {
-		doTheEvent(c1u1e2v1);
 	},
 
-	[0, 0, 0, -0.3, 0.2, 0, 0, 0, 0],
-	[0, 0, 0, 0.3, -0.2, 0, 0, 0, 0]
+	[0, 0, 0, -0.3, -0.3, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 );
 
-doTheEvent(c1u1e1);
+let test2 = new MyEvent(
+	"bogosBinted/jakub.png", //budzik.png
+	[
+		new MyLine(
+			"bogosBinted/jakub.png", "Jakub", colors['green'],
+			"Ooh, co to... co ty było? Co to niby miało... JUŻ 8, ZASPAŁEM! Ale ten sen..."
+		),
+	],
+	"O co chodziło z tym snem?",
+	"Zaraz się spóźnię!",
+	function () {
+	},
+
+	function () {
+		tutorialBox(s3)
+		s2.element.style.setProperty("border", "0px")
+		doTheEvent(test3)
+	},
+
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0.3, -0.1, 0, 0, 0, 0]
+);
+
+tutorialBox(s1);
+doTheEvent(test1);

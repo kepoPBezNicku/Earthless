@@ -11,13 +11,13 @@ body {
 
 :root {
 	--background-color: black;
-	--header-color: #364962;
+	--header-color: #3649628b;
 	--chapter-background-color: #63798c;
 	--main-containers-color: #63798c;
 	--font-family: "Outfit", Segoe UI, sans-serif;
 	--button: #d8dee9;
 	--color: black;
-	--border-header-contrast: none;
+
 	--background-image: url(bogosBinted/background-main1.png)
 }
 
@@ -27,7 +27,7 @@ body {
 	--header-color: black;
 	--button: black;
 	--color: white;
-	--background-image: ;
+	--background-image: url(bogosBinted/background-main1-contrast.png	);
 }
 
 html {
@@ -58,7 +58,7 @@ body {
 	height: 100vh;
 	margin: 0px;
 	padding: 0px;
-	z-index: 10;
+	z-index: 12;
 	opacity: 1;
 	animation-duration: 0.3s;
 	animation-timing-function: ease;
@@ -145,6 +145,7 @@ header {
 	font-family: var(--font-family);
 	position: sticky;
 	top: 0;
+	z-index: 10;
 	box-shadow: 0px 0px 15px 0px #efece8;
 	border: var(--border-header-contrast);
 }
@@ -368,7 +369,7 @@ ul#alien-relations {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
-	background-position: center
+	background-position: center;
 }
 
 .main-index {
@@ -421,6 +422,8 @@ main {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
+	position: relative;
+	z-index: 1;
 }
 
 #main-section .choice #middleDiv {
@@ -679,4 +682,40 @@ main {
 /* ---------------------- FOOTER ---------------------- */
 /* ---------------------------------------------------- */
 
-/* ------------------------------------ */
+#samouczek-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	left: 50%;
+	width: 100%;
+	transform: translateX(-50%);
+	bottom: 200px;
+}
+
+#samouczek {
+	font-size: 17px;
+	border: 3px solid red;
+	background-color: white;
+	width: 40%;
+	min-width: 370px;
+	max-width: 370px;
+	padding: 5px 10px;
+	border-radius: 20px;
+	color: black;
+	font-weight: bold;
+	text-align: center;
+	font-family: Rubik, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media only screen and (max-width: 750px) {
+	#samouczek-container {
+		bottom: 250px
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	#samouczek {
+		min-width: 250px;
+	}
+}
