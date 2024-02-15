@@ -493,7 +493,6 @@ main {
 
 #main-section .choice #decision-button button:hover {
 	background-color: #4c566a;
-	color: var(--button);
 }
 
 .gameOver {

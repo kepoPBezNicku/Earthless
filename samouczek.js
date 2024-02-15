@@ -747,28 +747,6 @@ let test2 = new MyEvent(
 	[0, 0, 0, 0.3, -0.1, 0, 0, 0, 0]
 );
 
-let test3 = new MyEvent(
-	"bogosBinted/jakub.png", //budzik.png
-	[
-		new MyLine(
-			"bogosBinted/jakub.png", "Jakub", colors['green'],
-			"Ooh, co to... co ty było? Co to niby miało... JUŻ 8, ZASPAŁEM! Ale ten sen..."
-		),
-	],
-	"O co chodziło z tym snem?",
-	"Zaraz się spóźnię!",
-	function () {
-	},
-
-	function () {
-		s3.element.classList.remove("samouczek");
-		tutorialBox(s3)
-		doTheEvent(test3)
-	},
-
-	[0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0, 0, 0, 0]
-);
 
 tutorialBox(s1);
 doTheEvent(test1);
