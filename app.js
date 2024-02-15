@@ -711,8 +711,8 @@ let c1u1e2v1 = new MyEvent(
 		doTheEvent(c1u1e2v2);
 	},
 
-	[0, 0, 0, 0.2, -1, 0, 0, 0, 0],
-	[0, 0, 0, -0.2, 0.3, 0, 0, 0, 0]
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 	// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	// !!!!!!!!! DO ZMIANY TE STATY (ALIENRELATIONS I RESZTA NIE SA WIDOCZNE DLA GRACZA) !!!!!!!!!
@@ -905,10 +905,10 @@ let c1u1e6 = new MyEvent(
 );
 
 let c1u1e7 = new MyEvent(
-	"bogosBinted/mirek.png", //taxi.png
+	"bogosBinted/taxi.png",
 	[
 		new MyLine(
-			"bogosBinted/mirek.png","Pan Mirek","yellow", //panmirek.png
+			"bogosBinted/mirek.png","Pan Mirek","yellow",
 			"Długo będzie jeszcze tam pan stał? Ja mam inne kursy!"
 		),
 	],
@@ -1085,7 +1085,7 @@ let c1u2e5v1 = new MyEvent(
 		),
 		new MyLine(
 			"bogosBinted/becia.png","Becia","red",
-			"Dobrze, zanim jeszcze przejdziemy do serca sedna naszego spotkania... ponoć miał pan z wosu 2 na światectwie!"
+			"Dobrze, zanim jeszcze przejdziemy do sedna naszego spotkania... ponoć miał pan z wosu 2 na światectwie!"
 		),
 	],
 	"To prawda, przyznaję, że w tym wieku nie bardzo uważałem na oceny. Najważniejsze że zdałem, prawda? Haha",
@@ -1458,11 +1458,11 @@ let c1u2e13v1 = new MyEvent(
 	"Dobra, zobaczmy",
 	"Nie bardzo mnie to teraz obchodzi, po prostu czekajmy na wyniki. Musimy być gotowi.",
 	function (){
-		if (data.areTeethBrushed = true) doTheEvent(c1u2e14v1)
+		if (data.areTeethBrushed) doTheEvent(c1u2e14v1)
 		else doTheEvent(c1u2e14v2)
 	},
 	function (){
-		//doTheEvent(c1u2e15v1)
+		doTheEvent(c1u2e15v1)
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
@@ -1486,10 +1486,10 @@ let c1u2e14v1 = new MyEvent(
 	"Chyba nie jest tak źle",
 	"Jest świtnie! Naprawdę mam szansę to wygrać!",
 	function (){
-		//doTheEvent(cuev)
+		doTheEvent(c1u2e15v1)
 	},
 	function (){
-		//doTheEvent(cuev)
+		doTheEvent(c1u2e15v1)
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
@@ -1513,10 +1513,10 @@ let c1u2e14v2 = new MyEvent(
 	"Chyba nie jest tak źle",
 	"Jest świetnie! Naprawdę mam szansę to wygrać!",
 	function (){
-		//doTheEvent(cuev)
+		doTheEvent(c1u2e15v1)
 	},
 	function (){
-		//doTheEvent(cuev)
+		doTheEvent(c1u2e15v1)
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
@@ -1531,6 +1531,97 @@ let c1u2e15v1 = new MyEvent(
 		"bogosBinted/krzys.png", "Krzychu", "purple",
 		"Chodźcie, jest ogłoszenie wyników!"
 	)],
+	"Chwila prawdy.",
+	"To tylko formalność, ale zobaczmy.",
+	function (){
+		doTheEvent(c1u2e16v1)
+	},
+	function (){
+		doTheEvent(c1u2e16v1)
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+
+let c1u2e16v1 = new MyEvent(
+	"bogosBinted/radio.png",
+	[new MyLine(
+		"bogosBinted/becia.png", "Becia", "red",
+		"Uwaga, Państwowa Komisja Wyborcza podała wyniki wyborów prezydenckich 2060! Wy.ory rozstrzygły się w pierwszej turze, a ich zwycięzcą zostaje Jakub Bukaj zdobywając 65% głosów, gratualacje dla Pana prezydenta!"
+	),new MyLine(
+		"bogosBinted/jakub.png", "Marcin", "red",
+		"MAMY TO!"
+	),new MyLine(
+		"bogosBinted/jakub.png", "Ilia", "red",
+		"Udało się!"
+	),new MyLine(
+		"bogosBinted/jakub.png", "Jakub", "red",
+		"A więc Panie i Panowie - bierzemy się do pracy! Amina, Henryk i Ilia przygotujcie prezentacje waszych badań, Krzychu idź do Alberta, a ja z Marcinem idziemy nagrać przemówienie."
+	),new MyLine(
+		"bogosBinted/krzychu.png", "Krzychu", "red",
+		"Kuba, czekaj! Albert ma do ciebie sprawę."
+	)],
+	"Co ten staruch znowu chce?",
+	"Nie mam na to teraz czasu, musimy to natychmiast nagrać.1",
+	function (){
+		doTheEvent(c1u2e17v1)
+	},
+	function (){
+		//doTheEvent(cuev)
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+
+let c1u2e17v1 = new MyEvent(
+	"bogosBinted/albert.png",
+	[new MyLine(
+		"bogosBinted/krzychu.png", "Krzychu", "red",
+		"Twierdzi, że skończył to, co mu zleciłeś."
+	),new MyLine(
+		"bogosBinted/jakub.png", "Jakub", colors["green"],
+		"O, czyli jednak? Powoli zaczynałem wątpić w to jego paplanie, ale jednak! Albert, pokaż co tam zmajstrowałeś!"
+	),new MyLine(
+		"bogosBinted/albert.png", "Albert", "red",
+		"Nie wierzyłeś we mnie, ale sieidzałem nad tym całymi dniami i jest! Stworzyłem generator sztucznej grawitacji."
+	)],
+	"Jak to niby jest możliwe?",
+	"Nie wierzę, nie ma szans",
+	function (){
+		//doTheEvent(c1u2e18v1)
+	},
+	function (){
+		//doTheEvent(cuev)
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+
+let c1u2e18v1 = new MyEvent(
+	"bogosBinted/gsg.png",
+	[new MyLine(
+		"bogosBinted/albert.png", "Albert", "red",
+		"Już tłumaczę o co chodzi. Za pomocą kilku skomplikowanych układów elektrycznych, których nikt po za MNĄ nie byłby w stanie zrozumieć swoim małym móżdżkiem, stworzyłem narzędzie opierające się o działaniu nagęszczacza metrii. Zagęszcza on tyle materii, ile potrzeba żeby wytworzyć dane pole grawitacyj..."
+	)],
+	"Wiesz co, śpieszy mi się...",
+	"Mhm, a czym jest ten zagęszczacz materii?",
+	function (){
+		//doTheEvent(cuev)
+	},
+	function (){
+		doTheEvent(c1u2e19v1)
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+
+let c1u2e19v1 = new MyEvent(
+	"bogosBinted/albert.png",
+	[new MyLine(
+		"bogosBinted/albert.png", "Albert", "red",
+		"Cieszę się, że pytasz! Zagęszczacz materii... ha! Co to takiego? To nie jest zwykłe urządzenie, to przełomowa technologia, która wyrywa nas z ram ograniczeń fizyki, to maszyna, która zmienia naszą percepcję rzeczywistości! Wyobraźcie sobie, że mogę skoncentrować całą masę Wszechświata w jednym punkcie, na tyle małym, że nie mieści się w waszym wyobrażeniu!. Ale jak to możliwe, zapytacie? Otóż ja, wyjątkowy umysł, odkryłem sekrety teoretycznej fizyki kwantowej, a następnie przeniosłem je do praktyki! Zagęszczacz materii wykorzystuje połączenie skomplikowanych manipulacji polami kwantowymi, promieniowaniem gamma i... no cóż, skomplikowanymi obwodami elektronicznymi, których funkcjonowanie przechodzi wasze zwykłe pojęcie!"
+	)//dobra robota, teraz zajmij sie następnym...
+	],
 	"LewaOpcja",
 	"PrawaOpcja",
 	function (){
@@ -1565,7 +1656,5 @@ let cuev = new MyEvent(
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
 )
 */
-
-
-
-doTheEvent(c1u1e1);  
+console.log("nega")
+doTheEvent(c1u1e1);
