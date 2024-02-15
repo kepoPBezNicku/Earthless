@@ -675,9 +675,9 @@ function tutorialBox(ob) {
 	// 	samouczekDiv.style.setProperty("top", ob.top+"px")
 	// }
 
-	let samouczekDiv = document.getElementById("samouczek");
+	let samouczekDiv = document.getElementById("samouczek-box");
 	// ob.element.style.setProperty("border", "2px solid red");
-	ob.element.classList.add("samouczek");
+	ob.element.classList.add("samouczek")
 	samouczekDiv.textContent = ob.text;
 }
 
@@ -713,7 +713,6 @@ let test1 = new MyEvent(
 	"Zaraz się spóźnię!",
 	function () {
 		s1.element.classList.remove("samouczek");
-		// console.log(s1)
 		tutorialBox(s2)
 		doTheEvent(test2)
 	},

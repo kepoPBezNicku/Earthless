@@ -112,7 +112,6 @@ body {
 /* ---------------------------------------------------- */
 
 .samouczek {
-	/* background-color: white; */
 	border: 5px solid red;
 	animation-name: samouczek-animacja;
 	animation-duration: 1s;
@@ -252,7 +251,6 @@ ul#alien-relations {
 #header-section nav #resources ul li div:first-of-type::after, #alien-relations li div:first-of-type::after {
 	content: "";
 	background-color: var(--pseudoElColor);
-	/* transition-property: background-color; */
 	width: 7px;
 	height: 100%;
 	display: block;
@@ -474,7 +472,10 @@ main {
 
 #main-section .choice #decision-button div {
 	border-radius: 5px;
-	/* background-color: var(--button); */
+}
+
+#main-section .choice #decision-button div.samouczek button {
+	background-color: rgba(0,0,0,0);
 }
 
 #main-section .choice #decision-button button {
@@ -688,7 +689,7 @@ main {
 	bottom: 200px;
 }
 
-#samouczek {
+#samouczek-box {
 	font-size: 17px;
 	border: 3px solid red;
 	background-color: white;
@@ -710,7 +711,7 @@ main {
 }
 
 @media only screen and (max-width: 500px) {
-	#samouczek {
+	#samouczek-box {
 		min-width: 250px;
 	}
 }
