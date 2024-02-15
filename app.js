@@ -1559,7 +1559,7 @@ let c1u2e16v1 = new MyEvent(
 		"A więc Panie i Panowie - bierzemy się do pracy! Amina, Henryk i Ilia przygotujcie prezentacje waszych badań, Krzychu idź do Alberta, a ja z Marcinem idziemy nagrać przemówienie."
 	),new MyLine(
 		"bogosBinted/krzychu.png", "Krzychu", "red",
-		"Kuba, czekaj! Alber ma do ciebie sprawę."
+		"Kuba, czekaj! Albert ma do ciebie sprawę."
 	)],
 	"Co ten staruch znowu chce?",
 	"Nie mam na to teraz czasu, musimy to natychmiast nagrać.1",
@@ -1567,17 +1567,41 @@ let c1u2e16v1 = new MyEvent(
 		doTheEvent(c1u2e17v1)
 	},
 	function (){
-		doTheEvent(c1u2e17v2)
+		//doTheEvent(cuev)
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
 )
 
 let c1u2e17v1 = new MyEvent(
-	"bogosBinted/jakub.png",
+	"bogosBinted/albert.png",
 	[new MyLine(
-		"bogosBinted/jakub.png", "Jakub", "red",
-		"testline"
+		"bogosBinted/krzychu.png", "Krzychu", "red",
+		"Twierdzi, że skończył to, co mu zleciłeś."
+	),new MyLine(
+		"bogosBinted/jakub.png", "Jakub", colors["green"],
+		"O, czyli jednak? Powoli zaczynałem wątpić w to jego paplanie, ale jednak! Albert, pokaż co tam zmajstrowałeś!"
+	),new MyLine(
+		"bogosBinted/albert.png", "Albert", "red",
+		"Nie wierzyłeś we mnie, ale sieidzałem nad tym całymi dniami i jest! Stworzyłem generator sztucznej grawitacji."
+	)],
+	"Jak to niby jest możliwe?",
+	"Nie wierzę, nie ma szans",
+	function (){
+		//doTheEvent(c1u2e18v1)
+	},
+	function (){
+		//doTheEvent(cuev)
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+
+let c1u2e18v1 = new MyEvent(
+	"bogosBinted/gsg.png",
+	[new MyLine(
+		"bogosBinted/albert.png", "Albert", "red",
+		"Już tłumaczę o co chodzi! Stworzyłem "
 	)],
 	"LewaOpcja",
 	"PrawaOpcja",
