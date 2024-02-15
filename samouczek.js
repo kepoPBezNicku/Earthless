@@ -11,7 +11,7 @@ var buttonRight = document.querySelector("button#right");
 let backgroundImage = document.querySelector(".background-image-index")
 
 let colors = {
-	green:'#49cc4f',
+	green:'#278c2d',
 	aqua:'#3a71a6',
 	red:'#ce5263',
 	white:'#efece8',
@@ -542,10 +542,9 @@ class MyLine {
 }
 
 class Samouczek {
-	constructor(element, text, isFirst, left, top) {
+	constructor(element, text) {
 		this.element = element;
 		this.text = text;
-		this.isFirst = isFirst;
 	}
 }
 
@@ -677,38 +676,28 @@ function tutorialBox(ob) {
 	// }
 
 	let samouczekDiv = document.getElementById("samouczek");
-
-	if (ob.isFirst == true) {
-		console.log(ob)
-		ob.element.style.setProperty("border", "2px solid red");
-		samouczekDiv.textContent = ob.text;
-	} else {
-		ob.element.style.setProperty("border", "0px");
-		samouczekDiv.textContent = ob.text;
-
-	}
+	// ob.element.style.setProperty("border", "2px solid red");
+	ob.element.classList.add("samouczek");
+	samouczekDiv.textContent = ob.text;
 }
 
 //==================== CHAPTER 1 ====================
-changeChapterPlace(1, "Dom Jakuba");
+changeChapterPlace(1, "Samouczek");
 //===== Underchapter 1 =====
 // tutorialBox(leftDiv, "Przycisk lewy od decyzji (PODGLAD ZMIANY STATYSTYK PO PRZYTRZYMANIU)", true, 0, 50);
 let s1 = new Samouczek (
 	leftDiv,
-	"Przycisk lewy od decyzji (PODGLAD ZMIANY STATYSTYK PO PRZYTRZYMANIU)",
-	true
+	"Przycisk lewy od decyzji. Oznaczony jest czerwoną ramką. Przytrzymaj go aby sprawdzić, jak zmienią się statystyki."
 )
 
 let s2 = new Samouczek (
 	rightDiv,
-	"Przycisk prawy od decyzji. Przytrzymaj go aby sprawdzić, jak zmienią się statystyki.",
-	false
+	"Przycisk prawy od decyzji. Przytrzymaj go aby sprawdzić, jak zmienią się statystyki."
 )
 
 let s3 = new Samouczek (
 	money,
-	"Przycisk prawy od decyzji. Przytrzymaj przycisk aby ",
-	false
+	"Czerwoną ramką jest oznaczona jedna z statystyk, a dokładnie Twoja ilość pieniędzy."
 )
 // tutorialBox(leftDiv, 6, "Przycisk lewy od decyzji");
 //wstawić jakiś sen (insp. Adamem Mickiewiczem XDDDD)
@@ -723,8 +712,8 @@ let test1 = new MyEvent(
 	"O co chodziło z tym snem?",
 	"Zaraz się spóźnię!",
 	function () {
-		s1.element.style.setProperty("border", "0px");
-		console.log(s1)
+		s1.element.classList.remove("samouczek");
+		// console.log(s1)
 		tutorialBox(s2)
 		doTheEvent(test2)
 	},
@@ -750,13 +739,36 @@ let test2 = new MyEvent(
 	},
 
 	function () {
-		s2.element.style.setProperty("border", "0px")
+		s2.element.classList.remove("samouczek");
 		tutorialBox(s3)
 		doTheEvent(test3)
 	},
 
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0.3, -0.1, 0, 0, 0, 0]
+);
+
+let test3 = new MyEvent(
+	"bogosBinted/jakub.png", //budzik.png
+	[
+		new MyLine(
+			"bogosBinted/jakub.png", "Jakub", colors['green'],
+			"Ooh, co to... co ty było? Co to niby miało... JUŻ 8, ZASPAŁEM! Ale ten sen..."
+		),
+	],
+	"O co chodziło z tym snem?",
+	"Zaraz się spóźnię!",
+	function () {
+	},
+
+	function () {
+		s3.element.classList.remove("samouczek");
+		tutorialBox(s3)
+		doTheEvent(test3)
+	},
+
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 );
 
 tutorialBox(s1);

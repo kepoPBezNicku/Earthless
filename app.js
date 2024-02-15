@@ -11,7 +11,7 @@ var buttonRight = document.querySelector("button#right");
 let backgroundImage = document.querySelector(".background-image-index")
 
 let colors = {
-	green:'#49cc4f',
+	green:'#278c2d',
 	aqua:'#3a71a6',
 	red:'#ce5263',
 	white:'#efece8',

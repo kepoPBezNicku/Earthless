@@ -112,27 +112,18 @@ body {
 /* ---------------------------------------------------- */
 
 .samouczek {
-	position: absolute;
-	width: max-content;
-	border-radius: 20px;
-	color: black;
-	background-color: white;
-	padding: 5px 10px;
-	font-size: 17px;
-	max-width: 350px;
-	display: none;
+	/* background-color: white; */
 	border: 5px solid red;
 	animation-name: samouczek-animacja;
 	animation-duration: 1s;
 	animation-timing-function: ease;
-	font-weight: bold;
 	animation-iteration-count: infinite;
 }
 
-@keyframes  samouczek-animacja {
-	0% {background-color: rgb(255, 136, 136); color: black}
-	50% {background-color: white; color: black}
-	to {background-color: rgb(255, 136, 136); color: black}
+@keyframes samouczek-animacja {
+	0% {background-color: rgb(255, 136, 136)}
+	50% {background-color: white}
+	to {background-color: rgb(255, 136, 136)}
 }
 
 /* ---------------------------------------------------- */
@@ -483,6 +474,7 @@ main {
 
 #main-section .choice #decision-button div {
 	border-radius: 5px;
+	/* background-color: var(--button); */
 }
 
 #main-section .choice #decision-button button {
@@ -492,7 +484,6 @@ main {
 	font-weight: bold;
 	width: fit-content;
 	color: var(--color);
-	background-color: var(--button);
 	cursor: pointer;
 	border: var(--border-header-contrast);
 	transition: 0.2s ease;
