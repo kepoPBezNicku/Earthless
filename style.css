@@ -695,7 +695,7 @@ main {
 #samouczek-next {
 	padding: 10px 15px;
 	position: absolute;
-	top: -60px;
+	bottom: -60px;
 	background-color: white;
 	cursor: pointer;
 	user-select: none;
