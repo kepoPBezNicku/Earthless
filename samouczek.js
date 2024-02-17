@@ -92,10 +92,10 @@ burger.addEventListener("click", function () {
 
 // ============ KONTRAST I CZCIONKA ============
 
-function fontAndContrast() {
-	let font = document.querySelector("#contrast-and-font-size i:first-of-type");
-	let contrast = document.querySelector("#contrast-and-font-size i:nth-of-type(2)");
+let font = document.querySelector("#contrast-and-font-size i:first-of-type");
+let contrast = document.querySelector("#contrast-and-font-size i:nth-of-type(2)");
 
+function fontAndContrast() {
 	font.addEventListener("click", function fontChange() {
 		if (font.classList.contains("bigger")) {
 			font.classList.remove("bigger");
@@ -613,11 +613,11 @@ function doTheEvent(ob) {
 	statsChanger(buttonRight, ob.sP);
 }
 
+let chapterNumber = document.querySelector("#chapter h1:first-of-type");
+let chapterPlace = document.querySelector("#chapter h1:nth-of-type(2)");
+
 function changeChapterPlace(x, place) {
 	loadingScreen();
-	let chapterNumber = document.querySelector("#chapter h1:first-of-type");
-	let chapterPlace = document.querySelector("#chapter h1:nth-of-type(2)");
-
 	let chapterText = "Chapter - " + x;
 	chapterNumber.textContent = chapterText;
 
@@ -649,45 +649,23 @@ function gameOverFunction(gameOverClassName, cause) {
 	div.insertAdjacentElement("beforeend", playAgain);
 }
 
+let samouczekNext = document.getElementById("samouczek-next");
+
 let leftDiv = document.getElementById("leftDiv");
 let rightDiv = document.getElementById("rightDiv")
 
 function tutorialBox(ob) {
-	// if (ob.isFirst == true) {
-	// 	let samouczekDiv = document.createElement("div");
-	// 	ob.element.style.setProperty("position", "relative");
-	// 	samouczekDiv.className = "samouczek";
-	// 	samouczekDiv.textContent = ob.text;
-	// 	samouczekDiv.style.setProperty("display", "block");
-	// 	ob.element.insertAdjacentElement("beforeend", samouczekDiv);
-	// 	samouczekDiv.style.setProperty("left", ob.left+"px");
-	// 	samouczekDiv.style.setProperty("top", ob.top+"px")
-	// } else {
-	// 	let removeThisDiv = document.querySelector(".samouczek");
-	// 	removeThisDiv.remove();
-	// 	let samouczekDiv = document.createElement("div");
-	// 	ob.element.style.setProperty("position", "relative");
-	// 	samouczekDiv.className = "samouczek"
-	// 	samouczekDiv.textContent = ob.text;
-	// 	samouczekDiv.style.setProperty("display", "block");
-	// 	ob.element.insertAdjacentElement("beforeend", samouczekDiv);
-	// 	samouczekDiv.style.setProperty("left", ob.left+"px");
-	// 	samouczekDiv.style.setProperty("top", ob.top+"px")
-	// }
-
 	let samouczekDiv = document.getElementById("samouczek-box");
-	// ob.element.style.setProperty("border", "2px solid red");
 	ob.element.classList.add("samouczek")
 	samouczekDiv.textContent = ob.text;
 }
 
-//==================== CHAPTER 1 ====================
+// ---------------- SAMOUCZEK ---------------- 
 changeChapterPlace(1, "Samouczek");
-//===== Underchapter 1 =====
-// tutorialBox(leftDiv, "Przycisk lewy od decyzji (PODGLAD ZMIANY STATYSTYK PO PRZYTRZYMANIU)", true, 0, 50);
+
 let s1 = new Samouczek (
 	leftDiv,
-	"Przycisk lewy od decyzji. Oznaczony jest czerwoną ramką. Przytrzymaj go aby sprawdzić, jak zmienią się statystyki."
+	"Wszystkie elementy będą oznaczane czerwoną ramką. Teraz oznaczony jest przycisk lewy od decyzji. Przytrzymaj go aby sprawdzić, jak zmienią się statystyki."
 )
 
 let s2 = new Samouczek (
@@ -697,10 +675,42 @@ let s2 = new Samouczek (
 
 let s3 = new Samouczek (
 	money,
+	"."
+)
+
+let s4 = new Samouczek (
+	publicOp,
 	"Czerwoną ramką jest oznaczona jedna z statystyk, a dokładnie Twoja ilość pieniędzy."
 )
-// tutorialBox(leftDiv, 6, "Przycisk lewy od decyzji");
-//wstawić jakiś sen (insp. Adamem Mickiewiczem XDDDD)
+
+let s5 = new Samouczek (
+	adviser,
+	"Czerwoną ramką jest oznaczona jedna z statystyk, a dokładnie Twoja ilość pieniędzy."
+)
+
+let s6 = new Samouczek (
+	font,
+	"Czerwoną ramką jest oznaczona jedna z statystyk, a dokładnie Twoja ilość pieniędzy."
+)
+
+let s7 = new Samouczek (
+	contrast,
+	"Czerwoną ramką jest oznaczona jedna z statystyk, a dokładnie Twoja ilość pieniędzy."
+)
+
+let s8 = new Samouczek (
+	chapterNumber,
+	"Czerwoną ramką jest oznaczona jedna z statystyk, a dokładnie Twoja ilość pieniędzy."
+)
+
+let s9 = new Samouczek (
+	chapterPlace,
+	"Czerwoną ramką jest oznaczona jedna z statystyk, a dokładnie Twoja ilość pieniędzy."
+)
+
+let sArray = [s1,s2,s3,s4,s5,s6,s7,s8,s9]
+
+
 let test1 = new MyEvent(
 	"bogosBinted/jakub.png", //budzik.png
 	[
@@ -712,7 +722,7 @@ let test1 = new MyEvent(
 	"O co chodziło z tym snem?",
 	"Zaraz się spóźnię!",
 	function () {
-		s1.element.classList.remove("samouczek");
+
 		tutorialBox(s2)
 		doTheEvent(test2)
 	},
@@ -723,30 +733,15 @@ let test1 = new MyEvent(
 	[0, 0, 0, -0.3, -0.3, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 );
-
-let test2 = new MyEvent(
-	"bogosBinted/jakub.png", //budzik.png
-	[
-		new MyLine(
-			"bogosBinted/jakub.png", "Jakub", colors['green'],
-			"Ooh, co to... co ty było? Co to niby miało... JUŻ 8, ZASPAŁEM! Ale ten sen..."
-		),
-	],
-	"O co chodziło z tym snem?",
-	"Zaraz się spóźnię!",
-	function () {
-	},
-
-	function () {
-		s2.element.classList.remove("samouczek");
-		tutorialBox(s3)
-		doTheEvent(test3)
-	},
-
-	[0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0.3, -0.1, 0, 0, 0, 0]
-);
-
-
+let samouczekProgress = 0;
 tutorialBox(s1);
 doTheEvent(test1);
+
+samouczekNext.addEventListener("click", function () {
+	sArray[samouczekProgress].element.classList.remove("samouczek");
+	samouczekProgress++;
+	tutorialBox(sArray[samouczekProgress]);
+	if (samouczekProgress == 4) {
+		showIcons(adviser);
+	}
+})

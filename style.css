@@ -112,17 +112,18 @@ body {
 /* ---------------------------------------------------- */
 
 .samouczek {
-	border: 5px solid red;
+	border: 3px solid red;
 	animation-name: samouczek-animacja;
 	animation-duration: 1s;
 	animation-timing-function: ease;
 	animation-iteration-count: infinite;
+	color: rgb(108, 108, 108);
 }
 
 @keyframes samouczek-animacja {
-	0% {background-color: rgb(255, 136, 136)}
-	50% {background-color: white}
-	to {background-color: rgb(255, 136, 136)}
+	0% {background-color: rgba(255, 136, 136, 1)}
+	50% {background-color: rgba(255, 255, 255, 0.75);}
+	to {background-color: rgba(255, 136, 136, 1)}
 }
 
 /* ---------------------------------------------------- */
@@ -364,8 +365,9 @@ ul#alien-relations {
 .main-index {
 	display: flex;
 	justify-content: center;
+	flex-direction: column;
 	align-items: center;
-	margin-top: 200px;
+	margin-top: 150px;
 }
 
 main {
@@ -378,9 +380,10 @@ main {
 	font-family: Outfit;
 	border: 5px solid var(--header-color);
 	border-radius: 10px;
-	padding: 60px 0px;
+	padding: 50px 0px;
 	text-align: center;
-	font-size: 40px;
+	font-size: 25px;
+	margin-top: 20px;
 }
 
 #main-section-index {
@@ -484,7 +487,6 @@ main {
 	font-size: 1rem;
 	font-weight: bold;
 	width: fit-content;
-	color: var(--color);
 	cursor: pointer;
 	border: var(--border-header-contrast);
 	transition: 0.2s ease;
@@ -555,15 +557,9 @@ main {
 	background-color: #ce5263;
 }
 
-@media only screen and (max-width: 1100px) {
-	main {
-		padding-top: 40px;
-	}
-}
-
 @media only screen and (max-width: 1000px) {
 	.main-index {
-		margin-top: 200px
+		margin-top: 100px
 	}
 	#main-section-index {
 		width: 70%;
@@ -593,19 +589,12 @@ main {
 		width: fit-content;
 		gap: 60px;
 	}
-	#main-section div {
-		width: 100%;
-	}
-	/* #main-section .choice #middleDiv .whoInfo {
-	} */
 	#main-section .choice #middleDiv .linePhoto {
 		margin: 0px 0px 0px auto;
 	}
 	#main-section .choice #middleDiv .lineWho {
 		font-size: 1.5rem;
 	}
-	/* #main-section .choice #middleDiv .lineText {
-	} */
 	#main-section .choice #decision-button {
 		flex-direction: column-reverse;
 	}
@@ -619,7 +608,7 @@ main {
 		margin-top: 70px;
 	}
 	#main-section-index {
-		height: 450px;
+		height: 250px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -701,6 +690,20 @@ main {
 	font-weight: bold;
 	text-align: center;
 	font-family: Rubik, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#samouczek-next {
+	padding: 10px 15px;
+	position: absolute;
+	top: -60px;
+	background-color: white;
+	cursor: pointer;
+	user-select: none;
+	color: black;
+	border-radius: 20px;
+	font-weight: bolder;
+	border: 3px solid red;
+
 }
 
 @media only screen and (max-width: 750px) {
