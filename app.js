@@ -687,7 +687,7 @@ let c1u1e1 = new MyEvent(
 	[
 		new MyLine(
 			"bogosBinted/jakub.png", "Jakub", colors["green"],
-			"Ooh, co to... co ty było? Co to niby miało... JUŻ 8, ZASPAŁEM! Ale ten sen..."
+			"Ooh, co to... co to było? Co to niby miało... JUŻ 8, ZASPAŁEM! Ale ten sen..."
 		),
 	],
 	"O co chodziło z tym snem?",
