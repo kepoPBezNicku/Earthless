@@ -176,8 +176,20 @@ function loadingScreen() {
 
 // ============ DISPLAYING ICONS ============
 
-function showIcons(icon) {
+function showIcons(icon, caption) {
 	icon.style.setProperty("display", "flex");
+	let info = document.createElement("span");
+	info.textContent = caption;
+	info.classList.add("iconCaption");
+	icon.insertAdjacentElement("beforeend", info);
+
+	setTimeout(function () {
+		info.classList.add("closing");
+	}, 5000);
+
+	setTimeout(function () {
+		info.classList.add("closed");
+	}, 6000)
 }
 
 // =========================================================
@@ -634,7 +646,7 @@ function changeChapterPlace(x, place) {
 	let chapterNumber = document.querySelector("#chapter h1:first-of-type");
 	let chapterPlace = document.querySelector("#chapter h1:nth-of-type(2)");
 
-	let chapterText = "Chapter - " + x;
+	let chapterText = "Etap - " + x;
 	chapterNumber.textContent = chapterText;
 
 	chapterPlace.textContent = place;
@@ -915,11 +927,11 @@ let c1u1e7 = new MyEvent(
 	"O, to już? Szybki pan jest!",
 	"Ale spokojnie, gdzie się panu tak śpieszy?",
 	function () {
-		showIcons(adviser);
+		showIcons(adviser, "Doradca");
 		doTheEvent(c1u1e8);
 	},
 	function () {
-		showIcons(adviser);
+		showIcons(adviser, "Doradca");
 		doTheEvent(c1u1e8);
 	},
 	[0, 0, 0, 0.1, 0, 0, 0, 0, 0],

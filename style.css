@@ -208,7 +208,7 @@ header {
 	text-align: center;
 	display: flex;
 	justify-content: space-between;
-	--pseudoElColor: yellow;
+	--pseudoElColor: #c7af42;
 }
 
 #header-section nav #resources ul li:nth-child(1n+3) {
@@ -260,6 +260,27 @@ ul#alien-relations {
 	transform: var(--transform);
 	transition: 0.2s ease;
 	transition-property: background-color, transform;
+}
+
+.iconCaption {
+	position: fixed;
+	top: 80px;
+	background-color: white;
+	color: black;
+	border-radius: 10px;
+	padding: 5px 10px;
+	font-size: 1.2rem;
+	font-weight: bolder;
+	transition: 0.2s ease transform;
+}
+
+.iconCaption.closing {
+	transform: translateY(-250px);
+	transition: 0.3s ease transform;
+}
+
+.iconCaption.closed {
+	display: none;
 }
 
 #burger {
@@ -348,6 +369,15 @@ ul#alien-relations {
 		margin: 10px 10px;
 		cursor: pointer;
 	}
+	.iconCaption {
+		position: fixed;
+		left: -100px;
+		top: auto;
+	}
+	.iconCaption.closing {
+		transform: translateX(250px);
+		transition: 0.3s ease transform;
+	}
 }
 
 /* ---------------------------------------------------- */
@@ -397,7 +427,7 @@ main {
 	justify-content: space-evenly;
 	font-family: var(--font-family);
 	width: 70%;
-	padding-top: 50px;
+	padding-top: 80px;
 	max-width: 800px;
 }
 
@@ -574,7 +604,7 @@ main {
 
 @media only screen and (max-width: 920px) {
 	.main-index {
-		padding: 0px;
+		padding-top: 0px;
 	}
 	#main-section .choice #decision-button {
 		align-items: center;
@@ -585,7 +615,7 @@ main {
 	#main-section {
 		flex-direction: column;
 		margin: 0px auto;
-		padding: 50px 15px 60px;
+		padding: 80px 15px 60px;
 		width: fit-content;
 		gap: 60px;
 	}
@@ -604,17 +634,11 @@ main {
 }
 
 @media only screen and (max-width: 650px) {
-	.main-index {
-		margin-top: 70px;
-	}
 	#main-section-index {
 		height: 250px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-	}
-	main {
-		padding-top: 60px;
 	}
 	#contrast-and-font-size {
 		left: 30%;
@@ -641,8 +665,8 @@ main {
 }
 
 @media only screen and (max-width: 500px) {
-	main {
-		padding-top: 60px;
+	#main-section {
+		padding-top: 120px
 	}
 	#contrast-and-font-size {
 		display: flex;
@@ -703,7 +727,6 @@ main {
 	border-radius: 20px;
 	font-weight: bolder;
 	border: 3px solid red;
-
 }
 
 @media only screen and (max-width: 750px) {
