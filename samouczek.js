@@ -696,12 +696,12 @@ let s1 = new Samouczek (
 
 let s2 = new Samouczek (
 	rightDiv,
-	"Przycisk prawy od decyzji. Przytrzymaj go aby sprawdzić, jak zmienią się statystyki."
+	"Przycisk do podjęcia decyzji. Przytrzymaj go aby sprawdzić, jak zmienią się statystyki."
 )
 
 let s3 = new Samouczek (
 	money,
-	"Przechodzimy do statystyk. Jeżeli korzystasz z telefonu/tabletu, kliknij ikonke trzech pasków w prawym górnym rogu ekranu. Jeżeli korzystasz z komputera, spójrz w górę. Oznaczona jest ilość pieniędzy."
+	"Przechodzimy do statystyk. Jeżeli korzystasz z telefonu/tabletu, kliknij ikonke trzech pasków w prawym górnym rogu ekranu. Jeżeli korzystasz z komputera, spójrz w górę. Zobaczysz tam ile masz aktualnie pieniędzy."
 )
 
 let s4 = new Samouczek (
@@ -711,7 +711,7 @@ let s4 = new Samouczek (
 
 let s5 = new Samouczek (
 	adviser,
-	"Możesz zauważyć, że kolejna oznaczona ikona właśnie się pojawiła. W różnych momentach gry może być więcej takich sytuacji. Oznaczoną ikoną jest ikona Twoich relacji z Twoim doradcą."
+	"Możesz zauważyć, że kolejna oznaczona ikona właśnie się pojawiła. Z czasem będzie się ich pojawiało coraz więcej. Ta statystyka oznacza relację z Twoim doradcą."
 )
 
 let s6 = new Samouczek (
@@ -731,7 +731,7 @@ let s8 = new Samouczek (
 
 let s9 = new Samouczek (
 	chapterPlace,
-	"Aktualna lokalizacja głównego bohatera (Jakuba)."
+	"Lokalizacja głównego bohatera (Jakuba)."
 )
 
 let s10 = new Samouczek (

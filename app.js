@@ -11,18 +11,18 @@ var buttonRight = document.querySelector("button#right");
 let backgroundImage = document.querySelector(".background-image-index")
 
 let colors = {
-	green:'#278c2d',
-	aqua:'#3a71a6',
-	red:'#ce5263',
-	white:'#efece8',
-	purple:'#4b3aa6',
-	yellow:'#c7af42',
-	darkred:'#85395b',
-	darkblue: '#060d23',
-	lightpurple: '#d8a3dc',
-	orange: '#e58852',
-	brown: '#9a5c4c',
-	grey: '#b3c5c2'
+	green:'#278c2d', //Jakub
+	aqua:'#3a71a6', //Marcin
+	red:'#ce5263', //Becia
+	white:'#efece8', //Unknown
+	purple:'#4b3aa6', //
+	yellow:'#c7af42', //Mirek
+	darkred:'#85395b', //Albert
+	darkblue: '#060d23', //
+	lightpurple: '#d8a3dc', //
+	orange: '#e58852', //
+	brown: '#9a5c4c', //
+	grey: '#b3c5c2' //
 }
 
 /*
@@ -705,7 +705,7 @@ let c1u1e1 = new MyEvent(
 );
 
 let c1u1e2v1 = new MyEvent(
-	"bogosBinted/jakub.png", //chmurka.png
+	"bogosBinted/chmurka.png",
 	[
 		new MyLine("bogosBinted/jakub.png", "Jakub", colors["green"], "Testowy tekst 1"),
 		new MyLine("bogosBinted/jakub.png", "bukaJ", colors["red"], "Testowy tekst 2"),
@@ -896,7 +896,7 @@ let c1u1e6 = new MyEvent(
 			"Halo?? Dziś jest prima aprilis czy ja o czymś nie wiem???"
 		),
 		new MyLine(
-			"bogosBinted/noPfpUser.png","ArchUserUWU",colors["white"],
+			"bogosBinted/noPfpUser.png","ArchUserUWU",colors["grey"],
 			"Myślicie że ten wyciek był prawdziwy? Przecież by nam powiedzieli o czymś takim..."
 		),
 		new MyLine(
@@ -927,11 +927,11 @@ let c1u1e7 = new MyEvent(
 	"O, to już? Szybki pan jest!",
 	"Ale spokojnie, gdzie się panu tak śpieszy?",
 	function () {
-		showIcons(adviser, "Doradca");
+		showIcons(adviser, "Relacja z doradcą");
 		doTheEvent(c1u1e8);
 	},
 	function () {
-		showIcons(adviser, "Doradca");
+		showIcons(adviser, "Relacja z doradcą");
 		doTheEvent(c1u1e8);
 	},
 	[0, 0, 0, 0.1, 0, 0, 0, 0, 0],
@@ -1013,7 +1013,7 @@ let c1u2e2v1 = new MyEvent(
 );
 
 let c1u2e2v2 = new MyEvent(
-	"bogosBinted/jakub.png", //chmurka.png
+	"bogosBinted/chmurka.png",
 	[
 		new MyLine(
 			"bogosBinted/jakub.png","Jakub",colors["green"],
@@ -1037,10 +1037,10 @@ let c1u2e2v2 = new MyEvent(
 );
 
 let c1u2e3v1 = new MyEvent(
-	"bogosBinted/jakub.png",
+	"bogosBinted/marcin.png",
 	[
 		new MyLine(
-			"bogosBinted/jakub.png","Jakub",colors["aqua"],
+			"bogosBinted/marcin.png","Marcin",colors["aqua"],
 			"Stary, ty masz wygrać wybory a nie być jakimś poszukiwaczem prawdy i sprawiedliwości. To jest zły pomysł, ale zrobisz jak uważasz."
 		),
 	],
@@ -1451,8 +1451,8 @@ let c1u2e12v2 = new MyEvent(
 		changeChapterPlace(1, "Siedziba Earthless - Bydgoszcz, Ziemia")
 		doTheEvent(c1u2e13v1)
 	},
-	[0, 0, 0, 0, 0, .05, 0, 0, 0], //
-	[0, 0, 0, .05, 0, -.1, 0, 0, 0] //
+	[0, 0, 0, 0, 0, .05, 0, 0, 0],
+	[0, 0, 0, .05, 0, -.1, 0, 0, 0] 
 )
 
 let c1u2e13v1 = new MyEvent(
@@ -1476,8 +1476,8 @@ let c1u2e13v1 = new MyEvent(
 	function (){
 		doTheEvent(c1u2e15v1)
 	},
-	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
-	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 )
 
 let c1u2e14v1 = new MyEvent(
@@ -1503,8 +1503,8 @@ let c1u2e14v1 = new MyEvent(
 	function (){
 		doTheEvent(c1u2e15v1)
 	},
-	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
-	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], 
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 )
 
 let c1u2e14v2 = new MyEvent(
@@ -1530,8 +1530,8 @@ let c1u2e14v2 = new MyEvent(
 	function (){
 		doTheEvent(c1u2e15v1)
 	},
-	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
-	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 )
 
 let c1u2e15v1 = new MyEvent(
@@ -1540,19 +1540,21 @@ let c1u2e15v1 = new MyEvent(
 		"bogosBinted/marcin.png", "Marcin", colors["aqua"],
 		"Mam nadzieję że ta zniesiona cisza wyborcza nam nie zaszkodzi. Ale za to mamy narzędzie to kamapnii nawet w dzień wyborów!"
 	),new MyLine(
-		"bogosBinted/krzys.png", "Krzychu", "purple",
+		"bogosBinted/krzys.png", "Krzychu", "red",
 		"Chodźcie, jest ogłoszenie wyników!"
 	)],
 	"Chwila prawdy.",
 	"To tylko formalność, ale zobaczmy.",
 	function (){
+		showIcons(research, "Postęp badań")
 		doTheEvent(c1u2e16v1)
 	},
 	function (){
+		showIcons(research, "Postęp badań")
 		doTheEvent(c1u2e16v1)
 	},
-	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
-	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 )
 
 let c1u2e16v1 = new MyEvent(
@@ -1574,15 +1576,35 @@ let c1u2e16v1 = new MyEvent(
 		"Kuba, czekaj! Albert ma do ciebie sprawę."
 	)],
 	"Co ten staruch znowu chce?",
-	"Nie mam na to teraz czasu, musimy to natychmiast nagrać.1",
+	"Nie mam na to teraz czasu, musimy to natychmiast nagrać.",
 	function (){
 		doTheEvent(c1u2e17v1)
 	},
 	function (){
-		//doTheEvent(cuev)
+		doTheEvent(c1u2e17v2)
 	},
-	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
-	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+	[-.05, 0, 0, .05, 0, 0, 0, 0, 0], //
+	[.05, 0, 0, -.15, 0, 0, 0, 0, 0] //
+)
+
+let c1u2e17v2 = new MyEvent(
+	"bogosBinted/gsg.png",
+	[new MyLine(
+		"bogosBinted/noPfpUser.png", "", colors["grey"],
+		"Gratulacje, odblokowałeś pierwszy wynalazek: genereator sztucznej grawitacji! Tym razem jeszcze ujdzie Ci to na sucho, ale pamętaj, aby szanować Alberta."
+	)],
+	"Okej...",
+	"Rozumiem.",
+	function (){
+		changeChapterPlace(2, "Studio nagrań")
+		doTheEvent(c2u1e1)
+	},
+	function (){
+		changeChapterPlace(2, "Studio nagrań")
+		doTheEvent(c2u1e1)
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 )
 
 let c1u2e17v1 = new MyEvent(
@@ -1594,46 +1616,82 @@ let c1u2e17v1 = new MyEvent(
 		"bogosBinted/jakub.png", "Jakub", colors["green"],
 		"O, czyli jednak? Powoli zaczynałem wątpić w to jego paplanie, ale jednak! Albert, pokaż co tam zmajstrowałeś!"
 	),new MyLine(
-		"bogosBinted/albert.png", "Albert", "red",
+		"bogosBinted/albert.png", "Albert", colors["darkred"],
 		"Nie wierzyłeś we mnie, ale sieidzałem nad tym całymi dniami i jest! Stworzyłem generator sztucznej grawitacji."
 	)],
 	"Jak to niby jest możliwe?",
 	"Nie wierzę, nie ma szans",
 	function (){
-		//doTheEvent(c1u2e18v1)
+		doTheEvent(c1u2e18v1)
 	},
 	function (){
-		//doTheEvent(cuev)
+		doTheEvent(c1u2e18v1)
 	},
-	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
-	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] 
 )
 
 let c1u2e18v1 = new MyEvent(
 	"bogosBinted/gsg.png",
 	[new MyLine(
-		"bogosBinted/albert.png", "Albert", "red",
+		"bogosBinted/albert.png", "Albert", colors["darkred"],
 		"Już tłumaczę o co chodzi. Za pomocą kilku skomplikowanych układów elektrycznych, których nikt po za MNĄ nie byłby w stanie zrozumieć swoim małym móżdżkiem, stworzyłem narzędzie opierające się o działaniu nagęszczacza metrii. Zagęszcza on tyle materii, ile potrzeba żeby wytworzyć dane pole grawitacyj..."
 	)],
-	"Wiesz co, śpieszy mi się...",
+	"Wiesz co, śpieszy mi się... do zobacznia",
 	"Mhm, a czym jest ten zagęszczacz materii?",
 	function (){
-		//doTheEvent(cuev)
+		doTheEvent(c1u2e17v2)
 	},
 	function (){
 		doTheEvent(c1u2e19v1)
 	},
-	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
-	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+	[.05, 0, 0, -.05, 0, 0, 0, 0, 0],
+	[-.05, 0, 0, .05, 0, 0, 0, 0, 0]
 )
 
 let c1u2e19v1 = new MyEvent(
 	"bogosBinted/albert.png",
 	[new MyLine(
-		"bogosBinted/albert.png", "Albert", "red",
-		"Cieszę się, że pytasz! Zagęszczacz materii... ha! Co to takiego? To nie jest zwykłe urządzenie, to przełomowa technologia, która wyrywa nas z ram ograniczeń fizyki, to maszyna, która zmienia naszą percepcję rzeczywistości! Wyobraźcie sobie, że mogę skoncentrować całą masę Wszechświata w jednym punkcie, na tyle małym, że nie mieści się w waszym wyobrażeniu!. Ale jak to możliwe, zapytacie? Otóż ja, wyjątkowy umysł, odkryłem sekrety teoretycznej fizyki kwantowej, a następnie przeniosłem je do praktyki! Zagęszczacz materii wykorzystuje połączenie skomplikowanych manipulacji polami kwantowymi, promieniowaniem gamma i... no cóż, skomplikowanymi obwodami elektronicznymi, których funkcjonowanie przechodzi wasze zwykłe pojęcie!"
-	)//dobra robota, teraz zajmij sie następnym...
+		"bogosBinted/albert.png", "Albert", colors["darkred"],
+		"Cieszę się, że pytasz! Zagęszczacz materii... ha! Co to takiego? To nie jest zwykłe urządzenie, to przełomowa technologia, która wyrywa nas z ram ograniczeń fizyki, to maszyna, która zmienia naszą percepcję rzeczywistości! Wyobraź sobie, że mogę skoncentrować całą masę Wszechświata w jednym punkcie, na tyle małym, że nie mieści się w waszym wyobrażeniu!. Ale jak to możliwe, zapytasz? Otóż ja, wyjątkowy umysł, odkryłem sekrety teoretycznej fizyki kwantowej, a następnie przeniosłem je do praktyki! Zagęszczacz materii wykorzystuje połączenie skomplikowanych manipulacji polami kwantowymi, promieniowaniem gamma i... no cóż, skomplikowanymi obwodami elektronicznymi, których funkcjonowanie przechodzi twoje zwykłe pojęcie!"
+	),
+	new MyLine(
+		"bogosBinted/jakub.png", "Jakub", colors["green"],
+		"Dobra robota! Krzysiek, zajmiesz się użyciem tego na statku?"
+	),
+	new MyLine(
+		"bogosBinted/krzychu.png", "Krzychu", "red",
+		"Proste, że tak!"
+	),
+	new MyLine(
+		"bogosBinted/jakub.png", "Jakub", colors["green"],
+		"Super, a ty Albert bierz się teraz za tą minaturową elektrownie jądrową o której Ci mówiłem."
+	),
+	new MyLine(
+		"bogosBinted/albert.png", "Albert", colors["darkred"],
+		"Jak niby mam to zrobić?! Kolejna rzecz która łamie prawa fizyki, chodziłeś ty kiedykolwiek do tej szkoły??"
+	)
 	],
+	"Womp womp, do roboty.",
+	"Powodzenia!",
+	function (){
+		changeChapterPlace(2, "Studio nagrań")
+		doTheEvent(c2u1e1)
+	},
+	function (){
+		changeChapterPlace(2, "Studio nagrań")
+		doTheEvent(c2u1e1)
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
+)
+
+let c2u1e1 = new MyEvent(
+	"bogosBinted/jakub.png",
+	[new MyLine(
+		"bogosBinted/jakub.png", "Jakub", "red",
+		"testline"
+	)],
 	"LewaOpcja",
 	"PrawaOpcja",
 	function (){
@@ -1668,5 +1726,5 @@ let cuev = new MyEvent(
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
 )
 */
-console.log("nega")
+
 doTheEvent(c1u1e1);
