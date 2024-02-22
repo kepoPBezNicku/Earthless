@@ -821,7 +821,7 @@ let c0u1e4 = new MyEvent(
 	"bogosBinted/gilotyna.png",
 	[new MyLine(
 		"bogosBinted/marcin.png", "Marcin", colors["aqua"],
-		"Lud wybrał! W imieniu Kosmicznej Polonii, za zdradę stanu oraz próbę zniszczenia ludzkości, zkazuję Jakuba Bukaja na śmierć!"
+		"Lud wybrał! W imieniu Kosmicznej Polonii, za zdradę stanu oraz próbę zniszczenia ludzkości, skazuję Jakuba Bukaja na śmierć!"
 	)],
 	"STÓJ!",
 	"NIE!",
@@ -884,10 +884,10 @@ let c0u2e2 = new MyEvent(
 	"...",
 	"...",
 	function (){
-		doTheEvent(c0u2e2)
+		doTheEvent(c0u2e3)
 	},
 	function (){
-		doTheEvent(c0u2e2)
+		doTheEvent(c0u2e3)
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -910,12 +910,6 @@ let c0u2e3 = new MyEvent(
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
 )
-
-//JAKUBIE (agresusi)
-
-//WYBIERZ (magikale)
-
-//MĄDRZE (nerdy)
 
 //wstawić jakiś sen (insp. Adamem Mickiewiczem XDDDD)
 
