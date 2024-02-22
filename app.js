@@ -65,39 +65,25 @@ let fuel = document.querySelector("#header-section nav #resources #resources-con
 let food = document.querySelector("#header-section nav #resources #resources-container li:nth-of-type(6)");
 
 // ====================== MUZYKA ======================
-// var audio1 = new Audio("audio/Arcadia.mp3");
-// audio1.play();
+var audio1 = new Audio("audio/Arcadia.mp3");
+var audio2 = new Audio("audio/Black Vortex.mp3");
+var audio3 = new Audio("audio/Frost Waltz.mp3");
+var audio4 = new Audio("audio/Hitman.mp3");
+var audio5 = new Audio("audio/The Descent.mp3");
+var audio6 = new Audio("audio/Truth of the Legend.mp3");
+function playMusic(audio) {
+	let start = document.createElement("button");
+	start.textContent = "Rozpocznij grę";
+	document.body.insertAdjacentElement("beforebegin", start);
+	start.className = "start";
+	start.addEventListener("click", function() {
+		audio.play();
+		audio.loop = true;
+		start.style.setProperty("transform", "scale(0)");
+	})
+}
 
-// function musicLoader() {
-	// var audio1 = new Audio("audio/Arcadia.mp3");
-    // window.addEventListener("load", function() {
-    //     // audio1.muted = true;
-	// 	audio1.play();
-    // });
-	// document.body.appendChild(audio1)
-
-// }
-// musicLoader()
-
-	// audio1.play()
-	// audio1.addEventListener("canplaythrough", function() {
-	// 	audio1.play();
-	// })
-// 	setTimeout(function() {
-
-// 	}, 3500)
-
-
-
-var audio = new Audio('audio/Arcadia.mp3');
-// audio.muted = false;
-
-// window.onload = function() {
-	audio.muted = true;
-	audio.play();
-
-
-// };
+playMusic(audio1);
 
 
 // ====================== LEAVING SITE ALERT ======================
@@ -154,10 +140,11 @@ function fontAndContrast() {
 		if (contrast.classList.contains("contrastON")) {
 			document.documentElement.className = "contrast";
 			contrast.style.setProperty("color", colors["green"]);
-
+			document.body.style.setProperty("background-image", "url(bogosBinted/background-main1-contrast.png)")
 		} else if (contrast.classList.contains("contrastOFF")) {
 			document.documentElement.className = "";
 			contrast.style.setProperty("color", colors["white"]);
+			document.body.style.setProperty("background-image", "url(bogosBinted/background-main1.png)")
 		}
 	})
 
@@ -167,10 +154,11 @@ function fontAndContrast() {
 		if (contrast.classList.contains("contrastON")) {
 			document.documentElement.className = "";
 			contrast.style.setProperty("color", colors["white"]);
-
+			document.body.style.setProperty("background-image", "url(bogosBinted/background-main1.png)")
 		} else if (contrast.classList.contains("contrastOFF")) {
 			document.documentElement.className = "contrast";
 			contrast.style.setProperty("color", colors["green"]);
+			document.body.style.setProperty("background-image", "url(bogosBinted/background-main1-contrast.png)")
 		}
 	})
 
@@ -183,12 +171,13 @@ function fontAndContrast() {
 			document.documentElement.className = "";
 			contrast.style.setProperty("color", colors["white"]);
 			contrast.classList.add("contrastOFF");
-
+			document.body.style.setProperty("background-image", "url(bogosBinted/background-main1.png)")
 		} else if (contrast.classList.contains("contrastOFF")) {
 			contrast.classList.remove("contrastOFF");
 			document.documentElement.className = "contrast";
 			contrast.style.setProperty("color", colors["green"]);
 			contrast.classList.add("contrastON");
+			document.body.style.setProperty("background-image", "url(bogosBinted/background-main1-contrast.png)")
 		}
 	})
 }
@@ -828,10 +817,12 @@ let c0u1e4 = new MyEvent(
 	function (){
 		doTheEvent(c0u1e5);
 		document.body.style.setProperty("background-image", "url(bogosBinted/background-main1-contrast.png)");
+		audio1.pause();
 	},
 	function (){
 		doTheEvent(c0u1e5);
 		document.body.style.setProperty("background-image", "url(bogosBinted/background-main1-contrast.png)");
+		audio1.pause();
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -846,11 +837,9 @@ let c0u1e5 = new MyEvent(
 	"...",
 	"...",
 	function (){
-		document.body.style.setProperty("background-image", "url(bogosBinted/background-main1.png)")
 		doTheEvent(c0u2e1)
 	},
 	function (){
-		document.body.style.setProperty("background-image", "url(bogosBinted/background-main1.png)")
 		doTheEvent(c0u2e1)
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -902,10 +891,14 @@ let c0u2e3 = new MyEvent(
 	"...",
 	"...",
 	function (){
-		doTheEvent(c1u1e1)
+		doTheEvent(c1u1e1);
+		document.body.style.setProperty("background-image", "url(bogosBinted/background-main1.png)");
+		playMusic(audio2);
 	},
 	function (){
-		doTheEvent(c1u1e1)
+		doTheEvent(c1u1e1);
+		document.body.style.setProperty("background-image", "url(bogosBinted/background-main1.png)");
+		playMusic(audio2);
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
