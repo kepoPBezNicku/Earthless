@@ -11,7 +11,7 @@ var buttonRight = document.querySelector("button#right");
 let backgroundImage = document.querySelector(".background-image-index")
 
 let colors = {
-	green:'#49cc4f',
+	green:'#278c2d',
 	aqua:'#3a71a6',
 	red:'#ce5263',
 	white:'#efece8',
@@ -92,10 +92,10 @@ burger.addEventListener("click", function () {
 
 // ============ KONTRAST I CZCIONKA ============
 
-function fontAndContrast() {
-	let font = document.querySelector("#contrast-and-font-size i:first-of-type");
-	let contrast = document.querySelector("#contrast-and-font-size i:nth-of-type(2)");
+let font = document.querySelector("#contrast-and-font-size i:first-of-type");
+let contrast = document.querySelector("#contrast-and-font-size i:nth-of-type(2)");
 
+function fontAndContrast() {
 	font.addEventListener("click", function fontChange() {
 		if (font.classList.contains("bigger")) {
 			font.classList.remove("bigger");
@@ -184,7 +184,6 @@ function showIcons(icon) {
 
 let middleDiv = document.querySelector("div#middleDiv");
 
-
 let data = {
 	chapter: 1,
 	underchapter: 1,
@@ -207,88 +206,91 @@ let data = {
 	isBreakfastEaten: false,
 };
 
-function statsChanger(element1, list) {
-	let colorNerds = window.getComputedStyle(nerds).getPropertyValue("--pseudoElColor");
-	let colorMagicals = window.getComputedStyle(magicals).getPropertyValue("--pseudoElColor");
-	let colorAgreSuS = window.getComputedStyle(agreSuS).getPropertyValue("--pseudoElColor");
+var colorNerds = window.getComputedStyle(nerds).getPropertyValue("--pseudoElColor");
+var colorMagicals = window.getComputedStyle(magicals).getPropertyValue("--pseudoElColor");
+var colorAgreSuS = window.getComputedStyle(agreSuS).getPropertyValue("--pseudoElColor");
 
-	let colorPublicOp = window.getComputedStyle(publicOp).getPropertyValue("--pseudoElColor");
-	let colorMoney = window.getComputedStyle(money).getPropertyValue("--pseudoElColor");
-	let colorAdviser = window.getComputedStyle(adviser).getPropertyValue("--pseudoElColor");
-	let colorResearch = window.getComputedStyle(research).getPropertyValue("--pseudoElColor");
-	let colorFuel = window.getComputedStyle(fuel).getPropertyValue("--pseudoElColor");
-	let colorFood = window.getComputedStyle(food).getPropertyValue("--pseudoElColor");
+var colorPublicOp = window.getComputedStyle(publicOp).getPropertyValue("--pseudoElColor");
+var colorMoney = window.getComputedStyle(money).getPropertyValue("--pseudoElColor");
+
+var colorAdviser = window.getComputedStyle(adviser).getPropertyValue("--pseudoElColor");
+var colorResearch = window.getComputedStyle(research).getPropertyValue("--pseudoElColor");
+var colorFuel = window.getComputedStyle(fuel).getPropertyValue("--pseudoElColor");
+var colorFood = window.getComputedStyle(food).getPropertyValue("--pseudoElColor");
+
+
+function statsChanger(element1, list) {
 	function colorChanger(nerds1, magicals1, agreSuS1, pOp1, mon1, adviser1, research1, fue1, food1) {
 		if (nerds1 > 0.7) {
-			nerds.style.setProperty("--pseudoElColor", colors['green']);
+			nerds.style.setProperty("--pseudoElColor", colors["green"]);
 		} else if (nerds1 >= 0.4 && nerds1 <= 0.7) {
-			nerds.style.setProperty("--pseudoElColor", "yellow");
+			nerds.style.setProperty("--pseudoElColor", colors["yellow"]);
 		} else if (nerds1 > 0 && nerds1 < 0.4) {
-			nerds.style.setProperty("--pseudoElColor", "red");
+			nerds.style.setProperty("--pseudoElColor", colors["red"]);
 		}
-
+	
 		if (magicals1 > 0.7) {
-			magicals.style.setProperty("--pseudoElColor", colors['green']);
+			magicals.style.setProperty("--pseudoElColor", colors["green"]);
 		} else if (magicals1 >= 0.4 && magicals1 <= 0.7) {
-			magicals.style.setProperty("--pseudoElColor", "yellow");
+			magicals.style.setProperty("--pseudoElColor", colors["yellow"]);
 		} else if (magicals1 > 0 && magicals1 < 0.4) {
-			magicals.style.setProperty("--pseudoElColor", "red");
+			magicals.style.setProperty("--pseudoElColor", colors["red"]);
 		}
-
+	
 		if (agreSuS1 > 0.7) {
-			agreSuS.style.setProperty("--pseudoElColor", colors['green']);
+			agreSuS.style.setProperty("--pseudoElColor", colors["green"]);
 		} else if (agreSuS1 >= 0.4 && agreSuS1 <= 0.7) {
-			agreSuS.style.setProperty("--pseudoElColor", "yellow");
+			agreSuS.style.setProperty("--pseudoElColor", colors["yellow"]);
 		} else if (agreSuS1 > 0 && agreSuS1 < 0.4) {
-			agreSuS.style.setProperty("--pseudoElColor", "red");
+			agreSuS.style.setProperty("--pseudoElColor", colors["red"]);
 		}
-
+	
 		if (pOp1 > 0.7) {
-			publicOp.style.setProperty("--pseudoElColor", colors['green']);
+			publicOp.style.setProperty("--pseudoElColor", colors["green"]);
 		} else if (pOp1 >= 0.4 && pOp1 <= 0.7) {
-			publicOp.style.setProperty("--pseudoElColor", "yellow");
+			publicOp.style.setProperty("--pseudoElColor", colors["yellow"]);
 		} else if (pOp1 > 0 && pOp1 < 0.4) {
-			publicOp.style.setProperty("--pseudoElColor", "red");
+			publicOp.style.setProperty("--pseudoElColor", colors["red"]);
 		}
-
+	
 		if (mon1 > 0.7) {
-			money.style.setProperty("--pseudoElColor", colors['green']);
+			money.style.setProperty("--pseudoElColor", colors["green"]);
 		} else if (mon1 >= 0.4 && mon1 <= 0.7) {
-			money.style.setProperty("--pseudoElColor", "yellow");
+			money.style.setProperty("--pseudoElColor", colors["yellow"]);
 		} else if (mon1 > 0 && mon1 < 0.4) {
-			money.style.setProperty("--pseudoElColor", "red");
+			money.style.setProperty("--pseudoElColor", colors["red"]);
 		}
-
+	
 		if (adviser1 > 0.7) {
-			adviser.style.setProperty("--pseudoElColor", colors['green']);
+			adviser.style.setProperty("--pseudoElColor", colors["green"]);
 		} else if (adviser1 >= 0.4 && adviser1 <= 0.7) {
-			adviser.style.setProperty("--pseudoElColor", "yellow");
+			adviser.style.setProperty("--pseudoElColor", colors["yellow"]);
 		} else if (adviser1 > 0 && adviser1 < 0.4) {
-			adviser.style.setProperty("--pseudoElColor", "red");
+			adviser.style.setProperty("--pseudoElColor", colors["red"]);
 		}
-
+	
 		if (research1 > 0.7) {
-			research.style.setProperty("--pseudoElColor", colors['green']);
+			research.style.setProperty("--pseudoElColor", colors["green"]);
 		} else if (research1 >= 0.4 && research1 <= 0.7) {
-			research.style.setProperty("--pseudoElColor", "yellow");
+			research.style.setProperty("--pseudoElColor", colors["yellow"]);
 		} else if (research1 > 0 && research1 < 0.4) {
-			research.style.setProperty("--pseudoElColor", "red");
+			research.style.setProperty("--pseudoElColor", colors["red"]);
 		}
-
+	
 		if (fue1 > 0.7) {
-			fuel.style.setProperty("--pseudoElColor", colors['green']);
+			fuel.style.setProperty("--pseudoElColor", colors["green"]);
 		} else if (fue1 >= 0.4 && fue1 <= 0.7) {
-			fuel.style.setProperty("--pseudoElColor", "yellow");
+			fuel.style.setProperty("--pseudoElColor", colors["yellow"]);
 		} else if (fue1 > 0 && fue1 < 0.4) {
-			fuel.style.setProperty("--pseudoElColor", "red");
+			fuel.style.setProperty("--pseudoElColor", colors["red"]);
 		}
-
+	
 		if (food1 > 0.7) {
-			food.style.setProperty("--pseudoElColor", colors['green']);
+			food.style.setProperty("--pseudoElColor", colors["green"]);
 		} else if (food1 >= 0.4 && food1 <= 0.7) {
-			food.style.setProperty("--pseudoElColor", "yellow");
+			food.style.setProperty("--pseudoElColor", colors["yellow"]);
 		} else if (food1 > 0 && food1 < 0.4) {
-			food.style.setProperty("--pseudoElColor", "red");
+			food.style.setProperty("--pseudoElColor", colors["red"]);
 		}
 	}
 
@@ -300,7 +302,7 @@ function statsChanger(element1, list) {
 		} else {
 			nerds.style.setProperty("--transform", "scaleY(0)");
 		}
-
+	
 		if (magicals2 >= 0 && magicals2 <= 1) {
 			magicals.style.setProperty("--transform", "scaleY(" + magicals2 + ")");
 		} else if (magicals2 > 1) {
@@ -308,7 +310,7 @@ function statsChanger(element1, list) {
 		} else {
 			magicals.style.setProperty("--transform", "scaleY(0)");
 		}
-
+	
 		if (agreSuS2 >= 0 && agreSuS2 <= 1) {
 			agreSuS.style.setProperty("--transform", "scaleY(" + agreSuS2 + ")");
 		} else if (agreSuS2 > 1) {
@@ -316,7 +318,7 @@ function statsChanger(element1, list) {
 		} else {
 			agreSuS.style.setProperty("--transform", "scaleY(0)");
 		}
-
+	
 		if (pOp2 >= 0 && pOp2 <= 1) {
 			publicOp.style.setProperty("--transform", "scaleY(" + pOp2 + ")");
 		} else if (pOp2 > 1) {
@@ -324,7 +326,7 @@ function statsChanger(element1, list) {
 		} else {
 			publicOp.style.setProperty("--transform", "scaleY(0)");
 		}
-
+	
 		if (mon2 >= 0 && mon2 <= 1) {
 			money.style.setProperty("--transform", "scaleY(" + mon2 + ")");
 		} else if (mon2 > 1) {
@@ -332,7 +334,7 @@ function statsChanger(element1, list) {
 		} else {
 			money.style.setProperty("--transform", "scaleY(0)");
 		}
-
+	
 		if (adviser2 >= 0 && adviser2 <= 1) {
 			adviser.style.setProperty("--transform", "scaleY(" + adviser2 + ")");
 		} else if (adviser2 > 1) {
@@ -340,7 +342,7 @@ function statsChanger(element1, list) {
 		} else {
 			adviser.style.setProperty("--transform", "scaleY(0)");
 		}
-
+	
 		if (research2 >= 0 && research2 <= 1) {
 			research.style.setProperty("--transform", "scaleY(" + research2 + ")");
 		} else if (research2 > 1) {
@@ -356,7 +358,7 @@ function statsChanger(element1, list) {
 		} else {
 			fuel.style.setProperty("--transform", "scaleY(0)");
 		}
-
+	
 		if (food2 >= 0 && food2 <= 1) {
 			food.style.setProperty("--transform", "scaleY(" + food2 + ")");
 		} else if (food2 > 1) {
@@ -364,7 +366,7 @@ function statsChanger(element1, list) {
 		} else {
 			food.style.setProperty("--transform", "scaleY(0)");
 		}
-	}
+	}	
 
 	element1.addEventListener("mouseover", function hover() {
 		let ner = data.stats.alienRelations.nerds + list[0];
@@ -380,28 +382,9 @@ function statsChanger(element1, list) {
 		statsFuse(ner, mag, agreS, pOp, mon, adv, res, fue, foo);
 		colorChanger(ner, mag, agreS, pOp, mon, adv, res, fue, foo);
 	});
-	element1.addEventListener("mouseout", function out() {
-		nerds.style.setProperty("--transform","scaleY(" + data.stats.alienRelations.nerds + ")");
-		magicals.style.setProperty("--transform","scaleY(" + data.stats.alienRelations.magicals + ")");
-		agreSuS.style.setProperty("--transform","scaleY(" + data.stats.alienRelations.agreSuS + ")");
-		publicOp.style.setProperty("--transform","scaleY(" + data.stats.publicOpinion + ")");
-		money.style.setProperty("--transform","scaleY(" + data.stats.currency + ")");
-		adviser.style.setProperty("--transform","scaleY(" + data.stats.adviser + ")");
-		research.style.setProperty("--transform","scaleY(" + data.stats.research + ")");
-		fuel.style.setProperty("--transform","scaleY(" + data.stats.fuel + ")");
-		food.style.setProperty("--transform","scaleY(" + data.stats.food + ")");
 
 
-		nerds.style.setProperty("--pseudoElColor", colorNerds);
-		magicals.style.setProperty("--pseudoElColor", colorMagicals);
-		agreSuS.style.setProperty("--pseudoElColor", colorAgreSuS);
-		publicOp.style.setProperty("--pseudoElColor", colorPublicOp);
-		money.style.setProperty("--pseudoElColor", colorMoney);
-		adviser.style.setProperty("--pseudoElColor", colorAdviser);
-		research.style.setProperty("--pseudoElColor", colorResearch);
-		fuel.style.setProperty("--pseudoElColor", colorFuel);
-		food.style.setProperty("--pseudoElColor", colorFood);
-	});
+
 	element1.addEventListener("click", function change() {
 		data.stats.alienRelations.nerds += list[0];
 		data.stats.alienRelations.magicals += list[1];
@@ -412,6 +395,18 @@ function statsChanger(element1, list) {
 		data.stats.research += list[6];
 		data.stats.fuel += list[7];
 		data.stats.food += list[8];
+
+		let ner = data.stats.alienRelations.nerds
+		let mag = data.stats.alienRelations.magicals
+		let agreS = data.stats.alienRelations.agreSuS
+		let pOp = data.stats.publicOpinion
+		let mon = data.stats.currency
+		let adv = data.stats.adviser
+		let res = data.stats.research
+		let fue = data.stats.fuel
+		let foo = data.stats.food
+
+		console.log(mon)
 
 		if (data.stats.alienRelations.nerds <= 0) {
 			data.stats.alienRelations.nerds = 0;
@@ -443,7 +438,7 @@ function statsChanger(element1, list) {
 
 		if (data.stats.currency <= 0) {
 			data.stats.currency = 0;
-			gameOverFunction("gameOver", "Nie potrafisz.");
+			gameOverFunction("gameOver", "Zbankrutowałeś.");
 		} else if (data.stats.currency > 1) {
 			data.stats.currency = 1;
 		}
@@ -495,16 +490,47 @@ function statsChanger(element1, list) {
 				data.stats.research,
 				data.stats.fuel,
 				data.stats.food);
-		colorChanger();
-		// console.log(data.stats.publicOpinion);
-		// console.log(data.stats.fuel);
-		// console.log(data.stats.currency);
 
-		// ↑ NIE WYWALAC CONSOLLOGUF DOPOKI NIE BEDZIEMY ODDAWAC PROJEKTU
+		colorChanger(ner, mag, agreS, pOp, mon, adv, res, fue, foo);
+
+
+		colorNerds = window.getComputedStyle(nerds).getPropertyValue("--pseudoElColor");
+		colorMagicals = window.getComputedStyle(magicals).getPropertyValue("--pseudoElColor");
+		colorAgreSuS = window.getComputedStyle(agreSuS).getPropertyValue("--pseudoElColor");
+	
+		colorPublicOp = window.getComputedStyle(publicOp).getPropertyValue("--pseudoElColor");
+		colorMoney = window.getComputedStyle(money).getPropertyValue("--pseudoElColor");
+
+		colorAdviser = window.getComputedStyle(adviser).getPropertyValue("--pseudoElColor");
+		colorResearch = window.getComputedStyle(research).getPropertyValue("--pseudoElColor");
+		colorFuel = window.getComputedStyle(fuel).getPropertyValue("--pseudoElColor");
+		colorFood = window.getComputedStyle(food).getPropertyValue("--pseudoElColor");
 
 		// ale pierdol sie
 
 		//naprawde
+	});
+	element1.addEventListener("mouseout", function out() {
+		nerds.style.setProperty("--transform","scaleY(" + data.stats.alienRelations.nerds + ")");
+		magicals.style.setProperty("--transform","scaleY(" + data.stats.alienRelations.magicals + ")");
+		agreSuS.style.setProperty("--transform","scaleY(" + data.stats.alienRelations.agreSuS + ")");
+		publicOp.style.setProperty("--transform","scaleY(" + data.stats.publicOpinion + ")");
+		money.style.setProperty("--transform","scaleY(" + data.stats.currency + ")");
+		adviser.style.setProperty("--transform","scaleY(" + data.stats.adviser + ")");
+		research.style.setProperty("--transform","scaleY(" + data.stats.research + ")");
+		fuel.style.setProperty("--transform","scaleY(" + data.stats.fuel + ")");
+		food.style.setProperty("--transform","scaleY(" + data.stats.food + ")");
+
+		console.log("!!!!" + colorPublicOp + "!!!")
+		nerds.style.setProperty("--pseudoElColor", colorNerds);
+		magicals.style.setProperty("--pseudoElColor", colorMagicals);
+		agreSuS.style.setProperty("--pseudoElColor", colorAgreSuS);
+		publicOp.style.setProperty("--pseudoElColor", colorPublicOp);
+		money.style.setProperty("--pseudoElColor", colorMoney);
+		adviser.style.setProperty("--pseudoElColor", colorAdviser);
+		research.style.setProperty("--pseudoElColor", colorResearch);
+		fuel.style.setProperty("--pseudoElColor", colorFuel);
+		food.style.setProperty("--pseudoElColor", colorFood);
 	});
 }
 
@@ -542,12 +568,9 @@ class MyLine {
 }
 
 class Samouczek {
-	constructor(element, text, isFirst, left, top) {
+	constructor(element, text) {
 		this.element = element;
 		this.text = text;
-		this.isFirst = isFirst;
-		this.left = left;
-		this.top = top;
 	}
 }
 
@@ -616,12 +639,12 @@ function doTheEvent(ob) {
 	statsChanger(buttonRight, ob.sP);
 }
 
+let chapterNumber = document.querySelector("#chapter h1:first-of-type");
+let chapterPlace = document.querySelector("#chapter h1:nth-of-type(2)");
+
 function changeChapterPlace(x, place) {
 	loadingScreen();
-	let chapterNumber = document.querySelector("#chapter h1:first-of-type");
-	let chapterPlace = document.querySelector("#chapter h1:nth-of-type(2)");
-
-	let chapterText = "Chapter - " + x;
+	let chapterText = "Etap - " + x;
 	chapterNumber.textContent = chapterText;
 
 	chapterPlace.textContent = place;
@@ -646,70 +669,58 @@ function gameOverFunction(gameOverClassName, cause) {
 
 	let playAgain = document.createElement("a");
 	let buttonNode = document.createTextNode("Zagraj ponownie");
-	playAgain.setAttribute("href", "main.html")
+	playAgain.setAttribute("href", "samouczek.html")
 	playAgain.appendChild(buttonNode);
 	playAgain.className = "playAgain"
 	div.insertAdjacentElement("beforeend", playAgain);
 }
 
+let samouczekNext = document.getElementById("samouczek-next");
+
 let leftDiv = document.getElementById("leftDiv");
 let rightDiv = document.getElementById("rightDiv")
 
 function tutorialBox(ob) {
-	if (ob.isFirst == true) {
-		let samouczekDiv = document.createElement("div");
-		ob.element.style.setProperty("position", "relative");
-		samouczekDiv.className = "samouczek";
-		samouczekDiv.textContent = ob.text;
-		samouczekDiv.style.setProperty("display", "block");
-		ob.element.insertAdjacentElement("beforeend", samouczekDiv);
-		samouczekDiv.style.setProperty("left", ob.left+"px");
-		samouczekDiv.style.setProperty("top", ob.top+"px")
-	} else {
-		let removeThisDiv = document.querySelector(".samouczek");
-		removeThisDiv.remove();
-		let samouczekDiv = document.createElement("div");
-		ob.element.style.setProperty("position", "relative");
-		samouczekDiv.className = "samouczek"
-		samouczekDiv.textContent = ob.text;
-		samouczekDiv.style.setProperty("display", "block");
-		ob.element.insertAdjacentElement("beforeend", samouczekDiv);
-		samouczekDiv.style.setProperty("left", ob.left+"px");
-		samouczekDiv.style.setProperty("top", ob.top+"px")
-	}
+	ob.line.forEach((el) => {
+		if (el.isFirst == true) {
+			let samouczekDiv = document.createElement("div");
+			el.element.style.setProperty("position", "relative");
+			samouczekDiv.className = "samouczek";
+			samouczekDiv.textContent = el.text;
+			samouczekDiv.style.setProperty("display", "block");
+			el.element.insertAdjacentElement("beforeend", samouczekDiv);
+			samouczekDiv.style.setProperty("left", el.left+"px");
+			samouczekDiv.style.setProperty("top", el.top+"px")
+		} else {
+			let removeThisDiv = document.querySelector(".samouczek");
+			removeThisDiv.remove();
+			let samouczekDiv = document.createElement("div");
+			el.element.style.setProperty("position", "relative");
+			samouczekDiv.className = "samouczek"
+			samouczekDiv.textContent = el.text;
+			samouczekDiv.style.setProperty("display", "block");
+			el.element.insertAdjacentElement("beforeend", samouczekDiv);
+			samouczekDiv.style.setProperty("left", left+"px");
+			samouczekDiv.style.setProperty("top", top+"px")
+		}
+	})
 
 }
 
-// samouczekDiv.forEach(ob => {
+// samouczekDiv.forEach(el => {
 // 	console.log(1)
 // })
 
 //==================== CHAPTER 1 ====================
 changeChapterPlace(1, "Dom Jakuba");
 //===== Underchapter 1 =====
-
+// tutorialBox(leftDiv, "Przycisk lewy od decyzji (PODGLAD ZMIANY STATYSTYK PO PRZYTRZYMANIU)", true, 0, 50);
 tutorialBox
 let s1 = new Samouczek (
 	leftDiv,
 	"Przycisk lewy od decyzji (PODGLAD ZMIANY STATYSTYK PO PRZYTRZYMANIU)",
 	true,
 	0,
-	50
-)
-
-let s2 = new Samouczek (
-	rightDiv,
-	"Przycisk lewy od decyzji (PODGLAD ZMIANY STATYSTYK PO PRZYTRZYMANIU)",
-	false,
-	0,
-	50
-)
-
-let s3 = new Samouczek (
-	money,
-	"Przycisk lewy od decyzji (PODGLAD ZMIANY STATYSTYK PO PRZYTRZYMANIU)",
-	false,
-	-300,
 	50
 )
 
@@ -727,17 +738,15 @@ let c1u1e1 = new MyEvent(
 	"O co chodziło z tym snem?",
 	"Zaraz się spóźnię!",
 	function () {
-		tutorialBox(s2)
+		doTheEvent(c1u1e2v1);
 	},
 
 	function () {
-		tutorialBox(s3)
+		doTheEvent(c1u1e2v1);
 	},
 
-	[0, 0, 0, -0.3, 0.2, 0, 0, 0, 0],
-	[0, 0, 0, 0.3, -0.2, 0, 0, 0, 0]
+	[0, 0, 0, -0.3, -0.3, 0, 0, 0, 0],
+	[0, 0, 0, -0.1, 0.4, 0, 0, 0, 0]
 );
-
-
 
 doTheEvent(c1u1e1);
