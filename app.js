@@ -65,6 +65,42 @@ let research = document.querySelector("#header-section nav #resources #resources
 let fuel = document.querySelector("#header-section nav #resources #resources-container li:nth-of-type(5)");
 let food = document.querySelector("#header-section nav #resources #resources-container li:nth-of-type(6)");
 
+// ====================== MUZYKA ======================
+// var audio1 = new Audio("audio/Arcadia.mp3");
+// audio1.play();
+
+// function musicLoader() {
+	// var audio1 = new Audio("audio/Arcadia.mp3");
+    // window.addEventListener("load", function() {
+    //     // audio1.muted = true;
+	// 	audio1.play();
+    // });
+	// document.body.appendChild(audio1)
+
+// }
+// musicLoader()
+
+	// audio1.play()
+	// audio1.addEventListener("canplaythrough", function() {
+	// 	audio1.play();
+	// })
+// 	setTimeout(function() {
+
+// 	}, 3500)
+
+
+
+var audio = new Audio('audio/Arcadia.mp3');
+// audio.muted = false;
+
+// window.onload = function() {
+	audio.muted = true;
+	audio.play();
+
+
+// };
+
+
 // ====================== LEAVING SITE ALERT ======================
 window.addEventListener("beforeunload", function (e) {
 	var confirmationMessage = "Czy na pewno chcesz opuścić stronę?";
