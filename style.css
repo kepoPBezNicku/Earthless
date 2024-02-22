@@ -534,6 +534,8 @@ main {
 	background-color: black;
 	background-attachment: fixed;
 	background-image: url(bogosBinted/gameOver.png);
+	opacity: 0;
+	transition: 1.5s ease opacity;
 	position: relative;
 }
 

@@ -15,12 +15,12 @@ let colors = {
 	aqua:'#3a71a6', //Marcin
 	red:'#ce5263', //Becia
 	white:'#efece8', //Unknown
-	purple:'#4b3aa6', //
+	purple:'#4b3aa6', // Ilia
 	yellow:'#c7af42', //Mirek
 	darkred:'#85395b', //Albert
 	darkblue: '#060d23', //
 	lightpurple: '#d8a3dc', //
-	orange: '#e58852', //
+	orange: '#e58852', // Krzychu
 	brown: '#9a5c4c', //
 	grey: '#b3c5c2' //
 }
@@ -409,15 +409,15 @@ function statsChanger(element1, list) {
 		data.stats.fuel += list[7];
 		data.stats.food += list[8];
 
-		let ner = data.stats.alienRelations.nerds
-		let mag = data.stats.alienRelations.magicals
-		let agreS = data.stats.alienRelations.agreSuS
-		let pOp = data.stats.publicOpinion
-		let mon = data.stats.currency
-		let adv = data.stats.adviser
-		let res = data.stats.research
-		let fue = data.stats.fuel
-		let foo = data.stats.food
+		let ner = data.stats.alienRelations.nerds;
+		let mag = data.stats.alienRelations.magicals;
+		let agreS = data.stats.alienRelations.agreSuS;
+		let pOp = data.stats.publicOpinion;
+		let mon = data.stats.currency;
+		let adv = data.stats.adviser;
+		let res = data.stats.research;
+		let fue = data.stats.fuel;
+		let foo = data.stats.food;
 
 		console.log(mon)
 
@@ -534,7 +534,6 @@ function statsChanger(element1, list) {
 		fuel.style.setProperty("--transform","scaleY(" + data.stats.fuel + ")");
 		food.style.setProperty("--transform","scaleY(" + data.stats.food + ")");
 
-		console.log("!!!!" + colorPublicOp + "!!!")
 		nerds.style.setProperty("--pseudoElColor", colorNerds);
 		magicals.style.setProperty("--pseudoElColor", colorMagicals);
 		agreSuS.style.setProperty("--pseudoElColor", colorAgreSuS);
@@ -657,24 +656,30 @@ function gameOverFunction(gameOverClassName, cause) {
 	let body = document.querySelector("body");
 
 	body.textContent = "";
-	body.style.setProperty("background-color", "black")
+	body.style.setProperty("background-color", "black");
+	body.style.setProperty("background-image", "url()");
 	body.className = gameOverClassName;
-	let div = document.createElement("div");
-	body.insertAdjacentElement("afterbegin", div);
-	div.className = "gameOverContainer"
+	setTimeout(function() {
+		body.style.setProperty("background-image", "url(bogosBinted/gameOver.png)");
 
-	let newP = document.createElement("p");
-	let caseNode = document.createTextNode(cause);
-	newP.appendChild(caseNode);
-	div.insertAdjacentElement("afterbegin", newP);
-	newP.className = "gameOverP";
-
-	let playAgain = document.createElement("a");
-	let buttonNode = document.createTextNode("Zagraj ponownie");
-	playAgain.setAttribute("href", "main.html")
-	playAgain.appendChild(buttonNode);
-	playAgain.className = "playAgain"
-	div.insertAdjacentElement("beforeend", playAgain);
+		let div = document.createElement("div");
+		body.insertAdjacentElement("afterbegin", div);
+		div.className = "gameOverContainer"
+	
+		let newP = document.createElement("p");
+		let caseNode = document.createTextNode(cause);
+		newP.appendChild(caseNode);
+		div.insertAdjacentElement("afterbegin", newP);
+		newP.className = "gameOverP";
+	
+		let playAgain = document.createElement("a");
+		let buttonNode = document.createTextNode("Zagraj ponownie");
+		playAgain.setAttribute("href", "main.html");
+		playAgain.appendChild(buttonNode);
+		playAgain.className = "playAgain"
+		div.insertAdjacentElement("beforeend", playAgain);
+		body.style.setProperty("opacity", 1)
+	}, 1000)
 }
 
 //==================== CHAPTER 1 ====================
@@ -1540,7 +1545,7 @@ let c1u2e15v1 = new MyEvent(
 		"bogosBinted/marcin.png", "Marcin", colors["aqua"],
 		"Mam nadzieję że ta zniesiona cisza wyborcza nam nie zaszkodzi. Ale za to mamy narzędzie to kamapnii nawet w dzień wyborów!"
 	),new MyLine(
-		"bogosBinted/krzys.png", "Krzychu", "red",
+		"bogosBinted/krzys.png", "Krzychu", colors['orange'],
 		"Chodźcie, jest ogłoszenie wyników!"
 	)],
 	"Chwila prawdy.",
@@ -1560,19 +1565,19 @@ let c1u2e15v1 = new MyEvent(
 let c1u2e16v1 = new MyEvent(
 	"bogosBinted/radio.png",
 	[new MyLine(
-		"bogosBinted/becia.png", "Becia", "red",
+		"bogosBinted/becia.png", "Becia", colors["red"],
 		"Uwaga, Państwowa Komisja Wyborcza podała wyniki wyborów prezydenckich 2060! Wy.ory rozstrzygły się w pierwszej turze, a ich zwycięzcą zostaje Jakub Bukaj zdobywając 65% głosów, gratualacje dla Pana prezydenta!"
 	),new MyLine(
-		"bogosBinted/marcin.png", "Marcin", "red",
+		"bogosBinted/marcin.png", "Marcin", colors['aqua'],
 		"MAMY TO!"
 	),new MyLine(
-		"bogosBinted/ilia.png", "Ilia", "red",
+		"bogosBinted/ilia.png", "Ilia", colors['purple'],
 		"Udało się!"
 	),new MyLine(
-		"bogosBinted/jakub.png", "Jakub", "red",
+		"bogosBinted/jakub.png", "Jakub", colors["green"],
 		"A więc Panie i Panowie - bierzemy się do pracy! Amina, Henryk i Ilia przygotujcie prezentacje waszych badań, Krzychu idź do Alberta, a ja z Marcinem idziemy nagrać przemówienie."
 	),new MyLine(
-		"bogosBinted/krzychu.png", "Krzychu", "red",
+		"bogosBinted/krzychu.png", "Krzychu", colors['orange'],
 		"Kuba, czekaj! Albert ma do ciebie sprawę."
 	)],
 	"Co ten staruch znowu chce?",
@@ -1610,7 +1615,7 @@ let c1u2e17v2 = new MyEvent(
 let c1u2e17v1 = new MyEvent(
 	"bogosBinted/albert.png",
 	[new MyLine(
-		"bogosBinted/krzychu.png", "Krzychu", "red",
+		"bogosBinted/krzychu.png", "Krzychu", colors['orange'],
 		"Twierdzi, że skończył to, co mu zleciłeś."
 	),new MyLine(
 		"bogosBinted/jakub.png", "Jakub", colors["green"],
@@ -1660,7 +1665,7 @@ let c1u2e19v1 = new MyEvent(
 		"Dobra robota! Krzysiek, zajmiesz się użyciem tego na statku?"
 	),
 	new MyLine(
-		"bogosBinted/krzychu.png", "Krzychu", "red",
+		"bogosBinted/krzychu.png", "Krzychu", colors['orange'],
 		"Proste, że tak!"
 	),
 	new MyLine(
@@ -1689,7 +1694,7 @@ let c1u2e19v1 = new MyEvent(
 let c2u1e1 = new MyEvent(
 	"bogosBinted/jakub.png",
 	[new MyLine(
-		"bogosBinted/jakub.png", "Jakub", "red",
+		"bogosBinted/jakub.png", "Jakub", colors["green"],
 		"testline"
 	)],
 	"LewaOpcja",
