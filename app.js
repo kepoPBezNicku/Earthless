@@ -11,20 +11,19 @@ var buttonRight = document.querySelector("button#right");
 let backgroundImage = document.querySelector(".background-image-index")
 
 let colors = {
-	green:'#278c2d', //Jakub
-	aqua:'#3a71a6', //Marcin
-	red:'#ce5263', //Becia
-	white:'#efece8', //Unknown
-	purple:'#4b3aa6', // Ilia
-	yellow:'#c7af42', //Mirek
-	darkred:'#85395b', //Albert
-	darkblue: '#060d23', //
-	lightpurple: '#d8a3dc', //
-	orange: '#e58852', // Krzychu
-	brown: '#9a5c4c', //
-	grey: '#b3c5c2' //
+	green:'#278c2d', 		//Jakub
+	aqua:'#3a71a6', 		//Marcin
+	red:'#ce5263', 			//Becia, Agresusi
+	white:'#efece8', 		//Unknown
+	purple:'#4b3aa6', 		//Ilia
+	yellow:'#c7af42', 		//Mirek, Nerds
+	darkred:'#85395b', 		//Albert
+	darkblue: '#060d23', 	//Magikale
+	lightpurple: '#d8a3dc', //Amina
+	orange: '#e58852', 		//Krzychu
+	brown: '#9a5c4c', 		//Henryk
+	grey: '#b3c5c2' 		//
 }
-
 /*
 #c7af42
 #a58449
@@ -729,7 +728,7 @@ let c0u1e1 = new MyEvent(
 	"bogosBinted/chmurka.png",
 	[new MyLine(
 		"bogosBinted/jakub.png", "Jakub", colors["green"],
-		"Gdzie ja jestem, cot ut robi tyle ludzi, co to za metal nade mną, i co tu... Marcin??"
+		"Gdzie ja jestem, co tu robi tyle ludzi, co to za metal nade mną, i co tu... Marcin??"
 	)],
 	"Marcin??",
 	"*nic nie rób*",
@@ -823,8 +822,8 @@ let c0u1e4 = new MyEvent(
 	function (){
 		doTheEvent(c0u1e5)
 	},
-	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
-	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 )
 
 let c0u1e5 = new MyEvent(
@@ -840,6 +839,60 @@ let c0u1e5 = new MyEvent(
 	},
 	function (){
 		//doTheEvent(c0u2e1)
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
+)
+
+let c0u2e1 = new MyEvent(
+	"bogosBinted/agresus.png",
+	[new MyLine(
+		"bogosBinted/agresus.png", "ImieAgr", colors["red"],
+		"JAKUBIE"
+	)],
+	"...",
+	"...",
+	function (){
+		doTheEvent(c0u2e2)
+	},
+	function (){
+		doTheEvent(c0u2e2)
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
+)
+
+let c0u2e2 = new MyEvent(
+	"bogosBinted/nikita.png",
+	[new MyLine(
+		"bogosBinted/nikita.png", "Nikita", colors["darkblue"],
+		"WYBIERZ"
+	)],
+	"...",
+	"...",
+	function (){
+		doTheEvent(c0u2e2)
+	},
+	function (){
+		doTheEvent(c0u2e2)
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
+)
+
+let c0u2e3 = new MyEvent(
+	"bogosBinted/nerd.png",
+	[new MyLine(
+		"bogosBinted/nerd.png", "Nerd", colors["yellow"],
+		"MĄDRZE"
+	)],
+	"...",
+	"...",
+	function (){
+		doTheEvent(c1u1e1)
+	},
+	function (){
+		doTheEvent(c1u1e1)
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
@@ -874,6 +927,9 @@ let c1u1e1 = new MyEvent(
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 );
+
+//pozdro Kiara
+//Ania Biła
 
 let c1u1e2v1 = new MyEvent(
 	"bogosBinted/chmurka.png",
@@ -1632,7 +1688,7 @@ let c1u2e13v1 = new MyEvent(
 		"Co sądzicie, dobrze tam wypadłem?"
 	),new MyLine(
 		"bogosBinted/amina.png", "Amina", "red",
-		"Póki co nie jesteś wyzywany na Y więc chyba nie jest źle"
+		"Póki co nie jesteś wyzywany na Y więc nie narzekaj."
 	),new MyLine(
 		"bogosBinted/henryk.png", "Henryk", "red",
 		"Spokojnie, zaraz pewnie ktoś coś wytnie z kontekstu i zaraz to obleci cały internet. Kuba, może wejdź tam i zobacz co się dzieje."
@@ -1709,6 +1765,9 @@ let c1u2e15v1 = new MyEvent(
 	[new MyLine(
 		"bogosBinted/marcin.png", "Marcin", colors["aqua"],
 		"Mam nadzieję że ta zniesiona cisza wyborcza nam nie zaszkodzi. Ale za to mamy narzędzie to kamapnii nawet w dzień wyborów!"
+	),
+	new MyLine(
+		"bogosBinted/ilia.png", "Ilia", colors["purple"]
 	),new MyLine(
 		"bogosBinted/krzys.png", "Krzychu", colors['orange'],
 		"Chodźcie, jest ogłoszenie wyników!"
