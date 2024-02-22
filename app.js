@@ -2038,6 +2038,7 @@ let c2u2e1 = new MyEvent(
 
 // ZEBY WLACZYC KOLEJNA IKONKE STATOW TRZEBA WPISAC showIcons(np. nerds/alienRelations)
 // szczerze?
+// KURWO MIAŁEŚ BYĆ O ~19
 
 /*
 let cuev = new MyEvent(
