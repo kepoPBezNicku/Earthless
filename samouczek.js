@@ -681,53 +681,67 @@ let leftDiv = document.getElementById("leftDiv");
 let rightDiv = document.getElementById("rightDiv")
 
 function tutorialBox(ob) {
-	ob.line.forEach((el) => {
-		if (el.isFirst == true) {
-			let samouczekDiv = document.createElement("div");
-			el.element.style.setProperty("position", "relative");
-			samouczekDiv.className = "samouczek";
-			samouczekDiv.textContent = el.text;
-			samouczekDiv.style.setProperty("display", "block");
-			el.element.insertAdjacentElement("beforeend", samouczekDiv);
-			samouczekDiv.style.setProperty("left", el.left+"px");
-			samouczekDiv.style.setProperty("top", el.top+"px")
-		} else {
-			let removeThisDiv = document.querySelector(".samouczek");
-			removeThisDiv.remove();
-			let samouczekDiv = document.createElement("div");
-			el.element.style.setProperty("position", "relative");
-			samouczekDiv.className = "samouczek"
-			samouczekDiv.textContent = el.text;
-			samouczekDiv.style.setProperty("display", "block");
-			el.element.insertAdjacentElement("beforeend", samouczekDiv);
-			samouczekDiv.style.setProperty("left", left+"px");
-			samouczekDiv.style.setProperty("top", top+"px")
-		}
-	})
-
+	let samouczekDiv = document.getElementById("samouczek-box");
+	ob.element.classList.add("samouczek")
+	samouczekDiv.textContent = ob.text;
 }
 
-// samouczekDiv.forEach(el => {
-// 	console.log(1)
-// })
+// ---------------- SAMOUCZEK ---------------- 
+changeChapterPlace(1, "Samouczek");
 
-//==================== CHAPTER 1 ====================
-changeChapterPlace(1, "Dom Jakuba");
-//===== Underchapter 1 =====
-// tutorialBox(leftDiv, "Przycisk lewy od decyzji (PODGLAD ZMIANY STATYSTYK PO PRZYTRZYMANIU)", true, 0, 50);
-tutorialBox
 let s1 = new Samouczek (
 	leftDiv,
-	"Przycisk lewy od decyzji (PODGLAD ZMIANY STATYSTYK PO PRZYTRZYMANIU)",
-	true,
-	0,
-	50
+	"Wszystkie omawiane elementy będą oznaczane czerwoną ramką. Teraz oznaczony jest przycisk lewy od decyzji. Przytrzymaj go aby sprawdzić, jak zmienią się statystyki."
 )
 
-tutorialBox(s1)
-// tutorialBox(leftDiv, 6, "Przycisk lewy od decyzji");
-//wstawić jakiś sen (insp. Adamem Mickiewiczem XDDDD)
-let c1u1e1 = new MyEvent(
+let s2 = new Samouczek (
+	rightDiv,
+	"Przycisk do podjęcia decyzji. Przytrzymaj go aby sprawdzić, jak zmienią się statystyki."
+)
+
+let s3 = new Samouczek (
+	money,
+	"Przechodzimy do statystyk. Jeżeli korzystasz z telefonu/tabletu, kliknij ikonke trzech pasków w prawym górnym rogu ekranu. Jeżeli korzystasz z komputera, spójrz w górę. Zobaczysz tam ile masz aktualnie pieniędzy."
+)
+
+let s4 = new Samouczek (
+	publicOp,
+	"Kolejną oznaczoną ikoną jest Twoja opinia społeczna."
+)
+
+let s5 = new Samouczek (
+	adviser,
+	"Możesz zauważyć, że kolejna oznaczona ikona właśnie się pojawiła. Z czasem będzie się ich pojawiało coraz więcej. Ta statystyka oznacza relację z Twoim doradcą."
+)
+
+let s6 = new Samouczek (
+	font,
+	"Przycisk od zmiany rozmiaru czcionki na gry."
+)
+
+let s7 = new Samouczek (
+	contrast,
+	"Przycisk od zmiany zmiany kontrastu."
+)
+
+let s8 = new Samouczek (
+	chapterNumber,
+	"Numer Twojego aktualnego rozdziału gry."
+)
+
+let s9 = new Samouczek (
+	chapterPlace,
+	"Lokalizacja głównego bohatera (Jakuba)."
+)
+
+let s10 = new Samouczek (
+	samouczekNext,
+	"To tyle, aby zacząć główną część gry, kliknij przycisk 'Dalej'"
+)
+
+let sArray = [s1,s2,s3,s4,s5,s6,s7,s8,s9,s10]
+
+let test1 = new MyEvent(
 	"bogosBinted/jakub.png", //budzik.png
 	[
 		new MyLine(
@@ -738,15 +752,32 @@ let c1u1e1 = new MyEvent(
 	"O co chodziło z tym snem?",
 	"Zaraz się spóźnię!",
 	function () {
-		doTheEvent(c1u1e2v1);
 	},
 
 	function () {
-		doTheEvent(c1u1e2v1);
 	},
 
 	[0, 0, 0, -0.3, -0.3, 0, 0, 0, 0],
 	[0, 0, 0, -0.1, 0.4, 0, 0, 0, 0]
 );
+let samouczekProgress = 0;
+tutorialBox(s1);
+doTheEvent(test1);
 
-doTheEvent(c1u1e1);
+samouczekNext.addEventListener("click", function () {
+	sArray[samouczekProgress].element.classList.remove("samouczek");
+	samouczekProgress++;
+	tutorialBox(sArray[samouczekProgress]);
+	if (samouczekProgress == 4) {
+		showIcons(adviser);
+	}
+	if (samouczekProgress == 9) {
+		samouczekNext.textContent = "";
+		let link = document.createElement("a");
+		let node = document.createTextNode("Przejdź do gry");
+		link.style.setProperty("color", "black");
+		link.setAttribute("href", "main.html");
+		link.appendChild(node);
+		samouczekNext.insertAdjacentElement("afterbegin", link);
+	}
+})
