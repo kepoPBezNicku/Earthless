@@ -618,6 +618,15 @@ class MyLine {
 	}
 }
 
+// class Planets {
+// 	constructor(text, photo, sL, sP) {
+// 		this.text = text;
+// 		this.photo = photo;
+// 		this.sL = sL;
+// 		this.sP = sP;
+// 	}
+// }
+
 
 // ============= KLONOWANIE (USUWANIE EVENTOW) =============
 
@@ -818,10 +827,12 @@ let c0u1e4 = new MyEvent(
 	"STÓJ!",
 	"NIE!",
 	function (){
-		doTheEvent(c0u1e5)
+		doTheEvent(c0u1e5);
+		document.body.style.setProperty("background-image", "url(bogosBinted/background-main1-contrast.png)");
 	},
 	function (){
-		doTheEvent(c0u1e5)
+		doTheEvent(c0u1e5);
+		document.body.style.setProperty("background-image", "url(bogosBinted/background-main1-contrast.png)");
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
@@ -836,10 +847,12 @@ let c0u1e5 = new MyEvent(
 	"...",
 	"...",
 	function (){
-		//doTheEvent(c0u2e1)
+		document.body.style.setProperty("background-image", "url(bogosBinted/background-main1.png)")
+		doTheEvent(c0u2e1)
 	},
 	function (){
-		//doTheEvent(c0u2e1)
+		document.body.style.setProperty("background-image", "url(bogosBinted/background-main1.png)")
+		doTheEvent(c0u2e1)
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
