@@ -71,19 +71,21 @@ var audio3 = new Audio("audio/Frost Waltz.mp3");
 var audio4 = new Audio("audio/Hitman.mp3");
 var audio5 = new Audio("audio/The Descent.mp3");
 var audio6 = new Audio("audio/Truth of the Legend.mp3");
-function playMusic(audio) {
-	let start = document.createElement("button");
-	start.textContent = "Rozpocznij grę";
-	document.body.insertAdjacentElement("beforebegin", start);
-	start.className = "start";
-	start.addEventListener("click", function() {
-		audio.play();
-		audio.loop = true;
-		start.style.setProperty("transform", "scale(0)");
-	})
-}
 
-playMusic(audio1);
+let start = document.createElement("button");
+start.textContent = "Rozpocznij grę";
+document.body.insertAdjacentElement("beforebegin", start);
+start.className = "start";
+start.addEventListener("click", function() {
+	audio1.play();
+	audio1.loop = true;
+	start.style.setProperty("transform", "scale(0)");
+})
+
+function playMusic(audio) {
+	audio.play();
+	audio.loop = true;
+}
 
 
 // ====================== LEAVING SITE ALERT ======================
