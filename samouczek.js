@@ -656,46 +656,60 @@ let leftDiv = document.getElementById("leftDiv");
 let rightDiv = document.getElementById("rightDiv")
 
 function tutorialBox(ob) {
-	ob.line.forEach((el) => {
-		if (el.isFirst == true) {
-			let samouczekDiv = document.createElement("div");
-			el.element.style.setProperty("position", "relative");
-			samouczekDiv.className = "samouczek";
-			samouczekDiv.textContent = el.text;
-			samouczekDiv.style.setProperty("display", "block");
-			el.element.insertAdjacentElement("beforeend", samouczekDiv);
-			samouczekDiv.style.setProperty("left", el.left+"px");
-			samouczekDiv.style.setProperty("top", el.top+"px")
-		} else {
-			let removeThisDiv = document.querySelector(".samouczek");
-			removeThisDiv.remove();
-			let samouczekDiv = document.createElement("div");
-			el.element.style.setProperty("position", "relative");
-			samouczekDiv.className = "samouczek"
-			samouczekDiv.textContent = el.text;
-			samouczekDiv.style.setProperty("display", "block");
-			el.element.insertAdjacentElement("beforeend", samouczekDiv);
-			samouczekDiv.style.setProperty("left", left+"px");
-			samouczekDiv.style.setProperty("top", top+"px")
-		}
-	})
+	if (ob.isFirst == true) {
+		let samouczekDiv = document.createElement("div");
+		ob.element.style.setProperty("position", "relative");
+		samouczekDiv.className = "samouczek";
+		samouczekDiv.textContent = ob.text;
+		samouczekDiv.style.setProperty("display", "block");
+		ob.element.insertAdjacentElement("beforeend", samouczekDiv);
+		samouczekDiv.style.setProperty("left", ob.left+"px");
+		samouczekDiv.style.setProperty("top", ob.top+"px")
+	} else {
+		let removeThisDiv = document.querySelector(".samouczek");
+		removeThisDiv.remove();
+		let samouczekDiv = document.createElement("div");
+		ob.element.style.setProperty("position", "relative");
+		samouczekDiv.className = "samouczek"
+		samouczekDiv.textContent = ob.text;
+		samouczekDiv.style.setProperty("display", "block");
+		ob.element.insertAdjacentElement("beforeend", samouczekDiv);
+		samouczekDiv.style.setProperty("left", ob.left+"px");
+		samouczekDiv.style.setProperty("top", ob.top+"px")
+	}
 
 }
 
-// samouczekDiv.forEach(el => {
+// samouczekDiv.forEach(ob => {
 // 	console.log(1)
 // })
 
 //==================== CHAPTER 1 ====================
 changeChapterPlace(1, "Dom Jakuba");
 //===== Underchapter 1 =====
-// tutorialBox(leftDiv, "Przycisk lewy od decyzji (PODGLAD ZMIANY STATYSTYK PO PRZYTRZYMANIU)", true, 0, 50);
+
 tutorialBox
 let s1 = new Samouczek (
 	leftDiv,
 	"Przycisk lewy od decyzji (PODGLAD ZMIANY STATYSTYK PO PRZYTRZYMANIU)",
 	true,
 	0,
+	50
+)
+
+let s2 = new Samouczek (
+	rightDiv,
+	"Przycisk lewy od decyzji (PODGLAD ZMIANY STATYSTYK PO PRZYTRZYMANIU)",
+	false,
+	0,
+	50
+)
+
+let s3 = new Samouczek (
+	money,
+	"Przycisk lewy od decyzji (PODGLAD ZMIANY STATYSTYK PO PRZYTRZYMANIU)",
+	false,
+	-300,
 	50
 )
 
@@ -713,15 +727,17 @@ let c1u1e1 = new MyEvent(
 	"O co chodziło z tym snem?",
 	"Zaraz się spóźnię!",
 	function () {
-		doTheEvent(c1u1e2v1);
+		tutorialBox(s2)
 	},
 
 	function () {
-		doTheEvent(c1u1e2v1);
+		tutorialBox(s3)
 	},
 
 	[0, 0, 0, -0.3, 0.2, 0, 0, 0, 0],
 	[0, 0, 0, 0.3, -0.2, 0, 0, 0, 0]
 );
+
+
 
 doTheEvent(c1u1e1);
