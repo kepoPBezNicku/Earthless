@@ -63,6 +63,7 @@ body {
 	animation-duration: 0.3s;
 	animation-timing-function: ease;
 	animation-name: loadingScreenOp;
+	animation-fill-mode: forwards;
 	animation-delay: 3s;
 	overflow: hidden;
 }
