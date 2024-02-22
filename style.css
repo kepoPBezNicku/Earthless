@@ -735,6 +735,26 @@ main {
 /* ---------------------- FOOTER ---------------------- */
 /* ---------------------------------------------------- */
 
-#google_translate_element {
-	margin-left: 5%;
+footer {
+	display: flex;
+	justify-content: center;
+	color: rgba(255, 255, 255, 0.457);
+	font-size: 0.5rem;
+	font-family: Rubik, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	margin-top: 70px; 
 }
+
+footer section {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+footer h1 {
+	font-weight: 500;
+}
+
+#google_translate_element {
+	display: flex;
+	justify-content: center;
+} 
