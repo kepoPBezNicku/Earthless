@@ -155,9 +155,11 @@ header {
 	background-color: var(--header-color);
 	transition: 0.3s ease background-color;
 	font-family: var(--font-family);
-	position: sticky;
+	position: fixed;
+	width: 100%	;
 	top: 0;
 	z-index: 10;
+	padding: 5px 0px 0px;
 	box-shadow: 0px 0px 15px 0px #efece8;
 	border: var(--border-header-contrast);
 }
@@ -321,6 +323,7 @@ ul#alien-relations {
 		position: fixed;
 		top: 0;
 		width: fit-content;
+		padding: 0px;
 		margin: 0px 0px 0px auto;
 		border-bottom-left-radius: 25px;
 		background-color: rgba(0, 0, 0, 0);
@@ -341,7 +344,7 @@ ul#alien-relations {
 	}
 	#header-section #chapter-burger #chapter {
 		margin: 0px;
-		padding: 15px;
+		padding: 30px 15px 20px;
 		position: static;
 		align-self: flex-start;
 		border-radius: 0px;
@@ -449,7 +452,7 @@ main {
 	justify-content: space-evenly;
 	font-family: var(--font-family);
 	width: 70%;
-	padding-top: 80px;
+	padding-top: 120px;
 	max-width: 800px;
 }
 
@@ -650,33 +653,76 @@ main {
 	border: 3px solid red;
 }
 
-#middleDiv.planets {
-	/* position: absolute; */
-	/* top: 0px; */
-	/* left: 50%; */
-	/* transform: translateX(-50%); */
-	justify-content: space-between;
-	flex-direction: row;
-	margin-top: 100px;
+#main-section.planets {
+	width: 100%;
+	max-width: 100%;
+	padding-top: 220px;
 	gap: 10px;
 }
 
-.planets div {
-	background-size: cover;
+#middleDiv.planets {
+	justify-content: space-between;
+	flex-direction: row;
+	border-radius: 10px;
+}
+
+#middleDiv.planets div {
+	position: relative;
+	transition: 0.2s ease;
+	border-radius: 20px;
+	cursor: pointer;
+	margin: 0px 10px;
+}
+
+#middleDiv.planets div:hover {
+	transform: scale(1.3);
+	z-index: 10;
+}
+
+#middleDiv.planets div p {
+	word-break: keep-all;
+	white-space: nowrap;
+}
+
+#middleDiv.planets div p::before {
+	content: "";
+	display: block;
+	border-bottom: 1px solid white;
+	transform: scaleX(0);
+	transform-origin: 100%;
+	transition: 0.3s ease;
+}
+
+#middleDiv.planets div p::after {
+	content: "";
+	display: block;
+	border-bottom: 1px solid white;
+	transform: scaleX(0);
+	transform-origin: 0%;
+	transition: 0.3s ease;
+}
+
+#middleDiv.planets div:hover p::after {
+	transform: scaleX(1);
+}
+
+#middleDiv.planets div:hover p::before {
+	transform: scaleX(1);
+}
+
+#middleDiv.planets div p {
+	text-align: center;
+	position: absolute;
+	bottom: 20px;
+	margin: 0px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+#middleDiv.planets div img {
+	border-radius: 20px;
 	width: 250px;
 	height: 250px;
-}
-
-.planets .planet1 {
-	background-image: url(bogosBinted/planet1.png);
-}
-
-.planets .planet2 {
-	background-image: url(bogosBinted/planet2.png);
-}
-
-.planets .planet3 {
-	background-image: url(bogosBinted/planet3.png);
 }
 
 @media only screen and (max-width: 1000px) {
@@ -690,6 +736,7 @@ main {
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		flex-wrap: wrap;
 		gap: 40px;
 	}
 }
@@ -700,6 +747,14 @@ main {
 	}
 	#decision-button {
 		align-items: center;
+	}
+	#main-section.planets {
+		padding-top: 120px
+	}
+	#middleDiv.planets {
+		flex-wrap: wrap;
+		justify-content: center;
+		border-radius: 10px;
 	}
 }
 
@@ -767,7 +822,7 @@ main {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		top: 10px;
+		top: 35px;
 		left: 40px;
 	}
 	#middleDiv .bigPhoto {
@@ -811,3 +866,8 @@ footer h1 {
 	display: flex;
 	justify-content: center;
 } 
+
+.goog-te-combo {
+	opacity: 0.5;
+	cursor: pointer;
+}

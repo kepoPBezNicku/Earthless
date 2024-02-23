@@ -69,8 +69,7 @@ let food = document.querySelector("#header-section nav #resources #resources-con
 // ====================== LADOWANIE ZDJEC ======================
 
 function imageLoader() {
-	let imgArray = document.querySelectorAll("img");
-
+	// let imgArray = document.querySelectorAll("img");
 }
 
 // ====================== MUZYKA ======================
@@ -639,9 +638,9 @@ function eventsRemover() {
 // =========================================================
 
 function doTheEvent(ob) {
+	middleDiv.textContent = "";
 	middleDiv.className = "";
 	mainSection.className = "";
-	// middleDiv.textContent = "";
 
 	decisionButton.style.setProperty("display", "flex");
 	eventsRemover();
@@ -735,7 +734,6 @@ function gameOverFunction(gameOverClassName, cause) {
 function changePlanet() {
 	middleDiv.textContent = "";
 	
-	
 	decisionButton.style.setProperty("display", "none");
 	let p1 = document.createElement("div");
 	p1.className = "planet1";
@@ -743,14 +741,79 @@ function changePlanet() {
 	p2.className = "planet2";
 	let p3 = document.createElement("div");
 	p3.className = "planet3";
+	
+	let img1 = document.createElement("img");
+	let img2 = document.createElement("img");
+	let img3 = document.createElement("img");
+	img1.setAttribute("src", "bogosBinted/planet1.png");
+	img2.setAttribute("src", "bogosBinted/planet2.png");
+	img3.setAttribute("src", "bogosBinted/planet3.png");
 
-	p1.textContent = "GUWNO";
+	let title1 = document.createElement("p");
+	let title2 = document.createElement("p");
+	let title3 = document.createElement("p");
+
+	p1.insertAdjacentElement("beforeend", img1);
+	p2.insertAdjacentElement("beforeend", img2);
+	p3.insertAdjacentElement("beforeend", img3);
 
 	middleDiv.insertAdjacentElement("beforeend", p1);
-	middleDiv.insertAdjacentElement("beforeend", p3);
 	middleDiv.insertAdjacentElement("beforeend", p2);
+	middleDiv.insertAdjacentElement("beforeend", p3);
+
+	p1.insertAdjacentElement("beforeend", title1);
+	p2.insertAdjacentElement("beforeend", title2);
+	p3.insertAdjacentElement("beforeend", title3);
+	title1.textContent = "Planeta pierwsza";
+	title2.textContent = "Planeta druga";
+	title3.textContent = "Planeta trzecia";
 
 	mainSection.classList.add("planets");
+	middleDiv.classList.add("planets");
+
+	p1.addEventListener("mouseover", function() {
+		p2.style.setProperty("opacity", 0.5);
+		p3.style.setProperty("opacity", 0.5);
+	})
+
+	p2.addEventListener("mouseover", function() {
+		p1.style.setProperty("opacity", 0.5);
+		p3.style.setProperty("opacity", 0.5);
+	})
+
+	p3.addEventListener("mouseover", function() {
+		p1.style.setProperty("opacity", 0.5);
+		p2.style.setProperty("opacity", 0.5);
+	})
+
+
+	p1.addEventListener("mouseout", function() {
+		p2.style.setProperty("opacity", 1);
+		p3.style.setProperty("opacity", 1);
+	})
+
+	p2.addEventListener("mouseout", function() {
+		p1.style.setProperty("opacity", 1);
+		p3.style.setProperty("opacity", 1);
+	})
+
+	p3.addEventListener("mouseout", function() {
+		p1.style.setProperty("opacity", 1);
+		p2.style.setProperty("opacity", 1);
+	})
+
+
+	p1.addEventListener("click", function() {
+		doTheEvent(c1u1e1);
+	})
+
+	p2.addEventListener("click", function() {
+		doTheEvent(c1u1e1);
+	})
+
+	p3.addEventListener("click", function() {
+		doTheEvent(c1u1e1);
+	})
 }
 
 //==================== CHAPTER 1 ====================
