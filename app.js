@@ -2069,12 +2069,12 @@ let c2u1e4v2 = new MyEvent(
 	"Dziękuję za uwagę, wszystkiego dobrego.",
 	"Pamiętajcie by być dobrej myśli.",
 	function (){
-		changeChapterPlace(1, "Laboratorium Earthless")
-		doTheEvent(c2u2e1)
+		changeChapterPlace(1, "Laboratorium Earthless");
+		doTheEvent(c2u2e1);
 	},
 	function (){
-		changeChapterPlace(1, "Laboratorium Earthless")
-		doTheEvent(c2u2e1)
+		changeChapterPlace(1, "Laboratorium Earthless");
+		doTheEvent(c2u2e1);
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
