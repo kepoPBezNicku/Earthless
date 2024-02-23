@@ -649,6 +649,20 @@ main {
 	border: 3px solid red;
 }
 
+.planets
+
+.planets.planet1 {
+	background-image: url(bogosBinted/planet1);
+}
+
+.planets.planet2 {
+	background-image: url(bogosBinted/planet2);
+}
+
+.planets.planet3 {
+	background-image: url(bogosBinted/planet3);
+}
+
 @media only screen and (max-width: 1000px) {
 	.main-index {
 		margin-top: 100px
