@@ -2089,7 +2089,61 @@ let c2u2e1 = new MyEvent(
 	"bogosBinted/stol.png",
 	[new MyLine(
 		"bogosBinted/jakub.png", "Jakub", colors["green"],
-		"testline"
+		"Dobrze, to teraz powtórzmy sobie podział obowiązków. Henryk, jaki mamy plan na wyżywinie wszystkich?" //HENRYK ILIA KRZYCHU AMINA MARCIN ALBERT 
+	),
+	new MyLine(
+		"bogosBinted/henryk.png", "Henryk", colors["brown"],
+		"Kierowniku, tu nie ma żadnej filizofii! W moim domu rodzinnym nauczyłem się automatyzować nasze uprawy. Wystarczy trochę kreatywności, i zrobię Ci samorobiące się uprawy czego tylko Kkerownik będzie chciał. Eee...zacząłbym od ziemniaków, kocham ziemniaki!"
+	),
+	new MyLine(
+		"bogosBinted/jakub.png", "Jakub", colors["green"],
+		"Ale jak chcesz cokolwiek posadzić na statku kosmicznym?"
+	),
+	new MyLine(
+		"bogosBinted/ilia.png", "Ilia", colors["purple"],
+		"O to się nie martw! Nie pamiętasz jak Ci opowiadałam o tym, czego potrzebuje roślina? "
+	),
+	new MyLine(
+		"bogosBinted/jakub.png", "Jakub", colors["green"],
+		"No pewnie, roślina potrzebuje..."
+	)],
+	"światła, wody i tlenu.",
+	"światła, wody i dwutlenku węgla",
+	function (){
+		data.stats.research+=.05
+		doTheEvent(c2u2e2v1)
+	},
+	function (){
+		data.stats.research-=.05
+		doTheEvent(c2u2e2v2)
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
+)
+
+let c2u2e2v1 = new MyEvent(
+	"bogosBinted/jakub.png",
+	[new MyLine(
+		"bogosBinted/ilia.png", "Ilia", colors["purple"],
+		"Skad! Po co jej tlen? Ona go produkuje, a nie potrzebuje. Za to będzie potrzebowała dwutlenku węgla, który jest wydychany przez ludzi, więc z tym nie będzie problemu. Podobnie z wodą, jeśli zaprojektujemy odpowiednie systemy filtracji, nigdy nam jej nie zabraknie. Jeśli chodzi o światło, nie koniecznie musi być ono słoneczne, ale musimy użyć specialnych lapm dostosowanych do roślin"
+	)],
+	"LewaOpcja",
+	"PrawaOpcja",
+	function (){
+		//doTheEvent(cuev)
+	},
+	function (){
+		//doTheEvent(cuev)
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+
+let c2u2e2v2 = new MyEvent(
+	"bogosBinted/jakub.png",
+	[new MyLine(
+		"bogosBinted/jakub.png", "Jakub", colors["purple"],
+		""
 	)],
 	"LewaOpcja",
 	"PrawaOpcja",
