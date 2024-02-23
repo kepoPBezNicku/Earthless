@@ -4,6 +4,8 @@ let newDiv = document.querySelector(".respNav");
 let resources = document.getElementById("resources");
 let alienRelationsContainer = document.getElementById("alien-relations");
 let burger = document.getElementById("burger");
+let decisionButton = document.querySelector("#decision-button");
+let mainSection = document.getElementById("main-section");
 
 var buttonLeft = document.querySelector("button#left");
 var buttonRight = document.querySelector("button#right");
@@ -638,8 +640,10 @@ function eventsRemover() {
 
 function doTheEvent(ob) {
 	middleDiv.className = "";
-	middleDiv.textContent = "";
+	mainSection.className = "";
+	// middleDiv.textContent = "";
 
+	decisionButton.style.setProperty("display", "flex");
 	eventsRemover();
 
 	let buttonLeft = document.querySelector("button#left");
@@ -730,6 +734,9 @@ function gameOverFunction(gameOverClassName, cause) {
 
 function changePlanet() {
 	middleDiv.textContent = "";
+	
+	
+	decisionButton.style.setProperty("display", "none");
 	let p1 = document.createElement("div");
 	p1.className = "planet1";
 	let p2 = document.createElement("div");
@@ -737,7 +744,13 @@ function changePlanet() {
 	let p3 = document.createElement("div");
 	p3.className = "planet3";
 
-	middleDiv.classList.add("planets");
+	p1.textContent = "GUWNO";
+
+	middleDiv.insertAdjacentElement("beforeend", p1);
+	middleDiv.insertAdjacentElement("beforeend", p3);
+	middleDiv.insertAdjacentElement("beforeend", p2);
+
+	mainSection.classList.add("planets");
 }
 
 //==================== CHAPTER 1 ====================
@@ -754,6 +767,7 @@ let c0u1e1 = new MyEvent(
 	"*nic nie rób*",
 	function (){
 		doTheEvent(c0u1e2)
+		changePlanet()
 	},
 	function (){
 		doTheEvent(c0u1e2)

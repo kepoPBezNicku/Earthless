@@ -359,7 +359,8 @@ ul#alien-relations {
 		background-color: var(--chapter-background-color);
 		border-bottom-left-radius: 25px;
 		transform: translateX(160px);
-		transition: 0.3s ease transform;
+		transition: 0.3s ease;
+		transition-property: background-color, transform;
 		flex-direction: column;
 	}
 	ul#alien-relations {
@@ -469,13 +470,13 @@ main {
 	z-index: 1;
 }
 
-#main-section .choice #middleDiv {
+#middleDiv {
 	display: flex;
 	flex-direction: column;
 	margin: 0px auto 15px;
 }
 
-#main-section .choice #middleDiv .whoInfo {
+#middleDiv .whoInfo {
 	align-items: center;
 	width: 100%;
 	gap: 0px;
@@ -485,7 +486,7 @@ main {
 	grid-template-rows: 0.5fr 1fr;
 }
 
-#main-section .choice #middleDiv .bigPhoto {
+#middleDiv .bigPhoto {
 	width: 80%;
 	max-width: 400px;
 	min-width: 400px;
@@ -493,23 +494,23 @@ main {
 	border-radius: 20px;
 }
 
-#main-section .choice #middleDiv .linePhoto {
+#middleDiv .linePhoto {
 	width: 50px;
 	border-radius: 10px;
 }
 
-#main-section .choice #middleDiv .lineWho {
+#middleDiv .lineWho {
 	width: fit-content;
 	font-size: 2rem;
 	margin: 0px 0px 0px 10px;
 }
 
-#main-section .choice #middleDiv .lineText {
+#middleDiv .lineText {
 	grid-column: 1/3;
 	margin: 10px;
 }
 
-#main-section .choice #decision-button {
+#decision-button {
 	display: flex;
 	justify-content: space-evenly;
 	gap: 20px;
@@ -519,20 +520,20 @@ main {
 	-ms-user-select: none;
 }
 
-#main-section .choice #decision-button div {
+#decision-button div {
 	display: flex;
 	justify-content: center;
 }
 
-#main-section .choice #decision-button div {
+#decision-button div {
 	border-radius: 5px;
 }
 
-#main-section .choice #decision-button div.samouczek button {
+#decision-button div.samouczek button {
 	background-color: rgba(0,0,0,0);
 }
 
-#main-section .choice #decision-button button {
+#decision-button button {
 	border-radius: 5px;
 	padding: 10px 25px;
 	font-size: 1rem;
@@ -544,7 +545,7 @@ main {
 	transition-property: background-color, color;
 }
 
-#main-section .choice #decision-button button:hover {
+#decision-button button:hover {
 	background-color: #4c566a;
 }
 
@@ -649,18 +650,33 @@ main {
 	border: 3px solid red;
 }
 
-.planets
-
-.planets.planet1 {
-	background-image: url(bogosBinted/planet1);
+#middleDiv.planets {
+	/* position: absolute; */
+	/* top: 0px; */
+	/* left: 50%; */
+	/* transform: translateX(-50%); */
+	justify-content: space-between;
+	flex-direction: row;
+	margin-top: 100px;
+	gap: 10px;
 }
 
-.planets.planet2 {
-	background-image: url(bogosBinted/planet2);
+.planets div {
+	background-size: cover;
+	width: 250px;
+	height: 250px;
 }
 
-.planets.planet3 {
-	background-image: url(bogosBinted/planet3);
+.planets .planet1 {
+	background-image: url(bogosBinted/planet1.png);
+}
+
+.planets .planet2 {
+	background-image: url(bogosBinted/planet2.png);
+}
+
+.planets .planet3 {
+	background-image: url(bogosBinted/planet3.png);
 }
 
 @media only screen and (max-width: 1000px) {
@@ -682,7 +698,7 @@ main {
 	.main-index {
 		padding-top: 0px;
 	}
-	#main-section .choice #decision-button {
+	#decision-button {
 		align-items: center;
 	}
 }
@@ -695,16 +711,16 @@ main {
 		width: fit-content;
 		gap: 60px;
 	}
-	#main-section .choice #middleDiv .linePhoto {
+	#middleDiv .linePhoto {
 		margin: 0px 0px 0px auto;
 	}
-	#main-section .choice #middleDiv .lineWho {
+	#middleDiv .lineWho {
 		font-size: 1.5rem;
 	}
-	#main-section .choice #decision-button {
+	#decision-button {
 		flex-direction: column-reverse;
 	}
-	#main-section .choice #decision-button input {
+	#decision-button input {
 		margin: 10px auto;
 	}
 	#samouczek-container {
@@ -754,7 +770,7 @@ main {
 		top: 10px;
 		left: 40px;
 	}
-	#main-section .choice #middleDiv .bigPhoto {
+	#middleDiv .bigPhoto {
 		min-width: 200px;
 	}
 	#samouczek-box {
