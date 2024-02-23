@@ -176,9 +176,22 @@ function loadingScreen() {
 
 // ============ DISPLAYING ICONS ============
 
-function showIcons(icon) {
+function showIcons(icon, caption) {
 	icon.style.setProperty("display", "flex");
+	let info = document.createElement("span");
+	info.textContent = caption;
+	info.classList.add("iconCaption");
+	icon.insertAdjacentElement("beforeend", info);
+
+	setTimeout(function () {
+		info.classList.add("closing");
+	}, 5000);
+
+	setTimeout(function () {
+		info.classList.add("closed");
+	}, 6000)
 }
+
 
 // =========================================================
 
@@ -382,7 +395,7 @@ function statsChanger(element1, list) {
 		statsFuse(ner, mag, agreS, pOp, mon, adv, res, fue, foo);
 		colorChanger(ner, mag, agreS, pOp, mon, adv, res, fue, foo);
 	});
-	
+
 	element1.addEventListener("mouseout", function out() {
 		nerds.style.setProperty("--transform","scaleY(" + data.stats.alienRelations.nerds + ")");
 		magicals.style.setProperty("--transform","scaleY(" + data.stats.alienRelations.magicals + ")");
@@ -642,9 +655,10 @@ samouczekNext.addEventListener("click", function () {
 	samouczekProgress++;
 	tutorialBox(sArray[samouczekProgress]);
 	if (samouczekProgress == 4) {
-		showIcons(adviser);
+		showIcons(adviser, "Relacja z doradcą");
 	}
 	if (samouczekProgress == 9) {
+		samouczekNext.style.setProperty("padding", "0px");
 		samouczekNext.textContent = "";
 		let link = document.createElement("a");
 		let node = document.createTextNode("Przejdź do gry");

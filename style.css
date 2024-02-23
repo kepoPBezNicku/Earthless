@@ -653,6 +653,10 @@ main {
 	border: 3px solid red;
 }
 
+#samouczek-next a {
+	padding: 10px 15px;
+}
+
 #main-section.planets {
 	width: 100%;
 	max-width: 100%;
