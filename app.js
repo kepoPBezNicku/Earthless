@@ -64,12 +64,19 @@ let research = document.querySelector("#header-section nav #resources #resources
 let fuel = document.querySelector("#header-section nav #resources #resources-container li:nth-of-type(5)");
 let food = document.querySelector("#header-section nav #resources #resources-container li:nth-of-type(6)");
 
+// ====================== LADOWANIE ZDJEC ======================
+
+function imageLoader() {
+	let imgArray = document.querySelectorAll("img");
+
+}
+
 // ====================== MUZYKA ======================
 var audio1 = new Audio("audio/Arcadia.mp3");
-var audio2 = new Audio("audio/Black Vortex.mp3");
-var audio3 = new Audio("audio/Frost Waltz.mp3");
+var audio2 = new Audio("audio/Frost Waltz.mp3");
+var audio3 = new Audio("audio/The Descent.mp3");
 var audio4 = new Audio("audio/Hitman.mp3");
-var audio5 = new Audio("audio/The Descent.mp3");
+var audio5 = new Audio("audio/Black Vortex.mp3");
 var audio6 = new Audio("audio/Truth of the Legend.mp3");
 
 let start = document.createElement("button");
@@ -630,6 +637,7 @@ function eventsRemover() {
 // =========================================================
 
 function doTheEvent(ob) {
+	middleDiv.className = "";
 	middleDiv.textContent = "";
 
 	eventsRemover();
@@ -718,6 +726,18 @@ function gameOverFunction(gameOverClassName, cause) {
 		div.insertAdjacentElement("beforeend", playAgain);
 		body.style.setProperty("opacity", 1)
 	}, 1000)
+}
+
+function changePlanet() {
+	middleDiv.textContent = "";
+	let p1 = document.createElement("div");
+	p1.className = "planet1";
+	let p2 = document.createElement("div");
+	p2.className = "planet2";
+	let p3 = document.createElement("div");
+	p3.className = "planet3";
+
+	middleDiv.classList.add("planets");
 }
 
 //==================== CHAPTER 1 ====================
@@ -1145,7 +1165,7 @@ let c1u1e6 = new MyEvent(
 );
 
 let c1u1e7 = new MyEvent(
-	"bogosBinted/taxi.png",
+	"bogosBinted/mirek.png",
 	[
 		new MyLine(
 			"bogosBinted/mirek.png","Pan Mirek",colors["yellow"],
@@ -1769,7 +1789,8 @@ let c1u2e15v1 = new MyEvent(
 		"Mam nadzieję że ta zniesiona cisza wyborcza nam nie zaszkodzi. Ale za to mamy narzędzie to kamapnii nawet w dzień wyborów!"
 	),
 	new MyLine(
-		"bogosBinted/ilia.png", "Ilia", colors["purple"]
+		"bogosBinted/ilia.png", "Ilia", colors["purple"],
+		// NAPISZ TU COS DEBILU ZAPOMNIALES
 	),new MyLine(
 		"bogosBinted/krzys.png", "Krzychu", colors['orange'],
 		"Chodźcie, jest ogłoszenie wyników!"
@@ -1947,7 +1968,7 @@ let c2u1e2v1 = new MyEvent(
 		"Dobra to zaczynamy. 3, 2, ..."
 	),
 	new MyLine(
-		"bogosBinted/jakub.png", "Jakub", colors["aqua"],
+		"bogosBinted/jakub.png", "Jakub", colors["green"],
 		"Witajcie rodacy! Na początku chciałbyhm wam bardoz podziękować za zaufanie. Rola prezydenta to coś, na co przygotowywyałem się całe życie. Stoimy przed wielkimi wyzwaniami jak naród, i jako nawet ludzkość i w związku z naszą misją ratowania narodu muszę wam powiedzieć, że..."
 	)],
 	"Musiscie się przygotować, nie każdy będzie mógł wejść na statek...",
@@ -2147,6 +2168,25 @@ let c2u2e2v2 = new MyEvent(
 	},
 	function (){
 		//doTheEvent(cuev)
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+
+// W TYM MA BYC ZROBIONY OSTATNI SLAJD PRZED WYBOREM ZMIANY PLANETY
+let cuev = new MyEvent(
+	"bogosBinted/jakub.png",
+	[new MyLine(
+		"bogosBinted/jakub.png", "Jakub", colors['green'],
+		"testline"
+	)],
+	"LewaOpcja",
+	"PrawaOpcja",
+	function (){
+		
+	},
+	function (){
+		
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
