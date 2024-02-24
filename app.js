@@ -53,6 +53,8 @@ let colors = {
 #060d23
 */
 
+
+
 // ============ RESOURCE'S PSEUDOELEMENTS ============
 
 let nerds = document.querySelector("#alien-relations li:nth-of-type(1)");
@@ -65,6 +67,47 @@ let adviser = document.querySelector("#header-section nav #resources #resources-
 let research = document.querySelector("#header-section nav #resources #resources-container li:nth-of-type(4)");
 let fuel = document.querySelector("#header-section nav #resources #resources-container li:nth-of-type(5)");
 let food = document.querySelector("#header-section nav #resources #resources-container li:nth-of-type(6)");
+
+// ====================== POWIADOMIENIA ======================
+
+let bell = document.getElementById("noti");
+let bellNumber = document.querySelector("#noti div")
+let notifications = document.getElementById("notifications");
+let licznik = 0;
+function noti(text) {
+	licznik = parseInt(licznik);
+	licznik++;
+	licznik = licznik.toString();
+	bellNumber.textContent = licznik;
+	bellNumber.style.setProperty("transform", "scale(1)");
+
+	let newNotification = document.createElement("p");
+	notifications.insertAdjacentElement('beforeend', newNotification);
+	newNotification.textContent = text;
+	newNotification.classList.add("newNotification");
+	newNotification.classList.add("unread");
+}
+
+bell.addEventListener("click", function openNoti() {
+	bellNumber.style.setProperty("transform", "scale(0)");
+	bellNumber.textContent = "";
+	licznik = 0;
+	if (notifications.classList.contains("closed")) {
+		notifications.classList.remove("closed");
+		notifications.classList.add("open");
+		let newNotification = document.querySelector(".newNotification");
+		if (newNotification.classList.contains("unread")) {
+			newNotification.classList.remove("unread");
+			newNotification.classList.add("read");
+		}
+		setTimeout(function() {
+			newNotification.style.setProperty("background-color", "rgba(0,0,0,0)")
+		}, 5000)
+	} else if (notifications.classList.contains("open")) {
+		notifications.classList.add("closed");
+		notifications.classList.remove("open");
+	}
+})
 
 // ====================== LADOWANIE ZDJEC ======================
 
@@ -96,7 +139,7 @@ function playMusic(audio) {
 }
 
 
-// ====================== LEAVING SITE ALERT ======================
+// ========== OSTRZEZENIE PODCZAS WYCHODENIA Z STRONY =========
 window.addEventListener("beforeunload", function (e) {
 	var confirmationMessage = "Czy na pewno chcesz opuścić stronę?";
 	e.returnValue = confirmationMessage;
@@ -107,7 +150,7 @@ window.addEventListener("unload", function () {
 	console.log("Strona jest odświeżana lub opuszczana.");
 });
 
-// ==== Otwieranie repsonsywnego menu przyciskiem ====
+// ============ RESPONSYWNE MENU STATYSTYK ============
 
 burger.addEventListener("click", function () {
 	if (resources.className == "") {
@@ -194,7 +237,7 @@ function fontAndContrast() {
 
 fontAndContrast();
 
-// ============ LOADING SCREEN ============
+// ============ EKRAN LADOWANIA ============
 
 function loadingScreen() {
 	let loadingScreen = document.querySelector("#loading-screen");
@@ -208,7 +251,7 @@ function loadingScreen() {
 
 // loadingScreen();
 
-// ============ DISPLAYING ICONS ============
+// ============ WYSWIETLANIE IKON ============
 
 function showIcons(icon, caption) {
 	icon.style.setProperty("display", "flex");
@@ -216,6 +259,8 @@ function showIcons(icon, caption) {
 	info.textContent = caption;
 	info.classList.add("iconCaption");
 	icon.insertAdjacentElement("beforeend", info);
+	let text = "Nowa statystyka została odblokowana: " + caption;
+	noti(text);
 
 	setTimeout(function () {
 		info.classList.add("closing");
@@ -616,16 +661,6 @@ class MyLine {
 	}
 }
 
-// class Planets {
-// 	constructor(text, photo, sL, sP) {
-// 		this.text = text;
-// 		this.photo = photo;
-// 		this.sL = sL;
-// 		this.sP = sP;
-// 	}
-// }
-
-
 // ============= KLONOWANIE (USUWANIE EVENTOW) =============
 
 function eventsRemover() {
@@ -698,6 +733,9 @@ function changeChapterPlace(x, place) {
 	chapterNumber.textContent = chapterText;
 
 	chapterPlace.textContent = place;
+
+	let text = "Etap: " + x + ", oraz lokalizacja: " + place;
+	noti(text);
 }
 
 
@@ -805,14 +843,17 @@ function changePlanet() {
 
 	p1.addEventListener("click", function() {
 		doTheEvent(c1u1e1);
+		noti("Wybrana nowa planeta: JAKAS NIE PAMIETAM JAKA 1");
 	})
 
 	p2.addEventListener("click", function() {
 		doTheEvent(c1u1e1);
+		noti("Wybrana nowa planeta: JAKAS NIE PAMIETAM JAKA 2");
 	})
 
 	p3.addEventListener("click", function() {
 		doTheEvent(c1u1e1);
+		noti("Wybrana nowa planeta: JAKAS NIE PAMIETAM JAKA 3");
 	})
 }
 
@@ -830,10 +871,9 @@ let c0u1e1 = new MyEvent(
 	"*nic nie rób*",
 	function (){
 		doTheEvent(c0u1e2)
-		changePlanet()
 	},
 	function (){
-		doTheEvent(c0u1e2)
+		doTheEvent(c0u1e2);
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -2251,23 +2291,23 @@ let c2u2e2v2 = new MyEvent(
 )
 
 // W TYM MA BYC ZROBIONY OSTATNI SLAJD PRZED WYBOREM ZMIANY PLANETY
-let cuev = new MyEvent(
-	"bogosBinted/jakub.png",
-	[new MyLine(
-		"bogosBinted/jakub.png", "Jakub", colors['green'],
-		"testline"
-	)],
-	"LewaOpcja",
-	"PrawaOpcja",
-	function (){
-		
-	},
-	function (){
-		
-	},
-	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
-	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
-)
+// let cuev = new MyEvent(
+// 	"bogosBinted/jakub.png",
+// 	[new MyLine(
+// 		"bogosBinted/jakub.png", "Jakub", colors['green'],
+// 		"testline"
+// 	)],
+// 	"LewaOpcja",
+// 	"PrawaOpcja",
+// 	function (){
+// 		changePlanet();
+// 	},
+// 	function (){
+// 		changePlanet();
+// 	},
+// 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+// 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+// )
 
 // ZEBY WLACZYC KOLEJNA IKONKE STATOW TRZEBA WPISAC showIcons(np. nerds/alienRelations)
 // szczerze?
