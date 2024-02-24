@@ -842,18 +842,18 @@ function changePlanet() {
 
 
 	p1.addEventListener("click", function() {
-		doTheEvent(c1u1e1);
-		noti("Wybrana nowa planeta: JAKAS NIE PAMIETAM JAKA 1");
+		doTheEvent();
+		noti("Wybrana nowa planeta: KOI-4878.01");
 	})
 
 	p2.addEventListener("click", function() {
-		doTheEvent(c1u1e1);
-		noti("Wybrana nowa planeta: JAKAS NIE PAMIETAM JAKA 2");
+		doTheEvent();
+		noti("Wybrana nowa planeta: TRAPPIST-1e");
 	})
 
 	p3.addEventListener("click", function() {
-		doTheEvent(c1u1e1);
-		noti("Wybrana nowa planeta: JAKAS NIE PAMIETAM JAKA 3");
+		doTheEvent();
+		noti("Wybrana nowa planeta: TRAPPIST-1e");
 	})
 }
 
