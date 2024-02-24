@@ -433,7 +433,7 @@ food.style.setProperty("--transform", "scaleY(" + data.stats.food + ")");
 
 class MyEvent {
 	constructor(photoPath, line, opL, opP, fL, fP, sL, sP) {
-		this.photoPath = photoPath; //ex jakub.png
+		this.photoPath = photoPath; //ex jakub.jpg
 		this.line = line; //list of obiects (path,who, color, line)
 		this.opL = opL; //string
 		this.opP = opP; //string
@@ -628,10 +628,10 @@ let s10 = new Samouczek (
 let sArray = [s1,s2,s3,s4,s5,s6,s7,s8,s9,s10]
 
 let test1 = new MyEvent(
-	"bogosBinted/jakub.png", //budzik.png
+	"bogosBinted/jakub.jpg", //budzik.jpg
 	[
 		new MyLine(
-			"bogosBinted/jakub.png", "Jakub", colors['green'],
+			"bogosBinted/jakub.jpg", "Jakub", colors['green'],
 			"Ooh, co to... co ty było? Co to niby miało... JUŻ 8, ZASPAŁEM! Ale ten sen..."
 		),
 	],

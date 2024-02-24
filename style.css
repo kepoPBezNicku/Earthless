@@ -18,7 +18,7 @@ body {
 	--button: #d8dee9;
 	--color: black;
 
-	--background-image: url(bogosBinted/background-main1.png)
+	--background-image: url(bogosBinted/background-main1.jpg)
 }
 
 :root.contrast {
@@ -27,7 +27,7 @@ body {
 	--header-color: black;
 	--button: black;
 	--color: white;
-	--background-image: url(bogosBinted/background-main1-contrast.png	);
+	--background-image: url(bogosBinted/background-main1-contrast.jpg	);
 }
 
 html {
@@ -414,7 +414,7 @@ header {
 /* ---------------------------------------------------- */
 
 .background-image-index {
-	background-image: url(bogosBinted/background.png);
+	background-image: url(bogosBinted/background.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
@@ -624,7 +624,7 @@ main {
 	background-size: cover;
 	background-color: black;
 	background-attachment: fixed;
-	background-image: url(bogosBinted/gameOver.png);
+	background-image: url(bogosBinted/gameOver.jpg);
 	opacity: 0;
 	transition: 1.5s ease opacity;
 	position: relative;
@@ -636,12 +636,12 @@ main {
 	background-size: cover;
 	background-color: black;
 	background-attachment: fixed;
-	background-image: url(bogosBinted/gameOverSmierc.png);
+	background-image: url(bogosBinted/gameOverSmierc.jpg);
 }
 
 @media only screen and (max-width: 700px) {
 	.gameOver {
-		background-image: url(bogosBinted/gameOverResp.png);
+		background-image: url(bogosBinted/gameOverResp.jpg);
 	}	
 }
 
