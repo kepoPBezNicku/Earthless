@@ -2298,6 +2298,45 @@ let c2u2e2v2 = new MyEvent(
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
 )
 
+//dokonczyc naukowe pierdolenie (MOJCIECH HELP)
+
+//podjąć decyzje ws zdobywania paliwa (z marcinem i chemikiem)
+
+//wybrać plan lotu
+
+//lot
+
+//pierwsze problemy na statku
+
+//kontakt z cywilizacjami (notion)
+
+//przygotować się do życia na nowej planecie
+
+//wybrać układy z cywilizacjami
+
+//wojna / domowa
+
+
+/*
+let cuev = new MyEvent(
+	"bogosBinted/jakub.jpg",
+	[new MyLine(
+		"bogosBinted/jakub.jpg", "Jakub", colors[],
+		"testline"
+	)],
+	"LewaOpcja",
+	"PrawaOpcja",
+	function (){
+		//doTheEvent(cuev)
+	},
+	function (){
+		//doTheEvent(cuev)
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+*/
+
 // W TYM MA BYC ZROBIONY OSTATNI SLAJD PRZED WYBOREM ZMIANY PLANETY
 // let cuev = new MyEvent(
 // 	"bogosBinted/jakub.jpg",
@@ -2319,25 +2358,5 @@ let c2u2e2v2 = new MyEvent(
 
 // ZEBY WLACZYC KOLEJNA IKONKE STATOW TRZEBA WPISAC showIcons(np. nerds/alienRelations)
 // szczerze?
-
-/*
-let cuev = new MyEvent(
-	"bogosBinted/jakub.jpg",
-	[new MyLine(
-		"bogosBinted/jakub.jpg", "Jakub", colors[],
-		"testline"
-	)],
-	"LewaOpcja",
-	"PrawaOpcja",
-	function (){
-		//doTheEvent(cuev)
-	},
-	function (){
-		//doTheEvent(cuev)
-	},
-	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
-	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
-)
-*/
 
 doTheEvent(c0u1e1);
