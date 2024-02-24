@@ -853,7 +853,7 @@ function changePlanet() {
 
 	p3.addEventListener("click", function() {
 		doTheEvent();
-		noti("Wybrana nowa planeta: TRAPPIST-1e");
+		noti("Wybrana nowa planeta: Proxima Centauri b");
 	})
 }
 
