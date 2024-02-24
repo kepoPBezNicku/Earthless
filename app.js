@@ -4,6 +4,8 @@ let newDiv = document.querySelector(".respNav");
 let resources = document.getElementById("resources");
 let alienRelationsContainer = document.getElementById("alien-relations");
 let burger = document.getElementById("burger");
+let decisionButton = document.querySelector("#decision-button");
+let mainSection = document.getElementById("main-section");
 
 var buttonLeft = document.querySelector("button#left");
 var buttonRight = document.querySelector("button#right");
@@ -51,6 +53,8 @@ let colors = {
 #060d23
 */
 
+
+
 // ============ RESOURCE'S PSEUDOELEMENTS ============
 
 let nerds = document.querySelector("#alien-relations li:nth-of-type(1)");
@@ -64,12 +68,61 @@ let research = document.querySelector("#header-section nav #resources #resources
 let fuel = document.querySelector("#header-section nav #resources #resources-container li:nth-of-type(5)");
 let food = document.querySelector("#header-section nav #resources #resources-container li:nth-of-type(6)");
 
+// ====================== POWIADOMIENIA ======================
+
+let bell = document.getElementById("noti");
+let bellNumber = document.querySelector("#noti div")
+let notifications = document.getElementById("notifications");
+let licznik = 0;
+let licznik2 = 0;
+function noti(text) {
+	licznik = parseInt(licznik);
+	licznik++;
+	licznik = licznik.toString();
+	bellNumber.textContent = licznik;
+	bellNumber.style.setProperty("transform", "scale(1)");
+
+	let newNotification = document.createElement("p");
+	notifications.insertAdjacentElement('beforeend', newNotification);
+	newNotification.textContent = text;
+	let newNotiClass = "newNotification" + licznik2.toString();
+	newNotification.classList.add(newNotiClass);
+	newNotification.classList.add("unread");
+}
+
+bell.addEventListener("click", function openNoti() {
+	bellNumber.style.setProperty("transform", "scale(0)");
+	bellNumber.textContent = "";
+	licznik = 0;
+	if (notifications.classList.contains("closed")) {
+		notifications.classList.remove("closed");
+		notifications.classList.add("open");
+		let newNotification = document.querySelectorAll(".unread");
+		newNotification.forEach((el) => {
+			el.classList.remove("unread");
+			el.classList.add("read");
+			setTimeout(function() {
+				el.style.setProperty("background-color", "rgba(0,0,0,0)")
+			}, 5000)
+		})
+	} else if (notifications.classList.contains("open")) {
+		notifications.classList.add("closed");
+		notifications.classList.remove("open");
+	}
+})
+
+// ====================== LADOWANIE ZDJEC ======================
+
+function imageLoader() {
+	// let imgArray = document.querySelectorAll("img");
+}
+
 // ====================== MUZYKA ======================
 var audio1 = new Audio("audio/Arcadia.mp3");
-var audio2 = new Audio("audio/Black Vortex.mp3");
-var audio3 = new Audio("audio/Frost Waltz.mp3");
+var audio2 = new Audio("audio/Frost Waltz.mp3");
+var audio3 = new Audio("audio/The Descent.mp3");
 var audio4 = new Audio("audio/Hitman.mp3");
-var audio5 = new Audio("audio/The Descent.mp3");
+var audio5 = new Audio("audio/Black Vortex.mp3");
 var audio6 = new Audio("audio/Truth of the Legend.mp3");
 
 let start = document.createElement("button");
@@ -88,7 +141,7 @@ function playMusic(audio) {
 }
 
 
-// ====================== LEAVING SITE ALERT ======================
+// ========== OSTRZEZENIE PODCZAS WYCHODENIA Z STRONY =========
 window.addEventListener("beforeunload", function (e) {
 	var confirmationMessage = "Czy na pewno chcesz opuścić stronę?";
 	e.returnValue = confirmationMessage;
@@ -99,7 +152,7 @@ window.addEventListener("unload", function () {
 	console.log("Strona jest odświeżana lub opuszczana.");
 });
 
-// ==== Otwieranie repsonsywnego menu przyciskiem ====
+// ============ RESPONSYWNE MENU STATYSTYK ============
 
 burger.addEventListener("click", function () {
 	if (resources.className == "") {
@@ -142,11 +195,11 @@ function fontAndContrast() {
 		if (contrast.classList.contains("contrastON")) {
 			document.documentElement.className = "contrast";
 			contrast.style.setProperty("color", colors["green"]);
-			document.body.style.setProperty("background-image", "url(bogosBinted/background-main1-contrast.png)")
+			document.body.style.setProperty("background-image", "url(bogosBinted/background-main1-contrast.jpg)")
 		} else if (contrast.classList.contains("contrastOFF")) {
 			document.documentElement.className = "";
 			contrast.style.setProperty("color", colors["white"]);
-			document.body.style.setProperty("background-image", "url(bogosBinted/background-main1.png)")
+			document.body.style.setProperty("background-image", "url(bogosBinted/background-main1.jpg)")
 		}
 	})
 
@@ -156,11 +209,11 @@ function fontAndContrast() {
 		if (contrast.classList.contains("contrastON")) {
 			document.documentElement.className = "";
 			contrast.style.setProperty("color", colors["white"]);
-			document.body.style.setProperty("background-image", "url(bogosBinted/background-main1.png)")
+			document.body.style.setProperty("background-image", "url(bogosBinted/background-main1.jpg)")
 		} else if (contrast.classList.contains("contrastOFF")) {
 			document.documentElement.className = "contrast";
 			contrast.style.setProperty("color", colors["green"]);
-			document.body.style.setProperty("background-image", "url(bogosBinted/background-main1-contrast.png)")
+			document.body.style.setProperty("background-image", "url(bogosBinted/background-main1-contrast.jpg)")
 		}
 	})
 
@@ -173,20 +226,20 @@ function fontAndContrast() {
 			document.documentElement.className = "";
 			contrast.style.setProperty("color", colors["white"]);
 			contrast.classList.add("contrastOFF");
-			document.body.style.setProperty("background-image", "url(bogosBinted/background-main1.png)")
+			document.body.style.setProperty("background-image", "url(bogosBinted/background-main1.jpg)")
 		} else if (contrast.classList.contains("contrastOFF")) {
 			contrast.classList.remove("contrastOFF");
 			document.documentElement.className = "contrast";
 			contrast.style.setProperty("color", colors["green"]);
 			contrast.classList.add("contrastON");
-			document.body.style.setProperty("background-image", "url(bogosBinted/background-main1-contrast.png)")
+			document.body.style.setProperty("background-image", "url(bogosBinted/background-main1-contrast.jpg)")
 		}
 	})
 }
 
 fontAndContrast();
 
-// ============ LOADING SCREEN ============
+// ============ EKRAN LADOWANIA ============
 
 function loadingScreen() {
 	let loadingScreen = document.querySelector("#loading-screen");
@@ -198,9 +251,7 @@ function loadingScreen() {
 	}, 3190);
 }
 
-// loadingScreen();
-
-// ============ DISPLAYING ICONS ============
+// ============ WYSWIETLANIE IKON ============
 
 function showIcons(icon, caption) {
 	icon.style.setProperty("display", "flex");
@@ -208,6 +259,8 @@ function showIcons(icon, caption) {
 	info.textContent = caption;
 	info.classList.add("iconCaption");
 	icon.insertAdjacentElement("beforeend", info);
+	let text = "Nowa statystyka została odblokowana: " + caption;
+	noti(text);
 
 	setTimeout(function () {
 		info.classList.add("closing");
@@ -588,7 +641,7 @@ food.style.setProperty("--transform", "scaleY(" + data.stats.food + ")");
 
 class MyEvent {
 	constructor(photoPath, line, opL, opP, fL, fP, sL, sP) {
-		this.photoPath = photoPath; //ex jakub.png
+		this.photoPath = photoPath; //ex jakub.jpg
 		this.line = line; //list of obiects (path,who, color, line)
 		this.opL = opL; //string
 		this.opP = opP; //string
@@ -608,16 +661,6 @@ class MyLine {
 	}
 }
 
-// class Planets {
-// 	constructor(text, photo, sL, sP) {
-// 		this.text = text;
-// 		this.photo = photo;
-// 		this.sL = sL;
-// 		this.sP = sP;
-// 	}
-// }
-
-
 // ============= KLONOWANIE (USUWANIE EVENTOW) =============
 
 function eventsRemover() {
@@ -631,7 +674,10 @@ function eventsRemover() {
 
 function doTheEvent(ob) {
 	middleDiv.textContent = "";
+	middleDiv.className = "";
+	mainSection.className = "";
 
+	decisionButton.style.setProperty("display", "flex");
 	eventsRemover();
 
 	let buttonLeft = document.querySelector("button#left");
@@ -687,6 +733,9 @@ function changeChapterPlace(x, place) {
 	chapterNumber.textContent = chapterText;
 
 	chapterPlace.textContent = place;
+
+	let text = "Etap: " + x + ", oraz lokalizacja: " + place;
+	noti(text);
 }
 
 
@@ -698,7 +747,7 @@ function gameOverFunction(gameOverClassName, cause) {
 	body.style.setProperty("background-image", "url()");
 	body.className = gameOverClassName;
 	setTimeout(function() {
-		body.style.setProperty("background-image", "url(bogosBinted/gameOver.png)");
+		body.style.setProperty("background-image", "url(bogosBinted/gameOver.jpg)");
 
 		let div = document.createElement("div");
 		body.insertAdjacentElement("afterbegin", div);
@@ -720,14 +769,102 @@ function gameOverFunction(gameOverClassName, cause) {
 	}, 1000)
 }
 
+function changePlanet() {
+	middleDiv.textContent = "";
+	
+	decisionButton.style.setProperty("display", "none");
+	let p1 = document.createElement("div");
+	p1.className = "planet1";
+	let p2 = document.createElement("div");
+	p2.className = "planet2";
+	let p3 = document.createElement("div");
+	p3.className = "planet3";
+	
+	let img1 = document.createElement("img");
+	let img2 = document.createElement("img");
+	let img3 = document.createElement("img");
+	img1.setAttribute("src", "bogosBinted/planet1.jpg");
+	img2.setAttribute("src", "bogosBinted/planet2.jpg");
+	img3.setAttribute("src", "bogosBinted/planet3.jpg");
+
+	let title1 = document.createElement("p");
+	let title2 = document.createElement("p");
+	let title3 = document.createElement("p");
+
+	p1.insertAdjacentElement("beforeend", img1);
+	p2.insertAdjacentElement("beforeend", img2);
+	p3.insertAdjacentElement("beforeend", img3);
+
+	middleDiv.insertAdjacentElement("beforeend", p1);
+	middleDiv.insertAdjacentElement("beforeend", p2);
+	middleDiv.insertAdjacentElement("beforeend", p3);
+
+	p1.insertAdjacentElement("beforeend", title1);
+	p2.insertAdjacentElement("beforeend", title2);
+	p3.insertAdjacentElement("beforeend", title3);
+	title1.textContent = "Planeta pierwsza";
+	title2.textContent = "Planeta druga";
+	title3.textContent = "Planeta trzecia";
+
+	mainSection.classList.add("planets");
+	middleDiv.classList.add("planets");
+
+	p1.addEventListener("mouseover", function() {
+		p2.style.setProperty("opacity", 0.5);
+		p3.style.setProperty("opacity", 0.5);
+	})
+
+	p2.addEventListener("mouseover", function() {
+		p1.style.setProperty("opacity", 0.5);
+		p3.style.setProperty("opacity", 0.5);
+	})
+
+	p3.addEventListener("mouseover", function() {
+		p1.style.setProperty("opacity", 0.5);
+		p2.style.setProperty("opacity", 0.5);
+	})
+
+
+	p1.addEventListener("mouseout", function() {
+		p2.style.setProperty("opacity", 1);
+		p3.style.setProperty("opacity", 1);
+	})
+
+	p2.addEventListener("mouseout", function() {
+		p1.style.setProperty("opacity", 1);
+		p3.style.setProperty("opacity", 1);
+	})
+
+	p3.addEventListener("mouseout", function() {
+		p1.style.setProperty("opacity", 1);
+		p2.style.setProperty("opacity", 1);
+	})
+
+
+	p1.addEventListener("click", function() {
+		doTheEvent();
+		noti("Wybrana nowa planeta: KOI-4878.01");
+	})
+
+	p2.addEventListener("click", function() {
+		doTheEvent();
+		noti("Wybrana nowa planeta: TRAPPIST-1e");
+	})
+
+	p3.addEventListener("click", function() {
+		doTheEvent();
+		noti("Wybrana nowa planeta: Proxima Centauri b");
+	})
+}
+
 //==================== CHAPTER 1 ====================
 changeChapterPlace(1, "Dom Jakuba");
 //===== Underchapter 1 =====
 
 let c0u1e1 = new MyEvent(
-	"bogosBinted/chmurka.png",
+	"bogosBinted/chmurka.jpg",
 	[new MyLine(
-		"bogosBinted/jakub.png", "Jakub", colors["green"],
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
 		"Gdzie ja jestem, co tu robi tyle ludzi, co to za metal nade mną, i co tu... Marcin??"
 	)],
 	"Marcin??",
@@ -736,24 +873,24 @@ let c0u1e1 = new MyEvent(
 		doTheEvent(c0u1e2)
 	},
 	function (){
-		doTheEvent(c0u1e2)
+		doTheEvent(c0u1e2);
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 )
 
 let c0u1e2 = new MyEvent(
-	"bogosBinted/gilotyna.png",
+	"bogosBinted/gilotyna.jpg",
 	[new MyLine(
-		"bogosBinted/marcin.png", "Marcin", colors["aqua"],
+		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
 		"Jakieś ostatnie słowa?"
 	), 
 	new MyLine(
-		"bogosBinted/jakub.png", "Jakub", colors["green"],
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
 		"Gdzie... Gdzie ja jestem? Marcin? Co ty robisz?!!!" 
 	),
 	new MyLine(
-		"bogosBinted/marcin.png", "Marcin", colors["aqua"],
+		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
 		"Pytam ostani raz: jakieś ostatnie słowa?"
 	)],
 	"*rozmawiaj*",
@@ -769,13 +906,13 @@ let c0u1e2 = new MyEvent(
 )
 
 let c0u1e3v1 = new MyEvent(
-	"bogosBinted/marcin.png",
+	"bogosBinted/marcin.jpg",
 	[new MyLine(
-		"bogosBinted/jakub.png", "Jakub", colors["green"],
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
 		"Jak możesz mi to robić! Po tym wszystkim co razem przeszliśmy..."
 	),
 	new MyLine(
-		"bogosBinted/marcin.png", "Marcin", colors["aqua"],
+		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
 		"Sojusze się zmieniają Jakubie. Miałeś swoje szanse ale mnie zawiodłeś."
 	)],
 	"Wypuść mnie zdracjo!",
@@ -791,9 +928,9 @@ let c0u1e3v1 = new MyEvent(
 )
 
 let c0u1e3v2 = new MyEvent(
-	"bogosBinted/chmurka.png",
+	"bogosBinted/chmurka.jpg",
 	[new MyLine(
-		"bogosBinted/jakub.png", "Jakub", colors["green"],
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
 		"Nie dam rady, sparaliżował mi prawie całe ciało. Ledwo mogę się podnieść, a co dopiero wlaczyć."
 	)],
 	"*rozmawiaj*",
@@ -809,21 +946,21 @@ let c0u1e3v2 = new MyEvent(
 )
 
 let c0u1e4 = new MyEvent(
-	"bogosBinted/gilotyna.png",
+	"bogosBinted/gilotyna.jpg",
 	[new MyLine(
-		"bogosBinted/marcin.png", "Marcin", colors["aqua"],
+		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
 		"Lud wybrał! W imieniu Kosmicznej Polonii, za zdradę stanu oraz próbę zniszczenia ludzkości, skazuję Jakuba Bukaja na śmierć!"
 	)],
 	"STÓJ!",
 	"NIE!",
 	function (){
 		doTheEvent(c0u1e5);
-		document.body.style.setProperty("background-image", "url(bogosBinted/background-main1-contrast.png)");
+		document.body.style.setProperty("background-image", "url(bogosBinted/background-main1-contrast.jpg)");
 		audio1.pause();
 	},
 	function (){
 		doTheEvent(c0u1e5);
-		document.body.style.setProperty("background-image", "url(bogosBinted/background-main1-contrast.png)");
+		document.body.style.setProperty("background-image", "url(bogosBinted/background-main1-contrast.jpg)");
 		audio1.pause();
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -831,9 +968,9 @@ let c0u1e4 = new MyEvent(
 )
 
 let c0u1e5 = new MyEvent(
-	"bogosBinted/gilotynaGG.png",
+	"bogosBinted/gilotynaGG.jpg",
 	[new MyLine(
-		"bogosBinted/jakub.png", "", colors["white"],
+		"bogosBinted/jakub.jpg", "", colors["white"],
 		"..."
 	)],
 	"...",
@@ -849,9 +986,9 @@ let c0u1e5 = new MyEvent(
 )
 
 let c0u2e1 = new MyEvent(
-	"bogosBinted/agresus.png",
+	"bogosBinted/agresus.jpg",
 	[new MyLine(
-		"bogosBinted/agresus.png", "ImieAgr", colors["red"],
+		"bogosBinted/agresus.jpg", "ImieAgr", colors["red"],
 		"JAKUBIE"
 	)],
 	"...",
@@ -867,9 +1004,9 @@ let c0u2e1 = new MyEvent(
 )
 
 let c0u2e2 = new MyEvent(
-	"bogosBinted/nikita.png",
+	"bogosBinted/nikita.jpg",
 	[new MyLine(
-		"bogosBinted/nikita.png", "Nikita", colors["darkblue"],
+		"bogosBinted/nikita.jpg", "Nikita", colors["darkblue"],
 		"WYBIERZ"
 	)],
 	"...",
@@ -885,21 +1022,21 @@ let c0u2e2 = new MyEvent(
 )
 
 let c0u2e3 = new MyEvent(
-	"bogosBinted/nerd.png",
+	"bogosBinted/nerd.jpg",
 	[new MyLine(
-		"bogosBinted/nerd.png", "Nerd", colors["yellow"],
+		"bogosBinted/nerd.jpg", "Nerd", colors["yellow"],
 		"MĄDRZE"
 	)],
 	"...",
 	"...",
 	function (){
 		doTheEvent(c1u1e1);
-		document.body.style.setProperty("background-image", "url(bogosBinted/background-main1.png)");
+		document.body.style.setProperty("background-image", "url(bogosBinted/background-main1.jpg)");
 		playMusic(audio2);
 	},
 	function (){
 		doTheEvent(c1u1e1);
-		document.body.style.setProperty("background-image", "url(bogosBinted/background-main1.png)");
+		document.body.style.setProperty("background-image", "url(bogosBinted/background-main1.jpg)");
 		playMusic(audio2);
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
@@ -909,10 +1046,10 @@ let c0u2e3 = new MyEvent(
 //wstawić jakiś sen (insp. Adamem Mickiewiczem XDDDD)
 
 let c1u1e1 = new MyEvent(
-	"bogosBinted/jakub.png", //budzik.png
+	"bogosBinted/jakub.jpg", //budzik.jpg
 	[
 		new MyLine(
-			"bogosBinted/jakub.png", "Jakub", colors["green"],
+			"bogosBinted/jakub.jpg", "Jakub", colors["green"],
 			"Ooh, co to... co to było? Co to niby miało... JUŻ 8, ZASPAŁEM! Ale ten sen..."
 		),
 	],
@@ -934,12 +1071,12 @@ let c1u1e1 = new MyEvent(
 //Ania Biła
 
 let c1u1e2v1 = new MyEvent(
-	"bogosBinted/chmurka.png",
+	"bogosBinted/chmurka.jpg",
 	[new MyLine(
-		"bogosBinted/jakub.png", "Jakub", colors["green"],
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
 		"Nie mam pojęcia o co tam chodziło... Marcin? Jakaś zdrada? Ufam mu jak nikomu innemu, czemu śnią mi się takie rzeczy?"),
 	new MyLine(
-		"bogosBinted/jakub.png", "Jakub", colors["green"],
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
 		"A te stwory? Jacyś kosmici czy co? Chyba gdzieś je widziałem... A, Krzychu mi o nich mówił, takie brednie nieźle potrafią namieszać w głowie.")
 	],
 	"Zaraz się spóźnię!",
@@ -960,10 +1097,10 @@ let c1u1e2v1 = new MyEvent(
 );
 
 let c1u1e2v2 = new MyEvent(
-	"bogosBinted/jakub.png", //budzik.png
+	"bogosBinted/jakub.jpg", //budzik.jpg
 	[
 		new MyLine(
-			"bogosBinted/jakub.png", "Jakub", colors["green"],
+			"bogosBinted/jakub.jpg", "Jakub", colors["green"],
 			"Na dzisiejszym wywiadzie muszę się dobrze prezentować! Ale mogę nie zdążyć ze wszystkim."
 		),
 	],
@@ -987,10 +1124,10 @@ let c1u1e2v2 = new MyEvent(
 );
 
 let c1u1e3v1 = new MyEvent(
-	"bogosBinted/jakub.png", //kawa.png
+	"bogosBinted/jakub.jpg", //kawa.jpg
 	[
 		new MyLine(
-			"bogosBinted/jakub.png","Jakub", colors["green"],
+			"bogosBinted/jakub.jpg","Jakub", colors["green"],
 			"Dzień bez kawy to dzień stracony! Dobra, na szczęscie zostało mi trochę czasu na..."
 		),
 	],
@@ -1013,10 +1150,10 @@ let c1u1e3v1 = new MyEvent(
 );
 
 let c1u1e3v2 = new MyEvent(
-	"bogosBinted/jakub.png", //zeby.png
+	"bogosBinted/jakub.jpg", //zeby.jpg
 	[
 		new MyLine(
-			"bogosBinted/jakub.png","Jakub",colors["green"],
+			"bogosBinted/jakub.jpg","Jakub",colors["green"],
 			"No, i takie ząbki ma człowiek sukcesu :DD teraz zostało mi jeszcze trochę czasu żeby .."
 		),
 	],
@@ -1037,10 +1174,10 @@ let c1u1e3v2 = new MyEvent(
 );
 
 let c1u1e3v3 = new MyEvent(
-	"bogosBinted/jakub.png", //kawa.png
+	"bogosBinted/jakub.jpg", //kawa.jpg
 	[
 		new MyLine(
-			"bogosBinted/jakub.png","Jakub",colors["green"],
+			"bogosBinted/jakub.jpg","Jakub",colors["green"],
 			"Dzień bez kawy to dzień stracony! No ale już nic innego nie zdążę zrobić, pójdę złapać taxi."
 		),
 	],
@@ -1057,10 +1194,10 @@ let c1u1e3v3 = new MyEvent(
 );
 
 let c1u1e3v4 = new MyEvent(
-	"bogosBinted/jakub.png", //zeby,png
+	"bogosBinted/jakub.jpg", //zeby.jpg
 	[
 		new MyLine(
-			"bogosBinted/jakub.png","Jakub",colors["green"],
+			"bogosBinted/jakub.jpg","Jakub",colors["green"],
 			"No, i takie ząbki ma człowiek sukcesu :DD Dobra, dość tego gapienia się w lustro, lepiej zamówię taxi."
 		),
 	],
@@ -1077,10 +1214,10 @@ let c1u1e3v4 = new MyEvent(
 );
 
 let c1u1e4v1 = new MyEvent(
-	"bogosBinted/jakub.png", //jedzenie.png
+	"bogosBinted/jakub.jpg", //jedzenie.jpg
 	[
 		new MyLine(
-			"bogosBinted/jakub.png","Jakub",colors["green"],
+			"bogosBinted/jakub.jpg","Jakub",colors["green"],
 			"Dobra, najadłem się, teraz lece zamówić taxi. "
 		),
 	],
@@ -1097,10 +1234,10 @@ let c1u1e4v1 = new MyEvent(
 );
 
 let c1u1e5v1 = new MyEvent(
-	"bogosBinted/jakub.png", //telefon.png
+	"bogosBinted/jakub.jpg", //telefon.jpg
 	[
 		new MyLine(
-			"bogosBinted/jakub.png","Jakub",colors["green"],
+			"bogosBinted/jakub.jpg","Jakub",colors["green"],
 			"Zaraz powinna być, w tym czasie może..."
 		),
 	],
@@ -1117,18 +1254,18 @@ let c1u1e5v1 = new MyEvent(
 );
 
 let c1u1e6 = new MyEvent(
-	"bogosBinted/Y.png", //y.png
+	"bogosBinted/Y.jpg", //y.jpg
 	[
 		new MyLine(
-			"bogosBinted/noPfpUser.png","SkibidiEdge2k13",colors["white"],
+			"bogosBinted/noPfpUser.jpg","SkibidiEdge2k13",colors["white"],
 			"Halo?? Dziś jest prima aprilis czy ja o czymś nie wiem???"
 		),
 		new MyLine(
-			"bogosBinted/noPfpUser.png","ArchUserUWU",colors["white"],
+			"bogosBinted/noPfpUser.jpg","ArchUserUWU",colors["white"],
 			"Myślicie że ten wyciek był prawdziwy? Przecież by nam powiedzieli o czymś takim..."
 		),
 		new MyLine(
-			"bogosBinted/noPfpUser.png","NwordEnjoyer",colors["white"],
+			"bogosBinted/noPfpUser.jpg","NwordEnjoyer",colors["white"],
 			"No to zaczynamy szturm foliarzy XDDD nie ma szans że to prawda, pewnie jakieś AI"
 		),
 	],
@@ -1145,10 +1282,10 @@ let c1u1e6 = new MyEvent(
 );
 
 let c1u1e7 = new MyEvent(
-	"bogosBinted/taxi.png",
+	"bogosBinted/mirek.jpg",
 	[
 		new MyLine(
-			"bogosBinted/mirek.png","Pan Mirek",colors["yellow"],
+			"bogosBinted/mirek.jpg","Pan Mirek",colors["yellow"],
 			"Długo będzie jeszcze tam pan stał? Ja mam inne kursy!"
 		),
 	],
@@ -1167,14 +1304,14 @@ let c1u1e7 = new MyEvent(
 );
 
 let c1u1e8 = new MyEvent(
-	"bogosBinted/mirek.png",
+	"bogosBinted/mirek.jpg",
 	[
 		new MyLine(
-			"bogosBinted/mirek.png","Pan Mirek",colors["yellow"],
+			"bogosBinted/mirek.jpg","Pan Mirek",colors["yellow"],
 			"Widział pan ten filmik z tym jakimś szefem ONZ? Mówił, że niby lecimy w kosmos ha! Większej głupoty nie słyszałem."
 		),
 		new MyLine(
-			"bogosBinted/jakub.png","Jakub",colors["green"],
+			"bogosBinted/jakub.jpg","Jakub",colors["green"],
 			"Czekają nas ciekawe czasy, bardzo ciekawe... ale jedźmy już, czeka na mnie mój doradca"
 		),
 	],
@@ -1195,14 +1332,14 @@ let c1u1e8 = new MyEvent(
 //=====Underchapter 2=====
 
 let c1u2e1 = new MyEvent(
-	"bogosBinted/marcin.png", //marcin.png
+	"bogosBinted/marcin.jpg", //marcin.jpg
 	[
 		new MyLine(
-			"bogosBinted/marcin.png","Marcin",colors["aqua"], //marcin.png
+			"bogosBinted/marcin.jpg","Marcin",colors["aqua"], //marcin.jpg
 			'... po czym powiesz "również dziekuję, miłego dnia", uśmiechniesz się i wyjdziesz ze studia. Wszystko jasne?'
 		),
 		new MyLine(
-			"bogosBinted/jakub.png","Jakub",colors["green"],
+			"bogosBinted/jakub.jpg","Jakub",colors["green"],
 			"Raczej tak... "
 		),
 	],
@@ -1221,10 +1358,10 @@ let c1u2e1 = new MyEvent(
 );
 
 let c1u2e2v1 = new MyEvent(
-	"bogosBinted/marcin.png", //marcin.png
+	"bogosBinted/marcin.jpg", //marcin.jpg
 	[
 		new MyLine(
-			"bogosBinted/marcin.png","Marcin",colors["aqua"], //marcin.png
+			"bogosBinted/marcin.jpg","Marcin",colors["aqua"], //marcin.jpg
 			"Słuchaj, tu jeszcze nikt tam niczego nie potwierdził opinii publicznej, po prostu unikaj tematu. Jeszcze wezmą nas za ludzi, którzy wierzą we wszystko co jest w internecie."
 		),
 	],
@@ -1241,14 +1378,14 @@ let c1u2e2v1 = new MyEvent(
 );
 
 let c1u2e2v2 = new MyEvent(
-	"bogosBinted/chmurka.png",
+	"bogosBinted/chmurka.jpg",
 	[
 		new MyLine(
-			"bogosBinted/jakub.png","Jakub",colors["green"],
+			"bogosBinted/jakub.jpg","Jakub",colors["green"],
 			"Jutro wybory, przed nami globalny kryzys, a ja wciąż nie wiem co mam o tym powiedzieć ludziom!"
 		),
 		new MyLine(
-			"bogosBinted/jakub.png","Jakub",colors["green"],
+			"bogosBinted/jakub.jpg","Jakub",colors["green"],
 			"To najbardziej stresujący dzień mojego życia, nie wiem jak bym sobie poradził bez mojego doradcy Marcina Kwiatkowskiego. Poznałem go na początku tej przygody i jest to jedyna osoba której ufam w tym kłamliwym politycznym świecie."
 		),
 	],
@@ -1265,10 +1402,10 @@ let c1u2e2v2 = new MyEvent(
 );
 
 let c1u2e3v1 = new MyEvent(
-	"bogosBinted/marcin.png",
+	"bogosBinted/marcin.jpg",
 	[
 		new MyLine(
-			"bogosBinted/marcin.png","Marcin",colors["aqua"],
+			"bogosBinted/marcin.jpg","Marcin",colors["aqua"],
 			"Stary, ty masz wygrać wybory a nie być jakimś poszukiwaczem prawdy i sprawiedliwości. To jest zły pomysł, ale zrobisz jak uważasz."
 		),
 	],
@@ -1285,10 +1422,10 @@ let c1u2e3v1 = new MyEvent(
 );
 
 let c1u2e4v1 = new MyEvent(
-	"bogosBinted/jakub.png", //glosnik.png
+	"bogosBinted/jakub.jpg", //glosnik.jpg
 	[
 		new MyLine(
-			"bogosBinted/jakub.png","*młody męski głos*","orange", //nopfp.png
+			"bogosBinted/jakub.jpg","*młody męski głos*","orange", //nopfp.jpg
 			"Zapraszamy pana Jakuba B do studia. Wchodzimy za 2 minuty!"
 		),
 	],
@@ -1305,26 +1442,26 @@ let c1u2e4v1 = new MyEvent(
 );
 
 let c1u2e5v1 = new MyEvent(
-	"bogosBinted/radio.png", //radio.png
+	"bogosBinted/radio.jpg", //radio.jpg
 	[
 		new MyLine(
-			"bogosBinted/becia.png","*wysoka kobieta ubrana na czerwono*",colors["red"], //becia.png
+			"bogosBinted/becia.jpg","*wysoka kobieta ubrana na czerwono*",colors["red"], //becia.jpg
 			"Cześć gotowy? Za 15 sekund wchodzimy."
 		),
 		new MyLine(
-			"bogosBinted/jakub.png","Jakub",colors["green"],
+			"bogosBinted/jakub.jpg","Jakub",colors["green"],
 			"Tak odrazu? Myślałem że jeszcze zostało trochę cza..."
 		),
 		new MyLine(
-			"bogosBinted/becia.png","*wysoka kobieta ubrana na czerwono*",colors["red"],
+			"bogosBinted/becia.jpg","*wysoka kobieta ubrana na czerwono*",colors["red"],
 			"Trzy, dwa, jeden... Witamy w wywiadzie dnia radia PDF FM, jest piątek godzina 10, z tej strony Beata Kowalczyk a moim dzisiejszym gościem jest pan Kuba Bukaj, kandydat na prezydent RP 2045. Witam serdecznie! Pojutrze ważny dzień, prawda?"
 		),
 		new MyLine(
-			"bogosBinted/jakub.png","Jakub",colors["green"],
+			"bogosBinted/jakub.jpg","Jakub",colors["green"],
 			"Również witam, tak, z pewnością jeden z najważniejszych dni dla współczesnej Polski. Wybory prezydenckie napewno znacząco wpłyną na losy naszego państwa"
 		),
 		new MyLine(
-			"bogosBinted/becia.png","Becia",colors["red"],
+			"bogosBinted/becia.jpg","Becia",colors["red"],
 			"Dobrze, zanim jeszcze przejdziemy do sedna naszego spotkania... ponoć miał pan z wosu 2 na światectwie!"
 		),
 	],
@@ -1341,21 +1478,21 @@ let c1u2e5v1 = new MyEvent(
 );
 
 let c1u2e6v1 = new MyEvent(
-	"bogosBinted/radio.png", //radio.png
+	"bogosBinted/radio.jpg", //radio.jpg
 	[
 		new MyLine(
-			"bogosBinted/becia.png","Becia",colors["red"],
+			"bogosBinted/becia.jpg","Becia",colors["red"],
 			"Pytam, bo każdy prezydent powinien znać podstawowe struktury organizacji państwa, dlatego zorganizowałam dla Pana test."
 		),
 		new MyLine(
-			"bogosBinted/jakub.png", "Jakub", colors["green"],
+			"bogosBinted/jakub.jpg", "Jakub", colors["green"],
 			"Jaki test?"),
 		new MyLine(
-			"bogosBinted/becia.png","Becia",colors["red"],
+			"bogosBinted/becia.jpg","Becia",colors["red"],
 			"Zadam kilka prostych pytań z wiedzy o społeczeństwie, Zaczynamy!"
 		),
 		new MyLine(
-			"bogosBinted/becia.png","Becia",colors["red"],
+			"bogosBinted/becia.jpg","Becia",colors["red"],
 			"Pytanie pierwsze: Ilu senatorów liczy senat?"
 		),
 	],
@@ -1374,14 +1511,14 @@ let c1u2e6v1 = new MyEvent(
 );
 
 let c1u2e7v1 = new MyEvent(
-	"bogosBinted/radio.png",
+	"bogosBinted/radio.jpg",
 	[
 		new MyLine(
-			"bogosBinted/becia.png","Becia",colors["red"],
+			"bogosBinted/becia.jpg","Becia",colors["red"],
 			"Źle! Senat liczy 100 senatorów, możliwe, że pomyliło się panu z liczbą posłów w sejmie, która wynosi 460. Lecimy dalej."
 		),
 		new MyLine(
-			"bogosBinted/becia.png","Becia",colors["red"],
+			"bogosBinted/becia.jpg","Becia",colors["red"],
 			"Pytanie drugie: Czym jest zgromadzenie narodowe?"
 		),
 	],
@@ -1400,14 +1537,14 @@ let c1u2e7v1 = new MyEvent(
 );
 
 let c1u2e7v2 = new MyEvent(
-	"bogosBinted/radio.png",
+	"bogosBinted/radio.jpg",
 	[
 		new MyLine(
-			"bogosBinted/becia.png","Becia",colors["red"],
+			"bogosBinted/becia.jpg","Becia",colors["red"],
 			"Dobrze! Senat liczy 100 senatorów, natomiast sejm liczy 460 posłów. Lecimy dalej."
 		),
 		new MyLine(
-			"bogosBinted/becia.png","Becia",colors["red"],
+			"bogosBinted/becia.jpg","Becia",colors["red"],
 			"Pytanie drugie: Czym jest zgromadzenie narodowe?"
 		),
 	],
@@ -1426,14 +1563,14 @@ let c1u2e7v2 = new MyEvent(
 );
 
 let c1u2e8v1 = new MyEvent(
-	"bogosBinted/radio.png",
+	"bogosBinted/radio.jpg",
 	[
 		new MyLine(
-			"bogosBinted/becia.png","Becia",colors["red"],
+			"bogosBinted/becia.jpg","Becia",colors["red"],
 			"Poprawna odpowiedź! Jest zwoływane np podczas odebranie przysięgi nowo wybranego prezydenta."
 		),
 		new MyLine(
-			"bogosBinted/becia.png","Becia",colors["red"],
+			"bogosBinted/becia.jpg","Becia",colors["red"],
 			"Ostatnie pytanie: Ile lat trzeba mieć żeby zostać posłem?"
 		),
 	],
@@ -1452,14 +1589,14 @@ let c1u2e8v1 = new MyEvent(
 );
 
 let c1u2e8v2 = new MyEvent(
-	"bogosBinted/radio.png",
+	"bogosBinted/radio.jpg",
 	[
 		new MyLine(
-			"bogosBinted/becia.png","Becia",colors["red"],
+			"bogosBinted/becia.jpg","Becia",colors["red"],
 			"Niestesty, zła odpowiedź. Zgromdzenie narodowe jest zebraniem senatu nie z prezydentem a z sejmem. Jest zwoływane np. podczas odebranie przysięgi nowo wybranego prezydenta."
 			),
 		new MyLine(
-			"bogosBinted/becia.png","Becia",colors["red"],
+			"bogosBinted/becia.jpg","Becia",colors["red"],
 			"Ostatnie pytanie: Ile lat trzeba mieć żeby zostać posłem?"
 			),
 	],
@@ -1478,10 +1615,10 @@ let c1u2e8v2 = new MyEvent(
 );
 
 let c1u2e9v1 = new MyEvent(
-	"bogosBinted/chmurka.png",
+	"bogosBinted/chmurka.jpg",
 	[
 		new MyLine(
-			"bogosBinted/becia.png", "Becia", colors["red"],
+			"bogosBinted/becia.jpg", "Becia", colors["red"],
 			"No nie, żeby zostać posłem wystarczy ukończyć 21 rok życia i do tego mieć prawa wyborcze. Dobrze, skoro pytania mamy za sobą, możemy przejść do właciwej częsci wywiadu. Jak pan się przygoto..."
 		),
 	],
@@ -1512,10 +1649,10 @@ let c1u2e9v1 = new MyEvent(
 );
 
 let c1u2e9v2 = new MyEvent(
-	"bogosBinted/chmurka.png",
+	"bogosBinted/chmurka.jpg",
 	[
 		new MyLine(
-			"bogosBinted/becia.png", "Becia", colors["red"],
+			"bogosBinted/becia.jpg", "Becia", colors["red"],
 			"Zgadza się! Wystaczy ukończyć 21 rok życia i mieć prawa wyborcze. Dobrze, skoro pytania mamy za sobą, możemy przejść do właciwej częsci wywiadu. Jak pan się przygoto..."
 		),
 	],
@@ -1544,9 +1681,9 @@ let c1u2e9v2 = new MyEvent(
 );
 
 let c1u2e10v1 = new MyEvent(
-	"bogosBinted/chumrka.png",
+	"bogosBinted/chumrka.jpg",
 	[new MyLine(
-		"bogosBinted/jakub.png", "Jakub", colors["green"],
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
 		"Rozmowa bardzo mi się udała! Dzięki temu, że rano nabrałem energii, bardzo sprytnie odpowiadałem na pytania Beaty. To napewno pomoże mi w kampanii."
 	)],
 	"Kontynuuj wywiad",
@@ -1562,9 +1699,9 @@ let c1u2e10v1 = new MyEvent(
 )
 
 let c1u2e10v2 = new MyEvent(
-	"bogosBinted/chmurka.png",
+	"bogosBinted/chmurka.jpg",
 	[new MyLine(
-		"bogosBinted/jakub.png", "Jakub", colors["green"],
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
 		"Dałem z siebie wszystko, ale przez to, że rano nie miałem czasu ani na śniadanie ani na kawę, nie byłem dokońca skupiony. Powiedziałem kilka głupich rzeczy, a wyborcy mogą mi tego nie wybaczyć."
 	)],
 	"Kontynuuj wywiad",
@@ -1580,9 +1717,9 @@ let c1u2e10v2 = new MyEvent(
 )
 
 let c1u2e10v3 = new MyEvent(
-	"bogosBinted/chmurka.png",
+	"bogosBinted/chmurka.jpg",
 	[new MyLine(
-		"bogosBinted/jakub.png", "Jakub", colors["green"],
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
 		"Starałem się nie wychodzić za bardzo przed szereg i wyszło mi to całkiem dobrze. Dzięki temu, że rano nabrałem siły na cały dzień udało mi się zachować skupienie i zimną krew. To wyjdzie mi na plus w kampanii."
 	)],
 	"Kontynuuj wywiad",
@@ -1598,9 +1735,9 @@ let c1u2e10v3 = new MyEvent(
 )
 
 let c1u2e10v4 = new MyEvent(
-	"bogosBinted/chmurka.png",
+	"bogosBinted/chmurka.jpg",
 	[new MyLine(
-		"bogosBinted/jakub.png", "Jakub", colors["green"], //wodą się nie nawodnisz debilu ~ Wojciech 2024
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"], //wodą się nie nawodnisz debilu ~ Wojciech 2024
 		"Dziś rano nie miałem czasu nabrać siły na ten dzień, więc postanowiłem starać się unikać niewygodnych pytań co mimo wszystko nie zawsze mi wychodziło. Na szczęście nic aż tak głupiego nie powiedziałem w sumie to nie wyszło aż tak źle"
 	)],
 	"Kontynuuj wywiad",
@@ -1616,9 +1753,9 @@ let c1u2e10v4 = new MyEvent(
 )
 
 let c1u2e11v1 = new MyEvent(
-	"bogosBinted/radio.png",
+	"bogosBinted/radio.jpg",
 	[new MyLine(
-		"bogosBinted/becia.png", "Becia", colors["red"],
+		"bogosBinted/becia.jpg", "Becia", colors["red"],
 		"Właśnie dostaliśmy wiadomość z ostatniej chwili! Sekretarz generalny ONZ potwierdziił rzetelność nagrania które było uważane za podrobione sztuczę inteligencją. Panie Jakubie, co teraz? Czy jesteśmy na to gotowi?"
 	)],
 	"Jak najbardziej, program Earthless...",
@@ -1634,12 +1771,12 @@ let c1u2e11v1 = new MyEvent(
 )
 
 let c1u2e12v1 = new MyEvent(
-	"bogosBinted/radio.png", //3
+	"bogosBinted/radio.jpg", //3
 	[new MyLine(
-		"bogosBinted/jakub.png", "Jakub", colors["green"],
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
 		"Jak najbardziej, program Earthless jest odpowiedzią na ten problem. We wspłpracy z najlepszymi Polskimi naukowcami stworzyliśmy plan emigracji wszystkich Polaków w kosmos. Mamy ambitnych ludzi, nowoczesne narzędzia i dopracowany plan. Teraz jedyne czego potrzebuję żeby go wprowadzić w życie to mnie jako prezydenta. To jest jedyny sposób na zapewnienie bezpieczeństwia Polakom."
 	),new MyLine(
-		"bogosBinted/becia.png", "Becia", colors["red"],
+		"bogosBinted/becia.jpg", "Becia", colors["red"],
 		"A to był wywiad dnia radia PDF FM! Panie Jakbie, dziękuję bardzo za rozmowę."
 	)],
 	"Również dziękuję, miłego dnia.",
@@ -1655,18 +1792,18 @@ let c1u2e12v1 = new MyEvent(
 )
 
 let c1u2e12v2 = new MyEvent(
-	"bogosBinted/radio.png", 
+	"bogosBinted/radio.jpg", 
 	[new MyLine(
-		"bogosBinted/jakub.png", "Jakub", colors["green"],
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
 		"Muszę przyznać, że tak jak większość uważaliśmy ten film za nieprawdziwy. W tej sytuacji jedynie co mogę zrobić to zapewnić, że napewno sobie jakoś poradzimy."
 	),new MyLine(
-		"bogosBinted/becia.png", "Becia", colors["red"],
+		"bogosBinted/becia.jpg", "Becia", colors["red"],
 		"Czy jest coś co może pan zapewnić obywatelom jako możliwy przyszły prezydent Polski?"
 	),new MyLine(
-		"bogosBinted/jakub.png", "Jakub", colors["green"],
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
 		"Mój sztab napewno już się tym zajmuje i zapewniam, że zrobimy wszystko żeby przygotować na to obywateli."
 	),new MyLine(
-		"bogosBinted/becia.png", "Becia", colors["red"],
+		"bogosBinted/becia.jpg", "Becia", colors["red"],
 		"A to był wywiad dnia radia PDF FM! Panie Jakbie, dziękuję bardzo za rozmowę."
 	)],
 	"Również dziękuję, miłego dnia.",
@@ -1684,15 +1821,15 @@ let c1u2e12v2 = new MyEvent(
 )
 
 let c1u2e13v1 = new MyEvent(
-	"bogosBinted/stol.png",
+	"bogosBinted/stol.jpg",
 	[new MyLine(
-		"bogosBinted/jakub.png", "Jakub", colors["green"],
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
 		"Co sądzicie, dobrze tam wypadłem?"
 	),new MyLine(
-		"bogosBinted/amina.png", "Amina", "red",
+		"bogosBinted/amina.jpg", "Amina", "red",
 		"Póki co nie jesteś wyzywany na Y więc nie narzekaj."
 	),new MyLine(
-		"bogosBinted/henryk.png", "Henryk", "red",
+		"bogosBinted/henryk.jpg", "Henryk", "red",
 		"Spokojnie, zaraz pewnie ktoś coś wytnie z kontekstu i zaraz to obleci cały internet. Kuba, może wejdź tam i zobacz co się dzieje."
 	)],
 	"Dobra, zobaczmy",
@@ -1709,18 +1846,18 @@ let c1u2e13v1 = new MyEvent(
 )
 
 let c1u2e14v1 = new MyEvent(
-	"bogosBinted/Y.png",
+	"bogosBinted/Y.jpg",
 	[new MyLine(
-		"bogosBinted/noPfpUser.png", "FreePenguin", colors["white"],
+		"bogosBinted/noPfpUser.jpg", "FreePenguin", colors["white"],
 		"Jakub zaorał wszystkich innych kandydatów! Idol xddd"
 	),new MyLine(
-		"bogosBinted/noPfpUser.png", "segga_crappost", colors["white"],
+		"bogosBinted/noPfpUser.jpg", "segga_crappost", colors["white"],
 		"Chłop po raz pierwszy zaczął gadać z sensem? Wow"
 	),new MyLine(
-		"bogosBinted/noPfpUser.png", "polish-player-2k09", colors["white"],
+		"bogosBinted/noPfpUser.jpg", "polish-player-2k09", colors["white"],
 		"MÓJ PREZYDENT BUKAJ2060!!11!!11"
 	),new MyLine(
-		"bogosBinted/noPfpUser.png", "marsrekin", colors["white"],
+		"bogosBinted/noPfpUser.jpg", "marsrekin", colors["white"],
 		"Dziś go podwiozłem pod radio, spoko człowiek!"
 	)],
 	"Chyba nie jest tak źle",
@@ -1736,18 +1873,18 @@ let c1u2e14v1 = new MyEvent(
 )
 
 let c1u2e14v2 = new MyEvent(
-	"bogosBinted/Y.png",
+	"bogosBinted/Y.jpg",
 	[new MyLine(
-		"bogosBinted/noPfpUser.png", "FreePenguin", colors["white"],
+		"bogosBinted/noPfpUser.jpg", "FreePenguin", colors["white"],
 		"Jakub zaorał wszystkich innych kandydatów! Idol xddd"
 	),new MyLine(
-		"bogosBinted/noPfpUser.png", "segga_crappost", colors["white"],
+		"bogosBinted/noPfpUser.jpg", "segga_crappost", colors["white"],
 		"Chłop po raz pierwszy zaczął gadać z sensem? Wow"
 	),new MyLine(
-		"bogosBinted/noPfpUser.png", "marsrekin", colors["white"],
+		"bogosBinted/noPfpUser.jpg", "marsrekin", colors["white"],
 		"Dziś go podwiozłem pod radio, tak strasznie mu śmierdziało z buzi... Ten człowiek chyba nie myje zębów! Ja mu nie ufam"
 	),new MyLine(
-		"bogosBinted/noPfpUser.png", "polish-player-2k09", colors["white"],
+		"bogosBinted/noPfpUser.jpg", "polish-player-2k09", colors["white"],
 		"MÓJ PREZYDENT BUKAJ2060!!11!!11"
 	)],
 	"Chyba nie jest tak źle",
@@ -1763,15 +1900,16 @@ let c1u2e14v2 = new MyEvent(
 )
 
 let c1u2e15v1 = new MyEvent(
-	"bogosBinted/stol.png",
+	"bogosBinted/stol.jpg",
 	[new MyLine(
-		"bogosBinted/marcin.png", "Marcin", colors["aqua"],
+		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
 		"Mam nadzieję że ta zniesiona cisza wyborcza nam nie zaszkodzi. Ale za to mamy narzędzie to kamapnii nawet w dzień wyborów!"
 	),
 	new MyLine(
-		"bogosBinted/ilia.png", "Ilia", colors["purple"]
+		"bogosBinted/ilia.jpg", "Ilia", colors["purple"],
+		// NAPISZ TU COS DEBILU ZAPOMNIALES
 	),new MyLine(
-		"bogosBinted/krzys.png", "Krzychu", colors['orange'],
+		"bogosBinted/krzys.jpg", "Krzychu", colors['orange'],
 		"Chodźcie, jest ogłoszenie wyników!"
 	)],
 	"Chwila prawdy.",
@@ -1789,21 +1927,21 @@ let c1u2e15v1 = new MyEvent(
 )
 
 let c1u2e16v1 = new MyEvent(
-	"bogosBinted/radio.png",
+	"bogosBinted/radio.jpg",
 	[new MyLine(
-		"bogosBinted/becia.png", "Becia", colors["red"],
+		"bogosBinted/becia.jpg", "Becia", colors["red"],
 		"Uwaga, Państwowa Komisja Wyborcza podała wyniki wyborów prezydenckich 2060! Wy.ory rozstrzygły się w pierwszej turze, a ich zwycięzcą zostaje Jakub Bukaj zdobywając 65% głosów, gratualacje dla Pana prezydenta!"
 	),new MyLine(
-		"bogosBinted/marcin.png", "Marcin", colors['aqua'],
+		"bogosBinted/marcin.jpg", "Marcin", colors['aqua'],
 		"MAMY TO!"
 	),new MyLine(
-		"bogosBinted/ilia.png", "Ilia", colors['purple'],
+		"bogosBinted/ilia.jpg", "Ilia", colors['purple'],
 		"Udało się!"
 	),new MyLine(
-		"bogosBinted/jakub.png", "Jakub", colors["green"],
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
 		"A więc Panie i Panowie - bierzemy się do pracy! Amina, Henryk i Ilia przygotujcie prezentacje waszych badań, Krzychu idź do Alberta, a ja z Marcinem idziemy nagrać przemówienie."
 	),new MyLine(
-		"bogosBinted/krzychu.png", "Krzychu", colors['orange'],
+		"bogosBinted/krzychu.jpg", "Krzychu", colors['orange'],
 		"Kuba, czekaj! Albert ma do ciebie sprawę."
 	)],
 	"Co ten staruch znowu chce?",
@@ -1819,9 +1957,9 @@ let c1u2e16v1 = new MyEvent(
 )
 
 let c1u2e17v2 = new MyEvent(
-	"bogosBinted/gsg.png",
+	"bogosBinted/gsg.jpg",
 	[new MyLine(
-		"bogosBinted/noPfpUser.png", "", colors["grey"],
+		"bogosBinted/noPfpUser.jpg", "", colors["grey"],
 		"Gratulacje, odblokowałeś pierwszy wynalazek: genereator sztucznej grawitacji! Tym razem jeszcze ujdzie Ci to na sucho, ale pamętaj, aby szanować Alberta."
 	)],
 	"Okej...",
@@ -1839,15 +1977,15 @@ let c1u2e17v2 = new MyEvent(
 )
 
 let c1u2e17v1 = new MyEvent(
-	"bogosBinted/albert.png",
+	"bogosBinted/albert.jpg",
 	[new MyLine(
-		"bogosBinted/krzychu.png", "Krzychu", colors['orange'],
+		"bogosBinted/krzychu.jpg", "Krzychu", colors['orange'],
 		"Twierdzi, że skończył to, co mu zleciłeś."
 	),new MyLine(
-		"bogosBinted/jakub.png", "Jakub", colors["green"],
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
 		"O, czyli jednak? Powoli zaczynałem wątpić w to jego paplanie, ale jednak! Albert, pokaż co tam zmajstrowałeś!"
 	),new MyLine(
-		"bogosBinted/albert.png", "Albert", colors["darkred"],
+		"bogosBinted/albert.jpg", "Albert", colors["darkred"],
 		"Nie wierzyłeś we mnie, ale sieidzałem nad tym całymi dniami i jest! Stworzyłem generator sztucznej grawitacji."
 	)],
 	"Jak to niby jest możliwe?",
@@ -1863,9 +2001,9 @@ let c1u2e17v1 = new MyEvent(
 )
 
 let c1u2e18v1 = new MyEvent(
-	"bogosBinted/gsg.png",
+	"bogosBinted/gsg.jpg",
 	[new MyLine(
-		"bogosBinted/albert.png", "Albert", colors["darkred"],
+		"bogosBinted/albert.jpg", "Albert", colors["darkred"],
 		"Już tłumaczę o co chodzi. Za pomocą kilku skomplikowanych układów elektrycznych, których nikt po za MNĄ nie byłby w stanie zrozumieć swoim małym móżdżkiem, stworzyłem narzędzie opierające się o działaniu nagęszczacza metrii. Zagęszcza on tyle materii, ile potrzeba żeby wytworzyć dane pole grawitacyj..."
 	)],
 	"Wiesz co, śpieszy mi się... do zobacznia",
@@ -1881,25 +2019,25 @@ let c1u2e18v1 = new MyEvent(
 )
 
 let c1u2e19v1 = new MyEvent(
-	"bogosBinted/albert.png",
+	"bogosBinted/albert.jpg",
 	[new MyLine(
-		"bogosBinted/albert.png", "Albert", colors["darkred"],
+		"bogosBinted/albert.jpg", "Albert", colors["darkred"],
 		"Cieszę się, że pytasz! Zagęszczacz materii... ha! Co to takiego? To nie jest zwykłe urządzenie, to przełomowa technologia, która wyrywa nas z ram ograniczeń fizyki, to maszyna, która zmienia naszą percepcję rzeczywistości! Wyobraź sobie, że mogę skoncentrować całą masę Wszechświata w jednym punkcie, na tyle małym, że nie mieści się w waszym wyobrażeniu!. Ale jak to możliwe, zapytasz? Otóż ja, wyjątkowy umysł, odkryłem sekrety teoretycznej fizyki kwantowej, a następnie przeniosłem je do praktyki! Zagęszczacz materii wykorzystuje połączenie skomplikowanych manipulacji polami kwantowymi, promieniowaniem gamma i... no cóż, skomplikowanymi obwodami elektronicznymi, których funkcjonowanie przechodzi twoje zwykłe pojęcie!"
 	),
 	new MyLine(
-		"bogosBinted/jakub.png", "Jakub", colors["green"],
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
 		"Dobra robota! Krzysiek, zajmiesz się użyciem tego na statku?"
 	),
 	new MyLine(
-		"bogosBinted/krzychu.png", "Krzychu", colors['orange'],
+		"bogosBinted/krzychu.jpg", "Krzychu", colors['orange'],
 		"Proste, że tak!"
 	),
 	new MyLine(
-		"bogosBinted/jakub.png", "Jakub", colors["green"],
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
 		"Super, a ty Albert bierz się teraz za tą minaturową elektrownie jądrową o której Ci mówiłem."
 	),
 	new MyLine(
-		"bogosBinted/albert.png", "Albert", colors["darkred"],
+		"bogosBinted/albert.jpg", "Albert", colors["darkred"],
 		"Jak niby mam to zrobić?! Kolejna rzecz która łamie prawa fizyki, chodziłeś ty kiedykolwiek do tej szkoły??"
 	)
 	],
@@ -1922,9 +2060,9 @@ let c1u2e19v1 = new MyEvent(
 //======================================================================
 
 let c2u1e1 = new MyEvent(
-	"bogosBinted/kamera.png",
+	"bogosBinted/kamera.jpg",
 	[new MyLine(
-		"bogosBinted/marcin.png", "Marcin", colors["aqua"],
+		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
 		"Dobra, czyli wiesz co mówić"
 	)],
 	"Tak, jestem gotowy",
@@ -1941,13 +2079,13 @@ let c2u1e1 = new MyEvent(
 )
 
 let c2u1e2v1 = new MyEvent(
-	"bogosBinted/kamera.png",
+	"bogosBinted/kamera.jpg",
 	[new MyLine(
-		"bogosBinted/marcin.png", "Marcin", colors["aqua"],
+		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
 		"Dobra to zaczynamy. 3, 2, ..."
 	),
 	new MyLine(
-		"bogosBinted/jakub.png", "Jakub", colors["aqua"],
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
 		"Witajcie rodacy! Na początku chciałbyhm wam bardoz podziękować za zaufanie. Rola prezydenta to coś, na co przygotowywyałem się całe życie. Stoimy przed wielkimi wyzwaniami jak naród, i jako nawet ludzkość i w związku z naszą misją ratowania narodu muszę wam powiedzieć, że..."
 	)],
 	"Musiscie się przygotować, nie każdy będzie mógł wejść na statek...",
@@ -1964,9 +2102,9 @@ let c2u1e2v1 = new MyEvent(
 )
 
 let c2u1e2v2 = new MyEvent(
-	"bogosBinted/marcin.png",
+	"bogosBinted/marcin.jpg",
 	[new MyLine(
-		"bogosBinted/marcin.png", "Marcin", colors["aqua"],
+		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
 		"Przede wszystkim powiedz to, co spodoba się ludziom. Ostatnie, czego teraz potrzebujemy, to paniki, więc nie mów o tym, że nie wszyscy będą mogli uciec. I lepiej nie wspomninaj nic o tym kto będzie mieć jakie warunki na statu. Pamiętaj, mamy umowy. Dzieki tym ludziom jesteśmy tu gdzie jesteśmy, więc nie mów nic głupiego."
 	)],
 	"Nie bedę czuł się z tym dobrze...",
@@ -1982,9 +2120,9 @@ let c2u1e2v2 = new MyEvent(
 )
 
 let c2u1e2v3 = new MyEvent(
-	"bogosBinted/marcin.png",
+	"bogosBinted/marcin.jpg",
 	[new MyLine(
-		"bogosBinted/marcin.png", "Marcin", colors["aqua"],
+		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
 		"Już się przekonałem ostatnio jak szanujesz moje rady... Mów co chcesz"
 	)],
 	"Obiecuję, że to się nie powtórzy.",
@@ -2002,9 +2140,9 @@ let c2u1e2v3 = new MyEvent(
 
 
 let c2u1e3v1 = new MyEvent(
-	"bogosBinted/kamera.png",
+	"bogosBinted/kamera.jpg",
 	[new MyLine(
-		"bogosBinted/jakub.png", "Jakub", colors["green"],
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
 		"Muszę was poinformować, że ze względu na ograniczenia technologiczne oraz finanosowe nie, nie każdy będzie mógł z nami od razu polecieć. Robimy wszystko, co w naszej mocy aby mogło polecieć jak najwięcej osób, ale niestety możemy nie zdążyć. Chcę też państwu powiedzieć o warunkach na statku..."
 	)],
 	"Które dla każdego będą takie same.",
@@ -2021,9 +2159,9 @@ let c2u1e3v1 = new MyEvent(
 )
 
 let c2u1e3v2 = new MyEvent(
-	"bogosBinted/jakub.png",
+	"bogosBinted/jakub.jpg",
 	[new MyLine(
-		"bogosBinted/jakub.png", "Jakub", colors["green"],
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
 		"Zapewniam, że uratujemy każdego Polaka. Każdy, kto będzie chciał wejść na statek ze swoją rodziną, obiecuję, że będzie mógł na ten statek razem ze swoją rodziną wejść. Jednocześnie musicie wiedzieć o warunkach na statku..."
 	)],
 	"Które dla każdego będą takie same.",
@@ -2040,9 +2178,9 @@ let c2u1e3v2 = new MyEvent(
 )
 
 let c2u1e4v1 = new MyEvent(
-	"bogosBinted/kamera.png",
+	"bogosBinted/kamera.jpg",
 	[new MyLine(
-		"bogosBinted/jakub.png", "Jakub", colors["green"],
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
 		"Każdy, bez względu na swój status społeczny, będzie miał dostęp do takich samych warunków na statku. Nadchodzą ciężkie czasy, ale my jesteśmy gotowi."
 	)],
 	"Dziękuję za uwagę, wszystkiego dobrego.",
@@ -2061,45 +2199,45 @@ let c2u1e4v1 = new MyEvent(
 
 
 let c2u1e4v2 = new MyEvent(
-	"bogosBinted/kamera.png",
+	"bogosBinted/kamera.jpg",
 	[new MyLine(
-		"bogosBinted/jakub.png", "Jakub", colors["green"],
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
 		"Które mogą być różne w zależności od tego kto kiedy wykupił bilet. Bilety muszą być płatne ze względu kosztów, które nie mogły być pokryte z budrzetu państwa. Nadchodzą ciężkie czasy, ale my jesteśmy gotowi"
 	)],
 	"Dziękuję za uwagę, wszystkiego dobrego.",
 	"Pamiętajcie by być dobrej myśli.",
 	function (){
-		changeChapterPlace(1, "Laboratorium Earthless")
-		doTheEvent(c2u2e1)
+		changeChapterPlace(1, "Laboratorium Earthless");
+		doTheEvent(c2u2e1);
 	},
 	function (){
-		changeChapterPlace(1, "Laboratorium Earthless")
-		doTheEvent(c2u2e1)
+		changeChapterPlace(1, "Laboratorium Earthless");
+		doTheEvent(c2u2e1);
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 )
 
 let c2u2e1 = new MyEvent(
-	"bogosBinted/stol.png",
+	"bogosBinted/stol.jpg",
 	[new MyLine(
-		"bogosBinted/jakub.png", "Jakub", colors["green"],
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
 		"Dobrze, to teraz powtórzmy sobie podział obowiązków. Henryk, jaki mamy plan na wyżywinie wszystkich?" //HENRYK ILIA KRZYCHU AMINA MARCIN ALBERT 
 	),
 	new MyLine(
-		"bogosBinted/henryk.png", "Henryk", colors["brown"],
+		"bogosBinted/henryk.jpg", "Henryk", colors["brown"],
 		"Kierowniku, tu nie ma żadnej filizofii! W moim domu rodzinnym nauczyłem się automatyzować nasze uprawy. Wystarczy trochę kreatywności, i zrobię Ci samorobiące się uprawy czego tylko Kkerownik będzie chciał. Eee...zacząłbym od ziemniaków, kocham ziemniaki!"
 	),
 	new MyLine(
-		"bogosBinted/jakub.png", "Jakub", colors["green"],
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
 		"Ale jak chcesz cokolwiek posadzić na statku kosmicznym?"
 	),
 	new MyLine(
-		"bogosBinted/ilia.png", "Ilia", colors["purple"],
+		"bogosBinted/ilia.jpg", "Ilia", colors["purple"],
 		"O to się nie martw! Nie pamiętasz jak Ci opowiadałam o tym, czego potrzebuje roślina? "
 	),
 	new MyLine(
-		"bogosBinted/jakub.png", "Jakub", colors["green"],
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
 		"No pewnie, roślina potrzebuje..."
 	)],
 	"światła, wody i tlenu.",
@@ -2117,7 +2255,7 @@ let c2u2e1 = new MyEvent(
 )
 
 let c2u2e2v1 = new MyEvent(
-	"bogosBinted/jakub.png",
+	"bogosBinted/jakub.jpg",
 	[new MyLine(
 		"bogosBinted/ilia.png", "Ilia", colors["purple"],
 		"Skad! Po co jej tlen? Ona go produkuje, a nie potrzebuje. Za to będzie potrzebowała dwutlenku węgla, który jest wydychany przez ludzi, więc z tym nie będzie problemu. Podobnie z wodą, jeśli zaprojektujemy odpowiednie systemy filtracji, nigdy nam jej nie zabraknie. Jeśli chodzi o światło, nie koniecznie musi być ono słoneczne, ale musimy użyć specialnych lapm dostosowanych do roślin."
@@ -2143,9 +2281,9 @@ let c2u2e2v1 = new MyEvent(
 )
 
 let c2u2e2v2 = new MyEvent(
-	"bogosBinted/jakub.png",
+	"bogosBinted/jakub.jpg",
 	[new MyLine(
-		"bogosBinted/jakub.png", "Jakub", colors["purple"],
+		"bogosBinted/jakub.jpg", "Jakub", colors["purple"],
 		""
 	)],
 	"LewaOpcja",
@@ -2160,14 +2298,33 @@ let c2u2e2v2 = new MyEvent(
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
 )
 
+// W TYM MA BYC ZROBIONY OSTATNI SLAJD PRZED WYBOREM ZMIANY PLANETY
+// let cuev = new MyEvent(
+// 	"bogosBinted/jakub.jpg",
+// 	[new MyLine(
+// 		"bogosBinted/jakub.jpg", "Jakub", colors['green'],
+// 		"testline"
+// 	)],
+// 	"LewaOpcja",
+// 	"PrawaOpcja",
+// 	function (){
+// 		changePlanet();
+// 	},
+// 	function (){
+// 		changePlanet();
+// 	},
+// 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+// 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+// )
+
 // ZEBY WLACZYC KOLEJNA IKONKE STATOW TRZEBA WPISAC showIcons(np. nerds/alienRelations)
 // szczerze?
 
 /*
 let cuev = new MyEvent(
-	"bogosBinted/jakub.png",
+	"bogosBinted/jakub.jpg",
 	[new MyLine(
-		"bogosBinted/jakub.png", "Jakub", colors[],
+		"bogosBinted/jakub.jpg", "Jakub", colors[],
 		"testline"
 	)],
 	"LewaOpcja",
