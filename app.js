@@ -2120,7 +2120,15 @@ let c2u2e2v1 = new MyEvent(
 	"bogosBinted/jakub.png",
 	[new MyLine(
 		"bogosBinted/ilia.png", "Ilia", colors["purple"],
-		"Skad! Po co jej tlen? Ona go produkuje, a nie potrzebuje. Za to będzie potrzebowała dwutlenku węgla, który jest wydychany przez ludzi, więc z tym nie będzie problemu. Podobnie z wodą, jeśli zaprojektujemy odpowiednie systemy filtracji, nigdy nam jej nie zabraknie. Jeśli chodzi o światło, nie koniecznie musi być ono słoneczne, ale musimy użyć specialnych lapm dostosowanych do roślin"
+		"Skad! Po co jej tlen? Ona go produkuje, a nie potrzebuje. Za to będzie potrzebowała dwutlenku węgla, który jest wydychany przez ludzi, więc z tym nie będzie problemu. Podobnie z wodą, jeśli zaprojektujemy odpowiednie systemy filtracji, nigdy nam jej nie zabraknie. Jeśli chodzi o światło, nie koniecznie musi być ono słoneczne, ale musimy użyć specialnych lapm dostosowanych do roślin."
+	), 
+	new MyLine(
+		"bogosBinted/jakub.png", "Jakub", colors["green"],
+		"Racja, teraz już pamiętam. A teraz zajmijmy się paliwem. Amina, jak będziemy zasilać statek?"
+	),
+	new MyLine(
+		"bogosBinted/amina.png", "Amina", colors["lightpurple"],
+		""
 	)],
 	"LewaOpcja",
 	"PrawaOpcja",
