@@ -74,6 +74,7 @@ let bell = document.getElementById("noti");
 let bellNumber = document.querySelector("#noti div")
 let notifications = document.getElementById("notifications");
 let licznik = 0;
+let licznik2 = 0;
 function noti(text) {
 	licznik = parseInt(licznik);
 	licznik++;
@@ -84,7 +85,8 @@ function noti(text) {
 	let newNotification = document.createElement("p");
 	notifications.insertAdjacentElement('beforeend', newNotification);
 	newNotification.textContent = text;
-	newNotification.classList.add("newNotification");
+	let newNotiClass = "newNotification" + licznik2.toString();
+	newNotification.classList.add(newNotiClass);
 	newNotification.classList.add("unread");
 }
 
@@ -95,14 +97,14 @@ bell.addEventListener("click", function openNoti() {
 	if (notifications.classList.contains("closed")) {
 		notifications.classList.remove("closed");
 		notifications.classList.add("open");
-		let newNotification = document.querySelector(".newNotification");
-		if (newNotification.classList.contains("unread")) {
-			newNotification.classList.remove("unread");
-			newNotification.classList.add("read");
-		}
-		setTimeout(function() {
-			newNotification.style.setProperty("background-color", "rgba(0,0,0,0)")
-		}, 5000)
+		let newNotification = document.querySelectorAll(".unread");
+		newNotification.forEach((el) => {
+			el.classList.remove("unread");
+			el.classList.add("read");
+			setTimeout(function() {
+				el.style.setProperty("background-color", "rgba(0,0,0,0)")
+			}, 5000)
+		})
 	} else if (notifications.classList.contains("open")) {
 		notifications.classList.add("closed");
 		notifications.classList.remove("open");
@@ -248,8 +250,6 @@ function loadingScreen() {
 		loadingScreen.style.setProperty("opacity", 0);
 	}, 3190);
 }
-
-// loadingScreen();
 
 // ============ WYSWIETLANIE IKON ============
 

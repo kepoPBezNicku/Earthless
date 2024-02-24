@@ -565,6 +565,7 @@ main {
 	padding: 10px;
 	z-index: 15;
 	text-shadow: 0px 0px 10px black;
+	width: fit-content;
 }
 
 #noti div {
@@ -607,7 +608,7 @@ main {
 	transform: scaleY(1);
 }
 
-.newNotification {
+.unread, .read {
 	margin: 10px;
 	border-top: 1px solid white;
 	border-bottom: 1px solid white;
