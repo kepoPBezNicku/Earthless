@@ -602,6 +602,7 @@ main {
 	height: auto;
 	max-height: 250px;
 	overflow: scroll;
+	z-index: 20;
 }
 
 #notifications.open {

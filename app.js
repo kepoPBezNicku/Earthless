@@ -143,6 +143,7 @@ function imageLoader() {
 		mainSection.insertAdjacentElement("afterend", newImg);
 		newImg.addEventListener("load", function() {
 			console.log("Done")
+			newImg.remove()
 		})
 	}
 }
