@@ -175,10 +175,6 @@ function imageLoader() {
 			}
 		})
 	}
-
-	console.log(doneArray.length)
-	console.log(doneArray)	
-
 }
 
 imageLoader()
