@@ -176,10 +176,6 @@ body {
 	right: 50px;
 }
 
-#image-loading-screen-container div:nth-of-type(2) {
-
-}
-
 #image-loading-screen-container div:last-of-type {
 	left: 50px
 }
@@ -977,6 +973,11 @@ main {
 		align-items: center;
 		top: 280px;
 		left: 53px;
+	}
+	#notifications {
+		top: 40px;
+		border-top-left-radius: 0px;
+		left: 50px;
 	}
 	#middleDiv .bigPhoto {
 		min-width: 200px;
