@@ -156,6 +156,7 @@ function imageLoader() {
 	for(let x = 0; x < 34; x++) {
 		let newImg = document.createElement("img");
 		newImg.setAttribute("src", imgArray[x]);
+		newImg.style.setProperty("width", "200px")
 		mainSection.insertAdjacentElement("afterend", newImg);
 		newImg.className = "imgTemp"
 		newImg.addEventListener("load", function() {
