@@ -51,7 +51,7 @@ body {
 	height: 100vh;
 	top: 0;
 	left: 0;
-	z-index: 12;
+	z-index: 11;
 	padding: 20px 30px;
 	font-size: 2rem;
 	cursor: pointer;
@@ -59,6 +59,8 @@ body {
 	border: 3px solid red;
 	transition-property: background-color, scale, color;
 	transition: 0.2s ease;
+	background-color: var(--background-color);
+	color: white
 }
 
 .start:hover {
@@ -79,7 +81,7 @@ body {
 	height: 100vh;
 	margin: 0px;
 	padding: 0px;
-	z-index: 12;
+	z-index: 13;
 	opacity: 1;
 	animation-duration: 0.3s;
 	animation-timing-function: ease;
@@ -129,11 +131,70 @@ body {
 	}
 }
 
+#image-loading-screen {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	z-index: 12;
+	background-color: var(--background-color);
+	transition: 0.3s ease opacity;
+}
+
+#image-loading-screen p {
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translateX(-50%);
+	letter-spacing: 3px;
+}
+
+#image-loading-screen-container {
+	position: relative;
+	left: 50%;
+	top: 50%;
+	width: fit-content;
+	transform: translate(-50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	animation-name: image-loading-screen;
+	animation-duration: 3s;
+	animation-timing-function: ease;
+	animation-iteration-count: infinite;
+}
+
+#image-loading-screen-container div {
+	background-color: white;
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+}
+
+#image-loading-screen-container div:first-of-type {
+	right: 50px;
+}
+
+#image-loading-screen-container div:nth-of-type(2) {
+
+}
+
+#image-loading-screen-container div:last-of-type {
+	left: 50px
+}
+
+@keyframes image-loading-screen {
+	0% {transform: rotate(0deg);}
+	25% {transform: rotate(180deg);}
+	50% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg)}
+}
+
+
 .imgTemp {
 	position: absolute;
 	z-index: 0;
-	
-
 }
 
 /* ---------------------------------------------------- */

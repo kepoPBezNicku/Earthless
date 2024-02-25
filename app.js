@@ -123,7 +123,7 @@ function imageLoader() {
 		"bogosBinted/background.jpg",
 		"bogosBinted/becia.jpg",
 		"bogosBinted/budzik.jpg",
-		"bogosBinted/chmurka.jpg",,
+		"bogosBinted/chmurka.jpg",
 		"bogosBinted/farmer.jpg",
 		"bogosBinted/gameOver.jpg",
 		"bogosBinted/gameOverResp.jpg",
@@ -151,15 +151,23 @@ function imageLoader() {
 		"bogosBinted/zeby.jpg"
 	]
 
+	let doneArray = []
+
 	for(let x = 0; x < 34; x++) {
 		let newImg = document.createElement("img");
 		newImg.setAttribute("src", imgArray[x]);
 		mainSection.insertAdjacentElement("afterend", newImg);
 		newImg.className = "imgTemp"
 		newImg.addEventListener("load", function() {
-			console.log("Done")
-			// newImg.style.setProperty("display", "none")
-			newImg.remove()
+			doneArray.push("Done");
+			if(doneArray.length == 34) {
+				let loading = document.getElementById("image-loading-screen");
+				loading.style.setProperty("transform", "translateX(-100%)");
+				setTimeout(function() {
+					loading.remove();
+				}, 3000)
+			}
+			newImg.remove();
 		})
 	}
 }
