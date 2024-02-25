@@ -162,14 +162,23 @@ function imageLoader() {
 			doneArray.push("Done");
 			if(doneArray.length == 34) {
 				let loading = document.getElementById("image-loading-screen");
-				loading.style.setProperty("transform", "translateX(-100%)");
+				let imgArray2 = document.querySelectorAll(".imgTemp");
 				setTimeout(function() {
-					loading.remove();
-				}, 3000)
+					for (let i = 0; i < 34; i++) {
+						imgArray2[i].remove();
+					}
+					loading.style.setProperty("transform", "translateX(-100%)");
+					setTimeout(function() {
+						loading.remove();
+					}, 1000)
+				}, 5000)
 			}
-			newImg.remove();
 		})
 	}
+
+	console.log(doneArray.length)
+	console.log(doneArray)	
+
 }
 
 imageLoader()
@@ -2243,11 +2252,11 @@ let c2u1e4v1 = new MyEvent(
 	"Dziękuję za uwagę, wszystkiego dobrego.",
 	"Pamiętajcie by być dobrej myśli.",
 	function (){
-		changeChapterPlace(1, "Laboratorium Earthless")
+		changeChapterPlace(2, "Laboratorium Earthless")
 		doTheEvent(c2u2e1)
 	},
 	function (){
-		changeChapterPlace(1, "Laboratorium Earthless")
+		changeChapterPlace(2, "Laboratorium Earthless")
 		doTheEvent(c2u2e1)
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -2314,16 +2323,8 @@ let c2u2e1 = new MyEvent(
 let c2u2e2v1 = new MyEvent(
 	"bogosBinted/jakub.jpg",
 	[new MyLine(
-		"bogosBinted/ilia.png", "Ilia", colors["purple"],
-		"Skad! Po co jej tlen? Ona go produkuje, a nie potrzebuje. Za to będzie potrzebowała dwutlenku węgla, który jest wydychany przez ludzi, więc z tym nie będzie problemu. Podobnie z wodą, jeśli zaprojektujemy odpowiednie systemy filtracji, nigdy nam jej nie zabraknie. Jeśli chodzi o światło, nie koniecznie musi być ono słoneczne, ale musimy użyć specialnych lapm dostosowanych do roślin."
-	), 
-	new MyLine(
-		"bogosBinted/jakub.png", "Jakub", colors["green"],
-		"Racja, teraz już pamiętam. A teraz zajmijmy się paliwem. Amina, jak będziemy zasilać statek?"
-	),
-	new MyLine(
-		"bogosBinted/amina.png", "Amina", colors["lightpurple"],
-		""
+		"bogosBinted/ilia.jpg", "Ilia", colors["purple"],
+		"Skad! Po co jej tlen? Ona go produkuje, a nie potrzebuje. Za to będzie potrzebowała dwutlenku węgla, który jest wydychany przez ludzi, więc z tym nie będzie problemu. Podobnie z wodą, jeśli zaprojektujemy odpowiednie systemy filtracji, nigdy nam jej nie zabraknie. Jeśli chodzi o światło, nie koniecznie musi być ono słoneczne, ale musimy użyć specialnych lapm dostosowanych do roślin"
 	)],
 	"LewaOpcja",
 	"PrawaOpcja",
@@ -2355,45 +2356,6 @@ let c2u2e2v2 = new MyEvent(
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
 )
 
-//dokonczyc naukowe pierdolenie (MOJCIECH HELP)
-
-//podjąć decyzje ws zdobywania paliwa (z marcinem i chemikiem)
-
-//wybrać plan lotu
-
-//lot
-
-//pierwsze problemy na statku
-
-//kontakt z cywilizacjami (notion)
-
-//przygotować się do życia na nowej planecie
-
-//wybrać układy z cywilizacjami
-
-//wojna / domowa
-
-
-/*
-let cuev = new MyEvent(
-	"bogosBinted/jakub.jpg",
-	[new MyLine(
-		"bogosBinted/jakub.jpg", "Jakub", colors[],
-		"testline"
-	)],
-	"LewaOpcja",
-	"PrawaOpcja",
-	function (){
-		//doTheEvent(cuev)
-	},
-	function (){
-		//doTheEvent(cuev)
-	},
-	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
-	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
-)
-*/
-
 // W TYM MA BYC ZROBIONY OSTATNI SLAJD PRZED WYBOREM ZMIANY PLANETY
 // let cuev = new MyEvent(
 // 	"bogosBinted/jakub.jpg",
@@ -2415,5 +2377,25 @@ let cuev = new MyEvent(
 
 // ZEBY WLACZYC KOLEJNA IKONKE STATOW TRZEBA WPISAC showIcons(np. nerds/alienRelations)
 // szczerze?
+
+/*
+let cuev = new MyEvent(
+	"bogosBinted/jakub.jpg",
+	[new MyLine(
+		"bogosBinted/jakub.jpg", "Jakub", colors[],
+		"testline"
+	)],
+	"LewaOpcja",
+	"PrawaOpcja",
+	function (){
+		//doTheEvent(cuev)
+	},
+	function (){
+		//doTheEvent(cuev)
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+*/
 
 doTheEvent(c0u1e1);
