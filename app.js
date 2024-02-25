@@ -115,6 +115,20 @@ bell.addEventListener("click", function openNoti() {
 
 function imageLoader() {
 	let imgArray = [
+		"bogosBinted/agresus.jpg",
+		"bogosBinted/albert.jpg",
+		"bogosBinted/amina.jpg",
+		"bogosBinted/background-main1-contrast.jpg",
+		"bogosBinted/background-main1.jpg",
+		"bogosBinted/background.jpg",
+		"bogosBinted/becia.jpg",
+		"bogosBinted/budzik.jpg",
+		"bogosBinted/chmurka.jpg",,
+		"bogosBinted/farmer.jpg",
+		"bogosBinted/gameOver.jpg",
+		"bogosBinted/gameOverResp.jpg",
+		"bogosBinted/gameOverSmierc.jpg",
+		"bogosBinted/gilotyna.jpg",
 		"bogosBinted/gilotynaGG.jpg",
 		"bogosBinted/gsg.jpg",
 		"bogosBinted/ilia.jpg",
@@ -137,12 +151,14 @@ function imageLoader() {
 		"bogosBinted/zeby.jpg"
 	]
 
-	for(let x = 0; x < 19; x++) {
+	for(let x = 0; x < 34; x++) {
 		let newImg = document.createElement("img");
 		newImg.setAttribute("src", imgArray[x]);
 		mainSection.insertAdjacentElement("afterend", newImg);
+		newImg.className = "imgTemp"
 		newImg.addEventListener("load", function() {
 			console.log("Done")
+			// newImg.style.setProperty("display", "none")
 			newImg.remove()
 		})
 	}
