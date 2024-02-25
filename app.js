@@ -2540,3 +2540,18 @@ let cuev = new MyEvent(
 // szczerze?
 
 doTheEvent(c0u1e1);
+
+//wybrać plan lotu
+
+//lot (klamstwo, wybor marcina)
+
+//pierwsze problemy na statku
+
+//kontakt z cywilizacjami (notion)
+
+//przygotować się do życia na nowej planecie
+
+//wybrać układy z cywilizacjami
+
+//wojna / domowa
+
