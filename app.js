@@ -114,8 +114,40 @@ bell.addEventListener("click", function openNoti() {
 // ====================== LADOWANIE ZDJEC ======================
 
 function imageLoader() {
-	// let imgArray = document.querySelectorAll("img");
+	let imgArray = [
+		"bogosBinted/gilotynaGG.jpg",
+		"bogosBinted/gsg.jpg",
+		"bogosBinted/ilia.jpg",
+		"bogosBinted/jakub.jpg",
+		"bogosBinted/kamera.jpg",
+		"bogosBinted/kawa.jpg",
+		"bogosBinted/krzychu.jpg",
+		"bogosBinted/marcin.jpg",
+		"bogosBinted/megafon.jpg",
+		"bogosBinted/mirek.jpg",
+		"bogosBinted/nerd.jpg",
+		"bogosBinted/noPfpUser.jpg",
+		"bogosBinted/planet1.jpg",
+		"bogosBinted/planet2.jpg",
+		"bogosBinted/planet3.jpg",
+		"bogosBinted/radio.jpg",
+		"bogosBinted/sniadanie.jpg",
+		"bogosBinted/stol.jpg",
+		"bogosBinted/Y.jpg",
+		"bogosBinted/zeby.jpg"
+	]
+
+	for(let x = 0; x < 19; x++) {
+		let newImg = document.createElement("img");
+		newImg.setAttribute("src", imgArray[x]);
+		mainSection.insertAdjacentElement("afterend", newImg);
+		newImg.addEventListener("load", function() {
+			console.log("Done")
+		})
+	}
 }
+
+imageLoader()
 
 // ====================== MUZYKA ======================
 var audio1 = new Audio("audio/Arcadia.mp3");
