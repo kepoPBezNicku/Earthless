@@ -53,8 +53,6 @@ let colors = {
 #060d23
 */
 
-
-
 // ============ RESOURCE'S PSEUDOELEMENTS ============
 
 let nerds = document.querySelector("#alien-relations li:nth-of-type(1)");
@@ -161,7 +159,7 @@ function imageLoader() {
 		newImg.className = "imgTemp"
 		newImg.addEventListener("load", function() {
 			doneArray.push("Done");
-			if(doneArray.length == 34) {
+			if(doneArray.length == imgArray.length) {
 				let loading = document.getElementById("image-loading-screen");
 				let imgArray2 = document.querySelectorAll(".imgTemp");
 				setTimeout(function() {
@@ -203,6 +201,14 @@ function playMusic(audio) {
 	audio.loop = true;
 }
 
+// ====================== DUBBING ======================
+
+function dubbing(audioPath) {
+	setTimeout(function() {
+		let dubbingAudio = new Audio("audioDub/" + audioPath + ".mp3");
+		dubbingAudio.play();
+	}, 1000)
+}
 
 // ========== OSTRZEZENIE PODCZAS WYCHODENIA Z STRONY =========
 window.addEventListener("beforeunload", function (e) {
@@ -705,7 +711,7 @@ fuel.style.setProperty("--transform", "scaleY(" + data.stats.fuel + ")");
 food.style.setProperty("--transform", "scaleY(" + data.stats.food + ")");
 
 class MyEvent {
-	constructor(photoPath, line, opL, opP, fL, fP, sL, sP) {
+	constructor(photoPath, line, opL, opP, fL, fP, sL, sP, audioH1, audioH2) {
 		this.photoPath = photoPath; //ex jakub.jpg
 		this.line = line; //list of obiects (path,who, color, line)
 		this.opL = opL; //string
@@ -714,6 +720,8 @@ class MyEvent {
 		this.fP = fP; //function
 		this.sL = sL; //list
 		this.sP = sP; //list
+		this.audioH1 = audioH1;
+		this.audioH2 = audioH2;
 	}
 }
 
@@ -736,6 +744,8 @@ function eventsRemover() {
 }
 
 // =========================================================
+
+let nextDub = "";
 
 function doTheEvent(ob) {
 	middleDiv.textContent = "";
@@ -785,8 +795,38 @@ function doTheEvent(ob) {
 	buttonLeft.addEventListener("click", ob.fL);
 	buttonRight.addEventListener("click", ob.fP);
 
+	let dubbingAudioH1 = new Audio("audioDub/" + ob.audioH1 + ".mp3");
+	let dubbingAudioH2 = new Audio("audioDub/" + ob.audioH2 + ".mp3");
+
+	console.log(dubbingAudioH1)
+	console.log(dubbingAudioH2)
+	buttonLeft.addEventListener("mouseover", function() {
+		dubbingAudioH1.play();
+	})
+	buttonLeft.addEventListener("mouseout", function() {
+		dubbingAudioH1.pause();
+		dubbingAudioH1.currentTime = 0;
+	})
+
+	buttonRight.addEventListener("mouseover", function() {
+		dubbingAudioH2.play();
+	})
+	buttonRight.addEventListener("mouseout", function() {
+		dubbingAudioH2.pause();
+		dubbingAudioH2.currentTime = 0;
+	})
+
+	buttonLeft.addEventListener("click", function() {
+		dubbing(nextDub)
+	})
+	
+	buttonRight.addEventListener("click", function() {
+		dubbing(nextDub)
+	})
+
 	statsChanger(buttonLeft, ob.sL);
 	statsChanger(buttonRight, ob.sP);
+
 }
 
 function changeChapterPlace(x, place) {
@@ -926,6 +966,13 @@ function changePlanet() {
 changeChapterPlace(1, "Dom Jakuba");
 //===== Underchapter 1 =====
 
+start.addEventListener("click", function() {
+	setTimeout(function() {
+		let dubbingAudio = new Audio("audioDub/c0u1e1.mp3");
+		dubbingAudio.play();
+	}, 500)
+})
+
 let c0u1e1 = new MyEvent(
 	"bogosBinted/chmurka.jpg",
 	[new MyLine(
@@ -935,13 +982,18 @@ let c0u1e1 = new MyEvent(
 	"Marcin??",
 	"*nic nie rób*",
 	function (){
-		doTheEvent(c0u1e2)
+		doTheEvent(c0u1e2);
+		nextDub = "c0u1e2";
 	},
 	function (){
 		doTheEvent(c0u1e2);
+		nextDub = "c0u1e2";
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0, 0, 0, 0]
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+
+	"c0u1e1L",
+	"c0u1e1R"
 )
 
 let c0u1e2 = new MyEvent(
