@@ -2488,14 +2488,106 @@ let c2u2e5v1 = new MyEvent(
 	"To znaczy? Jeszcze tego nie ustaliłeś?",
 	"Jakie mamy opcje?",
 	function (){
-		changePlanet();
+		doTheEvent(c2u3e1)
 	},
 	function (){
-		changePlanet();
+		doTheEvent(c2u3e1)
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
+)
+
+let c2u3e1 = new MyEvent(
+	"bogosBinted/krzychu.jpg",
+	[new MyLine(
+		"bogosBinted/krzychu.jpg", "Krzychu", colors["orange"],
+		"Mamy 3 opcje: KOI-4878.01, TRAPPIST-1e oraz Proxima Centauri b."
+	)],
+	"Czym się różnią?",
+	"Jakie są na nich warunki?",
+	function (){
+		doTheEvent(c2u2e2v1)
+	},
+	function (){
+		doTheEvent(c2u2e2v1)
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
+)
+
+let c2u3e2v1 = new MyEvent(
+	"bogosBinted/planet2.jpg",
+	[new MyLine(
+		"bogosBinted/krzychu.jpg", "Krzychu", colors["orange"],
+		"No to po kolei: KOI-4878.01 - jedna z planet najbardziej podobnych do Ziemii. Ma praktycznie identyczną masę i powierzchnię, podobną średnią temperaturę (zakładając, że ma atmosferę) i prawdopodobnie wodę. Niestey jest bardzo daleko i potrzebowalibyśmy całego naszego paliwa, żeby tam dolecieć. Do tego możliwe, że zamieszkiwany przez pewną rasę kosmitów nazywanych Nerdami. 1075 lat świtlnych od ziemii."
+	)],
+	"Okej",
+	"Mhm",
+	function (){
+		doTheEvent(c2u3e3v1)
+	},
+	function (){
+		doTheEvent(c2u3e3v1)
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
 )
+
+let c2u3e3v1 = new MyEvent(
+	"bogosBinted/planet1.jpg",
+	[new MyLine(
+		"bogosBinted/krzychu.jpg", "Krzychu", colors["orange"],
+		"TRAPPIST-1e - Dużo mniejsza od ziemii, ale wciąż podobna planeta. Też może mieć wodę i w miarę znośną temperaturę, a także atmosferę. Zaletą tego miejsca jest to, że ją zamieszkują przyjaźnie nastawienii Magikale, ale dysponują technologią, której nikt nie rozumie, stąd ich nazwa, więc lepiej im nie podpadać. 39 lat świetlnych od ziemii."
+	)],
+	"Okej",
+	"Mhm",
+	function (){
+		doTheEvent(c2u3e4v1)
+	},
+	function (){
+		doTheEvent(c2u3e4v1)
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+
+let c2u3e4v1 = new MyEvent(
+	"bogosBinted/planet3.jpg",
+	[new MyLine(
+		"bogosBinted/krzychu.jpg", "Krzychu", colors["orange"],
+		"Proxima centauri b - najbliżej z tych 3 planet - tylko 4 lata świetlne. Również zdatna do życia planeta, okrążenie wokół słońca trwa tam 11 dni. Zamieszkiwana przez Agresusów - mogą na nas zareagować nie zbyt dobrze."
+	)],
+	"Ty mówisz poważnie z tymi kosmitami? Myślałem że o tym już rozmawialiśmy.",
+	"Okej w takim razie lećmy na...",
+	function (){
+		//doTheEvent(c2u3e5v1)
+	},
+	function (){
+		changeChapterPlace(3, "Kosmiczny pierUg")
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+
+let cuev = new MyEvent(
+	"bogosBinted/jakub.jpg",
+	[new MyLine(
+		"bogosBinted/jakub.jpg", "Jakub", colors[],
+		"testline"
+	)],
+	"LewaOpcja",
+	"PrawaOpcja",
+	function (){
+		//doTheEvent(cuev)
+	},
+	function (){
+		//doTheEvent(cuev)
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+
+
 
 /*
 let cuev = new MyEvent(
