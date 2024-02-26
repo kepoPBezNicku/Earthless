@@ -208,9 +208,13 @@ function playMusic(audio) {
 
 function dubbing(audioPath) {
 	if (audioPath != "") {
+		decisionButton.style.setProperty("transform", "scale(0)")
 		setTimeout(function() {
 			let dubbingAudio = new Audio("audioDub/" + audioPath + ".mp3");
 			dubbingAudio.play();
+			dubbingAudio.addEventListener("ended", function() {
+				decisionButton.style.setProperty("transform", "scale(1)")
+			})
 		}, 1000)
 	}
 }
@@ -972,9 +976,13 @@ changeChapterPlace(1, "Dom Jakuba");
 //===== Underchapter 1 =====
 
 start.addEventListener("click", function() {
+	// decisionButton.style.setProperty("transform", "scale(0)")
 	setTimeout(function() {
 		let dubbingAudio = new Audio("audioDub/c0u1e1.mp3");
 		dubbingAudio.play();
+		dubbingAudio.addEventListener("ended", function() {
+			// decisionButton.style.setProperty("transform", "scale(1)")
+		})
 	}, 500)
 })
 
@@ -1212,7 +1220,9 @@ let c1u1e1 = new MyEvent(
 	},
 
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0, 0, 0, 0]
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	"c1u1e1L",
+	"c1u1e1R"
 );
 
 //pozdro Kiara
@@ -2032,16 +2042,12 @@ let c1u2e12v2 = new MyEvent(
 	function (){
 		changeChapterPlace(1, "Siedziba Earthless")
 		doTheEvent(c1u2e13v1);
-		setTimeout(function() {
-			nextDub = "c1u2e13v1"
-		}, 3500)
+		nextDub = "c1u2e13v1"
 	},
 	function (){
 		changeChapterPlace(1, "Siedziba Earthless")
 		doTheEvent(c1u2e13v1);
-		setTimeout(function() {
-			nextDub = "c1u2e13v1"
-		}, 3500)
+		nextDub = "c1u2e13v1"
 	},
 	[0, 0, 0, 0, 0, .05, 0, 0, 0],
 	[0, 0, 0, .05, 0, -.1, 0, 0, 0] 
@@ -2208,16 +2214,12 @@ let c1u2e17v2 = new MyEvent(
 	function (){
 		changeChapterPlace(2, "Studio nagrań")
 		doTheEvent(c2u1e1);
-		setTimeout(function() {
-			nextDub = "c2u1e1";
-		}, 3500)
+		nextDub = "c2u1e1";
 	},
 	function (){
 		changeChapterPlace(2, "Studio nagrań")
 		doTheEvent(c2u1e1);
-		setTimeout(function() {
 			nextDub = "c2u1e1";
-		}, 3500)
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -2297,16 +2299,12 @@ let c1u2e19v1 = new MyEvent(
 	function (){
 		changeChapterPlace(2, "Studio nagrań")
 		doTheEvent(c2u1e1);
-		setTimeout(function() {
-			nextDub = "c2u1e1";
-		}, 3500)
+		nextDub = "c2u1e1";
 	},
 	function (){
 		changeChapterPlace(2, "Studio nagrań")
 		doTheEvent(c2u1e1);
-		setTimeout(function() {
-			nextDub = "c2u1e1";
-		}, 3500)
+		nextDub = "c2u1e1";
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -2462,16 +2460,12 @@ let c2u1e4v1 = new MyEvent(
 	function (){
 		changeChapterPlace(2, "Laboratorium Earthless")
 		doTheEvent(c2u2e1);
-		setTimeout(function() {
-			nextDub = "c2u2e1";
-		}, 3500)
+		nextDub = "c2u2e1";
 	},
 	function (){
 		changeChapterPlace(2, "Laboratorium Earthless")
 		doTheEvent(c2u2e1);
-		setTimeout(function() {
-			nextDub = "c2u2e1";
-		}, 3500)
+		nextDub = "c2u2e1";
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
