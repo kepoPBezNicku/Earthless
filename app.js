@@ -1107,7 +1107,7 @@ let c0u1e5 = new MyEvent(
 	"...",
 	function (){
 		doTheEvent(c0u2e1);
-		nextDub = "c0u1e1"
+		nextDub = ""
 	},
 	function (){
 		doTheEvent(c0u2e1);
@@ -1195,11 +1195,12 @@ let c1u1e1 = new MyEvent(
 	"Zaraz się spóźnię!",
 	function () {
 		doTheEvent(c1u1e2v1);
-		nextDub = "c1u1e3v2"
+		nextDub = "c1u1e3v1"
 	},
 
 	function () {
 		doTheEvent(c1u1e2v2);
+		nextDub = "c1u1e2v2"
 	},
 
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -1224,11 +1225,13 @@ let c1u1e2v1 = new MyEvent(
 		data.notimeleft = true;
 
 		doTheEvent(c1u1e2v2);
+		nextDub = "c1u1e2v2"
 	},
 	function () {
 		data.notimeleft = true;
 
 		doTheEvent(c1u1e2v2);
+		nextDub = "c1u1e2v2"
 	},
 
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -1249,13 +1252,24 @@ let c1u1e2v2 = new MyEvent(
 		data.isCoffeDrunk = true;
 		if (data.notimeleft == true) {
 			data.stats.publicOpinion-=.05;
-			doTheEvent(c1u1e3v3);}
-		else doTheEvent(c1u1e3v1);
+			doTheEvent(c1u1e3v3);
+			nextDub = "c1u1e3v3"
+		}
+		else {
+			 doTheEvent(c1u1e3v1);
+			 nextDub = "c1u1e3v1"
+		}
 	},
 	function () {
 		data.areTeethBrushed = true;
-		if (data.notimeleft == true) doTheEvent(c1u1e3v4);
-		else doTheEvent(c1u1e3v2);
+		if (data.notimeleft == true) {
+			doTheEvent(c1u1e3v4);
+			nextDub = "c1u1e3v4"
+		}
+		else {
+			doTheEvent(c1u1e3v2);
+			nextDub = "c1u1e3v2"
+		}
 	},
 
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -1276,12 +1290,14 @@ let c1u1e3v1 = new MyEvent(
 		data.areTeethBrushed = true;
 
 		doTheEvent(c1u1e3v4);
+		nextDub = "c1u1e3v4"
 	},
 	function () {
 		data.isBreakfastEaten = true;
 		data.stats.publicOpinion-=0.05;
 
 		doTheEvent(c1u1e4v1);
+		nextDub = "c1u1e4v1"
 	},
 
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -1302,11 +1318,13 @@ let c1u1e3v2 = new MyEvent(
 		data.isBreakfastEaten = true;
 
 		doTheEvent(c1u1e4v1);
+		nextDub = "c1u1e4v1"
 	},
 	function () {
 		data.isCoffeDrunk = true;
 
 		doTheEvent(c1u1e3v3);
+		nextDub = "c1u1e3v3"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -1324,9 +1342,11 @@ let c1u1e3v3 = new MyEvent(
 	"Zamówię sobie taxi premium, niech wiedzą, że mnie stać",
 	function () {
 		doTheEvent(c1u1e5v1);
+		nextDub = "c1u1e5v1"
 	},
 	function () {
 		doTheEvent(c1u1e5v1);
+		nextDub = "c1u1e5v1"
 	},
 	[0, 0, 0, 0, -0.05, 0, 0, 0, 0],
 	[0, 0, 0, 0, -0.15, 0, 0, 0, 0]
@@ -1344,9 +1364,11 @@ let c1u1e3v4 = new MyEvent(
 	"Zamówię sobie taxi premium, niech wiedzą, że mnie stać",
 	function () {
 		doTheEvent(c1u1e5v1);
+		nextDub = "c1u1e5v1"
 	},
 	function () {
 		doTheEvent(c1u1e5v1);
+		nextDub = "c1u1e5v1"
 	},
 	[0, 0, 0, 0, -0.05, 0, 0, 0, 0],
 	[0, 0, 0, 0, -0.15, 0, 0, 0, 0]
@@ -1364,9 +1386,11 @@ let c1u1e4v1 = new MyEvent(
 	"Zamówię sobie taxi premium, niech wiedzą, że mnie stać",
 	function () {
 		doTheEvent(c1u1e5v1);
+		nextDub = "c1u1e5v1"
 	},
 	function () {
 		doTheEvent(c1u1e5v1);
+		nextDub = "c1u1e5v1"
 	},
 	[0, 0, 0, 0, -0.05, 0, 0, 0, 0],
 	[0, 0, 0, 0, -0.15, 0, 0, 0, 0]
@@ -1384,9 +1408,11 @@ let c1u1e5v1 = new MyEvent(
 	"Po prostu poczekam w samotności, lepiej odpocznę przed wywiadem",
 	function () {
 		doTheEvent(c1u1e6);
+		nextDub = "c1u1e6"
 	},
 	function () {
 		doTheEvent(c1u1e7);
+		nextDub = "c1u1e7"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -1412,9 +1438,11 @@ let c1u1e6 = new MyEvent(
 	"Wyłącz telefon",
 	function () {
 		doTheEvent(c1u1e7);
+		nextDub = "c1u1e7"
 	},
 	function () {
 		doTheEvent(c1u1e7);
+		nextDub = "c1u1e7"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -1433,10 +1461,12 @@ let c1u1e7 = new MyEvent(
 	function () {
 		showIcons(adviser, "Relacja z doradcą");
 		doTheEvent(c1u1e8);
+		nextDub = "c1u1e8"
 	},
 	function () {
 		showIcons(adviser, "Relacja z doradcą");
 		doTheEvent(c1u1e8);
+		nextDub = "c1u1e8"
 	},
 	[0, 0, 0, 0.1, 0, 0, 0, 0, 0],
 	[0, 0, 0, -0.1, 0, 0, 0, 0, 0]
@@ -1459,10 +1489,12 @@ let c1u1e8 = new MyEvent(
 	function () {
 		changeChapterPlace(1, "PDF FM");
 		doTheEvent(c1u2e1);
+		nextDub = "c1u2e1"
 	},
 	function () {
 		changeChapterPlace(1, "PDF FM");
 		doTheEvent(c1u2e1);
+		nextDub = "c1u2e1"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -1488,9 +1520,11 @@ let c1u2e1 = new MyEvent(
 		//hiddenStats
 
 		doTheEvent(c1u2e2v1);
+		nextDub = "c1u2e2v1"
 	},
 	function () {
 		doTheEvent(c1u2e2v2);
+		nextDub = "c1u2e2v2"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -1508,9 +1542,11 @@ let c1u2e2v1 = new MyEvent(
 	"Ludziom należy się prawda!",
 	function () {
 		doTheEvent(c1u2e2v2);
+		nextDub = "c1u2e2v2"
 	},
 	function () {
 		doTheEvent(c1u2e3v1);
+		nextDub = "c1u2e3v1"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, -0.1, 0, 0, 0]
@@ -1532,9 +1568,11 @@ let c1u2e2v2 = new MyEvent(
 	"Wróć do rozmowy",
 	function () {
 		doTheEvent(c1u2e4v1);
+		nextDub = "c1u2e4v1"
 	},
 	function () {
 		doTheEvent(c1u2e4v1);
+		nextDub = "c1u2e4v1"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -1552,9 +1590,11 @@ let c1u2e3v1 = new MyEvent(
 	"Jeszcze się zastanowię",
 	function () {
 		doTheEvent(c1u2e2v2);
+		nextDub = "c1u2e2v2"
 	},
 	function () {
 		doTheEvent(c1u2e2v2);
+		nextDub = "c1u2e2v2"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -1572,9 +1612,11 @@ let c1u2e4v1 = new MyEvent(
 	"Lecę, widzimy się za 20 minut",
 	function () {
 		doTheEvent(c1u2e5v1);
+		nextDub = "c1u2e5v1"
 	},
 	function () {
 		doTheEvent(c1u2e5v1);
+		nextDub = "c1u2e5v1"
 	},
 	[0, 0, 0, 0, 0, 0.1, 0, 0, 0],
 	[0, 0, 0, 0, 0, -0.05, 0, 0, 0]
@@ -1608,9 +1650,11 @@ let c1u2e5v1 = new MyEvent(
 	"To tylko plotka, w szkole byłem piątkowym uczniem, a tym bardziej z wosu!",
 	function () {
 		doTheEvent(c1u2e6v1);
+		nextDub = "c1u2e6v1"
 	},
 	function () {
 		doTheEvent(c1u2e6v1);
+		nextDub = "c1u2e6v1"
 	},
 	[0, 0, 0, 0.1, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0.05, 0, 0, 0, 0, 0]
@@ -1640,10 +1684,12 @@ let c1u2e6v1 = new MyEvent(
 	function () {
 		data.stats.publicOpinion-=.1
 		doTheEvent(c1u2e7v1);
+		nextDub = "c1u2e7v1"
 	},
 	function () {
 		data.stats.publicOpinion+=.05
 		doTheEvent(c1u2e7v2);
+		nextDub = "c1u2e7v2"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -1666,10 +1712,12 @@ let c1u2e7v1 = new MyEvent(
 	function () {
 		data.stats.publicOpinion+=.05
 		doTheEvent(c1u2e8v1);
+		nextDub = "c1u2e8v1"
 	},
 	function () {
 		data.stats.publicOpinion-=.1
 		doTheEvent(c1u2e8v2);
+		nextDub = "c1u2e8v2"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -1692,10 +1740,12 @@ let c1u2e7v2 = new MyEvent(
 	function () {
 		data.stats.publicOpinion+=.05
 		doTheEvent(c1u2e8v1);
+		nextDub = "c1u2e8v1"
 	},
 	function () {
 		data.stats.publicOpinion-=.1
 		doTheEvent(c1u2e8v2);
+		nextDub = "c1u2e8v2"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -1718,10 +1768,12 @@ let c1u2e8v1 = new MyEvent(
 	function () {
 		data.stats.publicOpinion-=.1
 		doTheEvent(c1u2e9v1);
+		nextDub = "c1u2e9v1"
 	},
 	function () {
 		data.stats.publicOpinion+=.05
 		doTheEvent(c1u2e9v2);
+		nextDub = "c1u2e9v1"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -1744,10 +1796,12 @@ let c1u2e8v2 = new MyEvent(
 	function () {
 		data.stats.publicOpinion-=.1
 		doTheEvent(c1u2e9v1);
+		nextDub = "c1u2e9v1"
 	},
 	function () {
 		data.stats.publicOpinion+=.05
 		doTheEvent(c1u2e9v2);
+		nextDub = "c1u2e9v1"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -1767,9 +1821,11 @@ let c1u2e9v1 = new MyEvent(
 		if(data.isCoffeDrunk||data.isBreakfastEaten){
 			data.stats.publicOpinion+=.3
 			doTheEvent(c1u2e10v1);
+			nextDub = "c1u2e10v1"
 		}else{
 			data.stats.publicOpinion-=.2
 			doTheEvent(c1u2e10v2);
+			nextDub = "c1u2e10v2"
 		}
 		
 		
@@ -1778,9 +1834,11 @@ let c1u2e9v1 = new MyEvent(
 		if(data.isCoffeDrunk||data.isBreakfastEaten){
 			data.stats.publicOpinion+=.1
 			doTheEvent(c1u2e10v3);
+			nextDub = "c1u2e10v3"
 		}else{
 			data.stats.publicOpinion-=.1
 			doTheEvent(c1u2e10v4);
+			nextDub = "c1u2e10v4"
 		}
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -1801,18 +1859,22 @@ let c1u2e9v2 = new MyEvent(
 		if(data.isCoffeDrunk||data.isBreakfastEaten){
 			data.stats.publicOpinion+=.3
 			doTheEvent(c1u2e10v1);
+			nextDub = "c1u2e10v1"
 		}else{
 			data.stats.publicOpinion-=.2
 			doTheEvent(c1u2e10v2);
+			nextDub = "c1u2e10v2"
 		}
 	},
 	function () {
 		if(data.isCoffeDrunk||data.isBreakfastEaten){
 			data.stats.publicOpinion+=.1
 			doTheEvent(c1u2e10v3);
+			nextDub = "c1u2e10v3"
 		}else{
 			data.stats.publicOpinion-=.1
 			doTheEvent(c1u2e10v4);
+			nextDub = "c1u2e10v4"
 		}
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -1828,10 +1890,12 @@ let c1u2e10v1 = new MyEvent(
 	"Kontynuuj wywiad",
 	"Kontynuuj wywiad",
 	function (){
-		doTheEvent(c1u2e11v1)
+		doTheEvent(c1u2e11v1);
+		nextDub = "c1u2e11v1"
 	},
 	function (){
-		doTheEvent(c1u2e11v1)
+		doTheEvent(c1u2e11v1);
+		nextDub = "c1u2e11v1"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -1846,10 +1910,12 @@ let c1u2e10v2 = new MyEvent(
 	"Kontynuuj wywiad",
 	"Kontynuuj wywiad",
 	function (){
-		doTheEvent(c1u2e11v1)
+		doTheEvent(c1u2e11v1);
+		nextDub = "c1u2e11v1"
 	},
 	function (){
-		doTheEvent(c1u2e11v1)
+		doTheEvent(c1u2e11v1);
+		nextDub = "c1u2e11v1"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -1864,10 +1930,12 @@ let c1u2e10v3 = new MyEvent(
 	"Kontynuuj wywiad",
 	"Kontynuuj wywiad",
 	function (){
-		doTheEvent(c1u2e11v1)
+		doTheEvent(c1u2e11v1);
+		nextDub = "c1u2e11v1"
 	},
 	function (){
-		doTheEvent(c1u2e11v1)
+		doTheEvent(c1u2e11v1);
+		nextDub = "c1u2e11v1"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -1882,10 +1950,12 @@ let c1u2e10v4 = new MyEvent(
 	"Kontynuuj wywiad",
 	"Kontynuuj wywiad",
 	function (){
-		doTheEvent(c1u2e11v1)
+		doTheEvent(c1u2e11v1);
+		nextDub = "c1u2e11v1"
 	},
 	function (){
-		doTheEvent(c1u2e11v1)
+		doTheEvent(c1u2e11v1);
+		nextDub = "c1u2e11v1"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -1900,10 +1970,12 @@ let c1u2e11v1 = new MyEvent(
 	"Jak najbardziej, program Earthless...",
 	"Myślę, że napewno sobię poradzimy.",
 	function (){
-		doTheEvent(c1u2e12v1)
+		doTheEvent(c1u2e12v1);
+		nextDub = "c1u2e12v1"
 	},
 	function (){
-		doTheEvent(c1u2e12v2)
+		doTheEvent(c1u2e12v2);
+		nextDub = "c1u2e12v2"
 	},
 	[0, 0, 0, .2, 0, -.2, 0, 0, 0],
 	[0, 0, 0, -.2, 0, .2, 0, 0, 0]
@@ -1921,10 +1993,12 @@ let c1u2e12v1 = new MyEvent(
 	"Również dziękuję, miłego dnia.",
 	"Dzięki wielkie, pamiętajcie Bukaj2060!",
 	function (){
-		doTheEvent(c1u2e13v1)
+		doTheEvent(c1u2e13v1);
+		nextDub = "c1u2e13v1"
 	},
 	function (){
-		doTheEvent(c1u2e13v1)
+		doTheEvent(c1u2e13v1);
+		nextDub = "c1u2e13v1"
 	},
 	[0, 0, 0, 0, 0, .05, 0, 0, 0], 
 	[0, 0, 0, .05, 0, -.1, 0, 0, 0] 
@@ -1949,11 +2023,17 @@ let c1u2e12v2 = new MyEvent(
 	"Dzięki wielkie, pamiętajcie Bukaj2060!",
 	function (){
 		changeChapterPlace(1, "Siedziba Earthless")
-		doTheEvent(c1u2e13v1)
+		doTheEvent(c1u2e13v1);
+		setTimeout(function() {
+			nextDub = "c1u2e13v1"
+		}, 3500)
 	},
 	function (){
 		changeChapterPlace(1, "Siedziba Earthless")
-		doTheEvent(c1u2e13v1)
+		doTheEvent(c1u2e13v1);
+		setTimeout(function() {
+			nextDub = "c1u2e13v1"
+		}, 3500)
 	},
 	[0, 0, 0, 0, 0, .05, 0, 0, 0],
 	[0, 0, 0, .05, 0, -.1, 0, 0, 0] 
@@ -1974,8 +2054,14 @@ let c1u2e13v1 = new MyEvent(
 	"Dobra, zobaczmy",
 	"Nie bardzo mnie to teraz obchodzi, po prostu czekajmy na wyniki. Musimy być gotowi.",
 	function (){
-		if (data.areTeethBrushed) doTheEvent(c1u2e14v1)
-		else doTheEvent(c1u2e14v2)
+		if (data.areTeethBrushed) {
+			doTheEvent(c1u2e14v1)
+			nextDub = "c1u2e14v1"
+		}
+		else {
+			doTheEvent(c1u2e14v2);
+			nextDub = "c1u2e14v2"
+		}
 	},
 	function (){
 		doTheEvent(c1u2e15v1)
@@ -2002,10 +2088,12 @@ let c1u2e14v1 = new MyEvent(
 	"Chyba nie jest tak źle",
 	"Jest świtnie! Naprawdę mam szansę to wygrać!",
 	function (){
-		doTheEvent(c1u2e15v1)
+		doTheEvent(c1u2e15v1);
+		nextDub = "c1u2e15v1"
 	},
 	function (){
-		doTheEvent(c1u2e15v1)
+		doTheEvent(c1u2e15v1);
+		nextDub = "c1u2e15v1"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], 
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -2029,10 +2117,12 @@ let c1u2e14v2 = new MyEvent(
 	"Chyba nie jest tak źle",
 	"Jest świetnie! Naprawdę mam szansę to wygrać!",
 	function (){
-		doTheEvent(c1u2e15v1)
+		doTheEvent(c1u2e15v1);
+		nextDub = "c1u2e15v1"
 	},
 	function (){
-		doTheEvent(c1u2e15v1)
+		doTheEvent(c1u2e15v1);
+		nextDub = "c1u2e15v1"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -2055,11 +2145,13 @@ let c1u2e15v1 = new MyEvent(
 	"To tylko formalność, ale zobaczmy.",
 	function (){
 		showIcons(research, "Postęp badań")
-		doTheEvent(c1u2e16v1)
+		doTheEvent(c1u2e16v1);
+		nextDub = "c1u2e16v1"
 	},
 	function (){
 		showIcons(research, "Postęp badań")
-		doTheEvent(c1u2e16v1)
+		doTheEvent(c1u2e16v1);
+		nextDub = "c1u2e16v1"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -2086,10 +2178,12 @@ let c1u2e16v1 = new MyEvent(
 	"Co ten staruch znowu chce?",
 	"Nie mam na to teraz czasu, musimy to natychmiast nagrać.",
 	function (){
-		doTheEvent(c1u2e17v1)
+		doTheEvent(c1u2e17v1);
+		nextDub = "c1u2e17v1"
 	},
 	function (){
-		doTheEvent(c1u2e17v2)
+		doTheEvent(c1u2e17v2);
+		nextDub = "c1u2e17v2"
 	},
 	[-.05, 0, 0, .05, 0, 0, 0, 0, 0], //
 	[.05, 0, 0, -.15, 0, 0, 0, 0, 0] //
@@ -2105,11 +2199,17 @@ let c1u2e17v2 = new MyEvent(
 	"Rozumiem.",
 	function (){
 		changeChapterPlace(2, "Studio nagrań")
-		doTheEvent(c2u1e1)
+		doTheEvent(c2u1e1);
+		setTimeout(function() {
+			nextDub = "c2u1e1";
+		}, 3500)
 	},
 	function (){
 		changeChapterPlace(2, "Studio nagrań")
-		doTheEvent(c2u1e1)
+		doTheEvent(c2u1e1);
+		setTimeout(function() {
+			nextDub = "c2u1e1";
+		}, 3500)
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -2130,10 +2230,12 @@ let c1u2e17v1 = new MyEvent(
 	"Jak to niby jest możliwe?",
 	"Nie wierzę, nie ma szans",
 	function (){
-		doTheEvent(c1u2e18v1)
+		doTheEvent(c1u2e18v1);
+		nextDub = "c1u2e18v1"
 	},
 	function (){
-		doTheEvent(c1u2e18v1)
+		doTheEvent(c1u2e18v1);
+		nextDub = "c1u2e18v1"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] 
@@ -2148,10 +2250,12 @@ let c1u2e18v1 = new MyEvent(
 	"Wiesz co, śpieszy mi się... do zobacznia",
 	"Mhm, a czym jest ten zagęszczacz materii?",
 	function (){
-		doTheEvent(c1u2e17v2)
+		doTheEvent(c1u2e17v2);
+		nextDub = "c1u2e17v2"
 	},
 	function (){
-		doTheEvent(c1u2e19v1)
+		doTheEvent(c1u2e19v1);
+		nextDub = "c1u2e19v2"
 	},
 	[.05, 0, 0, -.05, 0, 0, 0, 0, 0],
 	[-.05, 0, 0, .05, 0, 0, 0, 0, 0]
@@ -2184,11 +2288,17 @@ let c1u2e19v1 = new MyEvent(
 	"Powodzenia!",
 	function (){
 		changeChapterPlace(2, "Studio nagrań")
-		doTheEvent(c2u1e1)
+		doTheEvent(c2u1e1);
+		setTimeout(function() {
+			nextDub = "c2u1e1";
+		}, 3500)
 	},
 	function (){
 		changeChapterPlace(2, "Studio nagrań")
-		doTheEvent(c2u1e1)
+		doTheEvent(c2u1e1);
+		setTimeout(function() {
+			nextDub = "c2u1e1";
+		}, 3500)
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -2207,11 +2317,18 @@ let c2u1e1 = new MyEvent(
 	"Tak, jestem gotowy",
 	"Może jakaś rada?",
 	function (){
-		doTheEvent(c2u1e2v1)
+		doTheEvent(c2u1e2v1);
+		nextDub = "c2u1e2v1"
 	},
 	function (){
-		if(data.stats.adviser>=.3) doTheEvent(c2u1e2v2)
-		else doTheEvent(c2u1e2v3)
+		if(data.stats.adviser>=.3) {
+			doTheEvent(c2u1e2v2)
+			nextDub = "c2u1e2v2"
+		}
+		else {
+			doTheEvent(c2u1e2v3);
+			nextDub = "c2u1e2v3"
+		}
 	},
 	[0, 0, .05, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -2230,11 +2347,13 @@ let c2u1e2v1 = new MyEvent(
 	"Musiscie się przygotować, nie każdy będzie mógł wejść na statek...",
 	"Zapewniam, że uratujemy każdego polaka...",
 	function (){
-		doTheEvent(c2u1e3v1)
+		doTheEvent(c2u1e3v1);
+		nextDub = "c2u1e3v1"
 	},
 	function (){
 		data.liedAboutPassengers = true
-		doTheEvent(c2u1e3v2)
+		doTheEvent(c2u1e3v2);
+		nextDub = "c2u1e3v2"
 	},
 	[0, 0, 0, -.1, 0, -.15, 0, 0, 0],
 	[0, 0, 0, .05, 0, .1, 0, 0, 0] 
@@ -2249,10 +2368,12 @@ let c2u1e2v2 = new MyEvent(
 	"Nie bedę czuł się z tym dobrze...",
 	"Dobra, włączaj kamerę",
 	function (){
-		doTheEvent(c2u1e2v1)
+		doTheEvent(c2u1e2v1);
+		nextDub = "c2u1e2v1"
 	},
 	function (){
-		doTheEvent(c2u1e2v1)
+		doTheEvent(c2u1e2v1);
+		nextDub = "c2u1e2v1"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -2267,10 +2388,12 @@ let c2u1e2v3 = new MyEvent(
 	"Obiecuję, że to się nie powtórzy.",
 	"Skoro tak mówisz... włączaj kamerę.",
 	function (){
-		doTheEvent(c2u1e2v2)
+		doTheEvent(c2u1e2v2);
+		nextDub = "c2u1e2v2"
 	},
 	function (){
-		doTheEvent(c2u1e2v1)
+		doTheEvent(c2u1e2v1);
+		nextDub = "c2u1e2v1"
 	},
 	[0, 0, .1, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] 
@@ -2288,10 +2411,12 @@ let c2u1e3v1 = new MyEvent(
 	"Które mogą być różne...",
 	function (){
 		data.liedAboutSeats = true;
-		doTheEvent(c2u1e4v1)
+		doTheEvent(c2u1e4v1);
+		nextDub = "c2u1e4v1"
 	},
 	function (){
-		doTheEvent(c2u1e4v2)
+		doTheEvent(c2u1e4v2);
+		nextDub = "c2u1e4v2"
 	},
 	[0, 0, 0, .05, 0, .1, 0, 0, 0],
 	[0, 0, 0, -.1, 0, -.15, 0, 0, 0]
@@ -2307,10 +2432,12 @@ let c2u1e3v2 = new MyEvent(
 	"Które mogą być różne...",
 	function (){
 		data.liedAboutSeats = true;
-		doTheEvent(c2u1e4v1)
+		doTheEvent(c2u1e4v1);
+		nextDub = "c2u1e4v1"
 	},
 	function (){
-		doTheEvent(c2u1e4v2)
+		doTheEvent(c2u1e4v2);
+		nextDub = "c2u1e4v2"
 	},
 	[0, 0, 0, .05, 0, .1, 0, 0, 0],
 	[0, 0, 0, -.1, 0, -.15, 0, 0, 0]
@@ -2326,11 +2453,17 @@ let c2u1e4v1 = new MyEvent(
 	"Pamiętajcie by być dobrej myśli.",
 	function (){
 		changeChapterPlace(2, "Laboratorium Earthless")
-		doTheEvent(c2u2e1)
+		doTheEvent(c2u2e1);
+		setTimeout(function() {
+			nextDub = "c2u2e1";
+		}, 3500)
 	},
 	function (){
 		changeChapterPlace(2, "Laboratorium Earthless")
-		doTheEvent(c2u2e1)
+		doTheEvent(c2u2e1);
+		setTimeout(function() {
+			nextDub = "c2u2e1";
+		}, 3500)
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -2348,10 +2481,12 @@ let c2u1e4v2 = new MyEvent(
 	function (){
 		changeChapterPlace(1, "Laboratorium Earthless");
 		doTheEvent(c2u2e1);
+		nextDub = "c2u2e1"
 	},
 	function (){
 		changeChapterPlace(1, "Laboratorium Earthless");
 		doTheEvent(c2u2e1);
+		nextDub = "c2u2e1"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -2383,11 +2518,13 @@ let c2u2e1 = new MyEvent(
 	"światła, wody i dwutlenku węgla",
 	function (){
 		data.stats.research+=.05
-		doTheEvent(c2u2e2v1)
+		doTheEvent(c2u2e2v1);
+		nextDub = "c2u2e2v1"
 	},
 	function (){
 		data.stats.research-=.05
-		doTheEvent(c2u2e2v2)
+		doTheEvent(c2u2e2v2);
+		nextDub = "c2u2e2v2"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -2422,10 +2559,12 @@ let c2u2e2v1 = new MyEvent(
 	"Dobrze, byle szybko.",
 	"Nie mamy na to teraz czasu.",
 	function (){
-		doTheEvent(c2u2e3v1)
+		doTheEvent(c2u2e3v1);
+		nextDub = "c2u2e3v1"
 	},
 	function (){
-		doTheEvent(c2u2e3v2)
+		doTheEvent(c2u2e3v2);
+		nextDub = "c2u2e3v2"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
@@ -2461,10 +2600,12 @@ let c2u2e2v2 = new MyEvent(
 		"Nie mamy na to teraz czasu.",
 	function (){
 		showIcons(fuel, "Stan paliwa")
-		doTheEvent(c2u2e3v1)
+		doTheEvent(c2u2e3v1);
+		nextDub = "c2u2e3v1"
 	},
 	function (){
-		doTheEvent(c2u2e3v2)
+		doTheEvent(c2u2e3v2);
+		nextDub = "c2u2e3v2"
 	},
 	[0, 0, 0, 0, 0, 0, .05, 0, 0],
 	[0, 0, 0, 0, 0, 0, -.05, 0, 0]
@@ -2496,11 +2637,13 @@ let c2u2e3v1 = new MyEvent(
 	"Nie możemy ryzykować życia niewinnych ludzi!",
 	function (){
 		showIcons(food, "Dostępna żywność")
-		doTheEvent(c2u2e4v1)
+		doTheEvent(c2u2e4v1);
+		nextDub = "c2u2e4v1"
 	},
 	function (){
 		showIcons(food, "Dostępna żywność")
-		doTheEvent(c2u2e4v1)
+		doTheEvent(c2u2e4v1);
+		nextDub = "c2u2e4v1"
 	},
 	[0, 0, 0, -.3, -.2, 0, 0, .4, 0],
 	[0, 0, 0, 0, .2, 0, 0, 0, 0]
@@ -2516,12 +2659,14 @@ let c2u2e3v2 = new MyEvent(
 	"Rób co chcesz.",
 	function (){
 		showIcons(fuel, "Stan paliwa")
-		doTheEvent(c2u2e3v1)
+		doTheEvent(c2u2e3v1);
+		nextDub = "c2u2e3v1"
 	},
 	function (){
 		data.marcinsDecision
 		showIcons(food, "Dostępna żywność")
-		doTheEvent(c2u2e4v1)
+		doTheEvent(c2u2e4v1);
+		nextDub = "c2u2e4v1"
 	},
 	[0, 0, 0, 0, 0, -.1, 0, 0, 0],
 	[0, 0, 0, 0, 0, .1, 0, 0, 0] 
@@ -2544,10 +2689,12 @@ let c2u2e4v1 = new MyEvent(
 	"Ruszymy z kampanią informacyjną, musi z nami polecieć tyle ludzi, ile się da.",
 	"Odpuśćmy, musimy zwiększyć szanse na przetrwanie",
 	function (){
-		doTheEvent(c2u2e5v1)
+		doTheEvent(c2u2e5v1);
+		nextDub = "c2u2e5v1"
 	},
 	function (){
-		doTheEvent(c2u2e5v1)
+		doTheEvent(c2u2e5v1);
+		nextDub = "c2u2e5v1"
 	},
 	[0, 0, 0,.1, -.2, 0, 0, 0, -.1],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] 
@@ -2582,9 +2729,11 @@ let cuev = new MyEvent(
 	"PrawaOpcja",
 	function (){
 		//doTheEvent(cuev)
+		//nextDub = "cuev"
 	},
 	function (){
 		//doTheEvent(cuev)
+		//nextDub = "cuev"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
