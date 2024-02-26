@@ -1153,7 +1153,7 @@ let c0u2e1 = new MyEvent(
 	"...",
 	function (){
 		doTheEvent(c0u2e2);
-		nextDub = ""
+		nextDub = "";
 	},
 	function (){
 		doTheEvent(c0u2e2);
