@@ -495,7 +495,7 @@ header {
 main {
 	display: flex;
 	justify-content: center;
-	margin: 0px 0px 110px;
+	margin: 0px 0px 50px;
 }
 
 #main-section-index {
@@ -903,13 +903,10 @@ main {
 }
 
 @media only screen and (max-width: 750px) {
-	main {
-		margin-bottom: 50px
-	}
 	#main-section {
 		flex-direction: column;
 		margin: 0px auto;
-		padding: 80px 15px 70px;
+		padding: 80px 15px 0px;
 		width: fit-content;
 		gap: 60px;
 	}
@@ -930,6 +927,9 @@ main {
 	}
 	#contrast-and-font-size {
 		left: 30%;
+	}
+	footer {
+		margin-top: 20px;
 	}
 }
 
@@ -1005,19 +1005,13 @@ footer {
 	color: rgba(255, 255, 255, 0.457);
 	font-size: 0.5rem;
 	font-family: Rubik, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	left: 50%;
-	width: 100%;
-	transform: translateX(-50%);
-	position: fixed;
-	bottom: 5px;
-	z-index: 9;
+	/* margin-top: 70px;  */
 }
 
 footer section {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	text-align: center;
 }
 
 footer h1 {
