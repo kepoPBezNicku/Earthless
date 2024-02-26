@@ -375,6 +375,8 @@ let data = {
 	liedAboutSeats: false,
 
 	marcinsDecision: false,
+
+	destination: "earth",
 };
 
 var colorNerds = window.getComputedStyle(nerds).getPropertyValue("--pseudoElColor");
@@ -952,17 +954,25 @@ function changePlanet() {
 
 
 	p1.addEventListener("click", function() {
-		doTheEvent();
-		noti("Wybrana nowa planeta: KOI-4878.01");
+		if(data.stats.fuel>=.9){
+			data.destination("koi")
+			data.stats.fuel-=.8
+			doTheEvent(c3u1e1);
+			noti("Wybrana nowa planeta: KOI-4878.01");
+		}else noti("Nie masz wystarczająco paliwa.")
 	})
 
 	p2.addEventListener("click", function() {
-		doTheEvent();
+		data.destination("trap")
+		data.stats.fuel-=.3
+		doTheEvent(c3u1e1);
 		noti("Wybrana nowa planeta: TRAPPIST-1e");
 	})
 
 	p3.addEventListener("click", function() {
-		doTheEvent();
+		data.destination("prox")
+		data.stats.fuel-=.2
+		doTheEvent(c3u1e1);
 		noti("Wybrana nowa planeta: Proxima Centauri b");
 	})
 }
@@ -2793,12 +2803,13 @@ let c2u3e4v1 = new MyEvent(
 	},
 	function (){
 		changeChapterPlace(3, "Kosmiczny pierUg")
+		changePlanet();
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
 )
 
-let cuev = new MyEvent(
+let c3u1e1 = new MyEvent(//lot (spadają staty jeśli okłamałeś)
 	"bogosBinted/jakub.jpg",
 	[new MyLine(
 		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
