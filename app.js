@@ -1025,8 +1025,10 @@ let c0u1e2 = new MyEvent(
 		doTheEvent(c0u1e3v2);
 		nextDub = "c0u1e3v2"
 	},
-	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
-	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	"c0u1e2L",
+	"c0u1e2R"
 )
 
 let c0u1e3v1 = new MyEvent(
@@ -1050,7 +1052,9 @@ let c0u1e3v1 = new MyEvent(
 		nextDub = "c0u1e4"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0, 0, 0, 0]
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	"c0u1e3v1L",
+	"c0u1e3v1R"
 )
 
 let c0u1e3v2 = new MyEvent(
@@ -1070,7 +1074,9 @@ let c0u1e3v2 = new MyEvent(
 		nextDub = "c0u1e4"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0, 0, 0, 0]
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	"c0u1e3v2L",
+	"c0u1e3v2R"
 )
 
 let c0u1e4 = new MyEvent(
@@ -1094,7 +1100,9 @@ let c0u1e4 = new MyEvent(
 		nextDub = ""
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0, 0, 0, 0]
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	"c0u1e4L",
+	"c0u1e4R"
 )
 
 let c0u1e5 = new MyEvent(
