@@ -906,7 +906,7 @@ main {
 	#main-section {
 		flex-direction: column;
 		margin: 0px auto;
-		padding: 80px 15px 60px;
+		padding: 80px 15px 70px;
 		width: fit-content;
 		gap: 60px;
 	}
@@ -1003,12 +1003,15 @@ footer {
 	font-size: 0.5rem;
 	font-family: Rubik, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	margin-top: 70px; 
+	position: fixed;
+	bottom: 5px;
 }
 
 footer section {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
+	text-align: center;
 }
 
 footer h1 {
