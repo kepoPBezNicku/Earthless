@@ -176,9 +176,22 @@ function loadingScreen() {
 
 // ============ DISPLAYING ICONS ============
 
-function showIcons(icon) {
+function showIcons(icon, caption) {
 	icon.style.setProperty("display", "flex");
+	let info = document.createElement("span");
+	info.textContent = caption;
+	info.classList.add("iconCaption");
+	icon.insertAdjacentElement("beforeend", info);
+
+	setTimeout(function () {
+		info.classList.add("closing");
+	}, 5000);
+
+	setTimeout(function () {
+		info.classList.add("closed");
+	}, 6000)
 }
+
 
 // =========================================================
 
@@ -383,133 +396,6 @@ function statsChanger(element1, list) {
 		colorChanger(ner, mag, agreS, pOp, mon, adv, res, fue, foo);
 	});
 
-
-
-	element1.addEventListener("click", function change() {
-		data.stats.alienRelations.nerds += list[0];
-		data.stats.alienRelations.magicals += list[1];
-		data.stats.alienRelations.agreSuS += list[2];
-		data.stats.publicOpinion += list[3];
-		data.stats.currency += list[4];
-		data.stats.adviser += list[5];
-		data.stats.research += list[6];
-		data.stats.fuel += list[7];
-		data.stats.food += list[8];
-
-		let ner = data.stats.alienRelations.nerds
-		let mag = data.stats.alienRelations.magicals
-		let agreS = data.stats.alienRelations.agreSuS
-		let pOp = data.stats.publicOpinion
-		let mon = data.stats.currency
-		let adv = data.stats.adviser
-		let res = data.stats.research
-		let fue = data.stats.fuel
-		let foo = data.stats.food
-
-		console.log(mon)
-
-		if (data.stats.alienRelations.nerds <= 0) {
-			data.stats.alienRelations.nerds = 0;
-			gameOverFunction("gameOverDeath", "Twoje relacje z cywilizacją nerdów spadły do zera.");
-		} else if (data.stats.alienRelations.nerds > 1) {
-			data.stats.alienRelations.nerdsn = 1;
-		}
-
-		if (data.stats.alienRelations.magicals <= 0) {
-			data.stats.alienRelations.magicals = 0;
-			gameOverFunction("gameOverDeath", "Twoje relacje z magami nerdów spadły do zera.");
-		} else if (data.stats.alienRelations.magicals > 1) {
-			data.stats.alienRelations.magicals = 1;
-		}
-
-		if (data.stats.alienRelations.agreSuS <= 0) {
-			data.stats.alienRelations.agreSuS = 0;
-			gameOverFunction("gameOverDeath", "Twoje relacje z cywilizacją agresorów spadły	 do zera.");
-		} else if (data.stats.alienRelations.agreSuS > 1) {
-			data.stats.alienRelations.agreSuS = 1;
-		}
-
-		if (data.stats.publicOpinion <= 0) {
-			data.stats.publicOpinion = 0;
-			gameOverFunction("gameOver", "Obywatele cię znienawidzili, nie potrafisz być przywódcą! Twoja głowa została sprzedana na wolnym rynku.");
-		} else if (data.stats.publicOpinion > 1) {
-			data.stats.publicOpinion = 1;
-		}
-
-		if (data.stats.currency <= 0) {
-			data.stats.currency = 0;
-			gameOverFunction("gameOver", "Zbankrutowałeś.");
-		} else if (data.stats.currency > 1) {
-			data.stats.currency = 1;
-		}
-
-		if (data.stats.adviser <= 0) {
-			data.stats.adviser = 0;
-			gameOverFunction("gameOver", "Twoja reputacja spadła do zera.");
-		} else if (data.stats.adviser > 1) {
-			data.stats.adviser = 1;
-		}
-
-		if (data.stats.research <= 0) {
-			data.stats.research = 0;
-			gameOverFunction("gameOver", "Za mały poziom badań.");
-		} else if (data.stats.research > 1) {
-			data.stats.research = 1;
-		}
-		
-		if (data.stats.fuel <= 0) {
-			data.stats.fuel = 0;
-			gameOverFunction("gameOver", "Za mały poziom paliwa.");
-		} else if (data.stats.fuel > 1) {
-			data.stats.fuel = 1;
-		}
-
-		if (data.stats.food <= 0) {
-			data.stats.food = 0;
-			gameOverFunction("gameOverDeath", "Śmierć spowodowana brakiem jedzenia.");
-		} else if (data.stats.food > 1) {
-			data.stats.food = 1;
-		}
-
-		nerds.style.setProperty("--transform","scaleY(" + data.stats.alienRelations.nerds + ")");
-		magicals.style.setProperty("--transform","scaleY(" + data.stats.alienRelations.magicals + ")");
-		agreSuS.style.setProperty("--transform","scaleY(" + data.stats.alienRelations.agreSuS + ")");
-		publicOp.style.setProperty("--transform","scaleY(" + data.stats.publicOpinion + ")");
-		money.style.setProperty("--transform","scaleY(" + data.stats.currency + ")");
-		adviser.style.setProperty("--transform","scaleY(" + data.stats.adviser + ")");
-		research.style.setProperty("--transform","scaleY(" + data.stats.research + ")");
-		fuel.style.setProperty("--transform","scaleY(" + data.stats.fuel + ")");
-		food.style.setProperty("--transform","scaleY(" + data.stats.food + ")");
-		
-		statsFuse(data.stats.alienRelations.nerds,
-				data.stats.alienRelations.magicals,
-				data.stats.alienRelations.agreSuS,
-				data.stats.publicOpinion,
-				data.stats.currency,
-				data.stats.adviser,
-				data.stats.research,
-				data.stats.fuel,
-				data.stats.food);
-
-		colorChanger(ner, mag, agreS, pOp, mon, adv, res, fue, foo);
-
-
-		colorNerds = window.getComputedStyle(nerds).getPropertyValue("--pseudoElColor");
-		colorMagicals = window.getComputedStyle(magicals).getPropertyValue("--pseudoElColor");
-		colorAgreSuS = window.getComputedStyle(agreSuS).getPropertyValue("--pseudoElColor");
-	
-		colorPublicOp = window.getComputedStyle(publicOp).getPropertyValue("--pseudoElColor");
-		colorMoney = window.getComputedStyle(money).getPropertyValue("--pseudoElColor");
-
-		colorAdviser = window.getComputedStyle(adviser).getPropertyValue("--pseudoElColor");
-		colorResearch = window.getComputedStyle(research).getPropertyValue("--pseudoElColor");
-		colorFuel = window.getComputedStyle(fuel).getPropertyValue("--pseudoElColor");
-		colorFood = window.getComputedStyle(food).getPropertyValue("--pseudoElColor");
-
-		// ale pierdol sie
-
-		//naprawde
-	});
 	element1.addEventListener("mouseout", function out() {
 		nerds.style.setProperty("--transform","scaleY(" + data.stats.alienRelations.nerds + ")");
 		magicals.style.setProperty("--transform","scaleY(" + data.stats.alienRelations.magicals + ")");
@@ -547,7 +433,7 @@ food.style.setProperty("--transform", "scaleY(" + data.stats.food + ")");
 
 class MyEvent {
 	constructor(photoPath, line, opL, opP, fL, fP, sL, sP) {
-		this.photoPath = photoPath; //ex jakub.png
+		this.photoPath = photoPath; //ex jakub.jpg
 		this.line = line; //list of obiects (path,who, color, line)
 		this.opL = opL; //string
 		this.opP = opP; //string
@@ -742,10 +628,10 @@ let s10 = new Samouczek (
 let sArray = [s1,s2,s3,s4,s5,s6,s7,s8,s9,s10]
 
 let test1 = new MyEvent(
-	"bogosBinted/jakub.png", //budzik.png
+	"bogosBinted/jakub.jpg", //budzik.jpg
 	[
 		new MyLine(
-			"bogosBinted/jakub.png", "Jakub", colors['green'],
+			"bogosBinted/jakub.jpg", "Jakub", colors['green'],
 			"Ooh, co to... co ty było? Co to niby miało... JUŻ 8, ZASPAŁEM! Ale ten sen..."
 		),
 	],
@@ -769,9 +655,10 @@ samouczekNext.addEventListener("click", function () {
 	samouczekProgress++;
 	tutorialBox(sArray[samouczekProgress]);
 	if (samouczekProgress == 4) {
-		showIcons(adviser);
+		showIcons(adviser, "Relacja z doradcą");
 	}
 	if (samouczekProgress == 9) {
+		samouczekNext.style.setProperty("padding", "0px");
 		samouczekNext.textContent = "";
 		let link = document.createElement("a");
 		let node = document.createTextNode("Przejdź do gry");
