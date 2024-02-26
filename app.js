@@ -2625,7 +2625,7 @@ let c2u3e4v1 = new MyEvent(
 let cuev = new MyEvent(
 	"bogosBinted/jakub.jpg",
 	[new MyLine(
-		"bogosBinted/jakub.jpg", "Jakub", colors[],
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
 		"testline"
 	)],
 	"LewaOpcja",
