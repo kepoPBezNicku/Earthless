@@ -171,7 +171,7 @@ function imageLoader() {
 					setTimeout(function() {
 						loading.remove();
 					}, 1000)
-				}, 5000)
+				}, 6000)
 			}
 		})
 	}
