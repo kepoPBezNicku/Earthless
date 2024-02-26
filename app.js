@@ -194,21 +194,25 @@ start.className = "start";
 start.addEventListener("click", function() {
 	audio1.play();
 	audio1.loop = true;
+	audio1.volume = 0.1;
 	start.style.setProperty("transform", "scale(0)");
 })
 
 function playMusic(audio) {
 	audio.play();
 	audio.loop = true;
+	audio.volume = 0.1;
 }
 
 // ====================== DUBBING ======================
 
 function dubbing(audioPath) {
-	setTimeout(function() {
-		let dubbingAudio = new Audio("audioDub/" + audioPath + ".mp3");
-		dubbingAudio.play();
-	}, 1000)
+	if (audioPath != "") {
+		setTimeout(function() {
+			let dubbingAudio = new Audio("audioDub/" + audioPath + ".mp3");
+			dubbingAudio.play();
+		}, 1000)
+	}
 }
 
 // ========== OSTRZEZENIE PODCZAS WYCHODENIA Z STRONY =========
@@ -1014,10 +1018,12 @@ let c0u1e2 = new MyEvent(
 	"*rozmawiaj*",
 	"*walcz*",
 	function (){
-		doTheEvent(c0u1e3v1)
+		doTheEvent(c0u1e3v1);
+		nextDub = "c0u1e3v1"
 	},
 	function (){
-		doTheEvent(c0u1e3v2)
+		doTheEvent(c0u1e3v2);
+		nextDub = "c0u1e3v2"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
@@ -1036,10 +1042,12 @@ let c0u1e3v1 = new MyEvent(
 	"Wypuść mnie zdracjo!",
 	"Poczekaj, nie rób niczego głupiego!",
 	function (){
-		doTheEvent(c0u1e4)
+		doTheEvent(c0u1e4);
+		nextDub = "c0u1e4"
 	},
 	function (){
-		doTheEvent(c0u1e4)
+		doTheEvent(c0u1e4);
+		nextDub = "c0u1e4"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -1054,10 +1062,12 @@ let c0u1e3v2 = new MyEvent(
 	"*rozmawiaj*",
 	"*nic nie rób*",
 	function (){
-		doTheEvent(c0u1e3v1)
+		doTheEvent(c0u1e3v1);
+		nextDub = "c0u1e3v1"
 	},
 	function (){
-		doTheEvent(c0u1e4)
+		doTheEvent(c0u1e4);
+		nextDub = "c0u1e4"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -1075,11 +1085,13 @@ let c0u1e4 = new MyEvent(
 		doTheEvent(c0u1e5);
 		document.body.style.setProperty("background-image", "url(bogosBinted/background-main1-contrast.jpg)");
 		audio1.pause();
+		nextDub = ""
 	},
 	function (){
 		doTheEvent(c0u1e5);
 		document.body.style.setProperty("background-image", "url(bogosBinted/background-main1-contrast.jpg)");
 		audio1.pause();
+		nextDub = ""
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -1094,10 +1106,12 @@ let c0u1e5 = new MyEvent(
 	"...",
 	"...",
 	function (){
-		doTheEvent(c0u2e1)
+		doTheEvent(c0u2e1);
+		nextDub = "c0u1e1"
 	},
 	function (){
-		doTheEvent(c0u2e1)
+		doTheEvent(c0u2e1);
+		nextDub = ""
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -1112,10 +1126,12 @@ let c0u2e1 = new MyEvent(
 	"...",
 	"...",
 	function (){
-		doTheEvent(c0u2e2)
+		doTheEvent(c0u2e2);
+		nextDub = ""
 	},
 	function (){
-		doTheEvent(c0u2e2)
+		doTheEvent(c0u2e2);
+		nextDub = ""
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -1130,10 +1146,12 @@ let c0u2e2 = new MyEvent(
 	"...",
 	"...",
 	function (){
-		doTheEvent(c0u2e3)
+		doTheEvent(c0u2e3);
+		nextDub = ""
 	},
 	function (){
-		doTheEvent(c0u2e3)
+		doTheEvent(c0u2e3);
+		nextDub = ""
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -1151,11 +1169,13 @@ let c0u2e3 = new MyEvent(
 		doTheEvent(c1u1e1);
 		document.body.style.setProperty("background-image", "url(bogosBinted/background-main1.jpg)");
 		playMusic(audio2);
+		nextDub = "c1u1e1"
 	},
 	function (){
 		doTheEvent(c1u1e1);
 		document.body.style.setProperty("background-image", "url(bogosBinted/background-main1.jpg)");
 		playMusic(audio2);
+		nextDub = "c1u1e1"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
@@ -1175,6 +1195,7 @@ let c1u1e1 = new MyEvent(
 	"Zaraz się spóźnię!",
 	function () {
 		doTheEvent(c1u1e2v1);
+		nextDub = "c1u1e3v2"
 	},
 
 	function () {
