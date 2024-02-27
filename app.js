@@ -2791,9 +2791,9 @@ let c2u3e4v1 = new MyEvent(
 	"bogosBinted/planet3.jpg",
 	[new MyLine(
 		"bogosBinted/krzychu.jpg", "Krzychu", colors["orange"],
-		"Proxima centauri b - najbliżej z tych 3 planet - tylko 4 lata świetlne. Również zdatna do życia planeta, okrążenie wokół słońca trwa tam 11 dni. Zamieszkiwana przez Agresusów - mogą na nas zareagować niezbyt dobrze."
+		"Proxima centauri b - najbliżej z tych 3 planet - tylko 4 lata świetlne. Również zdatna do życia planeta, okrążenie wokół słońca trwa tam 11 dni. Zamieszkiwana przez Agresusów - mogą na nas zareagować niezbyt przyjaźnie."
 	)],
-	"Ty mówisz poważnie z tymi kosmitami? Myślałem, że o tym już rozmawialiśmy.",
+	"Ty mówisz poważnie z tymi kosmitami? Myślałem, że już o tym rozmawialiśmy.",
 	"Okej w takim razie lećmy na...",
 	function (){
 		doTheEvent(c2u3e5v1)
@@ -2809,9 +2809,9 @@ let c2u3e5v1 = new MyEvent(
 	"bogosBinted/krzychu.jpg",
 	[new MyLine(
 		"bogosBinted/krzychu.jpg", "Krzychu", colors["orange"],
-		"Naprawdę wierzysz w to, że jesteśmy sami we wszechświecie? Istnieje spora szansa, że nie będziemy tam sami, więc wolałem Ci powiedzieć."
+		"Naprawdę wierzysz w to, że jesteśmy sami we wszechświecie? Istnieje spora szansa, że jest na odwrót, więc wolałem ci powiedzieć."
 	)],
-	"No dobra, wracając do tych planet...",
+	"Dobra, wracając do tych planet...",
 	"Taa, w każdym razie polećmy na...",
 	function (){
 		changePlanet();
@@ -2829,11 +2829,11 @@ let c3u1e1 = new MyEvent(//lot (spadają staty jeśli okłamałeś)
 	"bogosBinted/stol.jpg",
 	[new MyLine(
 		"bogosBinted/krzychu.jpg", "Krzychu", colors["orange"],
-		'WItajcie na "Kosmicznym Pierogu"! Po namyśle z Jakubem doszliśmy do wniosku, że lecimy na '+data.destination+' .Na szczęście dzięki Albertowi dolecimy tam jeszcze za życia!'
+		'Witajcie na "Kosmicznym Pierogu"! Po namyśle z Jakubem doszliśmy do wniosku, że lecimy na '+data.destination+' .Na szczęście dzięki Albertowi dolecimy tam jeszcze za życia!'
 	),
 	new MyLine(
 		"bogosBinted/henryk.jpg", "Henryk", colors["brown"],
-		"Niby jak zamierzacie tak szybko przelecieć taki dystans?"
+		"Niby jak zamierzacie tak szybko przelecieć ten dystans?"
 	)],
 	"Też chętnie posłucham.",
 	"Albert, wytłumacz im",
@@ -2851,7 +2851,7 @@ let c3u1e2v1 = new MyEvent(
 	"bogosBinted/albert.jpg",
 	[new MyLine(
 		"bogosBinted/albert.jpg", "Albert", colors["darkred"],
-		"To akurat nie jest takie trudne. " //tutaj jeszce nwm jak to zrobic zeby wojtek mnie nie pobił xd
+		"To akurat nie jest takie trudne. " //tutaj jeszce nwm jak to zrobic zeby wojtek mnie nie pobił xd //Imagine że wojtek kogoś bije
 	)], //potem tylko odblokowanie nowego wynalazku i git
 	"LewaOpcja",
 	"PrawaOpcja",
@@ -2908,7 +2908,7 @@ let c3u2e2v1 = new MyEvent(
 	"bogosBinted/marcin.jpg",
 	[new MyLine(
 		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
-		"Ludzie się w końcu dowiedzieli o tym, o czym ich okłamałeś podczas tamtego liva na facebooku i to na praktycznie każdy temat. Teraz chcą zwrotu pieniędzy, a niektórzy już w ogóle rezygnują."
+		"Ludzie się w końcu dowiedzieli o tym, o czym ich okłamałeś podczas tamtego liva na Facebooku i to na praktycznie każdy temat. Teraz chcą zwrotu pieniędzy, a niektórzy już w ogóle rezygnują."
 	)],
 	"Daj im zwroty, a jeśli trzeba to bilety za bezcen.",
 	"Nie chcą - ich problem.",
@@ -3076,6 +3076,7 @@ let c3u2e4v1 = new MyEvent(
 // szczerze?
 // KURWO MIAŁEŚ BYĆ O ~19
 // Kto xdddd o huj chodzi
+// ^^^^^ O ten tramwaj co nie biega
 
 /*
 let cuev = new MyEvent(
