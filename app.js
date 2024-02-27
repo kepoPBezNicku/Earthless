@@ -3053,7 +3053,7 @@ let c3u1e3v1 = new MyEvent(
 	"bogosBinted/app.jpg",
 	[new MyLine(
 		"bogosBinted/albert.jpg", "Albert", colors["darkred"],
-		'Cieszę się, że pytasz. Więc, o co chodzi z tym całym PlanetoAutoPilotem? Otóż ten system wykorzystuje zjawisko znanego jako "asysta grawitacyjna", które pozwala na zwiększenie prędkości pojazdu kosmicznego poprzez wykorzystanie grawitacji innych planet! To tak jakby korzystać z siły pchającej nas do przodu, wyłącznie dzięki oddziaływaniu grawitacyjnemu planet! Ale uwaga! To nie jest kwestia po prostu wlepienia się na orbitę Marsa czy Jowisza i czekania, aż grawitacja nas wystrzeli w kosmos! Nie, to o wiele bardziej skomplikowane! PlanetoAutoPilot musi precyzyjnie obliczać trajektorię, prędkość i kąt podejścia do danej planety, aby wykorzystać jej grawitację w najbardziej efektywny sposób! To jak gra w kosmicznego bilarda, tylko z milionami planet i gwiazd jako kule!'
+		'Cieszę się, że pytasz. Więc, o co chodzi z tym całym AutoPlanetoPilot? Otóż ten system wykorzystuje zjawisko znanego jako "asysta grawitacyjna", które pozwala na zwiększenie prędkości pojazdu kosmicznego poprzez wykorzystanie grawitacji innych planet! To tak jakby korzystać z siły pchającej nas do przodu, wyłącznie dzięki oddziaływaniu grawitacyjnemu planet! Ale uwaga! To nie jest kwestia po prostu wlepienia się na orbitę Marsa czy Jowisza i czekania, aż grawitacja nas wystrzeli w kosmos! Nie, to o wiele bardziej skomplikowane! PlanetoAutoPilot musi precyzyjnie obliczać trajektorię, prędkość i kąt podejścia do danej planety, aby wykorzystać jej grawitację w najbardziej efektywny sposób! To jak gra w kosmicznego bilarda, tylko z milionami planet i gwiazd jako kule!'
 	)],
 	"A dasz radę zrobić te działka protonowe?",
 	"Dobra robota, teraz się bierz za działka protownowe.",
@@ -3075,7 +3075,7 @@ let c3u1e4v1 = new MyEvent(
 	"bogosBinted/albert.jpg",
 	[new MyLine(
 		"bogosBinted/albert.jpg", "Albert", colors["darkred"],
-		'Chyba cię wywaliło z butów na zbity ryj! Nie ma szans by to zrobić'
+		'Chyba cię wykasztaniło z butów na zbity ryj! Nie ma szans by to zrobić'
 	)],
 	"Mądry chłopak jesteś, dasz radę.",
 	"Uspokój się chłopie i do roboty.",
