@@ -211,12 +211,12 @@ function playMusic(audio) {
 
 function dubbing(audioPath) {
 	if (audioPath != "") {
-		// decisionButton.style.setProperty("transform", "scale(0)")
+		decisionButton.style.setProperty("transform", "scale(0)")
 		setTimeout(function() {
 			let dubbingAudio = new Audio("audioDub/" + audioPath + ".mp3");
 			dubbingAudio.play();
 			dubbingAudio.addEventListener("ended", function() {
-				// decisionButton.style.setProperty("transform", "scale(1)")
+				decisionButton.style.setProperty("transform", "scale(1)")
 			})
 		}, 1000)
 	}
@@ -809,8 +809,8 @@ function doTheEvent(ob) {
 	buttonLeft.addEventListener("click", ob.fL);
 	buttonRight.addEventListener("click", ob.fP);
 
-	let dubbingAudioH1 = new Audio("audioDub/" + ob.audioH1 + ".mp3");
-	let dubbingAudioH2 = new Audio("audioDub/" + ob.audioH2 + ".mp3");
+	let dubbingAudioH1 = new Audio("audioDubH/" + ob.audioH1 + ".mp3");
+	let dubbingAudioH2 = new Audio("audioDubH/" + ob.audioH2 + ".mp3");
 
 	console.log(dubbingAudioH1)
 	console.log(dubbingAudioH2)
@@ -1064,7 +1064,6 @@ let c0u1e1 = new MyEvent(
 	function (){
 		doTheEvent(c0u1e2);
 		nextDub = "c0u1e2";
-		endOfTheGame("GUNWO", "")
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -1316,7 +1315,9 @@ let c1u1e2v1 = new MyEvent(
 	},
 
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0, 0, 0, 0]
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	"c1u1e2v1L",
+	"c1u1e2v1R"
 );
 
 let c1u1e2v2 = new MyEvent(
@@ -1378,7 +1379,6 @@ let c1u1e3v1 = new MyEvent(
 	function () {
 		data.isBreakfastEaten = true;
 		data.stats.publicOpinion-=0.05;
-
 		doTheEvent(c1u1e4v1);
 		nextDub = "c1u1e4v1"
 	},
@@ -1616,7 +1616,7 @@ let c1u2e1 = new MyEvent(
 		),
 	],
 	"A co jak zapyta o Operację Earthless?",
-	"wszystko jasne.",
+	"Wszystko jasne.",
 	function () {
 		//hiddenStats
 
@@ -2493,7 +2493,7 @@ let c2u1e2v1 = new MyEvent(
 		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
 		"Witajcie rodacy! Na początku chciałbym wam bardzo podziękować za zaufanie. Rola prezydenta to coś, na co przygotowywałem się całe życie. Stoimy przed wielkimi wyzwaniami jako naród, i nawet jako ludzkość. W związku z naszą misją ratowania narodu, muszę wam powiedzieć, że..."
 	)],
-	"Musiscie się przygotować, nie każdy będzie mógł wejść na statek...",
+	"Musicie się przygotować, nie każdy będzie mógł wejść na statek...",
 	"Zapewniam, że uratujemy każdego Polaka...",
 	function (){
 		doTheEvent(c2u1e3v1);
@@ -2516,7 +2516,7 @@ let c2u1e2v2 = new MyEvent(
 		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
 		"Przede wszystkim powiedz to, co spodoba się ludziom. Ostatnie, czego teraz potrzebujemy, to paniki, więc nie mów o tym, że nie wszyscy będą mogli uciec. Lepiej nie wspomninaj też nic o tym kto będzie mieć jakie warunki na statku. Pamiętaj, mamy umowy. Dzięki tym ludziom jesteśmy tu gdzie jesteśmy, dlatego nie mów nic głupiego."
 	)],
-	"Nie bedę czuł się z tym dobrze...",
+	"Nie będę czuł się z tym dobrze...",
 	"Dobra, włączaj kamerę",
 	function (){
 		doTheEvent(c2u1e2v1);
@@ -2562,7 +2562,7 @@ let c2u1e3v1 = new MyEvent(
 		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
 		"Muszę was poinformować, że ze względu na ograniczenia technologiczne oraz finansowe, nie dla każdego znajdzie się miejsce. Robimy wszystko, co w naszej mocy, aby mogło polecieć jak najwięcej osób, jednak niestety możemy nie zdążyć na czas. Chcę też państwu powiedzieć o warunkach na statku..."
 	)],
-	"Które dla każdego będą takie same.",
+	"Które nie dla każdego będą takie same.", // DO SPRAWDZENIA CZY O TO CHODZI
 	"Które mogą być różne...",
 	function (){
 		data.liedAboutSeats = true;
@@ -2585,7 +2585,7 @@ let c2u1e3v2 = new MyEvent(
 		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
 		"Zapewniam, że uratujemy każdego Polaka. Każdy, kto będzie chciał wejść na statek ze swoją rodziną, obiecuję, że będzie mógł to uczynić. Jednocześnie musicie wiedzieć o warunkach na statku..."
 	)],
-	"Które dla każdego będą takie same.",
+	"Które nie dla każdego będą takie same.", // DO SPRAWDZENIA CZY O TO CHODZI
 	"Które mogą być różne...",
 	function (){
 		data.liedAboutSeats = true;
