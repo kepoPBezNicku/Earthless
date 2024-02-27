@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap')
 
 * {
 	box-sizing: border-box;
@@ -741,6 +742,7 @@ main {
 	text-decoration: none;
 	font-weight: bold;
 	color: black;
+	text-align: center;
 	background-color: #ce5263;
 }
 
@@ -857,6 +859,38 @@ main {
 	border-radius: 20px;
 	width: 250px;
 	height: 250px;
+}
+
+.end {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.endContainer {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.endContainer ul {
+	text-align: center;
+	padding: 0px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.endContainer ul li {
+	list-style-type: none;
+	font-size: 1.2rem;
+}
+
+.napis-po-zakonczeniu {
+	text-align: center;
+	font-size: 2rem;
+	font-family: Rubik, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	color: white;
 }
 
 @media only screen and (max-width: 1100px) {

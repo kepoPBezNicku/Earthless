@@ -208,12 +208,12 @@ function playMusic(audio) {
 
 function dubbing(audioPath) {
 	if (audioPath != "") {
-		decisionButton.style.setProperty("transform", "scale(0)")
+		// decisionButton.style.setProperty("transform", "scale(0)")
 		setTimeout(function() {
 			let dubbingAudio = new Audio("audioDub/" + audioPath + ".mp3");
 			dubbingAudio.play();
 			dubbingAudio.addEventListener("ended", function() {
-				decisionButton.style.setProperty("transform", "scale(1)")
+				// decisionButton.style.setProperty("transform", "scale(1)")
 			})
 		}, 1000)
 	}
@@ -884,6 +884,55 @@ function gameOverFunction(gameOverClassName, cause) {
 		body.style.setProperty("opacity", 1)
 	}, 1000)
 }
+
+function endOfTheGame(text, img) {
+	let body = document.querySelector("body");
+
+	body.textContent = "";
+	body.style.setProperty("background-color", "black");
+	body.style.setProperty("background-image", "url()");
+	body.className = "end";
+	setTimeout(function() {
+		body.style.setProperty("background-image", "url(bogosBinted/"+img+")");
+
+		let div = document.createElement("div");
+		let p = document.createElement("p");
+		p.className = "napis-po-zakonczeniu"
+		div.insertAdjacentElement("beforeend", p);
+		p.textContent = text;
+		body.insertAdjacentElement("afterbegin", div);
+		div.className = "endContainer";
+	
+		let ul = document.createElement("ul");
+		div.insertAdjacentElement("beforeend", ul);
+		for(let x = 0; x < 9; x++) {
+			let li = document.createElement("li");
+			ul.insertAdjacentElement("beforeend", li);
+			li.className = "stats";
+		}
+
+		let stats = document.querySelectorAll(".stats");
+		stats[0].textContent = "Opinia publiczna: " + (data.stats.publicOpinion * 100).toString() + "%";
+		stats[1].textContent = "Pieniądze: " + (data.stats.currency * 100).toString() + "%";;
+		stats[2].textContent = "Relacje z doradcą: " + (data.stats.adviser * 100).toString() + "%";
+		stats[3].textContent = "Poziom odkryć: " + (data.stats.research * 100).toString() + "%";
+		stats[4].textContent = "Poziom paliwa: " + (data.stats.fuel * 100).toString() + "%";
+		stats[5].textContent = "Poziom jedzenia: " + (data.stats.food * 100).toString() + "%";
+		stats[6].textContent = "Relacje z cywilizacją nerdów: " + (data.stats.alienRelations.nerds * 100).toString() + "%";;
+		stats[7].textContent = "Relacje z cywilizacją magikali: " + (data.stats.alienRelations.magicals * 100).toString() + "%";;
+		stats[8].textContent = "Relacje z cywilizacją agreSuSów: " + (data.stats.alienRelations.agreSuS * 100).toString() + "%";;
+	
+		let playAgain = document.createElement("a");
+		let buttonNode = document.createTextNode("Zagraj ponownie");
+		playAgain.setAttribute("href", "main.html");
+		playAgain.appendChild(buttonNode);
+		playAgain.className = "playAgain"
+		div.insertAdjacentElement("beforeend", playAgain);
+		body.style.setProperty("opacity", 1)
+	}, 1000)
+}
+
+endOfTheGame("guwno", "")
 
 function changePlanet() {
 	middleDiv.textContent = "";
@@ -2737,7 +2786,7 @@ let c2u3e1 = new MyEvent(
 	"bogosBinted/krzychu.jpg",
 	[new MyLine(
 		"bogosBinted/krzychu.jpg", "Krzychu", colors["orange"],
-		"Mamy 3 opcje: KOI-4878.01, TRAPPIST-1e oraz Proxima Centauri b."
+		"Mamy 3 opcje: KOI-4878.01, TRAPPIST-1e oraz 1 Centauri b."
 	)],
 	"Czym się różnią?",
 	"Jakie są na nich warunki?",
