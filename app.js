@@ -180,12 +180,11 @@ function imageLoader() {
 imageLoader()
 
 // ====================== MUZYKA ======================
-var audio1 = new Audio("audio/Arcadia.mp3");
-var audio2 = new Audio("audio/Frost Waltz.mp3");
-var audio3 = new Audio("audio/The Descent.mp3");
-var audio4 = new Audio("audio/Hitman.mp3");
-var audio5 = new Audio("audio/Black Vortex.mp3");
-var audio6 = new Audio("audio/Truth of the Legend.mp3");
+var audio0 = new Audio("audio/Arcadia.mp3");
+var audio1 = new Audio("audio/Frost Waltz.mp3");
+var audio2 = new Audio("audio/The Descent.mp3");
+var audio3 = new Audio("audio/Truth of the Legend.mp3");
+var audio4 = new Audio("audio/Black Vortex.mp3");
 
 // 0 4 1 2 3
 
@@ -194,9 +193,9 @@ start.textContent = "Rozpocznij grę";
 document.body.insertAdjacentElement("beforebegin", start);
 start.className = "start";
 start.addEventListener("click", function() {
-	audio1.play();
-	audio1.loop = true;
-	audio1.volume = 0.1;
+	audio0.play();
+	audio0.loop = true;
+	audio0.volume = 0.1;
 	start.style.setProperty("transform", "scale(0)");
 })
 
@@ -1039,12 +1038,12 @@ changeChapterPlace(1, "Dom Jakuba");
 //===== Underchapter 1 =====
 
 start.addEventListener("click", function() {
-	// decisionButton.style.setProperty("transform", "scale(0)")
+	decisionButton.style.setProperty("transform", "scale(0)")
 	setTimeout(function() {
 		let dubbingAudio = new Audio("audioDub/c0u1e1.mp3");
 		dubbingAudio.play();
 		dubbingAudio.addEventListener("ended", function() {
-			// decisionButton.style.setProperty("transform", "scale(1)")
+			decisionButton.style.setProperty("transform", "scale(1)")
 		})
 	}, 500)
 })
@@ -1160,13 +1159,13 @@ let c0u1e4 = new MyEvent(
 	function (){
 		doTheEvent(c0u1e5);
 		document.body.style.setProperty("background-image", "url(bogosBinted/background-main1-contrast.jpg)");
-		audio1.pause();
+		audio0.pause();
 		nextDub = ""
 	},
 	function (){
 		doTheEvent(c0u1e5);
 		document.body.style.setProperty("background-image", "url(bogosBinted/background-main1-contrast.jpg)");
-		audio1.pause();
+		audio0.pause();
 		nextDub = ""
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -1246,13 +1245,13 @@ let c0u2e3 = new MyEvent(
 	function (){
 		doTheEvent(c1u1e1);
 		document.body.style.setProperty("background-image", "url(bogosBinted/background-main1.jpg)");
-		playMusic(audio2);
+		playMusic(audio1);
 		nextDub = "c1u1e1"
 	},
 	function (){
 		doTheEvent(c1u1e1);
 		document.body.style.setProperty("background-image", "url(bogosBinted/background-main1.jpg)");
-		playMusic(audio2);
+		playMusic(audio1);
 		nextDub = "c1u1e1"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
@@ -1273,7 +1272,7 @@ let c1u1e1 = new MyEvent(
 	"Zaraz się spóźnię!",
 	function () {
 		doTheEvent(c1u1e2v1);
-		nextDub = "c1u1e3v1"
+		nextDub = "c1u1e2v1"
 	},
 
 	function () {
@@ -2562,7 +2561,7 @@ let c2u1e3v1 = new MyEvent(
 		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
 		"Muszę was poinformować, że ze względu na ograniczenia technologiczne oraz finansowe, nie dla każdego znajdzie się miejsce. Robimy wszystko, co w naszej mocy, aby mogło polecieć jak najwięcej osób, jednak niestety możemy nie zdążyć na czas. Chcę też państwu powiedzieć o warunkach na statku..."
 	)],
-	"Które nie dla każdego będą takie same.", // DO SPRAWDZENIA CZY O TO CHODZI
+	"Które dla każdego będą takie same.",
 	"Które mogą być różne...",
 	function (){
 		data.liedAboutSeats = true;
@@ -2585,7 +2584,7 @@ let c2u1e3v2 = new MyEvent(
 		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
 		"Zapewniam, że uratujemy każdego Polaka. Każdy, kto będzie chciał wejść na statek ze swoją rodziną, obiecuję, że będzie mógł to uczynić. Jednocześnie musicie wiedzieć o warunkach na statku..."
 	)],
-	"Które nie dla każdego będą takie same.", // DO SPRAWDZENIA CZY O TO CHODZI
+	"Które dla każdego będą takie same.", // DO SPRAWDZENIA CZY O TO CHODZI
 	"Które mogą być różne...",
 	function (){
 		data.liedAboutSeats = true;
