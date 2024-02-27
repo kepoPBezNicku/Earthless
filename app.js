@@ -932,8 +932,6 @@ function endOfTheGame(text, img) {
 	}, 1000)
 }
 
-endOfTheGame("guwno", "")
-
 function changePlanet() {
 	middleDiv.textContent = "";
 	
@@ -3120,6 +3118,8 @@ let c3u2e4v1 = new MyEvent(
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
 )
+
+// endOfTheGame("NAPIS KONCOWY", "ZDJECIE (BEZ url(bogosBinted/)")
 
 // ZEBY WLACZYC KOLEJNA IKONKE STATOW TRZEBA WPISAC showIcons(np. nerds/alienRelations)
 // szczerze?
