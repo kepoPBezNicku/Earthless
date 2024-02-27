@@ -3075,7 +3075,7 @@ let c3u1e4v1 = new MyEvent(
 	"bogosBinted/albert.jpg",
 	[new MyLine(
 		"bogosBinted/albert.jpg", "Albert", colors["darkred"],
-		'Chyba cię wykasztaniło z butów na zbity ryj! Nie ma szans by to zrobić'
+		'Chyba cię pokasztaniło z butów na zbity ryj! Nie ma szans by to zrobić'
 	)],
 	"Mądry chłopak jesteś, dasz radę.",
 	"Uspokój się chłopie i do roboty.",
@@ -3087,8 +3087,8 @@ let c3u1e4v1 = new MyEvent(
 		doTheEvent(c3u2e1)
 		//nextDub = "cuev"
 	},
-	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
-	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 )
 
 let c3u2e1 = new MyEvent(
