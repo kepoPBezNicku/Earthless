@@ -187,6 +187,8 @@ var audio4 = new Audio("audio/Hitman.mp3");
 var audio5 = new Audio("audio/Black Vortex.mp3");
 var audio6 = new Audio("audio/Truth of the Legend.mp3");
 
+// 0 4 1 2 3
+
 let start = document.createElement("button");
 start.textContent = "Rozpocznij grę";
 document.body.insertAdjacentElement("beforebegin", start);
@@ -203,6 +205,7 @@ function playMusic(audio) {
 	audio.loop = true;
 	audio.volume = 0.1;
 }
+// 0 4 1 2 3
 
 // ====================== DUBBING ======================
 
@@ -1061,10 +1064,10 @@ let c0u1e1 = new MyEvent(
 	function (){
 		doTheEvent(c0u1e2);
 		nextDub = "c0u1e2";
+		endOfTheGame("GUNWO", "")
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
-
 	"c0u1e1L",
 	"c0u1e1R"
 )
@@ -3000,7 +3003,7 @@ let c2u3e5v1 = new MyEvent(
 	"c2u3e5v1R"
 )
 
-let c3u1e1 = new MyEvent(//lot (spadają staty jeśli okłamałeś)
+let c3u1e1 = new MyEvent(//lot (spadają staty jeśli okłamałeś) // nie ma
 	"bogosBinted/stol.jpg",
 	[new MyLine(
 		"bogosBinted/krzychu.jpg", "Krzychu", colors["orange"],
@@ -3026,11 +3029,11 @@ let c3u1e1 = new MyEvent(//lot (spadają staty jeśli okłamałeś)
 	"c3u1e1R"
 )
 
-let c3u1e2v1 = new MyEvent(
+let c3u1e2v1 = new MyEvent( 
 	"bogosBinted/albert.jpg",
 	[new MyLine(
 		"bogosBinted/albert.jpg", "Albert", colors["darkred"],
-		"To akurat nie jest takie trudne. Stworzyłem AutoPlanetoPilot! Wystraczyło zintegrować wszystkie silniki na tym statku, odnaleźć współrzędne wszystkich planet po drodze, a sztuczna inteligencja zrobi resztę za nas!"
+		"To akurat nie jest takie trudne. Stworzyłem AutoPlanetoPilot! Wystarczyło zintegrować wszystkie silniki na tym statku, odnaleźć współrzędne wszystkich planet po drodze, a sztuczna inteligencja zrobi resztę za nas!"
 	)],
 	"Ale jak chcesz przelecieć tyle lat świetlnych?",
 	"Skoro wszystko gotowe, możemy już startować.",
