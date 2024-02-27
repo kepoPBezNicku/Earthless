@@ -1327,7 +1327,7 @@ let c1u1e3v2 = new MyEvent(
 	[
 		new MyLine(
 			"bogosBinted/jakub.jpg","Jakub",colors["green"],
-			"No, i takie ząbki ma człowiek sukcesu :DD teraz zostało mi jeszcze trochę czasu żeby .."
+			"No, i takie ząbki ma człowiek sukcesu :DD teraz zostało mi jeszcze trochę czasu żeby..."
 		),
 	],
 	"Zjeść śniadanie",
@@ -1357,7 +1357,7 @@ let c1u1e3v3 = new MyEvent(
 		),
 	],
 	"Wezmę zwykłą taxówkę, każdy grosz się liczy.",
-	"Zamówię sobie taxi premium, niech wiedzą, że mnie stać",
+	"Zamówię sobie taxi premium, niech wiedzą, że mnie stać.",
 	function () {
 		doTheEvent(c1u1e5v1);
 		nextDub = "c1u1e5v1"
@@ -1379,7 +1379,7 @@ let c1u1e3v4 = new MyEvent(
 		),
 	],
 	"Wezmę zwykłą taxówkę, każdy grosz się liczy.",
-	"Zamówię sobie taxi premium, niech wiedzą, że mnie stać",
+	"Zamówię sobie taxi premium, niech wiedzą, że mnie stać.",
 	function () {
 		doTheEvent(c1u1e5v1);
 		nextDub = "c1u1e5v1"
@@ -1401,7 +1401,7 @@ let c1u1e4v1 = new MyEvent(
 		),
 	],
 	"Wezmę zwykłą taxówkę, każdy grosz się liczy.",
-	"Zamówię sobie taxi premium, niech wiedzą, że mnie stać",
+	"Zamówię sobie taxi premium, niech wiedzą, że mnie stać.",
 	function () {
 		doTheEvent(c1u1e5v1);
 		nextDub = "c1u1e5v1"
@@ -1422,8 +1422,8 @@ let c1u1e5v1 = new MyEvent(
 			"Zaraz powinna przyjechać, w tym czasie może..."
 		),
 	],
-	"Zobaczę co się dzieje na Y",
-	"Poczekam w samotności, lepiej odpocznę przed wywiadem",
+	"Zobaczę co się dzieje na Y.",
+	"Poczekam w samotności, lepiej odpocznę przed wywiadem.",
 	function () {
 		doTheEvent(c1u1e6);
 		nextDub = "c1u1e6"
@@ -1499,11 +1499,11 @@ let c1u1e8 = new MyEvent(
 		),
 		new MyLine(
 			"bogosBinted/jakub.jpg","Jakub",colors["green"],
-			"Czekają nas ciekawe czasy, bardzo ciekawe... Jedźmy już, czeka na mnie mój doradca"
+			"Czekają nas ciekawe czasy, bardzo ciekawe... Jedźmy już, czeka na mnie mój doradca."
 		),
 	],
 	"Jedźmy pod siedzibę radio PDF FM.",
-	"Ruszajmy pod radio PDF FM",
+	"Ruszajmy pod radio PDF FM.",
 	function () {
 		changeChapterPlace(1, "PDF FM");
 		doTheEvent(c1u2e1);
@@ -1963,7 +1963,7 @@ let c1u2e10v4 = new MyEvent(
 	"bogosBinted/chmurka.jpg",
 	[new MyLine(
 		"bogosBinted/jakub.jpg", "Jakub", colors["green"], //wodą się nie nawodnisz debilu ~ Wojciech 2024
-		"Dziś rano nie miałem czasu nabrać siły na ten dzień. Postanowiłem unikać niewygodnych pytań, co nie zawsze szło po mojej myśli. Na szczęście udało mi się nie naopowiadać głupot, więc nie jest najgorzej"
+		"Dziś rano nie miałem czasu nabrać siły na ten dzień. Postanowiłem unikać niewygodnych pytań, co nie zawsze szło po mojej myśli. Na szczęście udało mi się nie naopowiadać głupot, więc nie jest najgorzej."
 	)],
 	"Kontynuuj wywiad",
 	"Kontynuuj wywiad",
@@ -2389,7 +2389,7 @@ let c2u1e2v3 = new MyEvent(
 	"bogosBinted/marcin.jpg",
 	[new MyLine(
 		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
-		"Już się przekonałem ostatnio jak szanujesz moje rady... Mów co chcesz"
+		"Już się przekonałem ostatnio jak szanujesz moje rady... Mów co chcesz."
 	)],
 	"Obiecuję, że to się nie powtórzy.",
 	"Skoro tak mówisz... włączaj kamerę.",
@@ -2476,7 +2476,7 @@ let c2u1e4v2 = new MyEvent(
 	"bogosBinted/kamera.jpg",
 	[new MyLine(
 		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
-		"Które mogą być różne w zależności od tego kto kiedy wykupił bilet. Bilety muszą być płatne ze względu na koszty, które nie mogły być pokryte z budżetu państwa. Nadchodzą ciężkie czasy, ale my jesteśmy gotowi"
+		"Które mogą być różne w zależności od tego kto kiedy wykupił bilet. Bilety muszą być płatne ze względu na koszty, które nie mogły być pokryte z budżetu państwa. Nadchodzą ciężkie czasy, ale my jesteśmy gotowi."
 	)],
 	"Dziękuję za uwagę, wszystkiego dobrego.",
 	"Pamiętajcie by być dobrej myśli.",
@@ -2510,14 +2510,14 @@ let c2u2e1 = new MyEvent(
 	),
 	new MyLine(
 		"bogosBinted/ilia.jpg", "Ilia", colors["purple"],
-		"O to się nie martw, to jest do zrobienia. Nie pamiętasz jak ci opowiadałam o tym, czego potrzebuje roślina? "
+		"O to się nie martw, to jest do zrobienia. Nie pamiętasz jak ci opowiadałam o tym, czego potrzebuje roślina? "
 	),
 	new MyLine(
 		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
 		"No pewnie, roślina potrzebuje..."
 	)],
 	"światła, wody i tlenu.",
-	"światła, wody i dwutlenku węgla",
+	"światła, wody i dwutlenku węgla.",
 	function (){
 		data.stats.research+=.05
 		doTheEvent(c2u2e2v1);
@@ -2536,7 +2536,7 @@ let c2u2e2v1 = new MyEvent(
 	"bogosBinted/stol.jpg",
 	[new MyLine(
 		"bogosBinted/ilia.jpg", "Ilia", colors["purple"],
-		"Skąd! Po co jej tlen? Ona go produkuje, a nie potrzebuje. Za to będzie potrzebowała dwutlenku węgla, który jest wydychany przez ludzi, więc z tym nie będzie problemu. Podobnie z wodą, jeśli zaprojektujemy odpowiednie systemy filtracji, nigdy nam jej nie zabraknie. Jeśli chodzi o światło, niekoniecznie musi być ono słoneczne, ale musimy użyć specialnych lamp dostosowanych do roślin"
+		"Skąd! Po co jej tlen? Ona go produkuje, a nie potrzebuje. Za to będzie potrzebowała dwutlenku węgla, który jest wydychany przez ludzi, więc z tym nie będzie problemu. Podobnie z wodą, jeśli zaprojektujemy odpowiednie systemy filtracji, nigdy nam jej nie zabraknie. Jeśli chodzi o światło, niekoniecznie musi być ono słoneczne, ale musimy użyć specialnych lamp dostosowanych do roślin."
 	),
 	new MyLine(
 		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
@@ -2576,7 +2576,7 @@ let c2u2e2v2 = new MyEvent(
 	"bogosBinted/stol.jpg",
 	[new MyLine(
 		"bogosBinted/ilie.jpg", "Ilia", colors["purple"],
-		"No właśnie! Dwutlenek węgla jest wydychany przez ludzi, więc z tym nie będzie problemu. Podobnie z wodą, jeśli zaprojektujemy odpowiednie systemy filtracji, nigdy nam jej nie zabraknie. Jeśli chodzi o światło, niekoniecznie musi być ono słoneczne, ale musimy użyć specialnych lamp dostosowanych do roślin"
+		"No właśnie! Dwutlenek węgla jest wydychany przez ludzi, więc z tym nie będzie problemu. Podobnie z wodą, jeśli zaprojektujemy odpowiednie systemy filtracji, nigdy nam jej nie zabraknie. Jeśli chodzi o światło, niekoniecznie musi być ono słoneczne, ale musimy użyć specialnych lamp dostosowanych do roślin."
 		),
 		new MyLine(
 			"bogosBinted/jakub.jpg", "Jakub", colors["green"],
