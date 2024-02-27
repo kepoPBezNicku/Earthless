@@ -1742,8 +1742,8 @@ let c1u2e5v1 = new MyEvent(
 			"Tak od razu? Myślałem, że jeszcze zostało trochę cza..."
 		),
 		new MyLine(
-			"bogosBinted/becia.jpg","*Becia*",colors["red"],
-			"Trzy, dwa, jeden... Witamy w wywiadzie dnia radia PDF FM, jest piątek godzina 10, z tej strony Beata Kowalczyk, a moim dzisiejszym gościem jest Pan Kuba Bukaj, kandydat na prezydenta RP 2045. Witam serdecznie! Pojutrze ważny dzień, prawda?"
+			"bogosBinted/becia.jpg","*wysoka kobieta ubrana na czerwono*",colors["red"],
+			"Trzy, dwa, jeden... Witamy w wywiadzie dnia radia PDF FM, jest piątek godzina 10, z tej strony Beata Kowalczyk, a moim dzisiejszym gościem jest Pan Kuba Bukaj, kandydat na prezydenta RP 2060. Witam serdecznie! Pojutrze ważny dzień, prawda?"
 		),
 		new MyLine(
 			"bogosBinted/jakub.jpg","Jakub",colors["green"],
