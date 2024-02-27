@@ -3358,7 +3358,7 @@ let c3u3e3v1 = new MyEvent(
 	"bogosBinted/amina.jpg",
 	[new MyLine(
 		"bogosBinted/ilia.jpg", "Ilia", colors["purple"],
-		"Kuba, musimy ipowoli myśleć o tym jak się przygotować do życia na nowej planecie"
+		"Kuba, musimy powoli myśleć o tym jak się przygotować do życia na nowej planecie."
 	)],
 	"LewaOpcja",
 	"PrawaOpcja",
