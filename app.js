@@ -2367,7 +2367,7 @@ let c1u2e17v1 = new MyEvent(
 		"O, czyli jednak? Powoli zaczynałem wątpić w to jego paplanie, ale jednak! Albert, pokaż co tam zmajstrowałeś!"
 	),new MyLine(
 		"bogosBinted/albert.jpg", "Albert", colors["darkred"],
-		"Nie wierzyłeś we mnie, ale sieidzałem nad tym całymi dniami i jest! Stworzyłem generator sztucznej grawitacji."
+		"Nie wierzyłeś we mnie, ale siedziałem nad tym całymi dniami i jest! Stworzyłem generator sztucznej grawitacji."
 	)],
 	"Jak to niby jest możliwe?",
 	"Nie wierzę, nie ma szans",
@@ -2423,11 +2423,11 @@ let c1u2e19v1 = new MyEvent(
 	),
 	new MyLine(
 		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
-		"Super, a ty Albert bierz się teraz za tą minaturową elektrownie jądrową o której Ci mówiłem." //w koncu jakis inny wynalazek xd
+		"Super, a ty Albert teraz zajmij się tym, żeby w ogóle tam dolecieć za życia."
 	),
 	new MyLine(
 		"bogosBinted/albert.jpg", "Albert", colors["darkred"],
-		"Jak niby mam to zrobić?! Kolejna rzecz która łamie prawa fizyki, chodziłeś ty kiedykolwiek do tej szkoły??"
+		"Jak niby mam to zrobić, wiesz jakie tam są odległości?! Kolejna rzecz która łamie prawa fizyki, chodziłeś ty kiedykolwiek do tej szkoły??"
 	)
 	],
 	"Womp womp, do roboty.",
@@ -3030,10 +3030,30 @@ let c3u1e2v1 = new MyEvent(
 	"bogosBinted/albert.jpg",
 	[new MyLine(
 		"bogosBinted/albert.jpg", "Albert", colors["darkred"],
-		"To akurat nie jest takie trudne. " //tutaj jeszce nwm jak to zrobic zeby wojtek mnie nie pobił xd //Imagine że wojtek kogoś bije
-	)], //potem tylko odblokowanie nowego wynalazku i git
-	"LewaOpcja",
-	"PrawaOpcja",
+		"To akurat nie jest takie trudne. Stworzyłem AutoPlanetoPilot! Wystraczyło zintegrować wszystkie silniki na tym statku, odnaleźć współrzędne wszystkich planet po drodze, a sztuczna inteligencja zrobi resztę za nas!"
+	)],
+	"Ale jak chcesz przelecieć tyle lat świetlnych?",
+	"Skoro wszystko gotowe, możemy już startować.",
+	function (){
+		doTheEvent(c3u1e3v1)
+		//nextDub = "cuev"
+	},
+	function (){
+		doTheEvent(c3u2e1v)
+		//nextDub = "cuev"
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+
+let c3u1e3v1 = new MyEvent(
+	"bogosBinted/app.jpg",
+	[new MyLine(
+		"bogosBinted/albert.jpg", "Albert", colors["darkred"],
+		'Cieszę się, że pytasz. Więc, o co chodzi z tym całym PlanetoAutoPilotem? Otóż ten system wykorzystuje zjawisko znanego jako "asysta grawitacyjna", które pozwala na zwiększenie prędkości pojazdu kosmicznego poprzez wykorzystanie grawitacji innych planet! To tak jakby korzystać z siły pchającej nas do przodu, wyłącznie dzięki oddziaływaniu grawitacyjnemu planet! Ale uwaga! To nie jest kwestia po prostu wlepienia się na orbitę Marsa czy Jowisza i czekania, aż grawitacja nas wystrzeli w kosmos! Nie, to o wiele bardziej skomplikowane! PlanetoAutoPilot musi precyzyjnie obliczać trajektorię, prędkość i kąt podejścia do danej planety, aby wykorzystać jej grawitację w najbardziej efektywny sposób! To jak gra w kosmicznego bilarda, tylko z milionami planet i gwiazd jako kule!'
+	)],
+	"A dasz radę zrobić te działka protonowe?",
+	"Dobra robota, teraz się bierz za działka protownowe.",
 	function (){
 		//doTheEvent(cuev)
 		//nextDub = "cuev"
@@ -3046,6 +3066,26 @@ let c3u1e2v1 = new MyEvent(
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	"c3u1e2v1L",
 	"c3u1e2v1R"
+)
+
+let c3u1e4v1 = new MyEvent(
+	"bogosBinted/albert.jpg",
+	[new MyLine(
+		"bogosBinted/albert.jpg", "Albert", colors["darkred"],
+		'Chyba cię wywaliło z butów na zbity ryj! Nie ma szans by to zrobić'
+	)],
+	"Mądry chłopak jesteś, dasz radę.",
+	"Uspokój się chłopie i do roboty.",
+	function (){
+		doTheEvent(c3u2e1)
+		//nextDub = "cuev"
+	},
+	function (){
+		doTheEvent(c3u2e1)
+		//nextDub = "cuev"
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
 )
 
 let c3u2e1 = new MyEvent(
@@ -3259,11 +3299,13 @@ let c3u2e3v2 = new MyEvent(
 	"Okej, to tyle na teraz, startujmy.",
 	"Przekaż wszytkim, żeby się przygotowali do startu.",
 	function (){
-		doTheEvent(c3u2e4v1)
+		changeChapterPlace(3, "Kosmiczny PierUg, 5% trasy.")
+		doTheEvent(c3u3e1)
 		//nextDub = "cuev"
 	},
 	function (){
-		doTheEvent(c3u2e4v1)
+		changeChapterPlace(3, "Kosmiczny PierUg, 5% trasy.")
+		doTheEvent(c3u3e1)
 		//nextDub = "cuev"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -3272,11 +3314,51 @@ let c3u2e3v2 = new MyEvent(
 	"c3u2e3v2R"
 )
 
-let c3u2e4v1 = new MyEvent(
-	"bogosBinted/jakub.jpg",
+let c3u3e1 = new MyEvent(
+	"bogosBinted/chmurka.jpg",
 	[new MyLine(
 		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
-		"testline"
+		"Start przeszedł bez zarzutu, już jesteśmy w drodze na "+data.destination+"! Niestety już zaczynam widzieć pierwsze problemy."
+	)],
+	"...",
+	"...",
+	function (){
+		doTheEvent(c3u3e2v1)
+		//nextDub = "cuev"
+	},
+	function (){
+		doTheEvent(c3u3e2v1)
+		//nextDub = "cuev"
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] 
+)
+
+let c3u3e2v1 = new MyEvent(
+	"bogosBinted/henryk.jpg",
+	[new MyLine(
+		"bogosBinted/henryk.jpg", "Henryk", colors["brown"],
+		"Szefie, mam jedną sprawę. Wzieliśmy 2 rodzaje zboża: jedno jest znacznie łatwiej uprawiać, ale może powodować choroby i jest i porostu gorszej jakości. A drugie jest dobrej jakości, ale ciężej się je uprawia. Którego rodzaju powinniśmy użyć?"
+	)],
+	"Lepiej pójdźmy w ilość, żęby starczyło dla każdego.",
+	"Nie możemy ryzykować zdrowia ludzi.",
+	function (){
+		doTheEvent(c3u3e3v1)
+		//nextDub = "cuev"
+	},
+	function (){
+		doTheEvent(c3u3e3v1)
+		//nextDub = "cuev"
+	},
+	[0, 0, 0, -.1, .1, 0, 0, 0, .1], //
+	[0, 0, 0, .1, -.1, 0, 0, 0, 0] //
+)
+
+let c3u3e3v1 = new MyEvent(
+	"bogosBinted/amina.jpg",
+	[new MyLine(
+		"bogosBinted/ilia.jpg", "Ilia", colors["purple"],
+		"Kuba, musimy powoli myśleć o tym jak się przygotować do życia na nowej planecie."
 	)],
 	"LewaOpcja",
 	"PrawaOpcja",
