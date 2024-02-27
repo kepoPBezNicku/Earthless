@@ -218,6 +218,8 @@ function dubbing(audioPath) {
 				decisionButton.style.setProperty("transform", "scale(1)")
 			})
 		}, 1000)
+	} else {
+		decisionButton.style.setProperty("transform", "scale(1)")
 	}
 }
 
@@ -226,10 +228,6 @@ window.addEventListener("beforeunload", function (e) {
 	var confirmationMessage = "Czy na pewno chcesz opuścić stronę?";
 	e.returnValue = confirmationMessage;
 	return confirmationMessage;
-});
-
-window.addEventListener("unload", function () {
-	console.log("Strona jest odświeżana lub opuszczana.");
 });
 
 // ============ RESPONSYWNE MENU STATYSTYK ============
@@ -585,8 +583,6 @@ function statsChanger(element1, list) {
 		let fue = data.stats.fuel;
 		let foo = data.stats.food;
 
-		console.log(mon)
-
 		if (data.stats.alienRelations.nerds <= 0) {
 			data.stats.alienRelations.nerds = 0;
 			gameOverFunction("gameOverDeath", "Twoje relacje z cywilizacją nerdów spadły do zera.");
@@ -811,8 +807,6 @@ function doTheEvent(ob) {
 	let dubbingAudioH1 = new Audio("audioDubH/" + ob.audioH1 + ".mp3");
 	let dubbingAudioH2 = new Audio("audioDubH/" + ob.audioH2 + ".mp3");
 
-	console.log(dubbingAudioH1)
-	console.log(dubbingAudioH2)
 	buttonLeft.addEventListener("mouseover", function() {
 		dubbingAudioH1.play();
 	})
@@ -2405,7 +2399,7 @@ let c1u2e18v1 = new MyEvent(
 	},
 	function (){
 		doTheEvent(c1u2e19v1);
-		nextDub = "c1u2e19v2"
+		nextDub = "c1u2e19v1"
 	},
 	[.05, 0, 0, -.05, 0, 0, 0, 0, 0],
 	[-.05, 0, 0, .05, 0, 0, 0, 0, 0],
