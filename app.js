@@ -2894,7 +2894,7 @@ let c2u3e1 = new MyEvent(
 	"bogosBinted/krzychu.jpg",
 	[new MyLine(
 		"bogosBinted/krzychu.jpg", "Krzychu", colors["orange"],
-		"Mamy 3 opcje: KOI-4878.01, TRAPPIST-1e oraz 1 Centauri b."
+		"Mamy 3 opcje: KOI-4878.01, TRAPPIST-1e oraz Proxima Centauri b."
 	)],
 	"Czym się różnią?",
 	"Jakie są na nich warunki?",
