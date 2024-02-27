@@ -589,6 +589,7 @@ main {
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
+	transition: 0.2s ease transform;
 }
 
 #decision-button div {
