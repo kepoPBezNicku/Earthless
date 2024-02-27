@@ -2367,7 +2367,7 @@ let c1u2e17v1 = new MyEvent( // nie ma
 		"O, czyli jednak? Powoli zaczynałem wątpić w to jego paplanie, ale jednak! Albert, pokaż co tam zmajstrowałeś!"
 	),new MyLine(
 		"bogosBinted/albert.jpg", "Albert", colors["darkred"],
-		"Nie wierzyłeś we mnie, ale sieidzałem nad tym całymi dniami i jest! Stworzyłem generator sztucznej grawitacji."
+		"Nie wierzyłeś we mnie, ale siedziałem nad tym całymi dniami i jest! Stworzyłem generator sztucznej grawitacji."
 	)],
 	"Jak to niby jest możliwe?",
 	"Nie wierzę, nie ma szans",
@@ -3338,10 +3338,30 @@ let c3u3e2v1 = new MyEvent(
 	"bogosBinted/henryk.jpg",
 	[new MyLine(
 		"bogosBinted/henryk.jpg", "Henryk", colors["brown"],
-		"Szefie, mam jedną sprawę. Wzieliśmy 2 rodzaje zboża: jedno jest znacznie łatwiej uprawiać, ale może powodować choroby i jest i porostu gorszej jakości. A drugie jest dobrej jakości, ale ciężej się je uprawia. LKtórego rodzaju powinniśmy użyć?"
+		"Szefie, mam jedną sprawę. Wzieliśmy 2 rodzaje zboża: jedno jest znacznie łatwiej uprawiać, ale może powodować choroby i jest i porostu gorszej jakości. A drugie jest dobrej jakości, ale ciężej się je uprawia. Którego rodzaju powinniśmy użyć?"
 	)],
 	"Lepiej pójdźmy w ilość, żęby starczyło dla każdego.",
 	"Nie możemy ryzykować zdrowia ludzi.",
+	function (){
+		doTheEvent(c3u3e3v1)
+		//nextDub = "cuev"
+	},
+	function (){
+		doTheEvent(c3u3e3v1)
+		//nextDub = "cuev"
+	},
+	[0, 0, 0, -.1, .1, 0, 0, 0, .1], //
+	[0, 0, 0, .1, -.1, 0, 0, 0, 0] //
+)
+
+let c3u3e3v1 = new MyEvent(
+	"bogosBinted/amina.jpg",
+	[new MyLine(
+		"bogosBinted/ilia.jpg", "Ilia", colors["purple"],
+		"Kuba, musimy ipowoli myśleć o tym jak się przygotować do życia na nowej planecie"
+	)],
+	"LewaOpcja",
+	"PrawaOpcja",
 	function (){
 		//doTheEvent(cuev)
 		//nextDub = "cuev"
