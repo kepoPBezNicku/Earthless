@@ -2382,7 +2382,7 @@ let c2u1e2v2 = new MyEvent(
 	"bogosBinted/marcin.jpg",
 	[new MyLine(
 		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
-		"Przede wszystkim powiedz to, co spodoba się ludziom. Ostatnie, czego teraz potrzebujemy, to paniki, więc nie mów o tym, że nie wszyscy będą mogli uciec. Lepiej nie wspomninaj też nic o tym kto będzie mieć jakie warunki na statku. Pamiętaj, mamy umowy. Dzięki tym ludziom jesteśmy tu gdzie jesteśmy, więc nie mów nic głupiego."
+		"Przede wszystkim powiedz to, co spodoba się ludziom. Ostatnie, czego teraz potrzebujemy, to paniki, więc nie mów o tym, że nie wszyscy będą mogli uciec. Lepiej nie wspomninaj też nic o tym kto będzie mieć jakie warunki na statku. Pamiętaj, mamy umowy. Dzięki tym ludziom jesteśmy tu gdzie jesteśmy, dlatego nie mów nic głupiego."
 	)],
 	"Nie bedę czuł się z tym dobrze...",
 	"Dobra, włączaj kamerę",
@@ -2402,7 +2402,7 @@ let c2u1e2v3 = new MyEvent(
 	"bogosBinted/marcin.jpg",
 	[new MyLine(
 		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
-		"Już się przekonałem ostatnio jak szanujesz moje rady... Mów co chcesz."
+		"Już się ostatnio przekonałem jak szanujesz moje rady... Mów co chcesz."
 	)],
 	"Obiecuję, że to się nie powtórzy.",
 	"Skoro tak mówisz... włączaj kamerę.",
@@ -2424,7 +2424,7 @@ let c2u1e3v1 = new MyEvent(
 	"bogosBinted/kamera.jpg",
 	[new MyLine(
 		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
-		"Muszę was poinformować, że ze względu na ograniczenia technologiczne oraz finansowe, nie dla każdego znajdzie się miejsce. Robimy wszystko, co w naszej mocy, aby mogło polecieć jak najwięcej osób, jednak niestety możemy nie zdążyć. Chcę też państwu powiedzieć o warunkach na statku..."
+		"Muszę was poinformować, że ze względu na ograniczenia technologiczne oraz finansowe, nie dla każdego znajdzie się miejsce. Robimy wszystko, co w naszej mocy, aby mogło polecieć jak najwięcej osób, jednak niestety możemy nie zdążyć na czas. Chcę też państwu powiedzieć o warunkach na statku..."
 	)],
 	"Które dla każdego będą takie same.",
 	"Które mogą być różne...",
@@ -2609,7 +2609,7 @@ let c2u2e2v2 = new MyEvent(
 		),
 		new MyLine(
 			"bogosBinted/amina.jpg", "Amina", colors["lightpurple"],
-			"Odezwał się zapraacowany! I tak, mam wszystko gotowe, ale muszę z tobą o tym pomówić na osobności."
+			"Odezwał się zapracowany! I tak, mam wszystko gotowe, ale muszę z tobą o tym pomówić na osobności."
 		)],
 		"Dobrze, byle szybko.",
 		"Nie mamy na to teraz czasu.",
@@ -2755,7 +2755,7 @@ let c2u3e2v1 = new MyEvent(
 	"bogosBinted/planet1.jpg",
 	[new MyLine(
 		"bogosBinted/krzychu.jpg", "Krzychu", colors["orange"],
-		"To po kolei: KOI-4878.01 - jedna z planet najbardziej podobnych do Ziemii. Ma praktycznie identyczną masę i powierzchnię, podobną średnią temperaturę (zakładając, że ma atmosferę) i prawdopodobnie wodę. Niestey jest bardzo daleko i potrzebowalibyśmy całego naszego paliwa, żeby tam dolecieć. Do tego możliwe, że zamieszkiwany przez pewną rasę kosmitów nazywanych Nerdami. 1075 lat świtlnych od ziemii."
+		"To po kolei: KOI-4878.01 - jedna z planet najbardziej podobnych do Ziemii. Ma praktycznie identyczną masę i powierzchnię, podobną średnią temperaturę (zakładając, że ma atmosferę) i prawdopodobnie wodę. Niestey jest bardzo daleko i potrzebowalibyśmy całego naszego paliwa, żeby tam dolecieć. Do tego możliwe, że zamieszkiwany przez pewną rasę kosmitów nazywanych Nerdami. 1075 lat świtlnych od Ziemii."
 	)],
 	"Okej",
 	"Mhm",
@@ -2773,7 +2773,7 @@ let c2u3e3v1 = new MyEvent(
 	"bogosBinted/planet2.jpg",
 	[new MyLine(
 		"bogosBinted/krzychu.jpg", "Krzychu", colors["orange"],
-		"TRAPPIST-1e - Dużo mniejsza od ziemii, ale wciąż podobna planeta. Też może mieć wodę i w miarę znośną temperaturę oraz atmosferę. Zaletą tego miejsca jest to, że ją zamieszkują przyjaźnie nastawienii Magikale. Problem taki, że dysponują oni technologią, której nikt nie rozumie, stąd ich nazwa, więc lepiej im nie podpadać. 39 lat świetlnych od ziemii."
+		"TRAPPIST-1e - Dużo mniejsza od Ziemii, ale wciąż podobna planeta. Też może mieć wodę i w miarę znośną temperaturę oraz atmosferę. Zaletą tego miejsca jest to, że ją zamieszkują przyjaźnie nastawienii Magikale. Problem taki, że dysponują oni technologią, której nikt nie rozumie, stąd ich nazwa, więc lepiej im nie podpadać. 39 lat świetlnych od Ziemii."
 	)],
 	"Okej",
 	"Mhm",
@@ -2791,7 +2791,7 @@ let c2u3e4v1 = new MyEvent(
 	"bogosBinted/planet3.jpg",
 	[new MyLine(
 		"bogosBinted/krzychu.jpg", "Krzychu", colors["orange"],
-		"Proxima centauri b - najbliżej z tych 3 planet - tylko 4 lata świetlne. Również zdatna do życia planeta, okrążenie wokół słońca trwa tam 11 dni. Zamieszkiwana przez Agresusów - mogą na nas zareagować niezbyt przyjaźnie."
+		"Proxima centauri b - najbliżej z tych 3 planet - tylko 4 lata świetlne. Również zdatna do życia planeta, okrążenie wokół jej gwiazdy macierzystej trwa 11 dni. Zamieszkiwana przez Agresusów - mogą na nas zareagować agresywnie."
 	)],
 	"Ty mówisz poważnie z tymi kosmitami? Myślałem, że już o tym rozmawialiśmy.",
 	"Okej w takim razie lećmy na...",
@@ -2829,7 +2829,7 @@ let c3u1e1 = new MyEvent(//lot (spadają staty jeśli okłamałeś)
 	"bogosBinted/stol.jpg",
 	[new MyLine(
 		"bogosBinted/krzychu.jpg", "Krzychu", colors["orange"],
-		'Witajcie na "Kosmicznym Pierogu"! Po namyśle z Jakubem doszliśmy do wniosku, że lecimy na '+data.destination+' .Na szczęście dzięki Albertowi dolecimy tam jeszcze za życia!'
+		'Witajcie na "Kosmicznym Pierogu"! Po namyśle z Jakubem doszliśmy do wniosku, że lecimy na '+data.destination+' .Na szczęście dzięki Albertowi dolecimy tam jeszcze za naszego życia!'
 	),
 	new MyLine(
 		"bogosBinted/henryk.jpg", "Henryk", colors["brown"],
@@ -2908,7 +2908,7 @@ let c3u2e2v1 = new MyEvent(
 	"bogosBinted/marcin.jpg",
 	[new MyLine(
 		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
-		"Ludzie się w końcu dowiedzieli o tym, o czym ich okłamałeś podczas tamtego liva na Facebooku i to na praktycznie każdy temat. Teraz chcą zwrotu pieniędzy, a niektórzy już w ogóle rezygnują."
+		"Ludzie się dowiedzieli o wszystkim, o czym ich okłamałeś podczas tamtego liva na Facebooku. Teraz chcą zwrotu pieniędzy, niektórzy już w ogóle rezygnują."
 	)],
 	"Daj im zwroty, a jeśli trzeba to bilety za bezcen.",
 	"Nie chcą - ich problem.",
@@ -2971,7 +2971,7 @@ let c3u2e2v3 = new MyEvent(
 		"Ludzie dowiedzieli się o nierównych warunkach na statku. Chcą za to tańsze bilety."
 	)],
 	"Obniż ceny, byle z nami polecieli.",
-	"Pełna cena albo nigdzie nie lecą",
+	"Pełna cena albo nigdzie nie lecą.",
 	function (){
 		if(data.marcinsDecision = true){
 			data.stats.publicOpinion-=.2
@@ -3014,7 +3014,7 @@ let c3u2e3v1 = new MyEvent(
 	),
 	new MyLine(
 		"bogosBinted/marin.jpg", "Marcin", colors["aqua"],
-		"Jeszcze jedna sprawa... Pamiętasz to, o czym chciała Ci powiedzieć Amina? Chciała użyć dosyć ryzykownego sposobu na wydobycie metanu do zasilenia statku... Ja na to pozwoliłem i... doszło do katastrofy. Umarło 3 tysiące ludzi."
+		"Jeszcze jedna sprawa... Pamiętasz to, o czym chciała Ci powiedzieć Amina? Chciała wykorzystać dosyć ryzykowny sposób na wydobycie metanu do zasilenia statku... Ja na to pozwoliłem i... doszło do katastrofy. Umarło 3 tysiące ludzi."
 	)],
 	"TY IDIOTO",
 	"Każdy popełnia błędy...",
@@ -3038,8 +3038,8 @@ let c3u2e3v2 = new MyEvent(
 		"bogosBinted/marin.jpg", "Marcin", colors["aqua"],
 		"Nie, to wszystko."
 	)],
-	"Ok, to tyle na teraz, startujmy.",
-	"Przekaż wszytkim żeby się przygotowali do startu",
+	"Okej, to tyle na teraz, startujmy.",
+	"Przekaż wszytkim, żeby się przygotowali do startu.",
 	function (){
 		doTheEvent(c3u2e4v1)
 		//nextDub = "cuev"
