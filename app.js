@@ -2347,7 +2347,7 @@ let c1u2e19v1 = new MyEvent(
 	),
 	new MyLine(
 		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
-		"Super, a ty Albert teraz zajmij się tym, żeby w ogole tam dolecieć za życia." //w koncu jakis inny wynalazek xd
+		"Super, a ty Albert teraz zajmij się tym, żeby w ogóle tam dolecieć za życia."
 	),
 	new MyLine(
 		"bogosBinted/albert.jpg", "Albert", colors["darkred"],
@@ -3165,10 +3165,10 @@ let c3u3e2v1 = new MyEvent(
 	"bogosBinted/henryk.jpg",
 	[new MyLine(
 		"bogosBinted/henryk.jpg", "Henryk", colors["brown"],
-		"Szefie, mam jedną sprawę. Wzieliśmy 2 rodzaje zboża: jedno jest znacznie łatwiej uprawiać, ale może powodować choroby i jest i porostu gorszej jakości. A drugie jest dobrej jakości, ale ciężej się je uprawia"
+		"Szefie, mam jedną sprawę. Wzieliśmy 2 rodzaje zboża: jedno jest znacznie łatwiej uprawiać, ale może powodować choroby i jest i porostu gorszej jakości. A drugie jest dobrej jakości, ale ciężej się je uprawia. LKtórego rodzaju powinniśmy użyć?"
 	)],
-	"LewaOpcja",
-	"PrawaOpcja",
+	"Lepiej pójdźmy w ilość, żęby starczyło dla każdego.",
+	"Nie możemy ryzykować zdrowia ludzi.",
 	function (){
 		//doTheEvent(cuev)
 		//nextDub = "cuev"
