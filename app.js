@@ -146,12 +146,13 @@ function imageLoader() {
 		"bogosBinted/sniadanie.jpg",
 		"bogosBinted/stol.jpg",
 		"bogosBinted/Y.jpg",
-		"bogosBinted/zeby.jpg"
+		"bogosBinted/zeby.jpg",
+		"bogosBinted/nikita.jpg"
 	]
 
 	let doneArray = []
 
-	for(let x = 0; x < 34; x++) {
+	for(let x = 0; x < imgArray.length; x++) {
 		let newImg = document.createElement("img");
 		newImg.setAttribute("src", imgArray[x]);
 		newImg.style.setProperty("width", "80%");
@@ -164,7 +165,7 @@ function imageLoader() {
 				let loading = document.getElementById("image-loading-screen");
 				let imgArray2 = document.querySelectorAll(".imgTemp");
 				setTimeout(function() {
-					for (let i = 0; i < 34; i++) {
+					for (let i = 0; i < imgArray.length; i++) {
 						imgArray2[i].remove();
 					}
 					loading.style.setProperty("transform", "translateX(-100%)");
