@@ -2268,7 +2268,7 @@ let c1u2e14v2 = new MyEvent(
 	"c1u2e14v2R"
 )
 
-let c1u2e15v1 = new MyEvent( // nie ma 
+let c1u2e15v1 = new MyEvent(
 	"bogosBinted/stol.jpg",
 	[new MyLine(
 		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
@@ -2357,7 +2357,7 @@ let c1u2e17v2 = new MyEvent(
 	"c1u2e17v2R"
 )
 
-let c1u2e17v1 = new MyEvent( // nie ma 
+let c1u2e17v1 = new MyEvent(
 	"bogosBinted/albert.jpg",
 	[new MyLine(
 		"bogosBinted/krzychu.jpg", "Krzychu", colors['orange'],
@@ -2385,7 +2385,7 @@ let c1u2e17v1 = new MyEvent( // nie ma
 	"c1u2e17v1R"
 )
 
-let c1u2e18v1 = new MyEvent( // nie ma 
+let c1u2e18v1 = new MyEvent(
 	"bogosBinted/gsg.jpg",
 	[new MyLine(
 		"bogosBinted/albert.jpg", "Albert", colors["darkred"],
@@ -2407,7 +2407,7 @@ let c1u2e18v1 = new MyEvent( // nie ma
 	"c1u2e18v1R"
 )
 
-let c1u2e19v1 = new MyEvent( // nie ma 
+let c1u2e19v1 = new MyEvent(
 	"bogosBinted/albert.jpg",
 	[new MyLine(
 		"bogosBinted/albert.jpg", "Albert", colors["darkred"],
@@ -2452,7 +2452,7 @@ let c1u2e19v1 = new MyEvent( // nie ma
 //====================CHAPTER 2=========================================
 //======================================================================
 
-let c2u1e1 = new MyEvent( // nie ma 
+let c2u1e1 = new MyEvent(
 	"bogosBinted/kamera.jpg",
 	[new MyLine(
 		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
@@ -2648,7 +2648,7 @@ let c2u1e4v2 = new MyEvent(
 	"c2u1e4v2R"
 )
 
-let c2u2e1 = new MyEvent(
+let c2u2e1 = new MyEvent( // nie ma
 	"bogosBinted/stol.jpg",
 	[new MyLine(
 		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
@@ -2688,7 +2688,7 @@ let c2u2e1 = new MyEvent(
 	"c2u2e1R"
 )
 
-let c2u2e2v1 = new MyEvent(
+let c2u2e2v1 = new MyEvent( // nie ma
 	"bogosBinted/stol.jpg",
 	[new MyLine(
 		"bogosBinted/ilia.jpg", "Ilia", colors["purple"],
@@ -2730,7 +2730,7 @@ let c2u2e2v1 = new MyEvent(
 	"c2u2e2v1R"
 )
 
-let c2u2e2v2 = new MyEvent(
+let c2u2e2v2 = new MyEvent( // nie ma
 	"bogosBinted/stol.jpg",
 	[new MyLine(
 		"bogosBinted/ilie.jpg", "Ilia", colors["purple"],
@@ -2773,7 +2773,7 @@ let c2u2e2v2 = new MyEvent(
 	"c2u2e2v2R"
 )
 
-let c2u2e3v1 = new MyEvent(
+let c2u2e3v1 = new MyEvent( // nie ma
 	"bogosBinted/amina.jpg",
 	[new MyLine(
 		"bogosBinted/amina.jpg", "Amina", colors["lightpurple"],
@@ -2813,7 +2813,7 @@ let c2u2e3v1 = new MyEvent(
 	"c2u2e3v1R"
 )
 
-let c2u2e3v2 = new MyEvent(
+let c2u2e3v2 = new MyEvent( // nie ma
 	"bogosBinted/amina.jpg",
 	[new MyLine(
 		"bogosBinted/amina.jpg", "Amina", colors["lightpurple"],
@@ -2838,7 +2838,7 @@ let c2u2e3v2 = new MyEvent(
 	"c2u2e3v2R"
 )
 
-let c2u2e4v1 = new MyEvent(
+let c2u2e4v1 = new MyEvent( // nie ma
 	"bogosBinted/stol.jpg",
 	[new MyLine(
 		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
