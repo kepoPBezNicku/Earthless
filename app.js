@@ -2345,13 +2345,17 @@ let c1u2e17v2 = new MyEvent(
 	"Rozumiem.",
 	function (){
 		changeChapterPlace(2, "Studio nagrań")
+		audio1.pause();
+		playMusic(audio2);
 		doTheEvent(c2u1e1);
 		nextDub = "c2u1e1";
 	},
 	function (){
-		changeChapterPlace(2, "Studio nagrań")
+		changeChapterPlace(2, "Studio nagrań");
+		audio1.pause();
+		playMusic(audio2);
 		doTheEvent(c2u1e1);
-			nextDub = "c2u1e1";
+		nextDub = "c2u1e1";
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -2635,12 +2639,12 @@ let c2u1e4v2 = new MyEvent(
 	"Dziękuję za uwagę, wszystkiego dobrego.",
 	"Pamiętajcie by być dobrej myśli.",
 	function (){
-		changeChapterPlace(1, "Laboratorium Earthless");
+		changeChapterPlace(2, "Laboratorium Earthless");
 		doTheEvent(c2u2e1);
 		nextDub = "c2u2e1"
 	},
 	function (){
-		changeChapterPlace(1, "Laboratorium Earthless");
+		changeChapterPlace(2, "Laboratorium Earthless");
 		doTheEvent(c2u2e1);
 		nextDub = "c2u2e1"
 	},
@@ -3301,13 +3305,19 @@ let c3u2e3v2 = new MyEvent(
 	"Okej, to tyle na teraz, startujmy.",
 	"Przekaż wszytkim, żeby się przygotowali do startu.",
 	function (){
-		changeChapterPlace(3, "Kosmiczny PierUg, 5% trasy.")
+		changeChapterPlace(3, "Kosmiczny PierUg, 5% trasy.");
+		audio2.pause();
+		playMusic(audio3);
 		doTheEvent(c3u3e1)
 		//nextDub = "cuev"
 	},
 	function (){
 		changeChapterPlace(3, "Kosmiczny PierUg, 5% trasy.")
-		doTheEvent(c3u3e1)
+		doTheEvent(c3u3e1);
+		audio2.pause();
+		playMusic(audio3);
+		audio2.pause();
+		audio3.play()
 		//nextDub = "cuev"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
