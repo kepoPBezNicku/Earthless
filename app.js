@@ -1494,11 +1494,11 @@ let c1u1e5v1 = new MyEvent(
 	"Poczekam w samotności, lepiej odpocznę przed wywiadem.",
 	function () {
 		doTheEvent(c1u1e6);
-		nextDub = "c1u1e6"
+		nextDub = ""
 	},
 	function () {
 		doTheEvent(c1u1e7);
-		nextDub = "c1u1e7"
+		nextDub = ""
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -2186,11 +2186,11 @@ let c1u2e13v1 = new MyEvent( // nie ma
 	function (){
 		if (data.areTeethBrushed) {
 			doTheEvent(c1u2e14v1)
-			nextDub = "c1u2e14v1"
+			nextDub = ""
 		}
 		else {
 			doTheEvent(c1u2e14v2);
-			nextDub = "c1u2e14v2"
+			nextDub = ""
 		}
 	},
 	function (){
@@ -2321,7 +2321,7 @@ let c1u2e16v1 = new MyEvent( // nie ma
 	},
 	function (){
 		doTheEvent(c1u2e17v2);
-		nextDub = "c1u2e17v2"
+		nextDub = ""
 	},
 	[-.05, 0, 0, .05, 0, 0, 0, 0, 0],
 	[.05, 0, 0, -.15, 0, 0, 0, 0, 0],
