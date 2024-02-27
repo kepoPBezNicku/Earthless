@@ -147,7 +147,8 @@ function imageLoader() {
 		"bogosBinted/stol.jpg",
 		"bogosBinted/Y.jpg",
 		"bogosBinted/zeby.jpg",
-		"bogosBinted/nikita.jpg"
+		"bogosBinted/nikita.jpg",
+		"bogosBinted/taxi.jpg"
 	]
 
 	let doneArray = []
