@@ -1222,11 +1222,11 @@ let c0u2e2 = new MyEvent(
 	"...",
 	function (){
 		doTheEvent(c0u2e3);
-		nextDub = ""
+		nextDub = "c0u2e3"
 	},
 	function (){
 		doTheEvent(c0u2e3);
-		nextDub = ""
+		nextDub = "c0u2e3"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -2173,7 +2173,7 @@ let c1u2e12v2 = new MyEvent(
 	"c1u2e12v2R"
 )
 
-let c1u2e13v1 = new MyEvent( // nie ma 
+let c1u2e13v1 = new MyEvent(
 	"bogosBinted/stol.jpg",
 	[new MyLine(
 		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
@@ -2299,7 +2299,7 @@ let c1u2e15v1 = new MyEvent(
 	"c1u2e15v1R"
 )
 
-let c1u2e16v1 = new MyEvent( // nie ma 
+let c1u2e16v1 = new MyEvent(
 	"bogosBinted/radio.jpg",
 	[new MyLine(
 		"bogosBinted/becia.jpg", "Becia", colors["red"],
@@ -2337,7 +2337,7 @@ let c1u2e17v2 = new MyEvent(
 	"bogosBinted/gsg.jpg",
 	[new MyLine(
 		"bogosBinted/noPfpUser.jpg", "", colors["grey"],
-		"Gratulacje, odblokowałeś pierwszy wynalazek: genereator sztucznej grawitacji! Tym razem jeszcze ujdzie Ci to na sucho, ale pamętaj, aby szanować Alberta."
+		"Gratulacje, odblokowałeś pierwszy wynalazek: generator sztucznej grawitacji! Tym razem jeszcze ujdzie Ci to na sucho, ale pamętaj, aby szanować Alberta."
 	)],
 	"Okej...",
 	"Rozumiem.",
@@ -2652,7 +2652,7 @@ let c2u1e4v2 = new MyEvent(
 	"c2u1e4v2R"
 )
 
-let c2u2e1 = new MyEvent( // nie ma
+let c2u2e1 = new MyEvent(
 	"bogosBinted/stol.jpg",
 	[new MyLine(
 		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
@@ -2692,7 +2692,7 @@ let c2u2e1 = new MyEvent( // nie ma
 	"c2u2e1R"
 )
 
-let c2u2e2v1 = new MyEvent( // nie ma
+let c2u2e2v1 = new MyEvent(
 	"bogosBinted/stol.jpg",
 	[new MyLine(
 		"bogosBinted/ilia.jpg", "Ilia", colors["purple"],
@@ -2734,7 +2734,7 @@ let c2u2e2v1 = new MyEvent( // nie ma
 	"c2u2e2v1R"
 )
 
-let c2u2e2v2 = new MyEvent( // nie ma
+let c2u2e2v2 = new MyEvent(
 	"bogosBinted/stol.jpg",
 	[new MyLine(
 		"bogosBinted/ilie.jpg", "Ilia", colors["purple"],
@@ -2777,7 +2777,7 @@ let c2u2e2v2 = new MyEvent( // nie ma
 	"c2u2e2v2R"
 )
 
-let c2u2e3v1 = new MyEvent( // nie ma
+let c2u2e3v1 = new MyEvent(
 	"bogosBinted/amina.jpg",
 	[new MyLine(
 		"bogosBinted/amina.jpg", "Amina", colors["lightpurple"],
@@ -2797,7 +2797,7 @@ let c2u2e3v1 = new MyEvent( // nie ma
 	),
 	new MyLine(
 		"bogosBinted/amina.jpg", "Amina", colors["lightpurple"],
-		"Te kopalnie byłyby pod terenem, zamieszkiwanym przez sporą ilość ludzi. Potencjalne zawalenie się którejkolwiek z kopalni, skutkuje śmiercią wielu z nich. Setek. Albo nawet i tysięcy."
+		"Te kopalnie byłyby pod terenem, zamieszkiwanym przez sporą ilość ludzi. Potencjalne zawalenie się którejkolwiek z kopalni, skutkuje śmiercią wielu mieszkańców. Setek. Albo nawet i tysięcy."
 	)],
 	"Trudno, skoro nie ma innych opcji, zlećcie to komuś.",
 	"Nie możemy ryzykować życia niewinnych ludzi!",
@@ -2817,7 +2817,7 @@ let c2u2e3v1 = new MyEvent( // nie ma
 	"c2u2e3v1R"
 )
 
-let c2u2e3v2 = new MyEvent( // nie ma
+let c2u2e3v2 = new MyEvent(
 	"bogosBinted/amina.jpg",
 	[new MyLine(
 		"bogosBinted/amina.jpg", "Amina", colors["lightpurple"],
@@ -2842,7 +2842,7 @@ let c2u2e3v2 = new MyEvent( // nie ma
 	"c2u2e3v2R"
 )
 
-let c2u2e4v1 = new MyEvent( // nie ma
+let c2u2e4v1 = new MyEvent(
 	"bogosBinted/stol.jpg",
 	[new MyLine(
 		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
@@ -3215,9 +3215,9 @@ let c3u2e2v2 = new MyEvent(
 )
 
 let c3u2e2v3 = new MyEvent(
-	"bogosBinted/jakub.jpg",
+	"bogosBinted/marcin.jpg",
 	[new MyLine(
-		"bogosBinted/jakub.jpg", "Jakub", colors[""],
+		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
 		"Ludzie dowiedzieli się o nierównych warunkach na statku. Chcą za to tańsze bilety."
 	)],
 	"Obniż ceny, byle z nami polecieli.",
@@ -3240,9 +3240,9 @@ let c3u2e2v3 = new MyEvent(
 )
 
 let c3u2e2v4 = new MyEvent(
-	"bogosBinted/jakub.jpg",
+	"bogosBinted/marcin.jpg",
 	[new MyLine(
-		"bogosBinted/jakub.jpg", "Jakub", colors["aqua"],
+		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
 		"Mimo tego co mówiłeś na live, wzrosło zainteresowanie lotem, ale kończą nam się miejsca!"
 	)],
 	"Nie możemy już wpuścić więcej.",
@@ -3323,7 +3323,7 @@ let c3u2e3v2 = new MyEvent(
 	"c3u2e3v2R"
 )
 
-let c3u3e1 = new MyEvent(
+let c3u3e1 = new MyEvent( // NIE MA 
 	"bogosBinted/chmurka.jpg",
 	[new MyLine(
 		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
@@ -3343,7 +3343,7 @@ let c3u3e1 = new MyEvent(
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] 
 )
 
-let c3u3e2v1 = new MyEvent(
+let c3u3e2v1 = new MyEvent( 
 	"bogosBinted/henryk.jpg",
 	[new MyLine(
 		"bogosBinted/henryk.jpg", "Henryk", colors["brown"],
