@@ -150,7 +150,8 @@ function imageLoader() {
 		"bogosBinted/nikita.jpg",
 		"bogosBinted/taxi.jpg",
 		"bogosBinted/app.jpg",
-		"bogosBinted/endingScreen.jpg"
+		"bogosBinted/endingScreen.jpg",
+		"bogosBinted/dp.jpg"
 	]
 
 	let doneArray = []
@@ -923,15 +924,68 @@ function endOfTheGame(text, img) {
 		stats[7].textContent = "Relacje z cywilizacją magikali: " + (data.stats.alienRelations.magicals * 100).toString() + "%";;
 		stats[8].textContent = "Relacje z cywilizacją agreSuSów: " + (data.stats.alienRelations.agreSuS * 100).toString() + "%";;
 	
-		let playAgain = document.createElement("a");
-		let buttonNode = document.createTextNode("Zagraj ponownie");
-		playAgain.setAttribute("href", "main.html");
-		playAgain.appendChild(buttonNode);
-		playAgain.className = "playAgain"
-		div.insertAdjacentElement("beforeend", playAgain);
-		body.style.setProperty("opacity", 1)
+		let showCreators = document.createElement("div");
+		let buttonNode = document.createTextNode("Pokaż twórców");
+
+		function showCreatorsDiv() {
+			body.textContent = "";
+			body.className = "endingCreators"
+
+			let dominik = document.createElement("h1");
+			dominik.textContent = "Dominik Popek - fabuła, dubbing: Jakub";
+			body.insertAdjacentElement("beforeend", dominik)
+
+			let igor = document.createElement("h1");
+			igor.textContent = "Igor Ciskał - grafika, dubbing: Albert";
+			body.insertAdjacentElement("beforeend", igor)
+
+			let wojtek = document.createElement("h1");
+			wojtek.textContent = "Wojciech Mazur - UX/UI, mechanika gry, dubbing: Krzychu";
+			body.insertAdjacentElement("beforeend", wojtek)
+			wojtek.style.setProperty("border-bottom", "1px solid white")
+
+			let piotr = document.createElement("h1");
+			piotr.textContent = "Piotr Chruścicki - dubbing: Marcin";
+			body.insertAdjacentElement("beforeend", piotr)
+
+			let zuzia = document.createElement("h1");
+			zuzia.textContent = "Zuzanna Zdebska - dubbing: Becia";
+			body.insertAdjacentElement("beforeend", zuzia)
+
+			let maja = document.createElement("h1");
+			maja.textContent = "Maja Kieca - dubbing: Ilia";
+			body.insertAdjacentElement("beforeend", maja)
+
+			let wiktoria = document.createElement("h1");
+			wiktoria.textContent = "Wiktoria Jamrozik - dubbing: Nikita";
+			body.insertAdjacentElement("beforeend", wiktoria)
+
+			let dominika = document.createElement("h1");
+			dominika.textContent = "Dominika Golan - dubbing: Amina";
+			body.insertAdjacentElement("beforeend", dominika)
+
+			let kacper = document.createElement("h1");
+			kacper.textContent = "Kacper Mazur - dubbing: Henryk";
+			body.insertAdjacentElement("beforeend", kacper)
+
+			let kuba = document.createElement("h1");
+			kuba.textContent = "Kuba Dudzik - dubbing: Nerd";
+			body.insertAdjacentElement("beforeend", kuba)
+
+			let krystian = document.createElement("h1");
+			krystian.textContent = "Krystian Zarych - dubbing: Agresus";
+			body.insertAdjacentElement("beforeend", krystian)
+
+			let jeremi = document.createElement("h1");
+			jeremi.textContent = "Jeremi Kalinka - dubbing: Pan Mirek";
+			body.insertAdjacentElement("beforeend", jeremi)
+		}
+
+		showCreatorsDiv()
 	}, 1000)
 }
+
+
 
 function changePlanet() {
 	middleDiv.textContent = "";
@@ -1061,6 +1115,7 @@ let c0u1e1 = new MyEvent(
 	function (){
 		doTheEvent(c0u1e2);
 		nextDub = "c0u1e2";
+		endOfTheGame("dupa", "endingScreen")
 	},
 	function (){
 		doTheEvent(c0u1e2);
@@ -1206,11 +1261,11 @@ let c0u2e1 = new MyEvent(
 	"...",
 	function (){
 		doTheEvent(c0u2e2);
-		nextDub = "";
+		nextDub = "c0u2e2";
 	},
 	function (){
 		doTheEvent(c0u2e2);
-		nextDub = ""
+		nextDub = "c0u2e2"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -3320,8 +3375,6 @@ let c3u2e3v2 = new MyEvent(
 	"Przekaż wszystkim, żeby się przygotowali do startu.",
 	function (){
 		changeChapterPlace(3, "Kosmiczny PierUg, 5% trasy.");
-		audio2.pause();
-		playMusic(audio3);
 		doTheEvent(c3u3e1)
 		nextDub = "c3u3e1";
 	},
@@ -3329,8 +3382,6 @@ let c3u2e3v2 = new MyEvent(
 		changeChapterPlace(3, "Kosmiczny PierUg, 5% trasy.")
 		doTheEvent(c3u3e1);
 		nextDub = "c3u3e1"
-		audio2.pause();
-		playMusic(audio3);
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -4063,12 +4114,16 @@ let c3u5e3v6 = new MyEvent( // nie ma
 	"Czyli jednak się pobawimy działkami!",
 	"Musimy uciekać, niech Krzychu zmieni kurs.",
 	function (){
-		doTheEvent(c3u5e4v5)
-		nextDub = "c3u5e4v5"
+		doTheEvent(c3u5e4v5);
+		nextDub = "c3u5e4v5";
+		audio3.pause();
+		playMusic(audio4);
 	},
 	function (){
-		doTheEvent(c3u5e4v2)
-		nextDub = "c3u5e4v2"
+		doTheEvent(c3u5e4v2);
+		nextDub = "c3u5e4v2";
+		audio3.pause();
+		playMusic(audio4);
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
@@ -4076,9 +4131,9 @@ let c3u5e3v6 = new MyEvent( // nie ma
 	"c3u5e3v6R"
 )
 
-//============================================================================
-//==================================CHAPTER 4 W KONCUAHHHH====================
-//============================================================================
+//============================================================================================
+//==================================CHAPTER 4 W KONCUAHHHH====================================
+//============================================================================================
 
 let c4u1e1v1 = new MyEvent( //wojna domova (kim byl ten domov)
 	"bogosBinted/chmurka.jpg",

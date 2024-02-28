@@ -8,6 +8,8 @@ let burger = document.getElementById("burger");
 var buttonLeft = document.querySelector("button#left");
 var buttonRight = document.querySelector("button#right");
 
+let notifications = document.getElementById("noti");
+
 let backgroundImage = document.querySelector(".background-image-index")
 
 let colors = {
@@ -621,11 +623,16 @@ let s9 = new Samouczek (
 )
 
 let s10 = new Samouczek (
+	notifications,
+	"To tyle, aby zacząć główną część gry, kliknij przycisk 'Dalej'"
+)
+
+let s11 = new Samouczek (
 	samouczekNext,
 	"To tyle, aby zacząć główną część gry, kliknij przycisk 'Dalej'"
 )
 
-let sArray = [s1,s2,s3,s4,s5,s6,s7,s8,s9,s10]
+let sArray = [s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11]
 
 let test1 = new MyEvent(
 	"bogosBinted/jakub.jpg", //budzik.jpg
@@ -657,8 +664,8 @@ samouczekNext.addEventListener("click", function () {
 	if (samouczekProgress == 4) {
 		showIcons(adviser, "Relacja z doradcą");
 	}
-	if (samouczekProgress == 9) {
-		samouczekNext.style.setProperty("padding", "0px");
+	if (samouczekProgress == 10) {
+		samouczekNext.style.setProperty("padding", "10px");
 		samouczekNext.textContent = "";
 		let link = document.createElement("a");
 		let node = document.createTextNode("Przejdź do gry");
