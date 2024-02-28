@@ -3327,7 +3327,7 @@ let c3u2e3v2 = new MyEvent(
 	"c3u2e3v2R"
 )
 
-let c3u3e1 = new MyEvent( // NIE MA 
+let c3u3e1 = new MyEvent(
 	"bogosBinted/chmurka.jpg",
 	[new MyLine(
 		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
@@ -3581,7 +3581,7 @@ let c3u4e3v1 = new MyEvent(
 		"Wtedy będziemy zmuszeni albo uciekać i liczyć na szczęście gdzieś indziej, albo walczyć, ale jesteśmy i na to gotowi, prawda albert?"
 	)],
 	"Oo już?",
-	"Nie  chce mi się go znowu słuchać, wyślijmy im tą wiadomość.",
+	"Nie chce mi się go znowu słuchać, wyślijmy im tą wiadomość.",
 	function (){
 		doTheEvent(c3u4e4v1)
 		//nextDub = "cuev"
@@ -3594,7 +3594,7 @@ let c3u4e3v1 = new MyEvent(
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 )
 
-let c3u4e4v1 = new MyEvent( //dzialo jonowoprotonowe // nie ma 
+let c3u4e4v1 = new MyEvent( //dzialo jonowoprotonowe
 	"bogosBinted/albert.jpg",
 	[new MyLine(
 		"bogosBinted/albert.jpg", "Albert", colors["darkred"],
@@ -3942,7 +3942,7 @@ let c3u5e3v4 = new MyEvent(
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
 )
-let c3u5e3v5 = new MyEvent(
+let c3u5e3v5 = new MyEvent( // nie ma 
 	"bogosBinted/agresus.jpg",
 	[new MyLine(
 		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
@@ -3965,7 +3965,7 @@ let c3u5e3v5 = new MyEvent(
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
 )
-let c3u5e3v6 = new MyEvent(
+let c3u5e3v6 = new MyEvent( // nie ma 
 	"bogosBinted/jakub.jpg",
 	[new MyLine(
 		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
