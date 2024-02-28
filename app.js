@@ -1162,13 +1162,13 @@ let c0u1e4 = new MyEvent(
 		doTheEvent(c0u1e5);
 		document.body.style.setProperty("background-image", "url(bogosBinted/background-main1-contrast.jpg)");
 		audio0.pause();
-		nextDub = ""
+		nextDub = "c0u1e5"
 	},
 	function (){
 		doTheEvent(c0u1e5);
 		document.body.style.setProperty("background-image", "url(bogosBinted/background-main1-contrast.jpg)");
 		audio0.pause();
-		nextDub = ""
+		nextDub = "c0u1e5"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -1186,11 +1186,11 @@ let c0u1e5 = new MyEvent(
 	"...",
 	function (){
 		doTheEvent(c0u2e1);
-		nextDub = ""
+		nextDub = "c0u2e1"
 	},
 	function (){
 		doTheEvent(c0u2e1);
-		nextDub = ""
+		nextDub = "c0u2e1"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -3285,7 +3285,8 @@ let c3u2e3v1 = new MyEvent(
 		nextDub = "c3u1e2v1"
 	},
 	function (){
-		doTheEvent(c3u2e3v2)
+		doTheEvent(c3u2e3v2);
+		nextDub = "c3u2e3v2"
 	},
 	[0, 0, 0, 0, 0, -.1, 0, 0, 0],
 	[0, 0, 0, 0, 0, .1, 0, 0, 0],
@@ -3310,7 +3311,7 @@ let c3u2e3v2 = new MyEvent(
 		audio2.pause();
 		playMusic(audio3);
 		doTheEvent(c3u3e1)
-		//nextDub = "cuev"
+		nextDub = "c3u3e1";
 	},
 	function (){
 		changeChapterPlace(3, "Kosmiczny PierUg, 5% trasy.")
@@ -3319,7 +3320,7 @@ let c3u2e3v2 = new MyEvent(
 		playMusic(audio3);
 		audio2.pause();
 		audio3.play()
-		//nextDub = "cuev"
+		nextDub = "c3u3e1"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -3472,7 +3473,7 @@ let c3u3e6v1 = new MyEvent(
 		changeChapterPlace(3, "Kosmiczny pieróg, 50% trasy.")
 		
 		if(data.host === "Nerdzi"){
-			doTheEvent(c3u4e1v1)			
+			doTheEvent(c3u4e1v1)
 		}else if(data.host === "Magikale"){
 			doTheEvent(c3u4e1v2)
 		}else if(data.host ==="Agresusi"){
@@ -3973,7 +3974,7 @@ let c3u5e3v6 = new MyEvent( // nie ma
 	),
 	new MyLine(
 		"bogosBinted/agresus.jpg", "Agresus", colors["red"],
-		"Widzę, że nie da się waas tak łatwo nastraszyć! Wydajecie się być dobrymi towarzyszami walki, zawiążmy sojusz."
+		"Widzę, że nie da się was tak łatwo nastraszyć! Wydajecie się być dobrymi towarzyszami walki, zawiążmy sojusz."
 	)],
 	"Czyli jednak się pobawimy działkami!",
 	"Musiy uciekać, niech Krzychu zmieni kurs",
@@ -4100,7 +4101,8 @@ let c4u1e1v5 = new MyEvent(
 // KURWO MIAŁEŚ BYĆ O ~19
 // Kto xdddd o huj chodzi
 // ^^^^^ O ten tramwaj co nie biega
-//JEBLEMBABENAPAAAAAASAAACH
+// JEBLEMBABENAPAAAAAASAAACH
+// Stary 15:00 i gotowe cnie???? CNIEEEE??
 
 /*
 let cuev = new MyEvent(
