@@ -3358,7 +3358,52 @@ let c3u3e3v1 = new MyEvent(
 	"bogosBinted/amina.jpg",
 	[new MyLine(
 		"bogosBinted/ilia.jpg", "Ilia", colors["purple"],
-		"Kuba, musimy powoli myśleć o tym jak się przygotować do życia na nowej planecie."
+		"Kuba, musimy powoli myśleć o tym jak się przygotować do życia na nowej planecie. Będziemy musieli utworzyć pole magnetyczne, aby uchronić się przed kosmicznym promieniowaniem. Wiesz z czego składa się promieniowanie kosmiczne?"
+	)],
+
+	// Po drugie: musimy dodać tlen do atmosfery, a konkretniej zmienić go z dwutlenkiem węgla. Posadzenie tam roślin powinno załatwić sprawę.  
+
+	"Sigma, omega i lambda",
+	"Alfa, beta i gamma",
+	function (){
+		doTheEvent(c3u3e4v1)
+		data.stats.research-=.1
+		//nextDub = "cuev"
+	},
+	function (){
+		data.stats.research+=.1
+		doTheEvent(c3u3e4v2)
+		//nextDub = "cuev"
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+
+let c3u3e4v1 = new MyEvent(
+	"bogosBinted/ilia.jpg",
+	[new MyLine(
+		"bogosBinted/ilia.jpg", "Ilia", colors[""],
+		"Ty niedoedukowany chloroplaście, chodziło o alfa, beta i gamma. W każdym razie będziemy potrzebowali sporo prądku na planecie."
+	)],
+	"Da się zrobić.",
+	"Nie zawracaj mi tym teraz głowy, idź z tym do Alberta",
+	function (){
+		//doTheEvent(cuev)
+		//nextDub = "cuev"
+	},
+	function (){
+		//doTheEvent(cuev)
+		//nextDub = "cuev"
+	},
+	[0, 0, 0, 0, -.2, 0, .1, 0, 0], //
+	[0, 0, 0, 0, .2, 0, -.1, 0, 0] //
+)
+
+let c3u3e4v2 = new MyEvent(
+	"bogosBinted/jakub.jpg",
+	[new MyLine(
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
+		"testline"
 	)],
 	"LewaOpcja",
 	"PrawaOpcja",
