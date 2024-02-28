@@ -4037,7 +4037,7 @@ let cuev = new MyEvent(
 	"bogosBinted/marcin.jpg",
 	[new MyLine(
 		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
-		"Myślę, że przez opinie ludzi na Twój temat teraz to JA jestem jedyną odpowiednią osobą na stanowaisko głowy państwa."
+		"Myślę, że przez opinie ludzi na Twój temat teraz to JA jestem jedyną odpowiednią osobą na stanowisko głowy państwa."
 	),
 	new MyLine(
 		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
