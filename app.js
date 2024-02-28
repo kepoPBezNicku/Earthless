@@ -4020,8 +4020,32 @@ let c4u1e1v1e1 = new MyEvent(
 		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
 		"Mamy duży problem, tak jak się spodziewałem, ludzie się buntują. Twierdzą, że zaminili Cię w kosmitę, i że ci "+data.host+" zjedzą wszystkich ludzi."
 	)],
-	"LewaOpcja",
-	"PrawaOpcja",
+	"Nie ma szans...",
+	"I co teraz zrobimy?",
+	function (){
+		doTheEvent(c4u1e1v1e2)
+		//nextDub = "cuev"
+	},
+	function (){
+		doTheEvent(c4u1e1v1e2)
+		//nextDub = "cuev"
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+
+let cuev = new MyEvent(
+	"bogosBinted/marcin.jpg",
+	[new MyLine(
+		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
+		"Myślę, że przez opinie ludzi na Twój temat teraz to JA jestem jedyną odpowiednią osobą na stanowaisko głowy państwa."
+	),
+	new MyLine(
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
+		"Marcin, co ty chesz zro-."
+	)],
+	"...",
+	"...",
 	function (){
 		//doTheEvent(cuev)
 		//nextDub = "cuev"
@@ -4094,6 +4118,8 @@ let c4u1e1v2e2 = new MyEvent(
 	[0, 0, 0, 0, 0, 0, 0, 0, -.1], //
 	[0, 0, 0, 0, 0, 0, 0, 0, -.1] //
 )
+
+
 
 let c4u1e1v3 = new MyEvent(
 	"bogosBinted/jakub.jpg",
