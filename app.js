@@ -831,10 +831,12 @@ function doTheEvent(ob) {
 
 	buttonLeft.addEventListener("click", function() {
 		dubbing(nextDub)
+		dubbingAudioH1.pause()
 	})
 	
 	buttonRight.addEventListener("click", function() {
 		dubbing(nextDub)
+		dubbingAudioH2.pause()
 	})
 
 	statsChanger(buttonLeft, ob.sL);
@@ -1115,7 +1117,6 @@ let c0u1e1 = new MyEvent(
 	function (){
 		doTheEvent(c0u1e2);
 		nextDub = "c0u1e2";
-		endOfTheGame("dupa", "endingScreen")
 	},
 	function (){
 		doTheEvent(c0u1e2);
@@ -1217,13 +1218,13 @@ let c0u1e4 = new MyEvent(
 		doTheEvent(c0u1e5);
 		document.body.style.setProperty("background-image", "url(bogosBinted/background-main1-contrast.jpg)");
 		audio0.pause();
-		nextDub = "c0u1e5"
+		nextDub = ""
 	},
 	function (){
 		doTheEvent(c0u1e5);
 		document.body.style.setProperty("background-image", "url(bogosBinted/background-main1-contrast.jpg)");
 		audio0.pause();
-		nextDub = "c0u1e5"
+		nextDub = ""
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -1254,7 +1255,7 @@ let c0u1e5 = new MyEvent(
 let c0u2e1 = new MyEvent(
 	"bogosBinted/agresus.jpg",
 	[new MyLine(
-		"bogosBinted/agresus.jpg", "ImieAgr", colors["red"],
+		"bogosBinted/agresus.jpg", "Agresus", colors["red"],
 		"JAKUBIE"
 	)],
 	"...",
@@ -1522,7 +1523,7 @@ let c1u1e3v4 = new MyEvent(
 );
 
 let c1u1e4v1 = new MyEvent(
-	"bogosBinted/jedzenie.jpg",
+	"bogosBinted/sniadanie.jpg",
 	[
 		new MyLine(
 			"bogosBinted/jakub.jpg","Jakub",colors["green"],
@@ -4339,7 +4340,6 @@ let c4u1e1v5 = new MyEvent(
 	"c4u1e1v5L",
 	"c4u1e1v5R"
 )
-
 
 // endOfTheGame("NAPIS KONCOWY", "ZDJECIE (BEZ url(bogosBinted/)")
 
