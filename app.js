@@ -4018,7 +4018,7 @@ let c4u1e1v1e1 = new MyEvent(
 	"bogosBinted/marcin.jpg",
 	[new MyLine(
 		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
-		"Mamy duży problem, tak jak się spodziewałem, ludzie się buntują. Twierzą, że zaminili Cię w kosmitę, i że ci "+data.host+" zjedzą wszystkich ludzi."
+		"Mamy duży problem, tak jak się spodziewałem, ludzie się buntują. Twierdzą, że zaminili Cię w kosmitę, i że ci "+data.host+" zjedzą wszystkich ludzi."
 	)],
 	"LewaOpcja",
 	"PrawaOpcja",
