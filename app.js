@@ -148,7 +148,9 @@ function imageLoader() {
 		"bogosBinted/Y.jpg",
 		"bogosBinted/zeby.jpg",
 		"bogosBinted/nikita.jpg",
-		"bogosBinted/taxi.jpg"
+		"bogosBinted/taxi.jpg",
+		"bogosBinted/app.jpg",
+		"bogosBinted/endingScreen.jpg"
 	]
 
 	let doneArray = []
@@ -891,7 +893,7 @@ function endOfTheGame(text, img) {
 	body.style.setProperty("background-image", "url()");
 	body.className = "end";
 	setTimeout(function() {
-		body.style.setProperty("background-image", "url(bogosBinted/"+img+")");
+		body.style.setProperty("background-image", "url(bogosBinted/"+img+".jpg)");
 
 		let div = document.createElement("div");
 		let p = document.createElement("p");
@@ -3380,6 +3382,9 @@ let c3u3e3v1 = new MyEvent(
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
 )
+
+
+
 
 // endOfTheGame("NAPIS KONCOWY", "ZDJECIE (BEZ url(bogosBinted/)")
 
