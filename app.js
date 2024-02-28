@@ -4016,10 +4016,31 @@ let c4u1e1v2 = new MyEvent( //ucieczka
 	"bogosBinted/krzychu.jpg",
 	[new MyLine(
 		"bogosBinted/krzychu.jpg", "Krzychu", colors["orange"],
-		"Jesteś pewien? Może nam nie wystarczyć paliwa do najbliższej planety"
-	)],
+		"Jesteś pewien? Może nam nie wystarczyć paliwa do najbliższej planety."
+	)
+	],
 	"Jestem pewien.",
-	"Nie mamy wyboru",
+	"Nie mamy wyboru.",
+	function (){
+		doTheEvent(c4u1e1v2e1)
+		//nextDub = "cuev"
+	},
+	function (){
+		doTheEvent(c4u1e1v2e1)
+		//nextDub = "cuev"
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+
+let c4u1e1v2e1 = new MyEvent(
+	"bogosBinted/jakub.jpg",
+	[new MyLine(
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
+		"No to czekamy"
+	)],
+	"LewaOpcja",
+	"PrawaOpcja",
 	function (){
 		//doTheEvent(cuev)
 		//nextDub = "cuev"
