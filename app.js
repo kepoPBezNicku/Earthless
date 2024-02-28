@@ -1143,7 +1143,7 @@ let c0u1e2 = new MyEvent(
 	),
 	new MyLine(
 		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
-		"Pytam ostani raz: jakieś ostatnie słowa?"
+		"Pytam ostatni raz: jakieś ostatnie słowa?"
 	)],
 	"*rozmawiaj*",
 	"*walcz*",
@@ -1171,7 +1171,7 @@ let c0u1e3v1 = new MyEvent(
 		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
 		"Sojusze się zmieniają Jakubie. Miałeś swoje szanse, ale mnie zawiodłeś."
 	)],
-	"Wypuść mnie zdracjo!",
+	"Wypuść mnie zdrajco!",
 	"Poczekaj, nie rób niczego głupiego!",
 	function (){
 		doTheEvent(c0u1e4);
@@ -1814,7 +1814,7 @@ let c1u2e5v1 = new MyEvent(
 		),
 		new MyLine(
 			"bogosBinted/becia.jpg","Becia",colors["red"],
-			"Dobrze, zanim przejdziemy do sedna naszego spotkania... Ponoć miał pan z WOSu 2 na świadectwie!"
+			"Dobrze, zanim przejdziemy do sedna naszego spotkania... Ponoć miał pan 2 z WOSu na świadectwie!"
 		),
 	],
 	"To prawda. Przyznaję, że w tym wieku nie bardzo uważałem na oceny. Najważniejsze, że zdałem, prawda? Haha!",
@@ -1845,7 +1845,7 @@ let c1u2e6v1 = new MyEvent(
 			"Jaki test?"),
 		new MyLine(
 			"bogosBinted/becia.jpg","Becia",colors["red"],
-			"Zadam kilka prostych pytań z wiedzy o społeczeństwie. Zaczynamy!"
+			"Zadam kilka podstawowych pytań z wiedzy o społeczeństwie. Zaczynamy!"
 		),
 		new MyLine(
 			"bogosBinted/becia.jpg","Becia",colors["red"],
@@ -2035,7 +2035,7 @@ let c1u2e9v2 = new MyEvent(
 	[
 		new MyLine(
 			"bogosBinted/becia.jpg", "Becia", colors["red"],
-			"Zgadza się! Wystarczy ukończyć 21 rok życia i mieć prawa wyborcze. Dobrze, skoro pytania mamy za sobą, możemy przejść do właciwej części wywiadu. Jak pan się przygoto..."
+			"Zgadza się! Wystarczy ukończyć 21 rok życia i mieć prawa wyborcze. Dobrze, skoro pytania mamy za sobą, możemy przejść do właściwej części wywiadu. Jak pan się przygoto..."
 		),
 	],
 	"*podejdź do wywiadu poważnie, nie unikaj trudnych pytań (wymaga skupienia)*",
@@ -2182,7 +2182,7 @@ let c1u2e12v1 = new MyEvent(
 	"bogosBinted/radio.jpg", //3
 	[new MyLine(
 		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
-		"Jak najbardziej, program Earthless jest odpowiedzią na ten problem. We współpracy z najlepszymi polskimi naukowcami, stworzyliśmy plan emigracji wszystkich Polaków w przestrzeń kosmiczną. Mamy ambitnych ludzi, nowoczesne narzędzia i dopracowany plan. Teraz jedyne czego potrzebuję żeby go wyegzekwować to mnie na stanowisku prezydenta. To jedyny sposób na zapewnienie bezpieczeństwia Polakom."
+		"Jak najbardziej, program Earthless jest odpowiedzią na ten problem. We współpracy z najlepszymi polskimi naukowcami, stworzyliśmy plan emigracji wszystkich Polaków w przestrzeń kosmiczną. Mamy ambitnych ludzi, nowoczesne narzędzia i dopracowany plan. Teraz jedyne czego potrzebuję żeby go wyegzekwować to mnie na stanowisku prezydenta. To jedyny sposób na zapewnienie bezpieczeństwa Polakom."
 	),new MyLine(
 		"bogosBinted/becia.jpg", "Becia", colors["red"],
 		"To był wywiad dnia radia PDF FM! Panie Jakubie, dziękuję bardzo za rozmowę."
@@ -3130,7 +3130,7 @@ let c3u1e3v1 = new MyEvent(
 		'Cieszę się, że pytasz. Więc, o co chodzi z tym całym AutoPlanetoPilotem? Otóż ten system wykorzystuje zjawisko znane jako "asysta grawitacyjna", które pozwala na zwiększenie prędkości pojazdu kosmicznego poprzez wykorzystanie grawitacji innych planet! To tak jakby korzystać z siły pchającej nas do przodu, wyłącznie dzięki oddziaływaniu grawitacyjnemi! Tylko trzeba z tym uważać. To nie jest kwestia po prostu wlepienia się na orbitę Marsa czy Jowisza i czekania, aż grawitacja nas wystrzeli w kosmos! Nie, to o wiele bardziej skomplikowane! AutoPlanetoPilot musi precyzyjnie obliczać trajektorię, prędkość i kąt podejścia do danej planety, aby wykorzystać jej grawitację w najbardziej efektywny sposób! To jak gra w kosmicznego bilarda, tylko z milionami planet i gwiazd jako kule!'
 	)],
 	"A dasz radę zrobić te działka protonowe?",
-	"Dobra robota, teraz się bierz za działka protownowe.", //!!!!!! KOMUNIKAT O WYNALAZKU
+	"Dobra robota, teraz się bierz za działka protonowe.", //!!!!!! KOMUNIKAT O WYNALAZKU
 	function (){
 
 	},
