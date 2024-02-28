@@ -1267,7 +1267,7 @@ let c1u1e1 = new MyEvent(
 	[
 		new MyLine(
 			"bogosBinted/jakub.jpg", "Jakub", colors["green"],
-			"Ooh, co to... co to było? Co to niby miało... JUŻ 8, ZASPAŁEM! Ale ten sen..."
+			"Ooh, co to... Co to było? Co to niby miało... JUŻ 8, ZASPAŁEM! Ale ten sen..."
 		),
 	],
 	"O co chodziło z tym snem?",
@@ -1715,11 +1715,11 @@ let c1u2e4v1 = new MyEvent(
 	[
 		new MyLine(
 			"bogosBinted/jakub.jpg","*młody męski głos*","orange", //nopfp.jpg
-			"Zapraszamy pana Jakuba B do studia. Wchodzimy za 2 minuty!"
+			"Zapraszamy pana Jakuba B. do studia. Wchodzimy za 2 minuty!"
 		),
 	],
 	"Dzięki że przyszedłeś, a teraz życz mi powodzenia. Cześć!",
-	"Lecę, widzimy się za 20 minut",
+	"Lecę, widzimy się za 20 minut.",
 	function () {
 		doTheEvent(c1u2e5v1);
 		nextDub = "c1u2e5v1"
@@ -1758,7 +1758,7 @@ let c1u2e5v1 = new MyEvent(
 			"Dobrze, zanim przejdziemy do sedna naszego spotkania... Ponoć miał pan z WOSu 2 na świadectwie!"
 		),
 	],
-	"To prawda. Przyznaję, że w tym wieku nie bardzo uważałem na oceny. Najważniejsze, że zdałem, prawda? Haha",
+	"To prawda. Przyznaję, że w tym wieku nie bardzo uważałem na oceny. Najważniejsze, że zdałem, prawda? Haha!",
 	"To tylko plotka, w szkole byłem piątkowym uczniem, a tym bardziej z WOSu!",
 	function () {
 		doTheEvent(c1u2e6v1);
@@ -1936,7 +1936,7 @@ let c1u2e9v1 = new MyEvent(
 	[
 		new MyLine(
 			"bogosBinted/becia.jpg", "Becia", colors["red"],
-			"Pomylił się Pan, żeby zostać posłem wystarczy ukończyć 21 rok życia i do tego mieć prawa wyborcze. Dobrze, skoro pytania mamy za sobą, możemy przejść do właciwej części wywiadu. Jak pan się przygoto..."
+			"Pomylił się Pan, żeby zostać posłem wystarczy ukończyć 21 rok życia i do tego mieć prawa wyborcze. Dobrze, skoro pytania mamy za sobą, możemy przejść do właściwej części wywiadu. Jak pan się przygoto..."
 		),
 	],
 	"*podejdź do wywiadu poważnie, nie unikaj trudnych pytań (wymaga skupienia)*",
@@ -2276,7 +2276,7 @@ let c1u2e15v1 = new MyEvent(
 	"bogosBinted/stol.jpg",
 	[new MyLine(
 		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
-		"Mam nadzieję że ta zniesiona cisza wyborcza nam nie zaszkodzi. Mamy za to narzędzie to kamapnii nawet w dzień wyborów!"
+		"Mam nadzieję, że ta zniesiona cisza wyborcza nam nie zaszkodzi. Mamy za to narzędzie to kamapnii nawet w dzień wyborów!"
 	),
 	new MyLine(
 		"bogosBinted/ilia.jpg", "Ilia", colors["purple"],
@@ -2522,7 +2522,7 @@ let c2u1e2v2 = new MyEvent(
 		"Przede wszystkim powiedz to, co spodoba się ludziom. Ostatnie, czego teraz potrzebujemy, to paniki, więc nie mów o tym, że nie wszyscy będą mogli uciec. Lepiej nie wspomninaj też nic o tym kto będzie mieć jakie warunki na statku. Pamiętaj, mamy umowy. Dzięki tym ludziom jesteśmy tu gdzie jesteśmy, dlatego nie mów nic głupiego."
 	)],
 	"Nie będę czuł się z tym dobrze...",
-	"Dobra, włączaj kamerę",
+	"Dobra, włączaj kamerę.",
 	function (){
 		doTheEvent(c2u1e2v1);
 		nextDub = "c2u1e2v1"
@@ -2785,7 +2785,7 @@ let c2u2e3v1 = new MyEvent(
 	"bogosBinted/amina.jpg",
 	[new MyLine(
 		"bogosBinted/amina.jpg", "Amina", colors["lightpurple"],
-		"Doszliśmy do wniosku, że najlepszym sposobem żeby wydobyć z Ziemi jak najwięcej energii, jest zasilienie statku na metan i tlen. Tylko z tym wiąże się mały problem."
+		"Doszliśmy do wniosku, że najlepszym sposobem żeby wydobyć z Ziemi jak najwięcej energii, jest zasilenie statku na metan i tlen. Tylko z tym wiąże się mały problem."
 	),
 	new MyLine(
 		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
@@ -2854,7 +2854,7 @@ let c2u2e4v1 = new MyEvent(
 	),
 	new MyLine(
 		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
-		"Co ze spiskowcami? Coraz więcej ludzi nie chce z nami lecieć, twierdzą, że operacja Earthless ma służyć pozbyciu się ludzi z przeludnionej Ziemii."
+		"Co ze spiskowcami? Coraz więcej ludzi nie chce z nami lecieć, twierdzą, że operacja Earthless ma służyć pozbyciu się ludzi z przeludnionej Ziemi."
 	),
 	new MyLine(
 		"bogosBinted/henryk.jpg", "Henryk", colors["brown"],
@@ -2924,7 +2924,7 @@ let c2u3e2v1 = new MyEvent(
 	"bogosBinted/planet1.jpg",
 	[new MyLine(
 		"bogosBinted/krzychu.jpg", "Krzychu", colors["orange"],
-		"To po kolei: KOI-4878.01 - jedna z planet najbardziej podobnych do Ziemii. Ma praktycznie identyczną masę i powierzchnię, podobną średnią temperaturę (zakładając, że ma atmosferę) i prawdopodobnie wodę. Niestey jest bardzo daleko i potrzebowalibyśmy całego naszego paliwa, żeby tam dolecieć. Do tego możliwe, że zamieszkiwany przez pewną rasę kosmitów nazywanych Nerdami. 1075 lat świtlnych od Ziemii."
+		"To po kolei: KOI-4878.01 - jedna z planet najbardziej podobnych do Ziemi. Ma praktycznie identyczną masę i powierzchnię, podobną średnią temperaturę (zakładając, że ma atmosferę) i prawdopodobnie wodę. Niestey jest bardzo daleko i potrzebowalibyśmy całego naszego paliwa, żeby tam dolecieć. Do tego możliwe, że zamieszkiwany przez pewną rasę kosmitów nazywanych Nerdami. 1075 lat świtlnych od Ziemi."
 	)],
 	"Okej",
 	"Mhm",
@@ -2946,7 +2946,7 @@ let c2u3e3v1 = new MyEvent(
 	"bogosBinted/planet2.jpg",
 	[new MyLine(
 		"bogosBinted/krzychu.jpg", "Krzychu", colors["orange"],
-		"TRAPPIST-1e - Dużo mniejsza od Ziemii, ale wciąż podobna planeta. Też może mieć wodę i w miarę znośną temperaturę oraz atmosferę. Zaletą tego miejsca jest to, że ją zamieszkują przyjaźnie nastawienii Magikale. Problem taki, że dysponują oni technologią, której nikt nie rozumie, stąd ich nazwa, więc lepiej im nie podpadać. 39 lat świetlnych od Ziemii."
+		"TRAPPIST-1e - Dużo mniejsza od Ziemi, ale wciąż podobna planeta. Też może mieć wodę i w miarę znośną temperaturę oraz atmosferę. Zaletą tego miejsca jest to, że ją zamieszkują przyjaźnie nastawienii Magikale. Problem taki, że dysponują oni technologią, której nikt nie rozumie, stąd ich nazwa, więc lepiej im nie podpadać. 39 lat świetlnych od Ziemi."
 	)],
 	"Okej",
 	"Mhm",
@@ -3012,14 +3012,14 @@ let c3u1e1 = new MyEvent(//lot (spadają staty jeśli okłamałeś) // nie ma
 	"bogosBinted/stol.jpg",
 	[new MyLine(
 		"bogosBinted/krzychu.jpg", "Krzychu", colors["orange"],
-		'Witajcie na "Kosmicznym Pierogu"! Po namyśle z Jakubem doszliśmy do wniosku, że lecimy na '+data.destination+' .Na szczęście dzięki Albertowi dolecimy tam jeszcze za naszego życia!'
+		'Witajcie na "Kosmicznym Pierogu"! Po namyśle z Jakubem doszliśmy do wniosku, że lecimy na '+data.destination+'. Na szczęście dzięki Albertowi dolecimy tam jeszcze za naszego życia!'
 	),
 	new MyLine(
 		"bogosBinted/henryk.jpg", "Henryk", colors["brown"],
 		"Niby jak zamierzacie tak szybko przelecieć ten dystans?"
 	)],
 	"Też chętnie posłucham.",
-	"Albert, wytłumacz im",
+	"Albert, wytłumacz im.",
 	function (){
 		doTheEvent(c3u1e2v1);
 		nextDub = "c3u1e2v1"
@@ -3079,7 +3079,7 @@ let c3u1e4v1 = new MyEvent(
 	"bogosBinted/albert.jpg",
 	[new MyLine(
 		"bogosBinted/albert.jpg", "Albert", colors["darkred"],
-		'Chyba cię pokasztaniło z butów na zbity ryj! Nie ma szans by to zrobić'
+		'Chyba cię pokasztaniło z butów na zbity ryj! Nie ma szans by to zrobić.'
 	)],
 	"Mądry chłopak jesteś, dasz radę.",
 	"Uspokój się chłopie i do roboty.",
@@ -3278,7 +3278,7 @@ let c3u2e3v1 = new MyEvent(
 		"bogosBinted/marin.jpg", "Marcin", colors["aqua"],
 		"Jeszcze jedna sprawa... Pamiętasz to, o czym chciała Ci powiedzieć Amina? Chciała wykorzystać dosyć ryzykowny sposób na wydobycie metanu do zasilenia statku... Ja na to pozwoliłem i... doszło do katastrofy. Umarło 3 tysiące ludzi."
 	)],
-	"TY IDIOTO",
+	"TY IDIOTO!",
 	"Każdy popełnia błędy...",
 	function (){
 		doTheEvent(c3u2e3v2);
@@ -3304,8 +3304,8 @@ let c3u2e3v2 = new MyEvent(
 		"bogosBinted/marin.jpg", "Marcin", colors["aqua"],
 		"Nie, to wszystko."
 	)],
-	"Okej, to tyle na teraz, startujmy.",
-	"Przekaż wszytkim, żeby się przygotowali do startu.",
+	"Okej, to tyle na teraz. Startujmy.",
+	"Przekaż wszystkim, żeby się przygotowali do startu.",
 	function (){
 		changeChapterPlace(3, "Kosmiczny PierUg, 5% trasy.");
 		audio2.pause();
