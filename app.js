@@ -3345,7 +3345,7 @@ let c3u2e3v1 = new MyEvent(
 		"Chciałeś mi jeszcze o czymś powiedzieć?"
 	),
 	new MyLine(
-		"bogosBinted/marin.jpg", "Marcin", colors["aqua"],
+		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
 		"Jeszcze jedna sprawa... Pamiętasz to, o czym chciała Ci powiedzieć Amina? Chciała wykorzystać dosyć ryzykowny sposób na wydobycie metanu do zasilenia statku... Ja na to pozwoliłem i... doszło do katastrofy. Umarło 3 tysiące ludzi."
 	)],
 	"TY IDIOTO!",
