@@ -3995,10 +3995,30 @@ let c3u5e3v6 = new MyEvent( // nie ma
 //============================================================================
 
 let c4u1e1v1 = new MyEvent( //wojna domova (kim byl ten domov)
-	"bogosBinted/jakub.jpg",
+	"bogosBinted/chmurka.jpg",
 	[new MyLine(
 		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
-		"testline"
+		"Dogadaliśmy się z tutejszą rasą i obyło się bez żadnych konfliktów. Niestety zamiast konfiktów z innymi rasami, doszło do wojny domowej wśród Polaków."
+	)],
+	"Poczekam na raport Marcina.",
+	"Poczekam na raport Marcina.",
+	function (){
+		doTheEvent(c4u1e1v1e1)
+		//nextDub = "cuev"
+	},
+	function (){
+		doTheEvent(c4u1e1v1e1)
+		//nextDub = "cuev"
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+
+let c4u1e1v1e1 = new MyEvent(
+	"bogosBinted/marcin.jpg",
+	[new MyLine(
+		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
+		"Mamy duży problem, tak jak się spodziewałem, ludzie się buntują. Twierzą, że zaminili Cię w kosmitę, i że ci "+data.host+" zjedzą wszystkich ludzi."
 	)],
 	"LewaOpcja",
 	"PrawaOpcja",
@@ -4013,24 +4033,66 @@ let c4u1e1v1 = new MyEvent( //wojna domova (kim byl ten domov)
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
 )
+
 let c4u1e1v2 = new MyEvent( //ucieczka
 	"bogosBinted/krzychu.jpg",
 	[new MyLine(
 		"bogosBinted/krzychu.jpg", "Krzychu", colors["orange"],
-		"Jesteś pewien? Może nam nie wystarczyć paliwa do najbliższej planety"
-	)],
+		"Jesteś pewien? Może nam nie wystarczyć paliwa do najbliższej planety."
+	)
+	],
 	"Jestem pewien.",
-	"Nie mamy wyboru",
+	"Nie mamy wyboru.",
 	function (){
-		//doTheEvent(cuev)
+		doTheEvent(c4u1e1v2e1)
 		//nextDub = "cuev"
 	},
 	function (){
-		//doTheEvent(cuev)
+		doTheEvent(c4u1e1v2e1)
 		//nextDub = "cuev"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+
+let c4u1e1v2e1 = new MyEvent(
+	"bogosBinted/jakub.jpg",
+	[new MyLine(
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
+		"No to czekamy."
+	)],
+	"I czekamy...",
+	"I czekamy...",
+	function (){
+		doTheEvent(c4u1e1v2e2)
+		//nextDub = "cuev"
+	},
+	function (){
+		doTheEvent(c4u1e1v2e2)
+		//nextDub = "cuev"
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, -.1], //
+	[0, 0, 0, 0, 0, 0, 0, 0, -.1] //
+)
+
+let c4u1e1v2e2 = new MyEvent(
+	"bogosBinted/jakub.jpg",
+	[new MyLine(
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
+		"I czekamy...czekamy."
+	)],
+	"I czekamy...",
+	"I czekamy...",
+	function (){
+		doTheEvent(c4u1e1v2e2)
+		//nextDub = "cuev"
+	},
+	function (){
+		doTheEvent(c4u1e1v2e2)
+		//nextDub = "cuev"
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, -.1], //
+	[0, 0, 0, 0, 0, 0, 0, 0, -.1] //
 )
 
 let c4u1e1v3 = new MyEvent(
