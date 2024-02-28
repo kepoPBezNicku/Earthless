@@ -906,6 +906,62 @@ main {
 	margin-top: 50px;
 }
 
+
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#about-main-section {
+	font-family: Rubik;
+	width: fit-content;
+	padding: 30px;
+}
+
+#about-main {
+	display: grid;
+	width: 100%;
+	grid-auto-flow: row dense;
+	grid-template-columns: 1fr 1fr 1fr;
+	max-width: 1500px;
+	gap: 20px;
+}
+
+#about-main figure {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	margin: 0px;
+}
+
+#about-main figure img {
+	width: 80%;
+	max-width: 500px;
+}
+
+#about-main figure {
+	font-family: Rubik;
+}
+
+#about-main figure figcaption {
+	text-align: center;
+}
+
+@media only screen and (max-width: 1000px) {
+	#about-main {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	#about-main {
+		grid-template-columns: 1fr;
+	}
+}
+
 @media only screen and (max-width: 1100px) {
 	#noti {
 		top: 220px;
