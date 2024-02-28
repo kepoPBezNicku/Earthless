@@ -1893,7 +1893,7 @@ let c1u2e8v1 = new MyEvent(
 	function () {
 		data.stats.publicOpinion+=.05
 		doTheEvent(c1u2e9v2);
-		nextDub = "c1u2e9v1"
+		nextDub = "c1u2e9v2"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
