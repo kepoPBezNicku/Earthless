@@ -3409,7 +3409,7 @@ let c3u3e4v1 = new MyEvent(
 	"bogosBinted/ilia.jpg",
 	[new MyLine(
 		"bogosBinted/ilia.jpg", "Ilia", colors["purple"],
-		"Ty niedoedukowany chloroplaście, chodziło o alfa, beta i gamma. W każdym razie jest ono śmiertelnie niebezbpieczne dla człowieka, wieć będziemy potrzebowali sporo prądu na planecie, żeby stworczyć pole magnetyczne."
+		"Ty niedoedukowany chloroplaście, chodziło o alfa, beta i gamma. W każdym razie jest ono śmiertelnie niebezpieczne dla człowieka, więc będziemy potrzebowali sporo prądu na planecie, żeby stworczyć pole magnetyczne."
 	)],
 	"Da się zrobić.",
 	"Nie zawracaj mi tym teraz głowy, idź z tym do Alberta",
@@ -3431,7 +3431,7 @@ let c3u3e4v2 = new MyEvent(
 	"bogosBinted/ilia.jpg",
 	[new MyLine(
 		"bogosBinted/ilia.jpg", "Ilia", colors["purple"],
-		"Dokładnie tak, i są one śmiertelnie niebezbpieczne dla człowieka, wieć będziemy potrzebowali sporo prądu na planecie, żeby stworczyć pole magnetyczne."
+		"Dokładnie tak, i są one śmiertelnie niebezpieczne dla człowieka, więc będziemy potrzebowali sporo prądu na planecie, żeby stworczyć pole magnetyczne."
 	)],
 	"Da się zrobić.",
 	"Nie zawracaj mi tym teraz głowy, idź z tym do Alberta",
@@ -3613,7 +3613,7 @@ let c3u4e3v1 = new MyEvent(
 	"bogosBinted/marcin.jpg",
 	[new MyLine(
 		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
-		"Wtedy będziemy zmuszeni albo uciekać i liczyć na szczęście gdzieś indziej, albo walczyć, ale jesteśmy i na to gotowi, prawda albert?"
+		"Wtedy będziemy zmuszeni albo uciekać i liczyć na szczęście gdzieś indziej, albo walczyć, ale jesteśmy i na to gotowi, prawda Albert?"
 	)],
 	"Oo już?",
 	"Nie chce mi się go znowu słuchać, wyślijmy im tą wiadomość.",
@@ -3659,7 +3659,7 @@ let c3u5e1v1 = new MyEvent( //nerd
 		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
 		"Muszę podjąć decyzję."
 	)],
-	"Będę dążył do pokoju",
+	"Będę dążył do pokoju.",
 	"Nie po to mamy działa protonowe, żeby ich teraz nie używać!",
 	function (){
 		doTheEvent(c3u5e2v1);
@@ -3681,7 +3681,7 @@ let c3u5e1v2 = new MyEvent( //mag
 		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
 		"Muszę podjąć decyzję."
 	)],
-	"Będę dążył do pokoju",
+	"Będę dążył do pokoju.",
 	"Nie po to mamy działa protonowe, żeby ich teraz nie używać!",
 	function (){
 		doTheEvent(c3u5e2v3);
@@ -3703,7 +3703,7 @@ let c3u5e1v3 = new MyEvent( //agr
 		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
 		"Muszę podjąć decyzję."
 	)],
-	"Będę dążył do pokoju",
+	"Będę dążył do pokoju.",
 	"Nie po to mamy działa protonowe, żeby ich teraz nie używać!",
 	function (){
 		doTheEvent(c3u5e2v5);
@@ -3729,7 +3729,7 @@ let c3u5e2v1 = new MyEvent( // nie ma
 		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
 		"No, to teraz czekamy na odpowiedź." 
 	)],
-	"Oby odpowiedzieli jak najszybciej",
+	"Oby odpowiedzieli jak najszybciej.",
 	"Mam nadzieję, że to nie potrwa długo.",
 	function (){
 		changeChapterPlace(4, "Kosmiczny PierUg, 95% trasy")
@@ -3770,7 +3770,7 @@ let c3u5e2v2 = new MyEvent(
 		"Nie wierzę, że to robisz..."
 	)],
 	"Spokojnie, przecież sobie poradzimy.",
-	"Robię to, co uważam za słuszne",
+	"Robię to, co uważam za słuszne.",
 	function (){
 		changeChapterPlace(4, "Kosmiczny PierUg, 95% trasy")
 		data.stats.food-=.1
@@ -3799,7 +3799,7 @@ let c3u5e2v3 = new MyEvent(
 		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
 		"No, to teraz czekamy na odpowiedź." 
 	)],
-	"Oby odpowiedzieli jak najszybciej",
+	"Oby odpowiedzieli jak najszybciej.",
 	"Mam nadzieję, że to nie potrwa długo.",
 	function (){
 		changeChapterPlace(4, "Kosmiczny PierUg, 95% trasy")
@@ -3843,7 +3843,7 @@ let c3u5e2v4 = new MyEvent(
 		"Nie wierzę, że to robisz..."
 	)],
 	"Spokojnie, przecież sobie poradzimy.",
-	"Robię to, co uważam za słuszne",
+	"Robię to, co uważam za słuszne.",
 	function (){
 		changeChapterPlace(4, "Kosmiczny PierUg, 95% trasy")
 		data.stats.food-=.1
@@ -3872,7 +3872,7 @@ let c3u5e2v5 = new MyEvent(
 		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
 		"No, to teraz czekamy na odpowiedź." 
 	)],
-	"Oby odpowiedzieli jak najszybciej",
+	"Oby odpowiedzieli jak najszybciej.",
 	"Mam nadzieję, że to nie potrwa długo.",
 	function (){
 		changeChapterPlace(4, "Kosmiczny PierUg, 95% trasy")
@@ -3903,7 +3903,7 @@ let c3u5e2v6 = new MyEvent(
 		"Nie wierzę, że to robisz..."
 	)],
 	"Spokojnie, przecież sobie poradzimy.",
-	"Robię to, co uważam za słuszne",
+	"Robię to, co uważam za słuszne.",
 	function (){
 		changeChapterPlace(4, "Kosmiczny PierUg, 95% trasy")
 		data.stats.food-=.1
@@ -3929,7 +3929,7 @@ let c3u5e3v1 = new MyEvent(
 	),
 	new MyLine(
 		"bogosBinted/nerd.jpg", "Nerd", colors["yellow"],
-		"Cieszę się, że udało nam się dojśc do porozumienia. Serdecznie zapraszamy na naszą planetę."
+		"Cieszę się, że udało nam się dojść do porozumienia. Serdecznie zapraszamy na naszą planetę."
 	)],
 	"Świetnie, no to lecimy.",
 	"Super, przygotujmy się do lądowania.",
@@ -3957,7 +3957,7 @@ let c3u5e3v2 = new MyEvent(
 		"A więc drogi Jakubie, jesteśmy w stanie wojny! Zobaczymy, kto tutaj wyjdzie na plus."
 	)],
 	"Czyli jednak się pobawimy działkami!",
-	"Musiy uciekać, niech Krzychu zmieni kurs",
+	"Musimy uciekać, niech Krzychu zmieni kurs.",
 	function (){
 		doTheEvent(c3u5e4v3)
 		nextDub = "c3u5e4v3"
@@ -4004,10 +4004,10 @@ let c3u5e3v4 = new MyEvent(
 	),
 	new MyLine(
 		"bogosBinted/nikita.jpg", "Nikita", colors["darkblue"],
-		"Nie ufamy wam, nie jesteście rasą godną zaufania, a ty jako przywódca nie robisz nieczego, żeby to zmienić."
+		"Nie ufamy wam, nie jesteście rasą godną zaufania, a ty jako przywódca nie robisz niczego, żeby to zmienić."
 	)],
 	"Czyli jednak się pobawimy działkami!",
-	"Musiy uciekać, niech Krzychu zmieni kurs",
+	"Musimy uciekać, niech Krzychu zmieni kurs.",
 	function (){
 		doTheEvent(c3u5e4v4)
 		nextDub = "c3u5e4v4"
@@ -4029,7 +4029,7 @@ let c3u5e3v5 = new MyEvent(
 	),
 	new MyLine(
 		"bogosBinted/agresus.jpg", "Agresus", colors["red"],
-		"Nie będziemy zawiązywać sojoszu z takimi mięczakami. Lepiej uciekajcie, albo będziecie mieli kłopoty."
+		"Nie będziemy zawiązywać sojuszu z takimi mięczakami. Lepiej uciekajcie, albo będziecie mieli kłopoty."
 	)],
 	"LewaOpcja",
 	"PrawaOpcja",
@@ -4057,7 +4057,7 @@ let c3u5e3v6 = new MyEvent( // nie ma
 		"Widzę, że nie da się was tak łatwo nastraszyć! Wydajecie się być dobrymi towarzyszami walki, zawiążmy sojusz."
 	)],
 	"Czyli jednak się pobawimy działkami!",
-	"Musiy uciekać, niech Krzychu zmieni kurs",
+	"Musimy uciekać, niech Krzychu zmieni kurs.",
 	function (){
 		doTheEvent(c3u5e4v5)
 		nextDub = "c3u5e4v5"
@@ -4102,7 +4102,7 @@ let c4u1e1v1e1 = new MyEvent(
 	"bogosBinted/marcin.jpg",
 	[new MyLine(
 		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
-		"Mamy duży problem, tak jak się spodziewałem, ludzie się buntują. Twierdzą, że zaminili Cię w kosmitę, i że ci "+data.host+" zjedzą wszystkich ludzi."
+		"Mamy duży problem, tak jak się spodziewałem, ludzie się buntują. Twierdzą, że zamienili cię w kosmitę, i że ci "+data.host+" zjedzą wszystkich ludzi."
 	)],
 	"Nie ma szans...",
 	"I co teraz zrobimy?",
@@ -4195,7 +4195,7 @@ let c4u1e1v2e2 = new MyEvent(
 	"bogosBinted/jakub.jpg",
 	[new MyLine(
 		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
-		"I czekamy...czekamy."
+		"I czekamy... Czekamy."
 	)],
 	"I czekamy...",
 	"I czekamy...",
@@ -4346,5 +4346,5 @@ doTheEvent(c0u1e1);
 
 //wybrać układy z cywilizacjami
 
-//wojna / domowa
+//wojna / domowa (jebany domov)
 
