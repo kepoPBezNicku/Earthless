@@ -3038,11 +3038,11 @@ let c3u1e2v1 = new MyEvent(
 	"Skoro wszystko gotowe, możemy już startować.",
 	function (){
 		doTheEvent(c3u1e3v1)
-		//nextDub = "cuev"
+		nextDub = "c3u1e3v1"
 	},
 	function (){
 		doTheEvent(c3u2e1v)
-		//nextDub = "cuev"
+		nextDub = "c3u1e3v1"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
@@ -3055,10 +3055,9 @@ let c3u1e3v1 = new MyEvent(
 		'Cieszę się, że pytasz. Więc, o co chodzi z tym całym AutoPlanetoPilotem? Otóż ten system wykorzystuje zjawisko znane jako "asysta grawitacyjna", które pozwala na zwiększenie prędkości pojazdu kosmicznego poprzez wykorzystanie grawitacji innych planet! To tak jakby korzystać z siły pchającej nas do przodu, wyłącznie dzięki oddziaływaniu grawitacyjnemi! Tylko trzeba z tym uważać. To nie jest kwestia po prostu wlepienia się na orbitę Marsa czy Jowisza i czekania, aż grawitacja nas wystrzeli w kosmos! Nie, to o wiele bardziej skomplikowane! AutoPlanetoPilot musi precyzyjnie obliczać trajektorię, prędkość i kąt podejścia do danej planety, aby wykorzystać jej grawitację w najbardziej efektywny sposób! To jak gra w kosmicznego bilarda, tylko z milionami planet i gwiazd jako kule!'
 	)],
 	"A dasz radę zrobić te działka protonowe?",
-	"Dobra robota, teraz się bierz za działka protownowe.",
+	"Dobra robota, teraz się bierz za działka protownowe.", //!!!!!! KOMUNIKAT O WYNALAZKU
 	function (){
-		//doTheEvent(cuev)
-		//nextDub = "cuev"
+
 	},
 	function (){
 		//doTheEvent(cuev)
@@ -3366,52 +3365,7 @@ let c3u3e3v1 = new MyEvent(
 	"bogosBinted/amina.jpg",
 	[new MyLine(
 		"bogosBinted/ilia.jpg", "Ilia", colors["purple"],
-		"Kuba, musimy powoli myśleć o tym jak się przygotować do życia na nowej planecie. Będziemy musieli utworzyć pole magnetyczne, aby uchronić się przed kosmicznym promieniowaniem. Wiesz z czego składa się promieniowanie kosmiczne?"
-	)],
-
-	// Po drugie: musimy dodać tlen do atmosfery, a konkretniej zmienić go z dwutlenkiem węgla. Posadzenie tam roślin powinno załatwić sprawę.  
-
-	"Sigma, omega i lambda",
-	"Alfa, beta i gamma",
-	function (){
-		doTheEvent(c3u3e4v1)
-		data.stats.research-=.1
-		//nextDub = "cuev"
-	},
-	function (){
-		data.stats.research+=.1
-		doTheEvent(c3u3e4v2)
-		//nextDub = "cuev"
-	},
-	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
-	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
-)
-
-let c3u3e4v1 = new MyEvent(
-	"bogosBinted/ilia.jpg",
-	[new MyLine(
-		"bogosBinted/ilia.jpg", "Ilia", colors[""],
-		"Ty niedoedukowany chloroplaście, chodziło o alfa, beta i gamma. W każdym razie będziemy potrzebowali sporo prądku na planecie."
-	)],
-	"Da się zrobić.",
-	"Nie zawracaj mi tym teraz głowy, idź z tym do Alberta",
-	function (){
-		//doTheEvent(cuev)
-		//nextDub = "cuev"
-	},
-	function (){
-		//doTheEvent(cuev)
-		//nextDub = "cuev"
-	},
-	[0, 0, 0, 0, -.2, 0, .1, 0, 0], //
-	[0, 0, 0, 0, .2, 0, -.1, 0, 0] //
-)
-
-let c3u3e4v2 = new MyEvent(
-	"bogosBinted/jakub.jpg",
-	[new MyLine(
-		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
-		"testline"
+		"Kuba, musimy powoli myśleć o tym jak się przygotować do życia na nowej planecie."
 	)],
 	"LewaOpcja",
 	"PrawaOpcja",
