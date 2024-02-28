@@ -624,7 +624,7 @@ let s9 = new Samouczek (
 
 let s10 = new Samouczek (
 	notifications,
-	"To tyle, aby zacząć główną część gry, kliknij przycisk 'Dalej'"
+	"Powiadomienia, wszelkie zmiany w trakcie gry będą wyświetlane w kontenerze pojawiającym się po kliknięciu."
 )
 
 let s11 = new Samouczek (
