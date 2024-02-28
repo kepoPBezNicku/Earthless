@@ -3595,7 +3595,7 @@ let c3u4e3v1 = new MyEvent(
 )
 
 let c3u4e4v1 = new MyEvent( //dzialo jonowoprotonowe
-	"bogosBinted/albert.jpg",
+	"bogosBinted/plp.jpg",
 	[new MyLine(
 		"bogosBinted/albert.jpg", "Albert", colors["darkred"],
 		"Ha! Oto przed wami majestatyczna potęga - działko protonowe! To monstrum technologii, które przemienia mikroskopijne protony w niebezpieczne pociski o potężnej energii! Gdy te malutkie cząsteczki są wystrzeliwane z prędkością bliską światła, nic nie jest w stanie im się oprzeć. Przebijają się przez materiał jak gorący nóż przez masło, powodując chaos i zniszczenie na swojej drodze. To jak burza na horyzoncie, gotowa zaorać wszystko, co stanie na jej drodze! Ale, oczywiście, ja, jako twórca tej bestii, używam jej moc w pełnej świadomości i z najwyższą ostrożnością. Działko protonowe - symbol potęgi i siły ludzkiego umysłu, ale także ostrzeżenie przed jej niewłaściwym użyciem. Bo z wielką mocą przychodzi wielka odpowiedzialność, a ja jestem gotów ponieść tę odpowiedzialność w imię nauki i postępu!"
@@ -3734,7 +3734,7 @@ let c3u5e2v3 = new MyEvent(
 	"bogosBinted/kamera.jpg",
 	[new MyLine(
 		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
-		"Droga Nikito! Dziękuję za Twoją wiadomość i pokojowe nastawienie. Liczę, że kiedy dolecimy i poznamy się lepiej, poznasza nasze dobre intenjce i dogadamy się na wspólne warunki życia 2 cywilizacji"
+		"Droga Nikito! Dziękuję za Twoją wiadomość i pokojowe nastawienie. Liczę, że kiedy dolecimy i poznamy się lepiej, poznasz nasze dobre intencje i dogadamy się na wspólne warunki życia 2 cywilizacji."
 	),
 	new MyLine(
 		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
@@ -3884,13 +3884,13 @@ let c3u5e3v2 = new MyEvent(
 		"A więc drogi Jakubie, jesteśmy w stanie wojny! Zobaczymy, kto tutaj wyjdzie na plus."
 	)],
 	"Czyli jednak się pobawimy działkami!",
-	"OUJEAAA",
+	"Musiy uciekać, niech Krzychu zmieni kurs",
 	function (){
-		doTheEvent(c3u5e4v1)
+		doTheEvent(c3u5e4v3)
 		//nextDub = "cuev"
 	},
 	function (){
-		doTheEvent(c3u5e4v1)
+		doTheEvent(c3u5e4v2)
 		//nextDub = "cuev"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
@@ -3930,13 +3930,13 @@ let c3u5e3v4 = new MyEvent(
 		"Nie ufamy wam, nie jesteście rasą godną zaufania, a ty jako przywódca nie robisz nieczego, żeby to zmienić."
 	)],
 	"Czyli jednak się pobawimy działkami!",
-	"OUJEAAA",
+	"Musiy uciekać, niech Krzychu zmieni kurs",
 	function (){
-		doTheEvent(c3u5e4v1)
+		doTheEvent(c3u5e4v4)
 		//nextDub = "cuev"
 	},
 	function (){
-		doTheEvent(c3u5e4v1)
+		doTheEvent(c3u5e4v2)
 		//nextDub = "cuev"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
@@ -3975,21 +3975,122 @@ let c3u5e3v6 = new MyEvent( // nie ma
 		"bogosBinted/agresus.jpg", "Agresus", colors["red"],
 		"Widzę, że nie da się waas tak łatwo nastraszyć! Wydajecie się być dobrymi towarzyszami walki, zawiążmy sojusz."
 	)],
-	"LewaOpcja",
-	"PrawaOpcja",
+	"Czyli jednak się pobawimy działkami!",
+	"Musiy uciekać, niech Krzychu zmieni kurs",
 	function (){
-		doTheEvent(c3u5e4v1)
+		doTheEvent(c3u5e4v5)
 		//nextDub = "cuev"
 	},
 	function (){
-		doTheEvent(c3u5e4v1)
+		doTheEvent(c3u5e4v2)
 		//nextDub = "cuev"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
 )
 
+//============================================================================
+//==================================CHAPTER 4 W KONCUAHHHH====================
+//============================================================================
 
+let c4u1e1v1 = new MyEvent( //wojna domova (kim byl ten domov)
+	"bogosBinted/jakub.jpg",
+	[new MyLine(
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
+		"testline"
+	)],
+	"LewaOpcja",
+	"PrawaOpcja",
+	function (){
+		//doTheEvent(cuev)
+		//nextDub = "cuev"
+	},
+	function (){
+		//doTheEvent(cuev)
+		//nextDub = "cuev"
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+let c4u1e1v2 = new MyEvent( //ucieczka
+	"bogosBinted/krzychu.jpg",
+	[new MyLine(
+		"bogosBinted/krzychu.jpg", "Krzychu", colors["orange"],
+		"Jesteś pewien? Może nam nie wystarczyć paliwa do najbliższej planety"
+	)],
+	"Jestem pewien.",
+	"Nie mamy wyboru",
+	function (){
+		//doTheEvent(cuev)
+		//nextDub = "cuev"
+	},
+	function (){
+		//doTheEvent(cuev)
+		//nextDub = "cuev"
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+
+let c4u1e1v3 = new MyEvent(
+	"bogosBinted/jakub.jpg",
+	[new MyLine(
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
+		"testline"
+	)],
+	"LewaOpcja",
+	"PrawaOpcja",
+	function (){
+		//doTheEvent(cuev)
+		//nextDub = "cuev"
+	},
+	function (){
+		//doTheEvent(cuev)
+		//nextDub = "cuev"
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+
+let c4u1e1v4 = new MyEvent(
+	"bogosBinted/jakub.jpg",
+	[new MyLine(
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
+		"testline"
+	)],
+	"LewaOpcja",
+	"PrawaOpcja",
+	function (){
+		//doTheEvent(cuev)
+		//nextDub = "cuev"
+	},
+	function (){
+		//doTheEvent(cuev)
+		//nextDub = "cuev"
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
+
+let c4u1e1v5 = new MyEvent(
+	"bogosBinted/jakub.jpg",
+	[new MyLine(
+		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
+		"testline"
+	)],
+	"LewaOpcja",
+	"PrawaOpcja",
+	function (){
+		//doTheEvent(cuev)
+		//nextDub = "cuev"
+	},
+	function (){
+		//doTheEvent(cuev)
+		//nextDub = "cuev"
+	},
+	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
+	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+)
 
 
 // endOfTheGame("NAPIS KONCOWY", "ZDJECIE (BEZ url(bogosBinted/)")
