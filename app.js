@@ -3372,7 +3372,7 @@ let c3u2e3v2 = new MyEvent(
 		"Chciałeś mi jeszcze o czymś powiedzieć?"
 	),
 	new MyLine(
-		"bogosBinted/marin.jpg", "Marcin", colors["aqua"],
+		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
 		"Nie, to wszystko."
 	)],
 	"Okej, to tyle na teraz. Startujmy.",
