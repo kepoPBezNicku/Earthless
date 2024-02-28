@@ -4034,7 +4034,7 @@ let c4u1e1v1e1 = new MyEvent(
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
 )
 
-let cuev = new MyEvent(
+let c4u1e1v1e2 = new MyEvent(
 	"bogosBinted/marcin.jpg",
 	[new MyLine(
 		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
@@ -4058,7 +4058,7 @@ let cuev = new MyEvent(
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
 )
 
-let c4u1e1v2 = new MyEvent( //ucieczka
+let  = new MyEvent( //ucieczka
 	"bogosBinted/krzychu.jpg",
 	[new MyLine(
 		"bogosBinted/krzychu.jpg", "Krzychu", colors["orange"],
