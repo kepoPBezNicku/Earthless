@@ -3460,11 +3460,11 @@ let c3u3e6v1 = new MyEvent(
 	),
 	new MyLine(
 		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
-		"No i co się tak cieszysz, o co chodzi"
+		"No i co się tak cieszysz, o co chodzi?"
 	),
 	new MyLine(
 		"bogosBinted/krzychu.jpg", "Krzychu", colors["orange"],
-		"Próbują się z nami skontakotwać ci kosmici z "+data.destination+" - "+data.host+"!"
+		"Próbują się z nami skontaktwać ci kosmici z "+data.destination+" - "+data.host+"!"
 	)],
 	"Wow, naprawdę w to nie wierzyłem.",
 	"O czym mówią?",
@@ -3517,7 +3517,7 @@ let c3u4e1v1 = new MyEvent(
 let c3u4e1v2 = new MyEvent(
 	"bogosBinted/nikita.jpg",
 	[new MyLine(
-		"bogosBinted/nikita.jpg", "Nkita", colors["darkblue"],
+		"bogosBinted/nikita.jpg", "Nikita", colors["darkblue"],
 		"Witajcie ziemianie, jestem Nikita, przywódca Magikali. Mamy dobre intencje i mamy nadzieję, że wy też, haha. Zweryfikujemy to." //przywódczyni??
 	)],
 	"Hmm ciekawe, zapytam Marcina co możnaby im odpowiedzieć.",
@@ -3534,7 +3534,7 @@ let c3u4e1v2 = new MyEvent(
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
 )
 
-let c3u4e1v3 = new MyEvent(
+let c3u4e1v3 = new MyEvent( // nie ma 
 	"bogosBinted/agresus.jpg",
 	[new MyLine(
 		"bogosBinted/agresus.jpg", "Agresus", colors["red"],
@@ -3594,7 +3594,7 @@ let c3u4e3v1 = new MyEvent(
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 )
 
-let c3u4e4v1 = new MyEvent( //dzialo jonowoprotonowe
+let c3u4e4v1 = new MyEvent( //dzialo jonowoprotonowe // nie ma 
 	"bogosBinted/albert.jpg",
 	[new MyLine(
 		"bogosBinted/albert.jpg", "Albert", colors["darkred"],
@@ -3668,7 +3668,7 @@ let c3u5e1v3 = new MyEvent( //agr
 	[0, 0, -.4, 0, -.2, -.2, 0, 0, 0]
 )
 
-let c3u5e2v1 = new MyEvent(
+let c3u5e2v1 = new MyEvent( // nie ma 
 	"bogosBinted/kamera.jpg",
 	[new MyLine(
 		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
