@@ -2996,11 +2996,15 @@ let c2u3e5v1 = new MyEvent(
 	"Taa, w każdym razie polećmy na...",
 	function (){
 		changePlanet();
-		nextDub = ""
+		nextDub = "";
+		audio2.pause();
+		playMusic(audio3);
 	},
 	function (){
 		changePlanet();
-		nextDub = ""
+		nextDub = "";
+		audio2.pause();
+		playMusic(audio3);
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -3077,8 +3081,8 @@ let c3u1e3v1 = new MyEvent(
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
-	"c3u1e2v1L",
-	"c3u1e2v1R"
+	"c3u1e3v1L",
+	"c3u1e3v1R"
 )
 
 let c3u1e4v1 = new MyEvent(
@@ -3456,7 +3460,7 @@ let c3u3e5v1 = new MyEvent(
 		"Jeśli chodzi o kolonizację to też mam sprawę. Musimy dodać tlen do atmosfery, a konkretniej zmienić go z dwutlenkiem węgla. Posadzenie tam roślin powinno załatwić sprawę, ale to zajmie sporo czasu i będzie bardzo kosztowne"
 	)],
 	"Do zrobienia.",
-	"Musiscie wymyślić jakiś tańszy sposób",
+	"Musicie wymyślić jakiś tańszy sposób",
 	function (){
 		doTheEvent(c3u3e6v1)
 		nextDub = "c3u3e6v1"
@@ -3957,7 +3961,7 @@ let c3u5e3v2 = new MyEvent(
 		"A więc drogi Jakubie, jesteśmy w stanie wojny! Zobaczymy, kto tutaj wyjdzie na plus."
 	)],
 	"Czyli jednak się pobawimy działkami!",
-	"Musiy uciekać, niech Krzychu zmieni kurs",
+	"Musimy uciekać, niech Krzychu zmieni kurs",
 	function (){
 		doTheEvent(c3u5e4v3)
 		nextDub = "c3u5e4v3"
