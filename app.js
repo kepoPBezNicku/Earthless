@@ -148,7 +148,9 @@ function imageLoader() {
 		"bogosBinted/Y.jpg",
 		"bogosBinted/zeby.jpg",
 		"bogosBinted/nikita.jpg",
-		"bogosBinted/taxi.jpg"
+		"bogosBinted/taxi.jpg",
+		"bogosBinted/app.jpg",
+		"bogosBinted/endingScreen.jpg"
 	]
 
 	let doneArray = []
@@ -892,7 +894,7 @@ function endOfTheGame(text, img) {
 	body.style.setProperty("background-image", "url()");
 	body.className = "end";
 	setTimeout(function() {
-		body.style.setProperty("background-image", "url(bogosBinted/"+img+")");
+		body.style.setProperty("background-image", "url(bogosBinted/"+img+".jpg)");
 
 		let div = document.createElement("div");
 		let p = document.createElement("p");
@@ -3042,11 +3044,11 @@ let c3u1e2v1 = new MyEvent(
 	"Skoro wszystko gotowe, możemy już startować.",
 	function (){
 		doTheEvent(c3u1e3v1)
-		//nextDub = "cuev"
+		nextDub = "c3u1e3v1"
 	},
 	function (){
 		doTheEvent(c3u2e1v)
-		//nextDub = "cuev"
+		nextDub = "c3u1e3v1"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
@@ -3059,10 +3061,9 @@ let c3u1e3v1 = new MyEvent(
 		'Cieszę się, że pytasz. Więc, o co chodzi z tym całym AutoPlanetoPilotem? Otóż ten system wykorzystuje zjawisko znane jako "asysta grawitacyjna", które pozwala na zwiększenie prędkości pojazdu kosmicznego poprzez wykorzystanie grawitacji innych planet! To tak jakby korzystać z siły pchającej nas do przodu, wyłącznie dzięki oddziaływaniu grawitacyjnemi! Tylko trzeba z tym uważać. To nie jest kwestia po prostu wlepienia się na orbitę Marsa czy Jowisza i czekania, aż grawitacja nas wystrzeli w kosmos! Nie, to o wiele bardziej skomplikowane! AutoPlanetoPilot musi precyzyjnie obliczać trajektorię, prędkość i kąt podejścia do danej planety, aby wykorzystać jej grawitację w najbardziej efektywny sposób! To jak gra w kosmicznego bilarda, tylko z milionami planet i gwiazd jako kule!'
 	)],
 	"A dasz radę zrobić te działka protonowe?",
-	"Dobra robota, teraz się bierz za działka protownowe.",
+	"Dobra robota, teraz się bierz za działka protownowe.", //!!!!!! KOMUNIKAT O WYNALAZKU
 	function (){
-		//doTheEvent(cuev)
-		//nextDub = "cuev"
+
 	},
 	function (){
 		//doTheEvent(cuev)
@@ -3948,6 +3949,9 @@ let c3u5e3v6 = new MyEvent(
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
 )
+
+
+
 
 // endOfTheGame("NAPIS KONCOWY", "ZDJECIE (BEZ url(bogosBinted/)")
 
