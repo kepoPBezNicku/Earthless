@@ -1067,6 +1067,7 @@ function changePlanet() {
 			data.host = "Nerdzi"
 			data.stats.fuel-=.8
 			changeChapterPlace(3, "Kosmiczny PierUg")
+			nextDub = "c3u1e1"
 			doTheEvent(c3u1e1);
 			noti("Wybrano cel: KOI-4878.01");
 		}else noti("Nie masz wystarczająco paliwa.")
@@ -1077,6 +1078,7 @@ function changePlanet() {
 		data.host = "Magikale"
 		data.stats.fuel-=.3
 		changeChapterPlace(3, "Kosmiczny PierUg")
+		nextDub = "c3u1e1"
 		doTheEvent(c3u1e1);
 		noti("Wybrano cel: TRAPPIST-1e");
 	})
@@ -1086,6 +1088,7 @@ function changePlanet() {
 		data.host = "Agresusi"
 		data.stats.fuel-=.2
 		changeChapterPlace(3, "Kosmiczny PierUg")
+		nextDub = "c3u1e1"
 		doTheEvent(c3u1e1);
 		noti("Wybrano cel: Proxima Centauri b");
 	})
@@ -2032,7 +2035,7 @@ let c1u2e9v2 = new MyEvent(
 	[
 		new MyLine(
 			"bogosBinted/becia.jpg", "Becia", colors["red"],
-			"Zgadza się! Wystaczy ukończyć 21 rok życia i mieć prawa wyborcze. Dobrze, skoro pytania mamy za sobą, możemy przejść do właciwej części wywiadu. Jak pan się przygoto..."
+			"Zgadza się! Wystarczy ukończyć 21 rok życia i mieć prawa wyborcze. Dobrze, skoro pytania mamy za sobą, możemy przejść do właciwej części wywiadu. Jak pan się przygoto..."
 		),
 	],
 	"*podejdź do wywiadu poważnie, nie unikaj trudnych pytań (wymaga skupienia)*",
@@ -2797,7 +2800,7 @@ let c2u2e2v1 = new MyEvent(
 let c2u2e2v2 = new MyEvent(
 	"bogosBinted/stol.jpg",
 	[new MyLine(
-		"bogosBinted/ilie.jpg", "Ilia", colors["purple"],
+		"bogosBinted/ilia.jpg", "Ilia", colors["purple"],
 		"No właśnie! Dwutlenek węgla jest wydychany przez ludzi, więc z tym nie będzie problemu. Podobnie z wodą, jeśli zaprojektujemy odpowiednie systemy filtracji, nigdy nam jej nie zabraknie. Jeśli chodzi o światło, niekoniecznie musi być ono słoneczne, ale musimy użyć specialnych lamp dostosowanych do roślin."
 		),
 		new MyLine(
@@ -2980,7 +2983,7 @@ let c2u3e2v1 = new MyEvent(
 	"bogosBinted/planet1.jpg",
 	[new MyLine(
 		"bogosBinted/krzychu.jpg", "Krzychu", colors["orange"],
-		"To po kolei: KOI-4878.01 - jedna z planet najbardziej podobnych do Ziemi. Ma praktycznie identyczną masę i powierzchnię, podobną średnią temperaturę (zakładając, że ma atmosferę) i prawdopodobnie wodę. Niestey jest bardzo daleko i potrzebowalibyśmy całego naszego paliwa, żeby tam dolecieć. Do tego możliwe, że zamieszkiwany przez pewną rasę kosmitów nazywanych Nerdami. 1075 lat świtlnych od Ziemi."
+		"To po kolei: KOI-4878.01 - jedna z planet najbardziej podobnych do Ziemi. Ma praktycznie identyczną masę i powierzchnię, podobną średnią temperaturę (zakładając, że ma atmosferę) i prawdopodobnie wodę. Niestey jest bardzo daleko i potrzebowalibyśmy całego naszego paliwa, żeby tam dolecieć. Do tego możliwe, że zamieszkiwany przez pewną rasę kosmitów nazywanych Nerdami. 1075 lat świetlnych od Ziemi."
 	)],
 	"Okej",
 	"Mhm",
@@ -3034,7 +3037,8 @@ let c2u3e4v1 = new MyEvent(
 	},
 	function (){
 		changePlanet();
-		nextDub = ""
+		audio2.pause()
+		playMusic(audio3)
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -3052,13 +3056,11 @@ let c2u3e5v1 = new MyEvent(
 	"Taa, w każdym razie polećmy na...",
 	function (){
 		changePlanet();
-		nextDub = "";
 		audio2.pause();
 		playMusic(audio3);
 	},
 	function (){
 		changePlanet();
-		nextDub = "";
 		audio2.pause();
 		playMusic(audio3);
 	},
@@ -3108,11 +3110,11 @@ let c3u1e2v1 = new MyEvent(
 	"Skoro wszystko gotowe, możemy już startować.",
 	function (){
 		doTheEvent(c3u1e3v1)
-		nextDub = "c3u1e3v1"
+		nextDub = ""
 	},
 	function (){
 		doTheEvent(c3u2e1v) // niedokonczone
-		nextDub = "c3u1e3v1"
+		nextDub = ""
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
