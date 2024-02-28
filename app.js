@@ -3943,7 +3943,7 @@ let c3u5e3v4 = new MyEvent(
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
 )
-let c3u5e3v5 = new MyEvent( // nie ma 
+let c3u5e3v5 = new MyEvent(
 	"bogosBinted/agresus.jpg",
 	[new MyLine(
 		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
