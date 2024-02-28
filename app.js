@@ -2261,7 +2261,8 @@ let c1u2e13v1 = new MyEvent(
 		}
 	},
 	function (){
-		doTheEvent(c1u2e15v1)
+		doTheEvent(c1u2e15v1);
+		nextDub = "c1u2e15v1"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -3345,7 +3346,7 @@ let c3u2e3v1 = new MyEvent(
 		"Chciałeś mi jeszcze o czymś powiedzieć?"
 	),
 	new MyLine(
-		"bogosBinted/marin.jpg", "Marcin", colors["aqua"],
+		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
 		"Jeszcze jedna sprawa... Pamiętasz to, o czym chciała Ci powiedzieć Amina? Chciała wykorzystać dosyć ryzykowny sposób na wydobycie metanu do zasilenia statku... Ja na to pozwoliłem i... doszło do katastrofy. Umarło 3 tysiące ludzi."
 	)],
 	"TY IDIOTO!",
@@ -3371,7 +3372,7 @@ let c3u2e3v2 = new MyEvent(
 		"Chciałeś mi jeszcze o czymś powiedzieć?"
 	),
 	new MyLine(
-		"bogosBinted/marin.jpg", "Marcin", colors["aqua"],
+		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
 		"Nie, to wszystko."
 	)],
 	"Okej, to tyle na teraz. Startujmy.",
