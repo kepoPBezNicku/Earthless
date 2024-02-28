@@ -2307,7 +2307,7 @@ let c1u2e16v1 = new MyEvent(
 	"bogosBinted/radio.jpg",
 	[new MyLine(
 		"bogosBinted/becia.jpg", "Becia", colors["red"],
-		"Uwaga, Państwowa Komisja Wyborcza podała wyniki wyborów prezydenckich 2060! Wybory rozstrzygnęły się w pierwszej turze, a ich zwycięzcą zostaje Jakub Bukaj, zdobywając 65% głosów. Gratualacje dla Pana prezydenta!"
+		"Uwaga, Państwowa Komisja Wyborcza podała wyniki wyborów prezydenckich 2060! Wybory zakończyły się w pierwszej turze, a ich zwycięzcą zostaje Jakub Bukaj, zdobywając 65% głosów. Gratualacje dla Pana prezydenta!"
 	),new MyLine(
 		"bogosBinted/marcin.jpg", "Marcin", colors['aqua'],
 		"MAMY TO!"
@@ -3683,14 +3683,20 @@ let c3u5e2v1 = new MyEvent( // nie ma
 	function (){
 		changeChapterPlace(4, "Kosmiczny PierUg, 95% trasy")
 		data.stats.food-=.1
-		doTheEvent(c3u5e3v1)
-		//nextDub = "cuev"
+		if(data.stats.research>=.4){
+			doTheEvent(c3u5e3v1)
+		}else{
+			doTheEvent(c3u5e3v2)
+		}
 	},
 	function (){
 		changeChapterPlace(4, "Kosmiczny PierUg, 95% trasy")
 		data.stats.food-=.1
-		doTheEvent(c3u5e3v1)
-		//nextDub = "cuev"
+		if(data.stats.research>=4){
+			doTheEvent(c3u5e3v1)
+		}else{
+			doTheEvent(c3u5e3v2)
+		}
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
@@ -3739,13 +3745,22 @@ let c3u5e2v3 = new MyEvent(
 	function (){
 		changeChapterPlace(4, "Kosmiczny PierUg, 95% trasy")
 		data.stats.food-=.1
-		doTheEvent(c3u5e3v3)
+		if(data.stats.publicOpinion>=.6){
+			doTheEvent(c3u5e3v3)
+		}else{
+			doTheEvent(c3u5e3v4)
+		}
+		// doTheEvent(c3u5e3v3)
 		//nextDub = "cuev"
 	},
 	function (){
 		changeChapterPlace(4, "Kosmiczny PierUg, 95% trasy")
 		data.stats.food-=.1
-		doTheEvent(c3u5e3v3)
+		if(data.stats.publicOpinion>=.6){
+			doTheEvent(c3u5e3v3)
+		}else{
+			doTheEvent(c3u5e3v4)
+		}
 		//nextDub = "cuev"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
@@ -3836,19 +3851,23 @@ let c3u5e2v6 = new MyEvent(
 	[0, 0, 0, 0, 0, -.1, 0, 0, 0] //
 )
 let c3u5e3v1 = new MyEvent(
-	"bogosBinted/jakub.jpg",
+	"bogosBinted/nerd.jpg",
 	[new MyLine(
-		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
-		"testline"
+		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
+		"Odpowiedzieli!"
+	),
+	new MyLine(
+		"bogosBinted/nerd.jpg", "Nerd", colors["yellow"],
+		"Cieszę się, że udało nam się dojśc do porozumienia. Serdecznie zapraszamy na naszą planetę."
 	)],
-	"LewaOpcja",
-	"PrawaOpcja",
+	"Świetnie, no to lecimy.",
+	"Super, przygotujmy się do lądowania.",
 	function (){
-		//doTheEvent(cuev)
+		doTheEvent(c3u5e4v1)
 		//nextDub = "cuev"
 	},
 	function (){
-		//doTheEvent(cuev)
+		doTheEvent(c3u5e4v1)
 		//nextDub = "cuev"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
