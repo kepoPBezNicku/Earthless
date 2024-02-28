@@ -1562,7 +1562,7 @@ let c1u1e5v1 = new MyEvent(
 	},
 	function () {
 		doTheEvent(c1u1e7);
-		nextDub = ""
+		nextDub = "c1u1e7"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
