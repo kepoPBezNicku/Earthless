@@ -3578,7 +3578,7 @@ let c3u4e3v1 = new MyEvent(
 	"bogosBinted/marcin.jpg",
 	[new MyLine(
 		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
-		"Wtedy będziemy zmuszeni walczyć, ale jesteśmy i na to gotowi, prawda albert?"
+		"Wtedy będziemy zmuszeni albo uciekać i liczyć na szczęście gdzieś indziej, albo walczyć, ale jesteśmy i na to gotowi, prawda albert?"
 	)],
 	"Oo już?",
 	"Nie  chce mi się go znowu słuchać, wyślijmy im tą wiadomość.",
@@ -3603,15 +3603,15 @@ let c3u4e4v1 = new MyEvent( //dzialo jonowoprotonowe
 	"Super, nagrajmy już tą wiadomość.",
 	"Więcej cię już nie słucham.",
 	function (){
-		//doTheEvent(cuev)
+		doTheEvent(c3u5e1v1)
 		//nextDub = "cuev"
 	},
 	function (){
-		//doTheEvent(cuev)
+		doTheEvent(c3u5e1v1)
 		//nextDub = "cuev"
 	},
-	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
-	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
+	[0, 0, 0, 0, 0, 0, .05, 0, 0], //
+	[0, 0, 0, 0, 0, 0, -.1, 0, 0] //
 )
 
 let c3u5e1v1 = new MyEvent( //nerd
@@ -3874,76 +3874,92 @@ let c3u5e3v1 = new MyEvent(
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
 )
 let c3u5e3v2 = new MyEvent(
-	"bogosBinted/jakub.jpg",
+	"bogosBinted/nerd.jpg",
 	[new MyLine(
-		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
-		"testline"
+		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
+		"Odpowiedzieli!"
+	),
+	new MyLine(
+		"bogosBinted/nerd.jpg", "Nerd", colors["yellow"],
+		"A więc drogi Jakubie, jesteśmy w stanie wojny! Zobaczymy, kto tutaj wyjdzie na plus."
 	)],
-	"LewaOpcja",
-	"PrawaOpcja",
+	"Czyli jednak się pobawimy działkami!",
+	"OUJEAAA",
 	function (){
-		//doTheEvent(cuev)
+		doTheEvent(c3u5e4v1)
 		//nextDub = "cuev"
 	},
 	function (){
-		//doTheEvent(cuev)
+		doTheEvent(c3u5e4v1)
 		//nextDub = "cuev"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
 )
 let c3u5e3v3 = new MyEvent(
-	"bogosBinted/jakub.jpg",
+	"bogosBinted/nikita.jpg",
 	[new MyLine(
-		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
-		"testline"
+		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
+		"Odpowiedzieli!"
+	),
+	new MyLine(
+		"bogosBinted/nikita.jpg", "Nikita", colors["darkblue"],
+		"Bardzo się cieszymy, serdecznie zapraszamy na naszą planetę."
 	)],
-	"LewaOpcja",
-	"PrawaOpcja",
+	"Świetnie, no to lecimy.",
+	"Super, przygotujmy się do lądowania.",
 	function (){
-		//doTheEvent(cuev)
+		doTheEvent(c3u5e4v1)
 		//nextDub = "cuev"
 	},
 	function (){
-		//doTheEvent(cuev)
+		doTheEvent(c3u5e4v1)
 		//nextDub = "cuev"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
 )
 let c3u5e3v4 = new MyEvent(
-	"bogosBinted/jakub.jpg",
+	"bogosBinted/nikita.jpg",
 	[new MyLine(
-		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
-		"testline"
+		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
+		"Odpowiedzieli!"
+	),
+	new MyLine(
+		"bogosBinted/nikita.jpg", "Nikita", colors["darkblue"],
+		"Nie ufamy wam, nie jesteście rasą godną zaufania, a ty jako przywódca nie robisz nieczego, żeby to zmienić."
 	)],
-	"LewaOpcja",
-	"PrawaOpcja",
+	"Czyli jednak się pobawimy działkami!",
+	"OUJEAAA",
 	function (){
-		//doTheEvent(cuev)
+		doTheEvent(c3u5e4v1)
 		//nextDub = "cuev"
 	},
 	function (){
-		//doTheEvent(cuev)
+		doTheEvent(c3u5e4v1)
 		//nextDub = "cuev"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
 	[0, 0, 0, 0, 0, 0, 0, 0, 0] //
 )
 let c3u5e3v5 = new MyEvent(
-	"bogosBinted/jakub.jpg",
+	"bogosBinted/agresus.jpg",
 	[new MyLine(
-		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
-		"testline"
+		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
+		"Odpowiedzieli!"
+	),
+	new MyLine(
+		"bogosBinted/agresus.jpg", "Agresus", colors["red"],
+		"Nie będziemy zawiązywać sojoszu z takimi mięczakami. Lepiej uciekajcie, albo będziecie mieli kłopoty."
 	)],
 	"LewaOpcja",
 	"PrawaOpcja",
 	function (){
-		//doTheEvent(cuev)
+		doTheEvent(c3u5e4v1)
 		//nextDub = "cuev"
 	},
 	function (){
-		//doTheEvent(cuev)
+		doTheEvent(c3u5e4v1)
 		//nextDub = "cuev"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
@@ -3952,17 +3968,21 @@ let c3u5e3v5 = new MyEvent(
 let c3u5e3v6 = new MyEvent(
 	"bogosBinted/jakub.jpg",
 	[new MyLine(
-		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
-		"testline"
+		"bogosBinted/marcin.jpg", "Marcin", colors["aqua"],
+		"Odpowiedzieli!"
+	),
+	new MyLine(
+		"bogosBinted/agresus.jpg", "Agresus", colors["red"],
+		"Widzę, że nie da się waas tak łatwo nastraszyć! Wydajecie się być dobrymi towarzyszami walki, zawiążmy sojusz."
 	)],
 	"LewaOpcja",
 	"PrawaOpcja",
 	function (){
-		//doTheEvent(cuev)
+		doTheEvent(c3u5e4v1)
 		//nextDub = "cuev"
 	},
 	function (){
-		//doTheEvent(cuev)
+		doTheEvent(c3u5e4v1)
 		//nextDub = "cuev"
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
