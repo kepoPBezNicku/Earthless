@@ -1434,7 +1434,7 @@ let c1u1e3v1 = new MyEvent(
 		),
 	],
 	"Wymycie zębów",
-	"Szbykie śniadanie",
+	"Szybkie śniadanie",
 	function () {
 		data.areTeethBrushed = true;
 
@@ -1808,7 +1808,7 @@ let c1u2e5v1 = new MyEvent(
 			"Tak od razu? Myślałem, że jeszcze zostało trochę cza..."
 		),
 		new MyLine(
-			"bogosBinted/becia.jpg","*wysoka kobieta ubrana na czerwono*",colors["red"],
+			"bogosBinted/becia.jpg","Becia",colors["red"],
 			"Trzy, dwa, jeden... Witamy w wywiadzie dnia radia PDF FM, jest piątek godzina 10, z tej strony Beata Kowalczyk, a moim dzisiejszym gościem jest Pan Kuba Bukaj, kandydat na prezydenta RP 2060. Witam serdecznie! Pojutrze ważny dzień, prawda?"
 		),
 		new MyLine(
@@ -2404,7 +2404,7 @@ let c1u2e17v2 = new MyEvent(
 	"bogosBinted/gsg.jpg",
 	[new MyLine(
 		"bogosBinted/noPfpUser.jpg", "", colors["grey"],
-		"Gratulacje, odblokowałeś pierwszy wynalazek: generator sztucznej grawitacji! Tym razem jeszcze ujdzie Ci to na sucho, ale pamętaj, aby szanować Alberta."
+		"Gratulacje, odblokowałeś pierwszy wynalazek: generator sztucznej grawitacji! Tym razem jeszcze ujdzie Ci to na sucho, ale pamiętaj, aby szanować Alberta."
 	)],
 	"Okej...",
 	"Rozumiem.",
@@ -2460,13 +2460,13 @@ let c1u2e18v1 = new MyEvent(
 	"bogosBinted/gsg.jpg",
 	[new MyLine(
 		"bogosBinted/albert.jpg", "Albert", colors["darkred"],
-		"Już tłumaczę o co chodzi. Za pomocą kilku skomplikowanych układów elektrycznych, których nikt poza MNĄ nie byłby w stanie zrozumieć swoim małym móżdżkiem, stworzyłem narzędzie opierające się o działaniu nagęszczacza metrii. Zagęszcza on tyle materii, ile potrzeba żeby wytworzyć dane pole grawitacyj..."
+		"Już tłumaczę o co chodzi. Za pomocą kilku skomplikowanych układów elektrycznych, których nikt poza MNĄ nie byłby w stanie zrozumieć swoim małym móżdżkiem, stworzyłem narzędzie opierające się o działaniu nagęszczacza meterii. Zagęszcza on tyle materii, ile potrzeba żeby wytworzyć dane pole grawitacyj..."
 	)],
 	"Wiesz co, śpieszy mi się... do zobacznia",
 	"Mhm, a czym jest ten zagęszczacz materii?",
 	function (){
 		doTheEvent(c1u2e17v2);
-		nextDub = "c1u2e17v2"
+		nextDub = ""
 	},
 	function (){
 		doTheEvent(c1u2e19v1);
@@ -3009,7 +3009,7 @@ let c2u3e3v1 = new MyEvent(
 	"bogosBinted/planet2.jpg",
 	[new MyLine(
 		"bogosBinted/krzychu.jpg", "Krzychu", colors["orange"],
-		"TRAPPIST-1e - Dużo mniejsza od Ziemi, ale wciąż podobna planeta. Też może mieć wodę i w miarę znośną temperaturę oraz atmosferę. Zaletą tego miejsca jest to, że ją zamieszkują przyjaźnie nastawienii Magikale. Problem taki, że dysponują oni technologią, której nikt nie rozumie, stąd ich nazwa, więc lepiej im nie podpadać. 39 lat świetlnych od Ziemi."
+		"TRAPPIST-1e - Dużo mniejsza od Ziemi, ale wciąż podobna planeta. Też może mieć wodę i w miarę znośną temperaturę oraz atmosferę. Zaletą tego miejsca jest to, że ją zamieszkują przyjaźnie nastawieni Magikale. Problem taki, że dysponują oni technologią, której nikt nie rozumie, stąd ich nazwa, więc lepiej im nie podpadać. 39 lat świetlnych od Ziemi."
 	)],
 	"Okej",
 	"Mhm",
