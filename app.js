@@ -592,6 +592,7 @@ function statsChanger(element1, list) {
 
 		if (data.stats.alienRelations.nerds <= 0) {
 			data.stats.alienRelations.nerds = 0;
+			nextDub = ""
 			gameOverFunction("gameOverDeath", "Twoje relacje z cywilizacją nerdów spadły do zera.");
 		} else if (data.stats.alienRelations.nerds > 1) {
 			data.stats.alienRelations.nerdsn = 1;
@@ -599,6 +600,7 @@ function statsChanger(element1, list) {
 
 		if (data.stats.alienRelations.magicals <= 0) {
 			data.stats.alienRelations.magicals = 0;
+			nextDub = ""
 			gameOverFunction("gameOverDeath", "Twoje relacje z magami nerdów spadły do zera.");
 		} else if (data.stats.alienRelations.magicals > 1) {
 			data.stats.alienRelations.magicals = 1;
@@ -606,6 +608,7 @@ function statsChanger(element1, list) {
 
 		if (data.stats.alienRelations.agreSuS <= 0) {
 			data.stats.alienRelations.agreSuS = 0;
+			nextDub = ""
 			gameOverFunction("gameOverDeath", "Twoje relacje z cywilizacją agresorów spadły	 do zera.");
 		} else if (data.stats.alienRelations.agreSuS > 1) {
 			data.stats.alienRelations.agreSuS = 1;
@@ -613,6 +616,7 @@ function statsChanger(element1, list) {
 
 		if (data.stats.publicOpinion <= 0) {
 			data.stats.publicOpinion = 0;
+			nextDub = ""
 			gameOverFunction("gameOver", "Obywatele cię znienawidzili, nie potrafisz być przywódcą! Twoja głowa została sprzedana na wolnym rynku.");
 		} else if (data.stats.publicOpinion > 1) {
 			data.stats.publicOpinion = 1;
@@ -620,6 +624,7 @@ function statsChanger(element1, list) {
 
 		if (data.stats.currency <= 0) {
 			data.stats.currency = 0;
+			nextDub = ""
 			gameOverFunction("gameOver", "Zbankrutowałeś.");
 		} else if (data.stats.currency > 1) {
 			data.stats.currency = 1;
@@ -627,6 +632,7 @@ function statsChanger(element1, list) {
 
 		if (data.stats.adviser <= 0) {
 			data.stats.adviser = 0;
+			nextDub = ""
 			gameOverFunction("gameOver", "Twoja reputacja spadła do zera.");
 		} else if (data.stats.adviser > 1) {
 			data.stats.adviser = 1;
@@ -634,6 +640,7 @@ function statsChanger(element1, list) {
 
 		if (data.stats.research <= 0) {
 			data.stats.research = 0;
+			nextDub = ""
 			gameOverFunction("gameOver", "Za mały poziom badań.");
 		} else if (data.stats.research > 1) {
 			data.stats.research = 1;
@@ -641,6 +648,7 @@ function statsChanger(element1, list) {
 		
 		if (data.stats.fuel <= 0) {
 			data.stats.fuel = 0;
+			nextDub = ""
 			gameOverFunction("gameOver", "Za mały poziom paliwa.");
 		} else if (data.stats.fuel > 1) {
 			data.stats.fuel = 1;
@@ -648,6 +656,7 @@ function statsChanger(element1, list) {
 
 		if (data.stats.food <= 0) {
 			data.stats.food = 0;
+			nextDub = ""
 			gameOverFunction("gameOverDeath", "Śmierć spowodowana brakiem jedzenia.");
 		} else if (data.stats.food > 1) {
 			data.stats.food = 1;
@@ -811,6 +820,9 @@ function doTheEvent(ob) {
 	buttonLeft.addEventListener("click", ob.fL);
 	buttonRight.addEventListener("click", ob.fP);
 
+	statsChanger(buttonLeft, ob.sL);
+	statsChanger(buttonRight, ob.sP);
+
 	let dubbingAudioH1 = new Audio("audioDubH/" + ob.audioH1 + ".mp3");
 	let dubbingAudioH2 = new Audio("audioDubH/" + ob.audioH2 + ".mp3");
 
@@ -839,18 +851,6 @@ function doTheEvent(ob) {
 		dubbing(nextDub)
 		dubbingAudioH2.pause()
 	})
-
-	// if (nextDub == "c3u1e1") {
-	// 	let p1 = document.querySelector("planet1");
-	// 	let p2 = document.querySelector("planet2");
-	// 	let p3 = document.querySelector("planet3");
-
-
-	// }	
-
-	statsChanger(buttonLeft, ob.sL);
-	statsChanger(buttonRight, ob.sP);
-
 }
 
 function changeChapterPlace(x, place) {
@@ -877,6 +877,8 @@ function gameOverFunction(gameOverClassName, cause) {
 	body.className = gameOverClassName;
 	setTimeout(function() {
 		body.style.setProperty("background-image", "url(bogosBinted/gameOver.jpg)");
+
+
 
 		let div = document.createElement("div");
 		body.insertAdjacentElement("afterbegin", div);
@@ -1259,13 +1261,19 @@ let c0u1e5 = new MyEvent(
 		if(!data.isGameDone){
 			doTheEvent(c0u2e1);
 			nextDub = "c0u2e1"
-		}else endOfTheGame("Marcin przejął władzę.", "endingScreen")
+		}else {
+			nextDub = ""
+			endOfTheGame("Marcin przejął władzę.", "endingScreen")
+		}
 	},
 	function (){
 		if(!data.isGameDone){
 			doTheEvent(c0u2e1);
 			nextDub = "c0u2e1"
-		}else endOfTheGame("Marcin przejął władzę.", "endingScreen")
+		}else {
+			nextDub = ""
+			endOfTheGame("Marcin przejął władzę.", "endingScreen")
+		}
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -4051,10 +4059,12 @@ let c3u5e3v2 = new MyEvent(
 	function (){
 		doTheEvent(c4u1e1v3)
 		nextDub = "c4u1e1v3"
+		changeChapterPlace(4, "")
 	},
 	function (){
 		doTheEvent(c4u1e1v2)
 		nextDub = "c4u1e1v2"
+		changeChapterPlace(4, "")
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -4076,10 +4086,12 @@ let c3u5e3v3 = new MyEvent(
 	function (){
 		doTheEvent(c4u1e1v1)
 		nextDub = "c4u1e1v1"
+		changeChapterPlace(4, "")
 	},
 	function (){
 		doTheEvent(c4u1e1v1)
 		nextDub = "c4u1e1v1"
+		changeChapterPlace(4, "")
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], 
@@ -4101,10 +4113,12 @@ let c3u5e3v4 = new MyEvent(
 	function (){
 		doTheEvent(c4u1e1v3)
 		nextDub = "c4u1e1v3"
+		changeChapterPlace(4, "")
 	},
 	function (){
 		doTheEvent(c4u1e1v2)
 		nextDub = "c4u1e1v2"
+		changeChapterPlace(4, "")
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -4121,10 +4135,10 @@ let c3u5e3v5 = new MyEvent(
 		"bogosBinted/agresus.jpg", "Agresus", colors["red"],
 		"Nie będziemy zawiązywać sojuszu z takimi mięczakami. Lepiej uciekajcie, albo będziecie mieli kłopoty."
 	)],
-	"LewaOpcja",
-	"PrawaOpcja",
+	"Świetnie, no to lecimy.",
+	"Super, przygotujmy się do lądowania.",
 	function (){
-		doTheEvent(c4u5e4v1)
+		doTheEvent(c4u1e1v1)
 		nextDub = "c3u5e4v1"
 	},
 	function (){
@@ -4259,8 +4273,8 @@ let c4u1e1v2 = new MyEvent( //ucieczka
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
-	"",
-	""
+	"c4u1e1v2L",
+	"c4u1e1v2R"
 )
 
 let c4u1e1v2e1 = new MyEvent(
@@ -4316,9 +4330,11 @@ let c4u1e1v3 = new MyEvent(
 	"Na następny raz zapiętam.",
 	"Przynajmniej się postrzelałem z kosmitami.",
 	function (){
+		nextDub = ""
 		endOfTheGame("Pogrążyłeś kraj w wojnie.", "endingScreen")
 	},
 	function (){
+		nextDub = ""
 		endOfTheGame("Pogrążyłeś kraj w wojnie.", "endingScreen")
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
