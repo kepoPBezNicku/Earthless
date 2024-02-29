@@ -840,6 +840,14 @@ function doTheEvent(ob) {
 		dubbingAudioH2.pause()
 	})
 
+	// if (nextDub == "c3u1e1") {
+	// 	let p1 = document.querySelector("planet1");
+	// 	let p2 = document.querySelector("planet2");
+	// 	let p3 = document.querySelector("planet3");
+
+
+	// }	
+
 	statsChanger(buttonLeft, ob.sL);
 	statsChanger(buttonRight, ob.sP);
 
@@ -1023,9 +1031,9 @@ function changePlanet() {
 	p1.insertAdjacentElement("beforeend", title1);
 	p2.insertAdjacentElement("beforeend", title2);
 	p3.insertAdjacentElement("beforeend", title3);
-	title1.textContent = "Planeta pierwsza";
-	title2.textContent = "Planeta druga";
-	title3.textContent = "Planeta trzecia";
+	title1.textContent = "Planeta KOI-4878.01";
+	title2.textContent = "Planeta TRAPPIST-1e";
+	title3.textContent = "Planeta Proxima Centauri b";
 
 	mainSection.classList.add("planets");
 	middleDiv.classList.add("planets");
@@ -1068,7 +1076,8 @@ function changePlanet() {
 			data.host = "Nerdzi"
 			data.stats.fuel-=.8
 			changeChapterPlace(3, "Kosmiczny PierUg")
-			nextDub = "c3u1e1"
+			// nextDub = "c3u1e1"
+			dubbing("c3u1e1")
 			doTheEvent(c3u1e1);
 			noti("Wybrano cel: KOI-4878.01");
 		}else noti("Nie masz wystarczająco paliwa.")
@@ -1079,7 +1088,8 @@ function changePlanet() {
 		data.host = "Magikale"
 		data.stats.fuel-=.3
 		changeChapterPlace(3, "Kosmiczny PierUg")
-		nextDub = "c3u1e1"
+		// nextDub = "c3u1e1"
+		dubbing("c3u1e1")
 		doTheEvent(c3u1e1);
 		noti("Wybrano cel: TRAPPIST-1e");
 	})
@@ -1089,7 +1099,8 @@ function changePlanet() {
 		data.host = "Agresusi"
 		data.stats.fuel-=.2
 		changeChapterPlace(3, "Kosmiczny PierUg")
-		nextDub = "c3u1e1"
+		// nextDub = "c3u1e1"
+		dubbing("c3u1e1")
 		doTheEvent(c3u1e1);
 		noti("Wybrano cel: Proxima Centauri b");
 	})
@@ -1397,7 +1408,7 @@ let c1u1e2v2 = new MyEvent(
 	"Wymyj zęby",
 	function () {
 		data.isCoffeDrunk = true;
-		if (data.notimeleft == true) {
+		if (data.notimeleft) {
 			data.stats.publicOpinion-=.05;
 			doTheEvent(c1u1e3v3);
 			nextDub = "c1u1e3v3"
@@ -1409,7 +1420,7 @@ let c1u1e2v2 = new MyEvent(
 	},
 	function () {
 		data.areTeethBrushed = true;
-		if (data.notimeleft == true) {
+		if (data.notimeleft) {
 			doTheEvent(c1u1e3v4);
 			nextDub = "c1u1e3v4"
 		}
@@ -3252,7 +3263,7 @@ let c3u2e2v1 = new MyEvent(
 	"Daj im zwroty, a jeśli trzeba to bilety za bezcen.",
 	"Nie chcą - ich problem.",
 	function (){
-		if(data.marcinsDecision = true){
+		if(data.marcinsDecision){
 			data.stats.publicOpinion-=.2
 			data.stats.fuel+=.3
 			doTheEvent(c3u2e3v1);
@@ -3263,7 +3274,7 @@ let c3u2e2v1 = new MyEvent(
 		}
 	},
 	function (){
-		if(data.marcinsDecision = true){
+		if(data.marcinsDecision){
 			data.stats.publicOpinion-=.2
 			data.stats.fuel+=.3
 			doTheEvent(c3u2e3v1);
@@ -3288,7 +3299,7 @@ let c3u2e2v2 = new MyEvent(
 	"Daj im darmowe bilety.",
 	"Zająć się nimi szybko, zaraz wylatujemy.",
 	function (){
-		if(data.marcinsDecision = true){
+		if(data.marcinsDecision){
 			data.stats.publicOpinion-=.2
 			data.stats.fuel+=.3
 			doTheEvent(c3u2e3v1);
@@ -3299,7 +3310,7 @@ let c3u2e2v2 = new MyEvent(
 		}
 	},
 	function (){
-		if(data.marcinsDecision = true){
+		if(data.marcinsDecision){
 			data.stats.publicOpinion-=.2
 			data.stats.fuel+=.3
 			doTheEvent(c3u2e3v1);
@@ -3324,7 +3335,7 @@ let c3u2e2v3 = new MyEvent(
 	"Obniż ceny, byle z nami polecieli.",
 	"Pełna cena albo nigdzie nie lecą.",
 	function (){
-		if(data.marcinsDecision = true){
+		if(data.marcinsDecision){
 			data.stats.publicOpinion-=.2
 			data.stats.fuel+=.3
 			doTheEvent(c3u2e3v1);
@@ -3349,7 +3360,7 @@ let c3u2e2v4 = new MyEvent(
 	"Nie możemy już wpuścić więcej.",
 	"Wpuść każdego, kto będzie chciał!",
 	function (){
-		if(data.marcinsDecision = true){
+		if(data.marcinsDecision){
 			data.stats.publicOpinion-=.2
 			data.stats.fuel+=.3
 			doTheEvent(c3u2e3v1);
