@@ -20,7 +20,7 @@ let colors = {
 	purple:'#4b3aa6', 		//Ilia
 	yellow:'#c7af42', 		//Mirek, Nerds
 	darkred:'#85395b', 		//Albert
-	darkblue: '#060d23', 	//Magikale
+	darkblue: '#162c77', 	//Magikale
 	lightpurple: '#d8a3dc', //Amina
 	orange: '#e58852', 		//Krzychu
 	brown: '#9a5c4c', 		//Henryk

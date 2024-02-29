@@ -962,12 +962,6 @@ main {
 	text-align: center;
 }
 
-@media only screen and (max-width: 1000px) {
-	#about-main {
-		grid-template-columns: 1fr 1fr;
-	}
-}
-
 @media only screen and (max-width: 700px) {
 	#about-main {
 		grid-template-columns: 1fr;
@@ -982,6 +976,9 @@ main {
 		top: auto;
 		bottom: 150px;
 		left: 30px;
+	}
+	#notifications {
+		max-height: 150px;
 	}
 }
 
@@ -999,6 +996,9 @@ main {
 		flex-wrap: wrap;
 		gap: 40px;
 	}
+	#about-main {
+		grid-template-columns: 1fr 1fr;
+	}
 }
 
 @media only screen and (max-width: 950px) {
@@ -1014,7 +1014,7 @@ main {
 		left: 53px;
 	}
 	#notifications {
-		top: 40px;
+		top: 0px;
 		border-top-left-radius: 0px;
 		left: 50px;
 	}
