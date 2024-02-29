@@ -4059,10 +4059,12 @@ let c3u5e3v2 = new MyEvent(
 	function (){
 		doTheEvent(c4u1e1v3)
 		nextDub = "c4u1e1v3"
+		changeChapterPlace(4, "")
 	},
 	function (){
 		doTheEvent(c4u1e1v2)
 		nextDub = "c4u1e1v2"
+		changeChapterPlace(4, "")
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -4084,10 +4086,12 @@ let c3u5e3v3 = new MyEvent(
 	function (){
 		doTheEvent(c4u1e1v1)
 		nextDub = "c4u1e1v1"
+		changeChapterPlace(4, "")
 	},
 	function (){
 		doTheEvent(c4u1e1v1)
 		nextDub = "c4u1e1v1"
+		changeChapterPlace(4, "")
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], 
@@ -4109,10 +4113,12 @@ let c3u5e3v4 = new MyEvent(
 	function (){
 		doTheEvent(c4u1e1v3)
 		nextDub = "c4u1e1v3"
+		changeChapterPlace(4, "")
 	},
 	function (){
 		doTheEvent(c4u1e1v2)
 		nextDub = "c4u1e1v2"
+		changeChapterPlace(4, "")
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -4132,7 +4138,7 @@ let c3u5e3v5 = new MyEvent(
 	"Świetnie, no to lecimy.",
 	"Super, przygotujmy się do lądowania.",
 	function (){
-		doTheEvent(c4u5e4v1)
+		doTheEvent(c4u1e1v1)
 		nextDub = "c3u5e4v1"
 	},
 	function (){
