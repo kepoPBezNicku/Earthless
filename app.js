@@ -2094,7 +2094,7 @@ let c1u2e9v2 = new MyEvent(
 );
 
 let c1u2e10v1 = new MyEvent(
-	"bogosBinted/chumrka.jpg",
+	"bogosBinted/chmurka.jpg",
 	[new MyLine(
 		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
 		"Rozmowa bardzo dobrze mi wyszła! Dzięki temu, że rano nabrałem energii, sprytnie odpowiadałem na pytania Beaty. To na pewno pomoże mi w kampanii."
@@ -3065,6 +3065,7 @@ let c2u3e4v1 = new MyEvent(
 		changePlanet();
 		audio2.pause()
 		playMusic(audio3)
+		nextDub = ""
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -3084,11 +3085,13 @@ let c2u3e5v1 = new MyEvent(
 		changePlanet();
 		audio2.pause();
 		playMusic(audio3);
+		nextDub = ""
 	},
 	function (){
 		changePlanet();
 		audio2.pause();
 		playMusic(audio3);
+		nextDub = ""
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0],
