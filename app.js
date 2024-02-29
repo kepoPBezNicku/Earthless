@@ -2920,7 +2920,7 @@ let c2u2e3v2 = new MyEvent(
 		nextDub = "c2u2e3v1"
 	},
 	function (){
-		data.marcinsDecision
+		data.marcinsDecision = true
 		showIcons(food, "Dostępna żywność")
 		doTheEvent(c2u2e4v1);
 		nextDub = "c2u2e4v1"
@@ -3359,6 +3359,17 @@ let c3u2e2v3 = new MyEvent(
 			nextDub = "c3u2e3v2"
 		}
 	},
+	function (){
+		if(data.marcinsDecision){
+			data.stats.publicOpinion-=.2
+			data.stats.fuel+=.3
+			doTheEvent(c3u2e3v1);
+			nextDub = "c3u2e3v1"
+		}else{
+			doTheEvent(c3u2e3v2);
+			nextDub = "c3u2e3v2"
+		}
+	},
 	[0, 0, 0, .1, -.1, 0, 0, 0, 0],
 	[0, 0, 0, -.1, .1, 0, 0, 0, .1],
 	"c3u2e2v3L",
@@ -3373,6 +3384,17 @@ let c3u2e2v4 = new MyEvent(
 	)],
 	"Nie możemy już wpuścić więcej.",
 	"Wpuść każdego, kto będzie chciał!",
+	function (){
+		if(data.marcinsDecision){
+			data.stats.publicOpinion-=.2
+			data.stats.fuel+=.3
+			doTheEvent(c3u2e3v1);
+			nextDub = "c3u2e3v1"
+		}else{
+			doTheEvent(c3u2e3v2);
+			nextDub = "c3u2e3v2"
+		}
+	},
 	function (){
 		if(data.marcinsDecision){
 			data.stats.publicOpinion-=.2
