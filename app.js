@@ -2404,7 +2404,7 @@ let c1u2e17v2 = new MyEvent(
 	"bogosBinted/gsg.jpg",
 	[new MyLine(
 		"bogosBinted/noPfpUser.jpg", "", colors["grey"],
-		"Gratulacje, odblokowałeś pierwszy wynalazek: generator sztucznej grawitacji! Tym razem jeszcze ujdzie Ci to na sucho, ale pamętaj, aby szanować Alberta."
+		"Gratulacje, odblokowałeś pierwszy wynalazek: generator sztucznej grawitacji! Tym razem jeszcze ujdzie Ci to na sucho, ale pamiętaj, aby szanować Alberta."
 	)],
 	"Okej...",
 	"Rozumiem.",
@@ -2466,7 +2466,7 @@ let c1u2e18v1 = new MyEvent(
 	"Mhm, a czym jest ten zagęszczacz materii?",
 	function (){
 		doTheEvent(c1u2e17v2);
-		nextDub = "c1u2e17v2"
+		nextDub = ""
 	},
 	function (){
 		doTheEvent(c1u2e19v1);
