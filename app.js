@@ -2922,6 +2922,7 @@ let c2u2e3v2 = new MyEvent(
 	function (){
 		data.marcinsDecision = true
 		showIcons(food, "Dostępna żywność")
+		showIcons(fuel, "Stan paliwa")
 		doTheEvent(c2u2e4v1);
 		nextDub = "c2u2e4v1"
 	},
@@ -3152,7 +3153,7 @@ let c3u1e2v1 = new MyEvent(
 )
 
 let c3u1e3v2 = new MyEvent(
-	"bogosBinted/gsg.jpg",
+	"bogosBinted/app.jpg",
 	[new MyLine(
 		"bogosBinted/noPfpUser.jpg", "", colors["grey"],
 		"Gratulacje, odblokowałeś drugi wynalazek: AutoPlanetoPilot! Tym razem jeszcze ujdzie Ci to na sucho, ale pamętaj, aby szanować Alberta."
@@ -3579,7 +3580,7 @@ let c3u3e4v2 = new MyEvent(
 )
 
 let c3u3e5v1 = new MyEvent(
-	"bogosBinted/Amina.jpg",
+	"bogosBinted/amina.jpg",
 	[new MyLine(
 		"bogosBinted/amina.jpg", "Amina", colors["lightpurple"],
 		"Jeśli chodzi o kolonizację to też mam sprawę. Musimy dodać tlen do atmosfery, a konkretniej zmienić go z dwutlenkiem węgla. Posadzenie tam roślin powinno załatwić sprawę, ale to zajmie sporo czasu i będzie bardzo kosztowne"
@@ -3761,7 +3762,7 @@ let c3u4e3v1 = new MyEvent(
 )
 
 let c3u4e4v1 = new MyEvent(
-	"bogosBinted/plp.jpg",
+	"bogosBinted/dp.jpg",
 	[new MyLine(
 		"bogosBinted/albert.jpg", "Albert", colors["darkred"],
 		"Ha! Oto przed wami majestatyczna potęga - działko protonowe! To monstrum technologii, które przemienia mikroskopijne protony w niebezpieczne pociski o potężnej energii! Gdy te malutkie cząsteczki są wystrzeliwane z prędkością bliską światła, nic nie jest w stanie im się oprzeć. Przebijają się przez materiał jak gorący nóż przez masło, powodując chaos i zniszczenie na swojej drodze. To jak burza na horyzoncie, gotowa zaorać wszystko, co stanie na jej drodze! Ale, oczywiście, ja, jako twórca tej bestii, używam jej moc w pełnej świadomości i z najwyższą ostrożnością. Działko protonowe - symbol potęgi i siły ludzkiego umysłu, ale także ostrzeżenie przed jej niewłaściwym użyciem. Bo z wielką mocą przychodzi wielka odpowiedzialność, a ja jestem gotów ponieść tę odpowiedzialność w imię nauki i postępu!"
