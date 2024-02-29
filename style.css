@@ -886,6 +886,18 @@ main {
 	font-size: 1.2rem;
 }
 
+.showCreators {
+	border: 1px solid red;
+	background-color: white;
+	width: fit-content;
+	padding: 10px 20px;
+	color: black;
+	border-radius: 10px;
+	font-family: Rubik, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	margin: 0px auto;
+	cursor: pointer;
+}
+
 .napis-po-zakonczeniu {
 	text-align: center;
 	font-size: 2rem;
