@@ -840,6 +840,14 @@ function doTheEvent(ob) {
 		dubbingAudioH2.pause()
 	})
 
+	// if (nextDub == "c3u1e1") {
+	// 	let p1 = document.querySelector("planet1");
+	// 	let p2 = document.querySelector("planet2");
+	// 	let p3 = document.querySelector("planet3");
+
+
+	// }	
+
 	statsChanger(buttonLeft, ob.sL);
 	statsChanger(buttonRight, ob.sP);
 
@@ -1023,9 +1031,9 @@ function changePlanet() {
 	p1.insertAdjacentElement("beforeend", title1);
 	p2.insertAdjacentElement("beforeend", title2);
 	p3.insertAdjacentElement("beforeend", title3);
-	title1.textContent = "Planeta pierwsza";
-	title2.textContent = "Planeta druga";
-	title3.textContent = "Planeta trzecia";
+	title1.textContent = "Planeta KOI-4878.01";
+	title2.textContent = "Planeta TRAPPIST-1e";
+	title3.textContent = "Planeta Proxima Centauri b";
 
 	mainSection.classList.add("planets");
 	middleDiv.classList.add("planets");
@@ -1068,7 +1076,8 @@ function changePlanet() {
 			data.host = "Nerdzi"
 			data.stats.fuel-=.8
 			changeChapterPlace(3, "Kosmiczny PierUg")
-			nextDub = "c3u1e1"
+			// nextDub = "c3u1e1"
+			dubbing("c3u1e1")
 			doTheEvent(c3u1e1);
 			noti("Wybrano cel: KOI-4878.01");
 		}else noti("Nie masz wystarczająco paliwa.")
@@ -1079,7 +1088,8 @@ function changePlanet() {
 		data.host = "Magikale"
 		data.stats.fuel-=.3
 		changeChapterPlace(3, "Kosmiczny PierUg")
-		nextDub = "c3u1e1"
+		// nextDub = "c3u1e1"
+		dubbing("c3u1e1")
 		doTheEvent(c3u1e1);
 		noti("Wybrano cel: TRAPPIST-1e");
 	})
@@ -1089,7 +1099,8 @@ function changePlanet() {
 		data.host = "Agresusi"
 		data.stats.fuel-=.2
 		changeChapterPlace(3, "Kosmiczny PierUg")
-		nextDub = "c3u1e1"
+		// nextDub = "c3u1e1"
+		dubbing("c3u1e1")
 		doTheEvent(c3u1e1);
 		noti("Wybrano cel: Proxima Centauri b");
 	})
