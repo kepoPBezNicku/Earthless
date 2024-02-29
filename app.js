@@ -4163,7 +4163,7 @@ let c4u1e1v1 = new MyEvent( //wojna domova (kim byl ten domov)
 	"bogosBinted/chmurka.jpg",
 	[new MyLine(
 		"bogosBinted/jakub.jpg", "Jakub", colors["green"],
-		"Dogadaliśmy się z tutejszą rasą i obyło się bez żadnych konfliktów. Niestety zamiast konfiktów z innymi rasami, doszło do wojny domowej wśród Polaków."
+		"Dogadaliśmy się z tutejszą rasą i obyło się bez żadnych konfliktów. Niestety zamiast tego doszło do wojny domowej wśród Polaków."
 	)],
 	"Poczekam na raport Marcina.",
 	"Poczekam na raport Marcina.",
