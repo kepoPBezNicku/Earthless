@@ -625,7 +625,7 @@ function statsChanger(element1, list) {
 		if (data.stats.currency <= 0) {
 			data.stats.currency = 0;
 			nextDub = ""
-			gameOverFunction("gameOver", "Zbankrutowałeś.");
+			gameOverFunction("gameOver", "Zbankrutował eś, nie jesteś już w stanie finansować państwa. .");
 		} else if (data.stats.currency > 1) {
 			data.stats.currency = 1;
 		}
@@ -633,7 +633,7 @@ function statsChanger(element1, list) {
 		if (data.stats.adviser <= 0) {
 			data.stats.adviser = 0;
 			nextDub = ""
-			gameOverFunction("gameOver", "Twoja reputacja spadła do zera.");
+			gameOverFunction("gameOver", "Marcin bym źle traktowany, zbuntował się i odsunął Cię od władzy.");
 		} else if (data.stats.adviser > 1) {
 			data.stats.adviser = 1;
 		}
@@ -641,7 +641,7 @@ function statsChanger(element1, list) {
 		if (data.stats.research <= 0) {
 			data.stats.research = 0;
 			nextDub = ""
-			gameOverFunction("gameOver", "Za mały poziom badań.");
+			gameOverFunction("gameOver", "Twój zespół badawczy się zbuntował, bez nich sobie nie poradzisz.");
 		} else if (data.stats.research > 1) {
 			data.stats.research = 1;
 		}
@@ -649,7 +649,7 @@ function statsChanger(element1, list) {
 		if (data.stats.fuel <= 0) {
 			data.stats.fuel = 0;
 			nextDub = ""
-			gameOverFunction("gameOver", "Za mały poziom paliwa.");
+			gameOverFunction("gameOver", "Skończyło Ci się paliwo.");
 		} else if (data.stats.fuel > 1) {
 			data.stats.fuel = 1;
 		}
@@ -657,7 +657,7 @@ function statsChanger(element1, list) {
 		if (data.stats.food <= 0) {
 			data.stats.food = 0;
 			nextDub = ""
-			gameOverFunction("gameOverDeath", "Śmierć spowodowana brakiem jedzenia.");
+			gameOverFunction("gameOverDeath", "Twój kraj powoli umiera z głodu i epidemii.");
 		} else if (data.stats.food > 1) {
 			data.stats.food = 1;
 		}
