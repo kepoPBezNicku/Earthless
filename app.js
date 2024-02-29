@@ -1795,7 +1795,7 @@ let c1u2e3v1 = new MyEvent(
 );
 
 let c1u2e4v1 = new MyEvent(
-	"bogosBinted/glosnik.jpg",
+	"bogosBinted/megafon.jpg",
 	[
 		new MyLine(
 			"bogosBinted/noPfpUser.jpg","*młody męski głos*","orange",
