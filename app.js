@@ -4259,8 +4259,8 @@ let c4u1e1v2 = new MyEvent( //ucieczka
 	},
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
 	[0, 0, 0, 0, 0, 0, 0, 0, 0], //
-	"",
-	""
+	"c4u1e1v2L",
+	"c4u1e1v2R"
 )
 
 let c4u1e1v2e1 = new MyEvent(
