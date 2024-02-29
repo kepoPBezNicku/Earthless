@@ -4121,8 +4121,8 @@ let c3u5e3v5 = new MyEvent(
 		"bogosBinted/agresus.jpg", "Agresus", colors["red"],
 		"Nie będziemy zawiązywać sojuszu z takimi mięczakami. Lepiej uciekajcie, albo będziecie mieli kłopoty."
 	)],
-	"LewaOpcja",
-	"PrawaOpcja",
+	"Świetnie, no to lecimy.",
+	"Super, przygotujmy się do lądowania.",
 	function (){
 		doTheEvent(c4u5e4v1)
 		nextDub = "c3u5e4v1"
